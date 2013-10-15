@@ -14,7 +14,7 @@
 //#import "UIDevice+Ext.h"
 
 #define VIEW_DID_UNLOAD_FUNCTION()   do{\
-if ([[self systemVersion] floatValue] < 6.0) {\
+if ([[[UIDevice currentDevice] systemVersion] floatValue] < 6.0) {\
 if ([self isViewLoaded] && ![[self view] window]) {\
 [self viewDidUnload];\
 }\
