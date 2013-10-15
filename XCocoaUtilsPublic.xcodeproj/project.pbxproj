@@ -73,9 +73,6 @@
 		A2141666180CE4300067EBE8 /* UIScrollView+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141646180CE4300067EBE8 /* UIScrollView+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2141667180CE4300067EBE8 /* UIScrollView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141647180CE4300067EBE8 /* UIScrollView+Ext.m */; };
 		A2141668180CE4300067EBE8 /* UIScrollView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141647180CE4300067EBE8 /* UIScrollView+Ext.m */; };
-		A2141677180CE7E30067EBE8 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141675180CE7E30067EBE8 /* RegexKitLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2141678180CE7E30067EBE8 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141676180CE7E30067EBE8 /* RegexKitLite.m */; };
-		A2141679180CE7E30067EBE8 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141676180CE7E30067EBE8 /* RegexKitLite.m */; };
 		A2141681180CE9FB0067EBE8 /* BlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = A214167F180CE9FB0067EBE8 /* BlockAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2141682180CE9FB0067EBE8 /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141680180CE9FB0067EBE8 /* BlockAlertView.m */; };
 		A2141683180CE9FB0067EBE8 /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141680180CE9FB0067EBE8 /* BlockAlertView.m */; };
@@ -86,6 +83,9 @@
 		A214168C180CEA1C0067EBE8 /* FileIOHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A214168A180CEA1C0067EBE8 /* FileIOHelper.m */; };
 		A214168D180CEA1C0067EBE8 /* FileIOHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A214168A180CEA1C0067EBE8 /* FileIOHelper.m */; };
 		A21416BD180CF6950067EBE8 /* XCocoaUtilsPublicFW.h in Headers */ = {isa = PBXBuildFile; fileRef = A21416B8180CF5C00067EBE8 /* XCocoaUtilsPublicFW.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A23B2A14180D2A4800C270A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23B2A13180D2A4800C270A4 /* UIKit.framework */; };
+		A23B2A15180D2A5F00C270A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415A0180CDF790067EBE8 /* Foundation.framework */; };
+		A23B2A16180D2A6800C270A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23B2A13180D2A4800C270A4 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -105,7 +105,6 @@
 		A21415A0180CDF790067EBE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A21415A4180CDF790067EBE8 /* XCocoaUtilsPublic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCocoaUtilsPublic-Prefix.pch"; sourceTree = "<group>"; };
 		A21415AE180CDF790067EBE8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		A21415B1180CDF790067EBE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		A21415E1180CE0790067EBE8 /* XCocoaUtilsPublicFW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCocoaUtilsPublicFW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A21415E4180CE0790067EBE8 /* XCocoaUtilsPublicFW-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XCocoaUtilsPublicFW-Info.plist"; sourceTree = "<group>"; };
 		A21415E6180CE0790067EBE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -162,6 +161,7 @@
 		A2141689180CEA1C0067EBE8 /* FileIOHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileIOHelper.h; sourceTree = "<group>"; };
 		A214168A180CEA1C0067EBE8 /* FileIOHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileIOHelper.m; sourceTree = "<group>"; };
 		A21416B8180CF5C00067EBE8 /* XCocoaUtilsPublicFW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublicFW.h; sourceTree = "<group>"; };
+		A23B2A13180D2A4800C270A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23B2A16180D2A6800C270A4 /* UIKit.framework in Frameworks */,
 				A21415A1180CDF790067EBE8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +178,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23B2A15180D2A5F00C270A4 /* Foundation.framework in Frameworks */,
+				A23B2A14180D2A4800C270A4 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,9 +209,9 @@
 		A214159F180CDF790067EBE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A23B2A13180D2A4800C270A4 /* UIKit.framework */,
 				A21415A0180CDF790067EBE8 /* Foundation.framework */,
 				A21415AE180CDF790067EBE8 /* XCTest.framework */,
-				A21415B1180CDF790067EBE8 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -343,7 +346,6 @@
 				A2141616180CE3CF0067EBE8 /* DebugUtility.h in Headers */,
 				A2141686180CEA0B0067EBE8 /* DefaultSettings.h in Headers */,
 				A214161B180CE3E00067EBE8 /* NSData+String.h in Headers */,
-				A2141677180CE7E30067EBE8 /* RegexKitLite.h in Headers */,
 				A214162F180CE4240067EBE8 /* UIColor+Ext.h in Headers */,
 				A21415FC180CE2540067EBE8 /* NSString+Ext.h in Headers */,
 				A2141625180CE3FD0067EBE8 /* UIAlertView+Ext.h in Headers */,
@@ -512,7 +514,6 @@
 				A214160C180CE3930067EBE8 /* NSData+Base64.m in Sources */,
 				A214162B180CE40E0067EBE8 /* UIButton+Ext.m in Sources */,
 				A2141652180CE4300067EBE8 /* UIView+Ext.m in Sources */,
-				A2141678180CE7E30067EBE8 /* RegexKitLite.m in Sources */,
 				A2141687180CEA0B0067EBE8 /* DefaultSettings.m in Sources */,
 				A214164F180CE4300067EBE8 /* UIImage+Ext.m in Sources */,
 				A2141667180CE4300067EBE8 /* UIScrollView+Ext.m in Sources */,
@@ -532,7 +533,6 @@
 				A2141618180CE3CF0067EBE8 /* DebugUtility.m in Sources */,
 				A214164D180CE4300067EBE8 /* UIScreen+Ext.m in Sources */,
 				A2141662180CE4300067EBE8 /* NSObject+Debug.m in Sources */,
-				A2141679180CE7E30067EBE8 /* RegexKitLite.m in Sources */,
 				A2141650180CE4300067EBE8 /* UIImage+Ext.m in Sources */,
 				A214168D180CEA1C0067EBE8 /* FileIOHelper.m in Sources */,
 				A214160D180CE3930067EBE8 /* NSData+Base64.m in Sources */,
@@ -600,7 +600,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -632,7 +632,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -667,7 +667,7 @@
 		A21415EA180CE0790067EBE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
 				DEAD_CODE_STRIPPING = NO;
@@ -695,7 +695,7 @@
 		A21415EB180CE0790067EBE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
 				DEAD_CODE_STRIPPING = NO;
