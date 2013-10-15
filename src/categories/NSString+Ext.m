@@ -9,7 +9,7 @@
 #import "NSString+Ext.h"
 #import "NSObject+Ext.h"
 #import "FunctionSet.h"
-//#import <RegexKitLite/RegexKitLite.h>
+#import "RegexKitLite.h"
 
 extern inline NSString* NSStringFromBool(BOOL bValue)
 {
@@ -212,7 +212,7 @@ static NSDateFormatter *formatter = nil;
 
 - (NSString *)stringByRemoveHTMLTags
 {
-    NSString *tmp = [self stringByReplacingOccurrencesOfRegex:@"\n" withString:@""];
+    NSString *tmp = [self stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 
     tmp = [tmp stringByRemoveHTMLTag:@"p"];
     tmp = [tmp stringByRemoveHTMLTag:@"img"];

@@ -7,7 +7,7 @@
 //
 
 #import "UIViewController+Ext.h"
-#import "UIDevice+Ext.h"
+//#import "UIDevice+Ext.h"
 #import "NSObject+Ext.h"
 
 #define ASSERT_LOADING  0
@@ -18,7 +18,7 @@
 
 + (NSString *)xibFileNameDefaultSuffix
 {
-    return [[UIDevice currentDevice] isIPad] ? @"iPad" : @"iPhone";
+    return ([[[[UIDevice currentDevice] model] lowercaseString] rangeOfString:@"ipad"].length > 0) ? @"iPad" : @"iPhone";
 }
 
 + (id)viewControllerWithNibName:(NSString *)nibName bundle:(NSBundle *)nibBundleOrNil

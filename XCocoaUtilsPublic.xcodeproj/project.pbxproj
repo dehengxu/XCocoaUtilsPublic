@@ -45,9 +45,6 @@
 		A214162F180CE4240067EBE8 /* UIColor+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A214162D180CE4230067EBE8 /* UIColor+Ext.h */; };
 		A2141630180CE4240067EBE8 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A214162E180CE4240067EBE8 /* UIColor+Ext.m */; };
 		A2141631180CE4240067EBE8 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A214162E180CE4240067EBE8 /* UIColor+Ext.m */; };
-		A2141648180CE4300067EBE8 /* UIDevice+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141632180CE4300067EBE8 /* UIDevice+Ext.h */; };
-		A2141649180CE4300067EBE8 /* UIDevice+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141633180CE4300067EBE8 /* UIDevice+Ext.m */; };
-		A214164A180CE4300067EBE8 /* UIDevice+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141633180CE4300067EBE8 /* UIDevice+Ext.m */; };
 		A214164B180CE4300067EBE8 /* UIScreen+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141634180CE4300067EBE8 /* UIScreen+Ext.h */; };
 		A214164C180CE4300067EBE8 /* UIScreen+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141635180CE4300067EBE8 /* UIScreen+Ext.m */; };
 		A214164D180CE4300067EBE8 /* UIScreen+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141635180CE4300067EBE8 /* UIScreen+Ext.m */; };
@@ -78,6 +75,9 @@
 		A2141666180CE4300067EBE8 /* UIScrollView+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141646180CE4300067EBE8 /* UIScrollView+Ext.h */; };
 		A2141667180CE4300067EBE8 /* UIScrollView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141647180CE4300067EBE8 /* UIScrollView+Ext.m */; };
 		A2141668180CE4300067EBE8 /* UIScrollView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141647180CE4300067EBE8 /* UIScrollView+Ext.m */; };
+		A2141677180CE7E30067EBE8 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141675180CE7E30067EBE8 /* RegexKitLite.h */; };
+		A2141678180CE7E30067EBE8 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141676180CE7E30067EBE8 /* RegexKitLite.m */; };
+		A2141679180CE7E30067EBE8 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141676180CE7E30067EBE8 /* RegexKitLite.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -128,8 +128,6 @@
 		A2141629180CE40E0067EBE8 /* UIButton+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Ext.m"; sourceTree = "<group>"; };
 		A214162D180CE4230067EBE8 /* UIColor+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Ext.h"; sourceTree = "<group>"; };
 		A214162E180CE4240067EBE8 /* UIColor+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Ext.m"; sourceTree = "<group>"; };
-		A2141632180CE4300067EBE8 /* UIDevice+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Ext.h"; sourceTree = "<group>"; };
-		A2141633180CE4300067EBE8 /* UIDevice+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Ext.m"; sourceTree = "<group>"; };
 		A2141634180CE4300067EBE8 /* UIScreen+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Ext.h"; sourceTree = "<group>"; };
 		A2141635180CE4300067EBE8 /* UIScreen+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Ext.m"; sourceTree = "<group>"; };
 		A2141636180CE4300067EBE8 /* UIImage+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Ext.h"; sourceTree = "<group>"; };
@@ -150,6 +148,8 @@
 		A2141645180CE4300067EBE8 /* SKProduct+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKProduct+Ext.m"; sourceTree = "<group>"; };
 		A2141646180CE4300067EBE8 /* UIScrollView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Ext.h"; sourceTree = "<group>"; };
 		A2141647180CE4300067EBE8 /* UIScrollView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Ext.m"; sourceTree = "<group>"; };
+		A2141675180CE7E30067EBE8 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		A2141676180CE7E30067EBE8 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,7 +240,8 @@
 		A21415EC180CE1190067EBE8 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				A21415F7180CE2340067EBE8 /* extensions */,
+				A2141674180CE7C60067EBE8 /* 3rdParty */,
+				A21415F7180CE2340067EBE8 /* categories */,
 				A2141613180CE3CF0067EBE8 /* debug */,
 				A2141604180CE3400067EBE8 /* FunctionSet.h */,
 				A2141605180CE3400067EBE8 /* FunctionSet.m */,
@@ -248,7 +249,7 @@
 			path = src;
 			sourceTree = "<group>";
 		};
-		A21415F7180CE2340067EBE8 /* extensions */ = {
+		A21415F7180CE2340067EBE8 /* categories */ = {
 			isa = PBXGroup;
 			children = (
 				A21415F8180CE2470067EBE8 /* extensions.h */,
@@ -268,8 +269,6 @@
 				A2141629180CE40E0067EBE8 /* UIButton+Ext.m */,
 				A214162D180CE4230067EBE8 /* UIColor+Ext.h */,
 				A214162E180CE4240067EBE8 /* UIColor+Ext.m */,
-				A2141632180CE4300067EBE8 /* UIDevice+Ext.h */,
-				A2141633180CE4300067EBE8 /* UIDevice+Ext.m */,
 				A2141634180CE4300067EBE8 /* UIScreen+Ext.h */,
 				A2141635180CE4300067EBE8 /* UIScreen+Ext.m */,
 				A2141636180CE4300067EBE8 /* UIImage+Ext.h */,
@@ -291,7 +290,6 @@
 				A2141646180CE4300067EBE8 /* UIScrollView+Ext.h */,
 				A2141647180CE4300067EBE8 /* UIScrollView+Ext.m */,
 			);
-			name = extensions;
 			path = categories;
 			sourceTree = "<group>";
 		};
@@ -306,6 +304,15 @@
 			path = debug;
 			sourceTree = "<group>";
 		};
+		A2141674180CE7C60067EBE8 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				A2141675180CE7E30067EBE8 /* RegexKitLite.h */,
+				A2141676180CE7E30067EBE8 /* RegexKitLite.m */,
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -318,13 +325,13 @@
 				A2141601180CE3310067EBE8 /* NSObject+Ext.h in Headers */,
 				A2141616180CE3CF0067EBE8 /* DebugUtility.h in Headers */,
 				A214161B180CE3E00067EBE8 /* NSData+String.h in Headers */,
+				A2141677180CE7E30067EBE8 /* RegexKitLite.h in Headers */,
 				A214162F180CE4240067EBE8 /* UIColor+Ext.h in Headers */,
 				A21415FC180CE2540067EBE8 /* NSString+Ext.h in Headers */,
 				A2141625180CE3FD0067EBE8 /* UIAlertView+Ext.h in Headers */,
 				A2141660180CE4300067EBE8 /* NSObject+Debug.h in Headers */,
 				A2141651180CE4300067EBE8 /* UIView+Ext.h in Headers */,
 				A2141620180CE3F40067EBE8 /* NSURL+Test.h in Headers */,
-				A2141648180CE4300067EBE8 /* UIDevice+Ext.h in Headers */,
 				A214160B180CE3930067EBE8 /* NSData+Base64.h in Headers */,
 				A2141610180CE39F0067EBE8 /* NSArray+Ext.h in Headers */,
 				A214165A180CE4300067EBE8 /* NSDate+Ext.h in Headers */,
@@ -386,6 +393,7 @@
 		A2141595180CDF790067EBE8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Deheng.Xu;
 			};
@@ -476,13 +484,13 @@
 				A2141621180CE3F40067EBE8 /* NSURL+Test.m in Sources */,
 				A2141664180CE4300067EBE8 /* SKProduct+Ext.m in Sources */,
 				A2141661180CE4300067EBE8 /* NSObject+Debug.m in Sources */,
-				A2141649180CE4300067EBE8 /* UIDevice+Ext.m in Sources */,
 				A2141617180CE3CF0067EBE8 /* DebugUtility.m in Sources */,
 				A2141658180CE4300067EBE8 /* NSTimer+Ext.m in Sources */,
 				A214164C180CE4300067EBE8 /* UIScreen+Ext.m in Sources */,
 				A214160C180CE3930067EBE8 /* NSData+Base64.m in Sources */,
 				A214162B180CE40E0067EBE8 /* UIButton+Ext.m in Sources */,
 				A2141652180CE4300067EBE8 /* UIView+Ext.m in Sources */,
+				A2141678180CE7E30067EBE8 /* RegexKitLite.m in Sources */,
 				A214164F180CE4300067EBE8 /* UIImage+Ext.m in Sources */,
 				A2141667180CE4300067EBE8 /* UIScrollView+Ext.m in Sources */,
 				A214165B180CE4300067EBE8 /* NSDate+Ext.m in Sources */,
@@ -500,8 +508,8 @@
 				A21415FE180CE2540067EBE8 /* NSString+Ext.m in Sources */,
 				A2141618180CE3CF0067EBE8 /* DebugUtility.m in Sources */,
 				A214164D180CE4300067EBE8 /* UIScreen+Ext.m in Sources */,
-				A214164A180CE4300067EBE8 /* UIDevice+Ext.m in Sources */,
 				A2141662180CE4300067EBE8 /* NSObject+Debug.m in Sources */,
+				A2141679180CE7E30067EBE8 /* RegexKitLite.m in Sources */,
 				A2141650180CE4300067EBE8 /* UIImage+Ext.m in Sources */,
 				A214160D180CE3930067EBE8 /* NSData+Base64.m in Sources */,
 				A2141668180CE4300067EBE8 /* UIScrollView+Ext.m in Sources */,
@@ -701,6 +709,7 @@
 				A21415C2180CDF790067EBE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A21415E9180CE0790067EBE8 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublicFW" */ = {
 			isa = XCConfigurationList;
@@ -709,6 +718,7 @@
 				A21415EB180CE0790067EBE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

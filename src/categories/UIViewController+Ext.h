@@ -11,10 +11,10 @@
 #import <UIKit/UIKit.h>
 #import "FunctionSet.h"
 /* Fix: Implicit declaration of method 'osVersion' in C99 */
-#import "UIDevice+Ext.h"
+//#import "UIDevice+Ext.h"
 
 #define VIEW_DID_UNLOAD_FUNCTION()   do{\
-if ([[UIDevice currentDevice] osVersion] < 6.0) {\
+if ([[self systemVersion] floatValue] < 6.0) {\
 if ([self isViewLoaded] && ![[self view] window]) {\
 [self viewDidUnload];\
 }\

@@ -19,7 +19,7 @@
 		[allFonts setObject:[UIFont fontNamesForFamilyName:familyName] forKey:familyName];
 	}
 	[allFonts writeToFile:@"/iphon4_font_family.plist" atomically:YES];
-	printf("Notice! Has already written file iphon4_font_family in \"/\"");
+	//printf("Notice! Has already written file iphon4_font_family in \"/\"");
 	return [allFonts XAutorelease];
 }
 
