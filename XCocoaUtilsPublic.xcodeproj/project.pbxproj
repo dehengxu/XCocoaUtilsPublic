@@ -10,23 +10,75 @@
 		A21415A1180CDF790067EBE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415A0180CDF790067EBE8 /* Foundation.framework */; };
 		A21415A6180CDF790067EBE8 /* XCocoaUtilsPublic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A21415A5180CDF790067EBE8 /* XCocoaUtilsPublic.h */; };
 		A21415A8180CDF790067EBE8 /* XCocoaUtilsPublic.m in Sources */ = {isa = PBXBuildFile; fileRef = A21415A7180CDF790067EBE8 /* XCocoaUtilsPublic.m */; };
-		A21415AF180CDF790067EBE8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415AE180CDF790067EBE8 /* XCTest.framework */; };
-		A21415B0180CDF790067EBE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415A0180CDF790067EBE8 /* Foundation.framework */; };
-		A21415B2180CDF790067EBE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415B1180CDF790067EBE8 /* UIKit.framework */; };
-		A21415B5180CDF790067EBE8 /* libXCocoaUtilsPublic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A214159D180CDF790067EBE8 /* libXCocoaUtilsPublic.a */; };
-		A21415BB180CDF790067EBE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A21415B9180CDF790067EBE8 /* InfoPlist.strings */; };
-		A21415BD180CDF790067EBE8 /* XCocoaUtilsPublicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A21415BC180CDF790067EBE8 /* XCocoaUtilsPublicTests.m */; };
+		A21415E7180CE0790067EBE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A21415E5180CE0790067EBE8 /* InfoPlist.strings */; };
+		A21415F9180CE2470067EBE8 /* extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A21415F8180CE2470067EBE8 /* extensions.h */; };
+		A21415FC180CE2540067EBE8 /* NSString+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A21415FA180CE2540067EBE8 /* NSString+Ext.h */; };
+		A21415FD180CE2540067EBE8 /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A21415FB180CE2540067EBE8 /* NSString+Ext.m */; };
+		A21415FE180CE2540067EBE8 /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A21415FB180CE2540067EBE8 /* NSString+Ext.m */; };
+		A2141601180CE3310067EBE8 /* NSObject+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A21415FF180CE3310067EBE8 /* NSObject+Ext.h */; };
+		A2141602180CE3310067EBE8 /* NSObject+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141600180CE3310067EBE8 /* NSObject+Ext.m */; };
+		A2141603180CE3310067EBE8 /* NSObject+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141600180CE3310067EBE8 /* NSObject+Ext.m */; };
+		A2141606180CE3400067EBE8 /* FunctionSet.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141604180CE3400067EBE8 /* FunctionSet.h */; };
+		A2141607180CE3400067EBE8 /* FunctionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141605180CE3400067EBE8 /* FunctionSet.m */; };
+		A2141608180CE3400067EBE8 /* FunctionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141605180CE3400067EBE8 /* FunctionSet.m */; };
+		A214160B180CE3930067EBE8 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141609180CE3930067EBE8 /* NSData+Base64.h */; };
+		A214160C180CE3930067EBE8 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A214160A180CE3930067EBE8 /* NSData+Base64.m */; };
+		A214160D180CE3930067EBE8 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A214160A180CE3930067EBE8 /* NSData+Base64.m */; };
+		A2141610180CE39F0067EBE8 /* NSArray+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A214160E180CE39F0067EBE8 /* NSArray+Ext.h */; };
+		A2141611180CE39F0067EBE8 /* NSArray+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A214160F180CE39F0067EBE8 /* NSArray+Ext.m */; };
+		A2141612180CE39F0067EBE8 /* NSArray+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A214160F180CE39F0067EBE8 /* NSArray+Ext.m */; };
+		A2141616180CE3CF0067EBE8 /* DebugUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141614180CE3CF0067EBE8 /* DebugUtility.h */; };
+		A2141617180CE3CF0067EBE8 /* DebugUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141615180CE3CF0067EBE8 /* DebugUtility.m */; };
+		A2141618180CE3CF0067EBE8 /* DebugUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141615180CE3CF0067EBE8 /* DebugUtility.m */; };
+		A214161B180CE3E00067EBE8 /* NSData+String.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141619180CE3E00067EBE8 /* NSData+String.h */; };
+		A214161C180CE3E00067EBE8 /* NSData+String.m in Sources */ = {isa = PBXBuildFile; fileRef = A214161A180CE3E00067EBE8 /* NSData+String.m */; };
+		A214161D180CE3E00067EBE8 /* NSData+String.m in Sources */ = {isa = PBXBuildFile; fileRef = A214161A180CE3E00067EBE8 /* NSData+String.m */; };
+		A2141620180CE3F40067EBE8 /* NSURL+Test.h in Headers */ = {isa = PBXBuildFile; fileRef = A214161E180CE3F40067EBE8 /* NSURL+Test.h */; };
+		A2141621180CE3F40067EBE8 /* NSURL+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = A214161F180CE3F40067EBE8 /* NSURL+Test.m */; };
+		A2141622180CE3F40067EBE8 /* NSURL+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = A214161F180CE3F40067EBE8 /* NSURL+Test.m */; };
+		A2141625180CE3FD0067EBE8 /* UIAlertView+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141623180CE3FD0067EBE8 /* UIAlertView+Ext.h */; };
+		A2141626180CE3FD0067EBE8 /* UIAlertView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141624180CE3FD0067EBE8 /* UIAlertView+Ext.m */; };
+		A2141627180CE3FD0067EBE8 /* UIAlertView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141624180CE3FD0067EBE8 /* UIAlertView+Ext.m */; };
+		A214162A180CE40E0067EBE8 /* UIButton+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141628180CE40E0067EBE8 /* UIButton+Ext.h */; };
+		A214162B180CE40E0067EBE8 /* UIButton+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141629180CE40E0067EBE8 /* UIButton+Ext.m */; };
+		A214162C180CE40E0067EBE8 /* UIButton+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141629180CE40E0067EBE8 /* UIButton+Ext.m */; };
+		A214162F180CE4240067EBE8 /* UIColor+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A214162D180CE4230067EBE8 /* UIColor+Ext.h */; };
+		A2141630180CE4240067EBE8 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A214162E180CE4240067EBE8 /* UIColor+Ext.m */; };
+		A2141631180CE4240067EBE8 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A214162E180CE4240067EBE8 /* UIColor+Ext.m */; };
+		A2141648180CE4300067EBE8 /* UIDevice+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141632180CE4300067EBE8 /* UIDevice+Ext.h */; };
+		A2141649180CE4300067EBE8 /* UIDevice+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141633180CE4300067EBE8 /* UIDevice+Ext.m */; };
+		A214164A180CE4300067EBE8 /* UIDevice+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141633180CE4300067EBE8 /* UIDevice+Ext.m */; };
+		A214164B180CE4300067EBE8 /* UIScreen+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141634180CE4300067EBE8 /* UIScreen+Ext.h */; };
+		A214164C180CE4300067EBE8 /* UIScreen+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141635180CE4300067EBE8 /* UIScreen+Ext.m */; };
+		A214164D180CE4300067EBE8 /* UIScreen+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141635180CE4300067EBE8 /* UIScreen+Ext.m */; };
+		A214164E180CE4300067EBE8 /* UIImage+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141636180CE4300067EBE8 /* UIImage+Ext.h */; };
+		A214164F180CE4300067EBE8 /* UIImage+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141637180CE4300067EBE8 /* UIImage+Ext.m */; };
+		A2141650180CE4300067EBE8 /* UIImage+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141637180CE4300067EBE8 /* UIImage+Ext.m */; };
+		A2141651180CE4300067EBE8 /* UIView+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141638180CE4300067EBE8 /* UIView+Ext.h */; };
+		A2141652180CE4300067EBE8 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141639180CE4300067EBE8 /* UIView+Ext.m */; };
+		A2141653180CE4300067EBE8 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141639180CE4300067EBE8 /* UIView+Ext.m */; };
+		A2141654180CE4300067EBE8 /* UIViewController+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A214163A180CE4300067EBE8 /* UIViewController+Ext.h */; };
+		A2141655180CE4300067EBE8 /* UIViewController+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A214163B180CE4300067EBE8 /* UIViewController+Ext.m */; };
+		A2141656180CE4300067EBE8 /* UIViewController+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A214163B180CE4300067EBE8 /* UIViewController+Ext.m */; };
+		A2141657180CE4300067EBE8 /* NSTimer+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A214163C180CE4300067EBE8 /* NSTimer+Ext.h */; };
+		A2141658180CE4300067EBE8 /* NSTimer+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A214163D180CE4300067EBE8 /* NSTimer+Ext.m */; };
+		A2141659180CE4300067EBE8 /* NSTimer+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A214163D180CE4300067EBE8 /* NSTimer+Ext.m */; };
+		A214165A180CE4300067EBE8 /* NSDate+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A214163E180CE4300067EBE8 /* NSDate+Ext.h */; };
+		A214165B180CE4300067EBE8 /* NSDate+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A214163F180CE4300067EBE8 /* NSDate+Ext.m */; };
+		A214165C180CE4300067EBE8 /* NSDate+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A214163F180CE4300067EBE8 /* NSDate+Ext.m */; };
+		A214165D180CE4300067EBE8 /* UIFont+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141640180CE4300067EBE8 /* UIFont+Ext.h */; };
+		A214165E180CE4300067EBE8 /* UIFont+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141641180CE4300067EBE8 /* UIFont+Ext.m */; };
+		A214165F180CE4300067EBE8 /* UIFont+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141641180CE4300067EBE8 /* UIFont+Ext.m */; };
+		A2141660180CE4300067EBE8 /* NSObject+Debug.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141642180CE4300067EBE8 /* NSObject+Debug.h */; };
+		A2141661180CE4300067EBE8 /* NSObject+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141643180CE4300067EBE8 /* NSObject+Debug.m */; };
+		A2141662180CE4300067EBE8 /* NSObject+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141643180CE4300067EBE8 /* NSObject+Debug.m */; };
+		A2141663180CE4300067EBE8 /* SKProduct+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141644180CE4300067EBE8 /* SKProduct+Ext.h */; };
+		A2141664180CE4300067EBE8 /* SKProduct+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141645180CE4300067EBE8 /* SKProduct+Ext.m */; };
+		A2141665180CE4300067EBE8 /* SKProduct+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141645180CE4300067EBE8 /* SKProduct+Ext.m */; };
+		A2141666180CE4300067EBE8 /* UIScrollView+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A2141646180CE4300067EBE8 /* UIScrollView+Ext.h */; };
+		A2141667180CE4300067EBE8 /* UIScrollView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141647180CE4300067EBE8 /* UIScrollView+Ext.m */; };
+		A2141668180CE4300067EBE8 /* UIScrollView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A2141647180CE4300067EBE8 /* UIScrollView+Ext.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A21415B3180CDF790067EBE8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A2141595180CDF790067EBE8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A214159C180CDF790067EBE8;
-			remoteInfo = XCocoaUtilsPublic;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A214159B180CDF790067EBE8 /* CopyFiles */ = {
@@ -47,12 +99,57 @@
 		A21415A4180CDF790067EBE8 /* XCocoaUtilsPublic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCocoaUtilsPublic-Prefix.pch"; sourceTree = "<group>"; };
 		A21415A5180CDF790067EBE8 /* XCocoaUtilsPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublic.h; sourceTree = "<group>"; };
 		A21415A7180CDF790067EBE8 /* XCocoaUtilsPublic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCocoaUtilsPublic.m; sourceTree = "<group>"; };
-		A21415AD180CDF790067EBE8 /* XCocoaUtilsPublicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCocoaUtilsPublicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A21415AE180CDF790067EBE8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A21415B1180CDF790067EBE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		A21415B8180CDF790067EBE8 /* XCocoaUtilsPublicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XCocoaUtilsPublicTests-Info.plist"; sourceTree = "<group>"; };
-		A21415BA180CDF790067EBE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A21415BC180CDF790067EBE8 /* XCocoaUtilsPublicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCocoaUtilsPublicTests.m; sourceTree = "<group>"; };
+		A21415E1180CE0790067EBE8 /* XCocoaUtilsPublicFW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCocoaUtilsPublicFW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A21415E4180CE0790067EBE8 /* XCocoaUtilsPublicFW-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XCocoaUtilsPublicFW-Info.plist"; sourceTree = "<group>"; };
+		A21415E6180CE0790067EBE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A21415E8180CE0790067EBE8 /* XCocoaUtilsPublicFW-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCocoaUtilsPublicFW-Prefix.pch"; sourceTree = "<group>"; };
+		A21415F8180CE2470067EBE8 /* extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extensions.h; sourceTree = "<group>"; };
+		A21415FA180CE2540067EBE8 /* NSString+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Ext.h"; sourceTree = "<group>"; };
+		A21415FB180CE2540067EBE8 /* NSString+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ext.m"; sourceTree = "<group>"; };
+		A21415FF180CE3310067EBE8 /* NSObject+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Ext.h"; sourceTree = "<group>"; };
+		A2141600180CE3310067EBE8 /* NSObject+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Ext.m"; sourceTree = "<group>"; };
+		A2141604180CE3400067EBE8 /* FunctionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionSet.h; sourceTree = "<group>"; };
+		A2141605180CE3400067EBE8 /* FunctionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionSet.m; sourceTree = "<group>"; };
+		A2141609180CE3930067EBE8 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		A214160A180CE3930067EBE8 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		A214160E180CE39F0067EBE8 /* NSArray+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Ext.h"; sourceTree = "<group>"; };
+		A214160F180CE39F0067EBE8 /* NSArray+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Ext.m"; sourceTree = "<group>"; };
+		A2141614180CE3CF0067EBE8 /* DebugUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugUtility.h; sourceTree = "<group>"; };
+		A2141615180CE3CF0067EBE8 /* DebugUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugUtility.m; sourceTree = "<group>"; };
+		A2141619180CE3E00067EBE8 /* NSData+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+String.h"; sourceTree = "<group>"; };
+		A214161A180CE3E00067EBE8 /* NSData+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+String.m"; sourceTree = "<group>"; };
+		A214161E180CE3F40067EBE8 /* NSURL+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Test.h"; sourceTree = "<group>"; };
+		A214161F180CE3F40067EBE8 /* NSURL+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Test.m"; sourceTree = "<group>"; };
+		A2141623180CE3FD0067EBE8 /* UIAlertView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Ext.h"; sourceTree = "<group>"; };
+		A2141624180CE3FD0067EBE8 /* UIAlertView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Ext.m"; sourceTree = "<group>"; };
+		A2141628180CE40E0067EBE8 /* UIButton+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Ext.h"; sourceTree = "<group>"; };
+		A2141629180CE40E0067EBE8 /* UIButton+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Ext.m"; sourceTree = "<group>"; };
+		A214162D180CE4230067EBE8 /* UIColor+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Ext.h"; sourceTree = "<group>"; };
+		A214162E180CE4240067EBE8 /* UIColor+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Ext.m"; sourceTree = "<group>"; };
+		A2141632180CE4300067EBE8 /* UIDevice+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Ext.h"; sourceTree = "<group>"; };
+		A2141633180CE4300067EBE8 /* UIDevice+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Ext.m"; sourceTree = "<group>"; };
+		A2141634180CE4300067EBE8 /* UIScreen+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Ext.h"; sourceTree = "<group>"; };
+		A2141635180CE4300067EBE8 /* UIScreen+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Ext.m"; sourceTree = "<group>"; };
+		A2141636180CE4300067EBE8 /* UIImage+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Ext.h"; sourceTree = "<group>"; };
+		A2141637180CE4300067EBE8 /* UIImage+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Ext.m"; sourceTree = "<group>"; };
+		A2141638180CE4300067EBE8 /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
+		A2141639180CE4300067EBE8 /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
+		A214163A180CE4300067EBE8 /* UIViewController+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Ext.h"; sourceTree = "<group>"; };
+		A214163B180CE4300067EBE8 /* UIViewController+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Ext.m"; sourceTree = "<group>"; };
+		A214163C180CE4300067EBE8 /* NSTimer+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Ext.h"; sourceTree = "<group>"; };
+		A214163D180CE4300067EBE8 /* NSTimer+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Ext.m"; sourceTree = "<group>"; };
+		A214163E180CE4300067EBE8 /* NSDate+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Ext.h"; sourceTree = "<group>"; };
+		A214163F180CE4300067EBE8 /* NSDate+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Ext.m"; sourceTree = "<group>"; };
+		A2141640180CE4300067EBE8 /* UIFont+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Ext.h"; sourceTree = "<group>"; };
+		A2141641180CE4300067EBE8 /* UIFont+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Ext.m"; sourceTree = "<group>"; };
+		A2141642180CE4300067EBE8 /* NSObject+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Debug.h"; sourceTree = "<group>"; };
+		A2141643180CE4300067EBE8 /* NSObject+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Debug.m"; sourceTree = "<group>"; };
+		A2141644180CE4300067EBE8 /* SKProduct+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKProduct+Ext.h"; sourceTree = "<group>"; };
+		A2141645180CE4300067EBE8 /* SKProduct+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKProduct+Ext.m"; sourceTree = "<group>"; };
+		A2141646180CE4300067EBE8 /* UIScrollView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Ext.h"; sourceTree = "<group>"; };
+		A2141647180CE4300067EBE8 /* UIScrollView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Ext.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +161,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A21415AA180CDF790067EBE8 /* Frameworks */ = {
+		A21415DB180CE0790067EBE8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A21415AF180CDF790067EBE8 /* XCTest.framework in Frameworks */,
-				A21415B5180CDF790067EBE8 /* libXCocoaUtilsPublic.a in Frameworks */,
-				A21415B2180CDF790067EBE8 /* UIKit.framework in Frameworks */,
-				A21415B0180CDF790067EBE8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +174,9 @@
 		A2141594180CDF790067EBE8 = {
 			isa = PBXGroup;
 			children = (
+				A21415EC180CE1190067EBE8 /* src */,
 				A21415A2180CDF790067EBE8 /* XCocoaUtilsPublic */,
-				A21415B6180CDF790067EBE8 /* XCocoaUtilsPublicTests */,
+				A21415E2180CE0790067EBE8 /* XCocoaUtilsPublicFW */,
 				A214159F180CDF790067EBE8 /* Frameworks */,
 				A214159E180CDF790067EBE8 /* Products */,
 			);
@@ -92,7 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				A214159D180CDF790067EBE8 /* libXCocoaUtilsPublic.a */,
-				A21415AD180CDF790067EBE8 /* XCocoaUtilsPublicTests.xctest */,
+				A21415E1180CE0790067EBE8 /* XCocoaUtilsPublicFW.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,25 +219,127 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A21415B6180CDF790067EBE8 /* XCocoaUtilsPublicTests */ = {
+		A21415E2180CE0790067EBE8 /* XCocoaUtilsPublicFW */ = {
 			isa = PBXGroup;
 			children = (
-				A21415BC180CDF790067EBE8 /* XCocoaUtilsPublicTests.m */,
-				A21415B7180CDF790067EBE8 /* Supporting Files */,
+				A21415E3180CE0790067EBE8 /* Supporting Files */,
 			);
-			path = XCocoaUtilsPublicTests;
+			path = XCocoaUtilsPublicFW;
 			sourceTree = "<group>";
 		};
-		A21415B7180CDF790067EBE8 /* Supporting Files */ = {
+		A21415E3180CE0790067EBE8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A21415B8180CDF790067EBE8 /* XCocoaUtilsPublicTests-Info.plist */,
-				A21415B9180CDF790067EBE8 /* InfoPlist.strings */,
+				A21415E4180CE0790067EBE8 /* XCocoaUtilsPublicFW-Info.plist */,
+				A21415E5180CE0790067EBE8 /* InfoPlist.strings */,
+				A21415E8180CE0790067EBE8 /* XCocoaUtilsPublicFW-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A21415EC180CE1190067EBE8 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A21415F7180CE2340067EBE8 /* extensions */,
+				A2141613180CE3CF0067EBE8 /* debug */,
+				A2141604180CE3400067EBE8 /* FunctionSet.h */,
+				A2141605180CE3400067EBE8 /* FunctionSet.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		A21415F7180CE2340067EBE8 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A21415F8180CE2470067EBE8 /* extensions.h */,
+				A21415FA180CE2540067EBE8 /* NSString+Ext.h */,
+				A21415FB180CE2540067EBE8 /* NSString+Ext.m */,
+				A21415FF180CE3310067EBE8 /* NSObject+Ext.h */,
+				A2141600180CE3310067EBE8 /* NSObject+Ext.m */,
+				A2141609180CE3930067EBE8 /* NSData+Base64.h */,
+				A214160A180CE3930067EBE8 /* NSData+Base64.m */,
+				A2141619180CE3E00067EBE8 /* NSData+String.h */,
+				A214161A180CE3E00067EBE8 /* NSData+String.m */,
+				A214160E180CE39F0067EBE8 /* NSArray+Ext.h */,
+				A214160F180CE39F0067EBE8 /* NSArray+Ext.m */,
+				A2141623180CE3FD0067EBE8 /* UIAlertView+Ext.h */,
+				A2141624180CE3FD0067EBE8 /* UIAlertView+Ext.m */,
+				A2141628180CE40E0067EBE8 /* UIButton+Ext.h */,
+				A2141629180CE40E0067EBE8 /* UIButton+Ext.m */,
+				A214162D180CE4230067EBE8 /* UIColor+Ext.h */,
+				A214162E180CE4240067EBE8 /* UIColor+Ext.m */,
+				A2141632180CE4300067EBE8 /* UIDevice+Ext.h */,
+				A2141633180CE4300067EBE8 /* UIDevice+Ext.m */,
+				A2141634180CE4300067EBE8 /* UIScreen+Ext.h */,
+				A2141635180CE4300067EBE8 /* UIScreen+Ext.m */,
+				A2141636180CE4300067EBE8 /* UIImage+Ext.h */,
+				A2141637180CE4300067EBE8 /* UIImage+Ext.m */,
+				A2141638180CE4300067EBE8 /* UIView+Ext.h */,
+				A2141639180CE4300067EBE8 /* UIView+Ext.m */,
+				A214163A180CE4300067EBE8 /* UIViewController+Ext.h */,
+				A214163B180CE4300067EBE8 /* UIViewController+Ext.m */,
+				A214163C180CE4300067EBE8 /* NSTimer+Ext.h */,
+				A214163D180CE4300067EBE8 /* NSTimer+Ext.m */,
+				A214163E180CE4300067EBE8 /* NSDate+Ext.h */,
+				A214163F180CE4300067EBE8 /* NSDate+Ext.m */,
+				A2141640180CE4300067EBE8 /* UIFont+Ext.h */,
+				A2141641180CE4300067EBE8 /* UIFont+Ext.m */,
+				A2141642180CE4300067EBE8 /* NSObject+Debug.h */,
+				A2141643180CE4300067EBE8 /* NSObject+Debug.m */,
+				A2141644180CE4300067EBE8 /* SKProduct+Ext.h */,
+				A2141645180CE4300067EBE8 /* SKProduct+Ext.m */,
+				A2141646180CE4300067EBE8 /* UIScrollView+Ext.h */,
+				A2141647180CE4300067EBE8 /* UIScrollView+Ext.m */,
+			);
+			name = extensions;
+			path = categories;
+			sourceTree = "<group>";
+		};
+		A2141613180CE3CF0067EBE8 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				A2141614180CE3CF0067EBE8 /* DebugUtility.h */,
+				A2141615180CE3CF0067EBE8 /* DebugUtility.m */,
+				A214161E180CE3F40067EBE8 /* NSURL+Test.h */,
+				A214161F180CE3F40067EBE8 /* NSURL+Test.m */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A21415DC180CE0790067EBE8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A214162A180CE40E0067EBE8 /* UIButton+Ext.h in Headers */,
+				A2141654180CE4300067EBE8 /* UIViewController+Ext.h in Headers */,
+				A2141601180CE3310067EBE8 /* NSObject+Ext.h in Headers */,
+				A2141616180CE3CF0067EBE8 /* DebugUtility.h in Headers */,
+				A214161B180CE3E00067EBE8 /* NSData+String.h in Headers */,
+				A214162F180CE4240067EBE8 /* UIColor+Ext.h in Headers */,
+				A21415FC180CE2540067EBE8 /* NSString+Ext.h in Headers */,
+				A2141625180CE3FD0067EBE8 /* UIAlertView+Ext.h in Headers */,
+				A2141660180CE4300067EBE8 /* NSObject+Debug.h in Headers */,
+				A2141651180CE4300067EBE8 /* UIView+Ext.h in Headers */,
+				A2141620180CE3F40067EBE8 /* NSURL+Test.h in Headers */,
+				A2141648180CE4300067EBE8 /* UIDevice+Ext.h in Headers */,
+				A214160B180CE3930067EBE8 /* NSData+Base64.h in Headers */,
+				A2141610180CE39F0067EBE8 /* NSArray+Ext.h in Headers */,
+				A214165A180CE4300067EBE8 /* NSDate+Ext.h in Headers */,
+				A2141657180CE4300067EBE8 /* NSTimer+Ext.h in Headers */,
+				A21415F9180CE2470067EBE8 /* extensions.h in Headers */,
+				A214164E180CE4300067EBE8 /* UIImage+Ext.h in Headers */,
+				A2141666180CE4300067EBE8 /* UIScrollView+Ext.h in Headers */,
+				A214164B180CE4300067EBE8 /* UIScreen+Ext.h in Headers */,
+				A2141606180CE3400067EBE8 /* FunctionSet.h in Headers */,
+				A2141663180CE4300067EBE8 /* SKProduct+Ext.h in Headers */,
+				A214165D180CE4300067EBE8 /* UIFont+Ext.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		A214159C180CDF790067EBE8 /* XCocoaUtilsPublic */ = {
@@ -163,23 +359,26 @@
 			productReference = A214159D180CDF790067EBE8 /* libXCocoaUtilsPublic.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		A21415AC180CDF790067EBE8 /* XCocoaUtilsPublicTests */ = {
+		A21415E0180CE0790067EBE8 /* XCocoaUtilsPublicFW */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A21415C3180CDF790067EBE8 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublicTests" */;
+			buildConfigurationList = A21415E9180CE0790067EBE8 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublicFW" */;
 			buildPhases = (
-				A21415A9180CDF790067EBE8 /* Sources */,
-				A21415AA180CDF790067EBE8 /* Frameworks */,
-				A21415AB180CDF790067EBE8 /* Resources */,
+				A21415D9180CE0790067EBE8 /* ShellScript */,
+				A21415DA180CE0790067EBE8 /* Sources */,
+				A21415DB180CE0790067EBE8 /* Frameworks */,
+				A21415DC180CE0790067EBE8 /* Headers */,
+				A21415DD180CE0790067EBE8 /* Resources */,
+				A21415DE180CE0790067EBE8 /* ShellScript */,
+				A21415DF180CE0790067EBE8 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A21415B4180CDF790067EBE8 /* PBXTargetDependency */,
 			);
-			name = XCocoaUtilsPublicTests;
-			productName = XCocoaUtilsPublicTests;
-			productReference = A21415AD180CDF790067EBE8 /* XCocoaUtilsPublicTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = XCocoaUtilsPublicFW;
+			productName = XCocoaUtilsPublicFW;
+			productReference = A21415E1180CE0790067EBE8 /* XCocoaUtilsPublicFW.framework */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -203,21 +402,63 @@
 			projectRoot = "";
 			targets = (
 				A214159C180CDF790067EBE8 /* XCocoaUtilsPublic */,
-				A21415AC180CDF790067EBE8 /* XCocoaUtilsPublicTests */,
+				A21415E0180CE0790067EBE8 /* XCocoaUtilsPublicFW */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A21415AB180CDF790067EBE8 /* Resources */ = {
+		A21415DD180CE0790067EBE8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A21415BB180CDF790067EBE8 /* InfoPlist.strings in Resources */,
+				A21415E7180CE0790067EBE8 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A21415D9180CE0790067EBE8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n";
+		};
+		A21415DE180CE0790067EBE8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
+		};
+		A21415DF180CE0790067EBE8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\nif [[ \"$XCODE_VERSION_MAJOR\" == \"0500\" ]]\nthen\n    echo \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nelse\n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nfi \n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build framework structure\n\necho \"Build symlinks\"\n\necho ln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\nln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\necho ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\necho ln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\necho ln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\nln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\n\n\n# Link to binary for unit tests\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework\"\nln -sfh \"../${WRAPPER_NAME}/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework/.fake_fw_testing\"\n\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A2141599180CDF790067EBE8 /* Sources */ = {
@@ -225,32 +466,67 @@
 			buildActionMask = 2147483647;
 			files = (
 				A21415A8180CDF790067EBE8 /* XCocoaUtilsPublic.m in Sources */,
+				A2141630180CE4240067EBE8 /* UIColor+Ext.m in Sources */,
+				A2141602180CE3310067EBE8 /* NSObject+Ext.m in Sources */,
+				A2141655180CE4300067EBE8 /* UIViewController+Ext.m in Sources */,
+				A214165E180CE4300067EBE8 /* UIFont+Ext.m in Sources */,
+				A21415FD180CE2540067EBE8 /* NSString+Ext.m in Sources */,
+				A2141611180CE39F0067EBE8 /* NSArray+Ext.m in Sources */,
+				A2141607180CE3400067EBE8 /* FunctionSet.m in Sources */,
+				A2141621180CE3F40067EBE8 /* NSURL+Test.m in Sources */,
+				A2141664180CE4300067EBE8 /* SKProduct+Ext.m in Sources */,
+				A2141661180CE4300067EBE8 /* NSObject+Debug.m in Sources */,
+				A2141649180CE4300067EBE8 /* UIDevice+Ext.m in Sources */,
+				A2141617180CE3CF0067EBE8 /* DebugUtility.m in Sources */,
+				A2141658180CE4300067EBE8 /* NSTimer+Ext.m in Sources */,
+				A214164C180CE4300067EBE8 /* UIScreen+Ext.m in Sources */,
+				A214160C180CE3930067EBE8 /* NSData+Base64.m in Sources */,
+				A214162B180CE40E0067EBE8 /* UIButton+Ext.m in Sources */,
+				A2141652180CE4300067EBE8 /* UIView+Ext.m in Sources */,
+				A214164F180CE4300067EBE8 /* UIImage+Ext.m in Sources */,
+				A2141667180CE4300067EBE8 /* UIScrollView+Ext.m in Sources */,
+				A214165B180CE4300067EBE8 /* NSDate+Ext.m in Sources */,
+				A214161C180CE3E00067EBE8 /* NSData+String.m in Sources */,
+				A2141626180CE3FD0067EBE8 /* UIAlertView+Ext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A21415A9180CDF790067EBE8 /* Sources */ = {
+		A21415DA180CE0790067EBE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A21415BD180CDF790067EBE8 /* XCocoaUtilsPublicTests.m in Sources */,
+				A2141612180CE39F0067EBE8 /* NSArray+Ext.m in Sources */,
+				A2141665180CE4300067EBE8 /* SKProduct+Ext.m in Sources */,
+				A21415FE180CE2540067EBE8 /* NSString+Ext.m in Sources */,
+				A2141618180CE3CF0067EBE8 /* DebugUtility.m in Sources */,
+				A214164D180CE4300067EBE8 /* UIScreen+Ext.m in Sources */,
+				A214164A180CE4300067EBE8 /* UIDevice+Ext.m in Sources */,
+				A2141662180CE4300067EBE8 /* NSObject+Debug.m in Sources */,
+				A2141650180CE4300067EBE8 /* UIImage+Ext.m in Sources */,
+				A214160D180CE3930067EBE8 /* NSData+Base64.m in Sources */,
+				A2141668180CE4300067EBE8 /* UIScrollView+Ext.m in Sources */,
+				A2141608180CE3400067EBE8 /* FunctionSet.m in Sources */,
+				A214162C180CE40E0067EBE8 /* UIButton+Ext.m in Sources */,
+				A214161D180CE3E00067EBE8 /* NSData+String.m in Sources */,
+				A2141656180CE4300067EBE8 /* UIViewController+Ext.m in Sources */,
+				A2141622180CE3F40067EBE8 /* NSURL+Test.m in Sources */,
+				A2141653180CE4300067EBE8 /* UIView+Ext.m in Sources */,
+				A2141659180CE4300067EBE8 /* NSTimer+Ext.m in Sources */,
+				A214165F180CE4300067EBE8 /* UIFont+Ext.m in Sources */,
+				A214165C180CE4300067EBE8 /* NSDate+Ext.m in Sources */,
+				A2141603180CE3310067EBE8 /* NSObject+Ext.m in Sources */,
+				A2141627180CE3FD0067EBE8 /* UIAlertView+Ext.m in Sources */,
+				A2141631180CE4240067EBE8 /* UIColor+Ext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		A21415B4180CDF790067EBE8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A214159C180CDF790067EBE8 /* XCocoaUtilsPublic */;
-			targetProxy = A21415B3180CDF790067EBE8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		A21415B9180CDF790067EBE8 /* InfoPlist.strings */ = {
+		A21415E5180CE0790067EBE8 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A21415BA180CDF790067EBE8 /* en */,
+				A21415E6180CE0790067EBE8 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -331,6 +607,7 @@
 		A21415C1180CDF790067EBE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/XCocoaUtilsPublic.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XCocoaUtilsPublic/XCocoaUtilsPublic-Prefix.pch";
@@ -343,6 +620,7 @@
 		A21415C2180CDF790067EBE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/XCocoaUtilsPublic.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XCocoaUtilsPublic/XCocoaUtilsPublic-Prefix.pch";
@@ -352,41 +630,55 @@
 			};
 			name = Release;
 		};
-		A21415C4180CDF790067EBE8 /* Debug */ = {
+		A21415EA180CE0790067EBE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
+				DEAD_CODE_STRIPPING = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "XCocoaUtilsPublic/XCocoaUtilsPublic-Prefix.pch";
+				GCC_PREFIX_HEADER = "XCocoaUtilsPublicFW/XCocoaUtilsPublicFW-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "XCocoaUtilsPublicTests/XCocoaUtilsPublicTests-Info.plist";
+				INFOPLIST_FILE = "XCocoaUtilsPublicFW/XCocoaUtilsPublicFW-Info.plist";
+				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
+				SKIP_INSTALL = YES;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
+				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
 		};
-		A21415C5180CDF790067EBE8 /* Release */ = {
+		A21415EB180CE0790067EBE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
+				DEAD_CODE_STRIPPING = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "XCocoaUtilsPublic/XCocoaUtilsPublic-Prefix.pch";
-				INFOPLIST_FILE = "XCocoaUtilsPublicTests/XCocoaUtilsPublicTests-Info.plist";
+				GCC_PREFIX_HEADER = "XCocoaUtilsPublicFW/XCocoaUtilsPublicFW-Prefix.pch";
+				INFOPLIST_FILE = "XCocoaUtilsPublicFW/XCocoaUtilsPublicFW-Info.plist";
+				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
+				SKIP_INSTALL = YES;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
+				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
 		};
@@ -410,11 +702,11 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		A21415C3180CDF790067EBE8 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublicTests" */ = {
+		A21415E9180CE0790067EBE8 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublicFW" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A21415C4180CDF790067EBE8 /* Debug */,
-				A21415C5180CDF790067EBE8 /* Release */,
+				A21415EA180CE0790067EBE8 /* Debug */,
+				A21415EB180CE0790067EBE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
