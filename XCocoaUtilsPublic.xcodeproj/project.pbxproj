@@ -641,10 +641,12 @@
 		A21415C1180CDF790067EBE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/XCocoaUtilsPublic.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XCocoaUtilsPublic/XCocoaUtilsPublic-Prefix.pch";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -654,10 +656,12 @@
 		A21415C2180CDF790067EBE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/XCocoaUtilsPublic.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XCocoaUtilsPublic/XCocoaUtilsPublic-Prefix.pch";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
