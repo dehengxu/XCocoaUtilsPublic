@@ -53,9 +53,9 @@
 #ifndef SafeRelease
 
 #if !ARC_ENABLED
-#define SafeRelease(obj) do {if (obj){[obj release];obj = nil;}}while (0)
+#define SafeRelease(obj) do {if (obj){[(obj) release];(obj) = nil;}}while (0)
 #else
-#define SafeRelease(obj) do {obj = nil;}while(0)
+#define SafeRelease(obj) do {(obj) = nil;}while(0)
 #endif
 
 #endif
@@ -63,9 +63,9 @@
 #ifndef XRetain
 
 #if !ARC_ENABLED
-#define XRetain(obj) [obj retain]
+#define XRetain(obj) [(obj) retain]
 #else
-#define XRetain(obj) obj
+#define XRetain(obj) (obj)
 #endif
 
 #endif
@@ -83,9 +83,9 @@
 #ifndef XAutorelease
 
 #if !ARC_ENABLED
-#define XAutorelease(obj) [obj autorelease]
+#define XAutorelease(obj) [(obj) autorelease]
 #else
-#define XAutorelease(obj) obj
+#define XAutorelease(obj) (obj)
 #endif
 
 #endif

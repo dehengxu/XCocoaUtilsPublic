@@ -20,7 +20,7 @@
 	}
 	[allFonts writeToFile:@"/iphon4_font_family.plist" atomically:YES];
 	//printf("Notice! Has already written file iphon4_font_family in \"/\"");
-	return [allFonts XAutorelease];
+	return [allFonts autorelease];
 }
 
 @end

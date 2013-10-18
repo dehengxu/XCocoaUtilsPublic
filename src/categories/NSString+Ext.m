@@ -203,7 +203,7 @@ static NSDateFormatter *formatter = nil;
 	}
     if (formatter == nil) {
         formatter =  [[NSDateFormatter alloc] init];
-        [formatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] XAutorelease]];
+        [formatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] autorelease]];
     }
     
     [formatter setDateFormat:formatString];
@@ -270,7 +270,7 @@ static NSDateFormatter *formatter = nil;
     va_list args;
     NSMutableString *rtn = nil;
     va_start(args, format);
-    rtn = [[NSMutableString alloc] initWithFormat:format arguments:args];
+    rtn = [[[NSMutableString alloc] initWithFormat:format arguments:args] autorelease];
     va_end(args);
     [rtn appendString:@"\n"];
     
@@ -301,7 +301,7 @@ static NSDateFormatter *formatter = nil;
     va_list args;
     NSMutableString *string = nil;
     va_start(args, format);
-    string = [[NSMutableString alloc] initWithFormat:format arguments:args];
+    string = [[[NSMutableString alloc] initWithFormat:format arguments:args] autorelease];
     va_end(args);
     
     if (string.length == 0) {
