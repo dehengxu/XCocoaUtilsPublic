@@ -34,7 +34,7 @@
     }else {
         rtn = [[self alloc] initWithNibName:[NSString stringWithFormat:@"%@_%@", nibName, suffix] bundle:nibBundleOrNil];
     }
-    return [rtn XAutorelease];
+    return [rtn autorelease];
 }
 
 @end

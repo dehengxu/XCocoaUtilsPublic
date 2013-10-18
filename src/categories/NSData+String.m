@@ -18,7 +18,7 @@
 
 - (NSString *)stringByEncoding:(NSStringEncoding)encoding
 {
-    return [[[NSString alloc] initWithData:self encoding:encoding] XAutorelease];
+    return [[[NSString alloc] initWithData:self encoding:encoding] autorelease];
 }
 
 @end
