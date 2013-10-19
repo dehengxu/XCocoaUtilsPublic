@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74887CCC18123109000E83E8 /* NameValuePaire.h in Headers */ = {isa = PBXBuildFile; fileRef = 74887CCA18123109000E83E8 /* NameValuePaire.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74887CCD18123109000E83E8 /* NameValuePaire.m in Sources */ = {isa = PBXBuildFile; fileRef = 74887CCB18123109000E83E8 /* NameValuePaire.m */; };
+		74887CCE18123109000E83E8 /* NameValuePaire.m in Sources */ = {isa = PBXBuildFile; fileRef = 74887CCB18123109000E83E8 /* NameValuePaire.m */; };
 		A21415A1180CDF790067EBE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415A0180CDF790067EBE8 /* Foundation.framework */; };
 		A21415E7180CE0790067EBE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A21415E5180CE0790067EBE8 /* InfoPlist.strings */; };
 		A21415F9180CE2470067EBE8 /* extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A21415F8180CE2470067EBE8 /* extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -101,6 +104,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		74887CCA18123109000E83E8 /* NameValuePaire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameValuePaire.h; sourceTree = "<group>"; };
+		74887CCB18123109000E83E8 /* NameValuePaire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameValuePaire.m; sourceTree = "<group>"; };
 		A214159D180CDF790067EBE8 /* libXCocoaUtilsPublic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXCocoaUtilsPublic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A21415A0180CDF790067EBE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A21415A4180CDF790067EBE8 /* XCocoaUtilsPublic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCocoaUtilsPublic-Prefix.pch"; sourceTree = "<group>"; };
@@ -265,6 +270,8 @@
 				A2141685180CEA0A0067EBE8 /* DefaultSettings.m */,
 				A2141689180CEA1C0067EBE8 /* FileIOHelper.h */,
 				A214168A180CEA1C0067EBE8 /* FileIOHelper.m */,
+				74887CCA18123109000E83E8 /* NameValuePaire.h */,
+				74887CCB18123109000E83E8 /* NameValuePaire.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -364,6 +371,7 @@
 				A2141681180CE9FB0067EBE8 /* BlockAlertView.h in Headers */,
 				A2141606180CE3400067EBE8 /* FunctionSet.h in Headers */,
 				A2141663180CE4300067EBE8 /* SKProduct+Ext.h in Headers */,
+				74887CCC18123109000E83E8 /* NameValuePaire.h in Headers */,
 				A214165D180CE4300067EBE8 /* UIFont+Ext.h in Headers */,
 				A21416BD180CF6950067EBE8 /* XCocoaUtilsPublicFW.h in Headers */,
 			);
@@ -511,6 +519,7 @@
 				A2141658180CE4300067EBE8 /* NSTimer+Ext.m in Sources */,
 				A214164C180CE4300067EBE8 /* UIScreen+Ext.m in Sources */,
 				A214168C180CEA1C0067EBE8 /* FileIOHelper.m in Sources */,
+				74887CCD18123109000E83E8 /* NameValuePaire.m in Sources */,
 				A214160C180CE3930067EBE8 /* NSData+Base64.m in Sources */,
 				A214162B180CE40E0067EBE8 /* UIButton+Ext.m in Sources */,
 				A2141652180CE4300067EBE8 /* UIView+Ext.m in Sources */,
@@ -542,6 +551,7 @@
 				A214161D180CE3E00067EBE8 /* NSData+String.m in Sources */,
 				A2141656180CE4300067EBE8 /* UIViewController+Ext.m in Sources */,
 				A2141683180CE9FB0067EBE8 /* BlockAlertView.m in Sources */,
+				74887CCE18123109000E83E8 /* NameValuePaire.m in Sources */,
 				A2141622180CE3F40067EBE8 /* NSURL+Test.m in Sources */,
 				A2141653180CE4300067EBE8 /* UIView+Ext.m in Sources */,
 				A2141659180CE4300067EBE8 /* NSTimer+Ext.m in Sources */,

@@ -9,6 +9,8 @@
 #import "NSString+Ext.h"
 #import "DebugUtility.h"
 #import "FunctionSet.h"
+#import "RegexKitLite.h"
+#import "NameValuePaire.h"
 
 @interface DebugUtility (private)
 
