@@ -89,6 +89,9 @@
 		A23B2A14180D2A4800C270A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23B2A13180D2A4800C270A4 /* UIKit.framework */; };
 		A23B2A15180D2A5F00C270A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415A0180CDF790067EBE8 /* Foundation.framework */; };
 		A23B2A16180D2A6800C270A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23B2A13180D2A4800C270A4 /* UIKit.framework */; };
+		A26481261817D3DB00443A3E /* NSURL+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A26481241817D3DB00443A3E /* NSURL+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A26481271817D3DB00443A3E /* NSURL+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A26481251817D3DB00443A3E /* NSURL+Ext.m */; };
+		A26481281817D3DB00443A3E /* NSURL+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A26481251817D3DB00443A3E /* NSURL+Ext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -167,6 +170,8 @@
 		A214168A180CEA1C0067EBE8 /* FileIOHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileIOHelper.m; sourceTree = "<group>"; };
 		A21416B8180CF5C00067EBE8 /* XCocoaUtilsPublicFW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublicFW.h; sourceTree = "<group>"; };
 		A23B2A13180D2A4800C270A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A26481241817D3DB00443A3E /* NSURL+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Ext.h"; sourceTree = "<group>"; };
+		A26481251817D3DB00443A3E /* NSURL+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Ext.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +321,8 @@
 				A2141645180CE4300067EBE8 /* SKProduct+Ext.m */,
 				A2141646180CE4300067EBE8 /* UIScrollView+Ext.h */,
 				A2141647180CE4300067EBE8 /* UIScrollView+Ext.m */,
+				A26481241817D3DB00443A3E /* NSURL+Ext.h */,
+				A26481251817D3DB00443A3E /* NSURL+Ext.m */,
 			);
 			path = categories;
 			sourceTree = "<group>";
@@ -373,6 +380,7 @@
 				A2141663180CE4300067EBE8 /* SKProduct+Ext.h in Headers */,
 				74887CCC18123109000E83E8 /* NameValuePaire.h in Headers */,
 				A214165D180CE4300067EBE8 /* UIFont+Ext.h in Headers */,
+				A26481261817D3DB00443A3E /* NSURL+Ext.h in Headers */,
 				A21416BD180CF6950067EBE8 /* XCocoaUtilsPublicFW.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +516,7 @@
 				A2141602180CE3310067EBE8 /* NSObject+Ext.m in Sources */,
 				A2141655180CE4300067EBE8 /* UIViewController+Ext.m in Sources */,
 				A214165E180CE4300067EBE8 /* UIFont+Ext.m in Sources */,
+				A26481271817D3DB00443A3E /* NSURL+Ext.m in Sources */,
 				A21415FD180CE2540067EBE8 /* NSString+Ext.m in Sources */,
 				A2141611180CE39F0067EBE8 /* NSArray+Ext.m in Sources */,
 				A2141607180CE3400067EBE8 /* FunctionSet.m in Sources */,
@@ -540,6 +549,7 @@
 				A2141665180CE4300067EBE8 /* SKProduct+Ext.m in Sources */,
 				A21415FE180CE2540067EBE8 /* NSString+Ext.m in Sources */,
 				A2141618180CE3CF0067EBE8 /* DebugUtility.m in Sources */,
+				A26481281817D3DB00443A3E /* NSURL+Ext.m in Sources */,
 				A214164D180CE4300067EBE8 /* UIScreen+Ext.m in Sources */,
 				A2141662180CE4300067EBE8 /* NSObject+Debug.m in Sources */,
 				A2141650180CE4300067EBE8 /* UIImage+Ext.m in Sources */,

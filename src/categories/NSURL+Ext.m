@@ -10,4 +10,9 @@
 
 @implementation NSURL (Ext)
 
+- (NSURL *)URLByTrimQuery
+{
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@%@", self.scheme, self.host, self.path]];
+}
+
 @end

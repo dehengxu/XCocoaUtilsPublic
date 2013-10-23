@@ -10,4 +10,6 @@
 
 @interface NSURL (Ext)
 
+- (NSURL *)URLByTrimQuery;
+
 @end
