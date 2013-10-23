@@ -29,6 +29,11 @@
     return [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
 }
 
++ (NSString *)cachePath
+{
+    return [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+}
+
 + (NSString *)tmpPath
 {
     return NSTemporaryDirectory();

@@ -16,6 +16,8 @@
 
 + (NSString *)libraryPath;
 
++ (NSString *)cachePath;
+
 + (NSString *)tmpPath;
 
 
