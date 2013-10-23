@@ -32,5 +32,6 @@
 #import "DebugUtility.h"
 #import "NSURL+Test.h"
 #import "NameValuePaire.h"
+#import "NSURL+Ext.h"
 
 #endif

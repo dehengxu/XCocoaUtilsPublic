@@ -24,5 +24,6 @@
 #import "UIView+Ext.h"
 #import "UIScrollView+Ext.h"
 #import "UIViewController+Ext.h"
+#import "NSURL+Ext.h"
 
 #endif
