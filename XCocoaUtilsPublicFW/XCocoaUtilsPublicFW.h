@@ -9,29 +9,6 @@
 #ifndef XCocoaUtilsPublic_XCocoaUtilsPublicFW_h
 #define XCocoaUtilsPublic_XCocoaUtilsPublicFW_h
 
-#import "NSArray+Ext.h"
-#import "NSData+Base64.h"
-#import "NSData+String.h"
-#import "NSObject+Ext.h"
-#import "NSString+Ext.h"
-#import "NSURL+Test.h"
-#import "NSTimer+Ext.h"
-#import "UIAlertView+Ext.h"
-#import "UIButton+Ext.h"
-#import "UIColor+Ext.h"
-#import "UIImage+Ext.h"
-#import "UIView+Ext.h"
-#import "UIScrollView+Ext.h"
-#import "UIViewController+Ext.h"
-
-#import "FunctionSet.h"
-#import "BlockAlertView.h"
-#import "DefaultSettings.h"
-#import "FileIOHelper.h"
-
-#import "DebugUtility.h"
-#import "NSURL+Test.h"
-#import "NameValuePaire.h"
-#import "NSURL+Ext.h"
+#import "XCocoaUtilsPublic.h"
 
 #endif
