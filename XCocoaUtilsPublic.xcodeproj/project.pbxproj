@@ -92,6 +92,7 @@
 		A26481261817D3DB00443A3E /* NSURL+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A26481241817D3DB00443A3E /* NSURL+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A26481271817D3DB00443A3E /* NSURL+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A26481251817D3DB00443A3E /* NSURL+Ext.m */; };
 		A26481281817D3DB00443A3E /* NSURL+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = A26481251817D3DB00443A3E /* NSURL+Ext.m */; };
+		A2EE1B141820B47000BE4C8C /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = A2EE1B131820B47000BE4C8C /* XCocoaUtilsPublic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -172,6 +173,7 @@
 		A23B2A13180D2A4800C270A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A26481241817D3DB00443A3E /* NSURL+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Ext.h"; sourceTree = "<group>"; };
 		A26481251817D3DB00443A3E /* NSURL+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Ext.m"; sourceTree = "<group>"; };
+		A2EE1B131820B47000BE4C8C /* XCocoaUtilsPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublic.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +279,7 @@
 				A214168A180CEA1C0067EBE8 /* FileIOHelper.m */,
 				74887CCA18123109000E83E8 /* NameValuePaire.h */,
 				74887CCB18123109000E83E8 /* NameValuePaire.m */,
+				A2EE1B131820B47000BE4C8C /* XCocoaUtilsPublic.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				A2141663180CE4300067EBE8 /* SKProduct+Ext.h in Headers */,
 				74887CCC18123109000E83E8 /* NameValuePaire.h in Headers */,
 				A214165D180CE4300067EBE8 /* UIFont+Ext.h in Headers */,
+				A2EE1B141820B47000BE4C8C /* XCocoaUtilsPublic.h in Headers */,
 				A26481261817D3DB00443A3E /* NSURL+Ext.h in Headers */,
 				A21416BD180CF6950067EBE8 /* XCocoaUtilsPublicFW.h in Headers */,
 			);
@@ -392,8 +396,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A21415C0180CDF790067EBE8 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublic" */;
 			buildPhases = (
-				A2141599180CDF790067EBE8 /* Sources */,
 				A214159A180CDF790067EBE8 /* Frameworks */,
+				A2141599180CDF790067EBE8 /* Sources */,
 				A214159B180CDF790067EBE8 /* CopyFiles */,
 			);
 			buildRules = (
@@ -666,6 +670,11 @@
 				DSTROOT = /tmp/XCocoaUtilsPublic.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XCocoaUtilsPublic/XCocoaUtilsPublic-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"src/**",
+				);
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -681,6 +690,11 @@
 				DSTROOT = /tmp/XCocoaUtilsPublic.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XCocoaUtilsPublic/XCocoaUtilsPublic-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"src/**",
+				);
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
