@@ -214,19 +214,22 @@ static NSDateFormatter *formatter = nil;
 {
     NSString *tmp = [self stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 
-    tmp = [tmp stringByRemoveHTMLTag:@"p"];
-    tmp = [tmp stringByRemoveHTMLTag:@"img"];
-    tmp = [tmp stringByRemoveHTMLTag:@"a"];
-    tmp = [tmp stringByRemoveHTMLTag:@"div"];
-    tmp = [tmp stringByRemoveHTMLTag:@"br"];
-    tmp = [tmp stringByRemoveHTMLTag:@"em"];
-    tmp = [tmp stringByRemoveHTMLTag:@"table"];
-    tmp = [tmp stringByRemoveHTMLTag:@"h1"];
-    tmp = [tmp stringByRemoveHTMLTag:@"h2"];
-    tmp = [tmp stringByRemoveHTMLTag:@"h3"];
-    tmp = [tmp stringByRemoveHTMLTag:@"h4"];
-    tmp = [tmp stringByRemoveHTMLTag:@"td"];
-
+    tmp = [tmp stringByReplacingOccurrencesOfRegex:@"<.[^>]*>" withString:@""];
+//    tmp = [tmp stringByReplacingOccurrencesOfRegex:@"</.>" withString:@""];
+    
+//    tmp = [tmp stringByRemoveHTMLTag:@"p"];
+//    tmp = [tmp stringByRemoveHTMLTag:@"img"];
+//    tmp = [tmp stringByRemoveHTMLTag:@"a"];
+//    tmp = [tmp stringByRemoveHTMLTag:@"div"];
+//    tmp = [tmp stringByRemoveHTMLTag:@"br"];
+//    tmp = [tmp stringByRemoveHTMLTag:@"em"];
+//    tmp = [tmp stringByRemoveHTMLTag:@"table"];
+//    tmp = [tmp stringByRemoveHTMLTag:@"h1"];
+//    tmp = [tmp stringByRemoveHTMLTag:@"h2"];
+//    tmp = [tmp stringByRemoveHTMLTag:@"h3"];
+//    tmp = [tmp stringByRemoveHTMLTag:@"h4"];
+//    tmp = [tmp stringByRemoveHTMLTag:@"td"];
+    
 //    tmp = [tmp stringByReplacingOccurrencesOfRegex:@"<p[^>]*>" withString:@""];
 //    tmp = [tmp stringByReplacingOccurrencesOfRegex:@"</p>" withString:@""];
 //    tmp = [tmp stringByReplacingOccurrencesOfRegex:@"<img[^>]*>" withString:@""];
