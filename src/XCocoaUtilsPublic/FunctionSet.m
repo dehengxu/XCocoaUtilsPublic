@@ -24,6 +24,28 @@ extern inline void CallDelegateWithArgs(NSObject **delegate, SEL selector, NSArr
     }
 }
 
+// Candidate.
+//extern inline void CallDelegateWithArgs(NSObject **delegate, SEL *selector, NSArray **args)
+//{
+//    if (!(*delegate)) {
+//        return;
+//    }
+//    
+//    [*delegate retain];
+//    if (*delegate && [*delegate respondsToSelector:*selector]) {
+//        NSInvocation *invoc = [NSInvocation invocationWithMethodSignature:[*delegate methodSignatureForSelector:*selector]];
+//        [invoc setArgument:delegate atIndex:0];
+//        [invoc setArgument:&selector atIndex:1];
+//        int starti = 2;
+//        for (__strong NSObject *arg in (*args)) {
+//            [invoc setArgument:arg atIndex:starti];
+//            starti ++;
+//        }
+//        [invoc invoke];
+//    }
+//    [*delegate release];
+//}
+
 extern inline CGRect CGRectResizeToCGSize(CGRect rect, CGSize size) {
     CGRect newrect = rect;
     newrect.size = size;
