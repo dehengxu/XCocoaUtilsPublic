@@ -182,6 +182,10 @@ static NSDateFormatter *formatter = nil;
 	return date;
 }
 
+
+/**
+ Reference: http://www.w3.org/QA/Tips/iso-date
+ */
 - (NSDate *)dateWithFormatString:(NSString *)formatString
 {
     if (dateformatters == nil) {

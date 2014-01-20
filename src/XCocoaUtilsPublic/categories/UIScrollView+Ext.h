@@ -13,4 +13,6 @@
 @property (nonatomic) CGFloat contentWidth;
 @property (nonatomic) CGFloat contentHeight;
 
+- (void)autoUpdateInset;
+
 @end
