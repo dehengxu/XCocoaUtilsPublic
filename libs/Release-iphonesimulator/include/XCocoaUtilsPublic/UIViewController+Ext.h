@@ -27,8 +27,6 @@ while(0)
 + (NSString *)xibFileNameDefaultSuffix;
 + (id)viewControllerWithNibName:(NSString *)nibName bundle:(NSBundle *)nibBundleOrNil;
 
-- (BOOL)isSupportInteractivePopGestureRecognizer;
-
 @end
 
 #endif

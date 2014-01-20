@@ -37,5 +37,10 @@
     return [rtn autorelease];
 }
 
+- (BOOL)isSupportInteractivePopGestureRecognizer
+{
+    return ([self isKindOfClass:[UINavigationController class]] && [self respondsToSelector:@selector(interactivePopGestureRecognizer)]);
+}
+
 @end
 #endif

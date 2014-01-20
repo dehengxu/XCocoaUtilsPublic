@@ -99,7 +99,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		A214159B180CDF790067EBE8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
@@ -165,6 +165,7 @@
 		74419E4A18448DD000E28DD4 /* NameValuePaire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameValuePaire.h; sourceTree = "<group>"; };
 		74419E4B18448DD000E28DD4 /* NameValuePaire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameValuePaire.m; sourceTree = "<group>"; };
 		74419E4C18448DD000E28DD4 /* XCocoaUtilsPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublic.h; sourceTree = "<group>"; };
+		74875C70186C3181000A0331 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A214159D180CDF790067EBE8 /* libXCocoaUtilsPublic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXCocoaUtilsPublic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A21415A0180CDF790067EBE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A21415A4180CDF790067EBE8 /* XCocoaUtilsPublic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCocoaUtilsPublic-Prefix.pch"; sourceTree = "<group>"; };
@@ -456,6 +457,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = A2141594180CDF790067EBE8;
 			productRefGroup = A214159E180CDF790067EBE8 /* Products */;
@@ -595,6 +597,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A21415E6180CE0790067EBE8 /* en */,
+				74875C70186C3181000A0331 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -666,6 +670,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -673,6 +678,7 @@
 		A21415C1180CDF790067EBE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/XCocoaUtilsPublic.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -692,6 +698,7 @@
 		A21415C2180CDF790067EBE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/XCocoaUtilsPublic.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

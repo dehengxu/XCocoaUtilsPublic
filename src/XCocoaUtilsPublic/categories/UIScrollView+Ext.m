@@ -30,4 +30,13 @@
     self.contentSize = CGSizeMake(self.contentSize.width, contentHeight);
 }
 
+- (void)autoUpdateInset
+{
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 7.0) {
+        self.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    }else {
+        self.contentInset = UIEdgeInsetsMake(44, 0, 0, 0);
+    }
+}
+
 @end
