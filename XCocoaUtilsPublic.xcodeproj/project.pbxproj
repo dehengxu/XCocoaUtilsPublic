@@ -448,7 +448,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = "";
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Deheng.Xu;
 			};
 			buildConfigurationList = A2141598180CDF790067EBE8 /* Build configuration list for PBXProject "XCocoaUtilsPublic" */;
@@ -678,7 +678,6 @@
 		A21415C1180CDF790067EBE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/XCocoaUtilsPublic.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -698,7 +697,6 @@
 		A21415C2180CDF790067EBE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/XCocoaUtilsPublic.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
