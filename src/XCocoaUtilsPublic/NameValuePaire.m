@@ -8,6 +8,8 @@
 
 #import "NameValuePaire.h"
 #import "FunctionSet.h"
+#import "NSString+Ext.h"
+#import "NSObject+Ext.h"
 
 @implementation NameValuePaire
 @synthesize name;
