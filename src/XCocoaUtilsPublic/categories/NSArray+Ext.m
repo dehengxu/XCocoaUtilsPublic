@@ -76,6 +76,20 @@
     return rtn;
 }
 
+- (BOOL)containsStringObject:(NSString *)anObject
+{
+    for (NSString *ele in self) {
+        if ([ele isKindOfClass:[NSString class]]) {
+            if ([ele isEqualToString:anObject]) {
+                return YES;
+            }
+        }else {
+            continue;
+        }
+    }
+    return NO;
+}
+
 @end
 
 
