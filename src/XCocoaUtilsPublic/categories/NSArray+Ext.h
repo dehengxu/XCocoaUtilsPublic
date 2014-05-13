@@ -17,6 +17,7 @@
 - (id)objectBefore:(id)anObject;
 - (id)mutableArray;
 - (NSArray *)getObjectsValueForKey:(NSString *)key;
+- (BOOL)containsStringObject:(NSString *)anObject;
 
 @end
 
