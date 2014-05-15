@@ -200,7 +200,7 @@
 \
 static classname *shared##classname = nil; \
 \
-+ (classname *)shared##classname \
++ (classname *)sharedInstance \
 { \
 @synchronized(self) \
 { \
@@ -212,6 +212,10 @@ shared##classname = [[self alloc] init]; \
 \
 return shared##classname; \
 } \
+\
++ (void)purgeSharedInstance{\
+    \
+}\
 \
 + (id)allocWithZone:(NSZone *)zone \
 { \
@@ -250,6 +254,13 @@ return NSUIntegerMax; \
 { \
 return self; \
 }
+#endif
+
+#ifndef SYNTHESIZE_SINGLETON_FOR_HEADER
+
+#define SYNTHESIZE_SINGLETON_FOR_HEADER \
++ (id)sharedInstance; \
++ (void)purgeSharedInstance;
 #endif
 
 #pragma mark - function
