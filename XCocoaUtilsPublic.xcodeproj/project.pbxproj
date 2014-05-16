@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41BBDE0C192620AA00A05DC9 /* NSObject+PropertyToURLParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41BBDE0D192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
+		41BBDE0E192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
 		74419E4D18448DD000E28DD4 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1318448DD000E28DD4 /* RegexKitLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74419E5018448DD000E28DD4 /* BlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1518448DD000E28DD4 /* BlockAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74419E5118448DD000E28DD4 /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1618448DD000E28DD4 /* BlockAlertView.m */; };
@@ -109,6 +112,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertyToURLParams.h"; sourceTree = "<group>"; };
+		41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyToURLParams.m"; sourceTree = "<group>"; };
 		74419E1318448DD000E28DD4 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		74419E1418448DD000E28DD4 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		74419E1518448DD000E28DD4 /* BlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockAlertView.h; sourceTree = "<group>"; };
@@ -246,6 +251,8 @@
 				74419E2218448DD000E28DD4 /* NSObject+Debug.m */,
 				74419E2318448DD000E28DD4 /* NSObject+Ext.h */,
 				74419E2418448DD000E28DD4 /* NSObject+Ext.m */,
+				41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */,
+				41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */,
 				74419E2518448DD000E28DD4 /* NSString+Ext.h */,
 				74419E2618448DD000E28DD4 /* NSString+Ext.m */,
 				74419E2718448DD000E28DD4 /* NSTimer+Ext.h */,
@@ -373,6 +380,7 @@
 				74419E7818448DD100E28DD4 /* UIColor+Ext.h in Headers */,
 				74419E6C18448DD100E28DD4 /* NSURL+Ext.h in Headers */,
 				74419E6318448DD100E28DD4 /* NSObject+Ext.h in Headers */,
+				41BBDE0C192620AA00A05DC9 /* NSObject+PropertyToURLParams.h in Headers */,
 				74419E5A18448DD000E28DD4 /* NSData+String.h in Headers */,
 				74419E8D18448DD100E28DD4 /* DebugUtility.h in Headers */,
 				74419E5718448DD000E28DD4 /* NSData+Base64.h in Headers */,
@@ -529,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74419E8E18448DD100E28DD4 /* DebugUtility.m in Sources */,
+				41BBDE0D192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */,
 				74419E9D18448DD100E28DD4 /* NameValuePaire.m in Sources */,
 				74419E5518448DD000E28DD4 /* NSArray+Ext.m in Sources */,
 				74419E7618448DD100E28DD4 /* UIButton+Ext.m in Sources */,
@@ -562,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74419E8F18448DD100E28DD4 /* DebugUtility.m in Sources */,
+				41BBDE0E192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */,
 				74419E9E18448DD100E28DD4 /* NameValuePaire.m in Sources */,
 				74419E5618448DD000E28DD4 /* NSArray+Ext.m in Sources */,
 				74419E7718448DD100E28DD4 /* UIButton+Ext.m in Sources */,
