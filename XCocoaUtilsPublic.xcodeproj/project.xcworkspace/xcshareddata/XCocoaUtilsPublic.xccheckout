@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6DB9423F-6FC9-49AC-8A9F-9EEFAE5A98F8</string>
+	<string>04C08917-7C02-43B9-B40A-59DC8386394E</string>
 	<key>IDESourceControlProjectName</key>
 	<string>XCocoaUtilsPublic</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>B532F0C4-4E48-4A59-AF51-0AE30C3CBA62</key>
-		<string>ssh://bitbucket.org/xudeheng/xcocoautilspublic.git</string>
+		<key>2D6DD123-C2E6-469D-82D1-83472595F430</key>
+		<string>ssh://github.com/xudeheng/XCocoaUtilsPublic.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>XCocoaUtilsPublic.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>B532F0C4-4E48-4A59-AF51-0AE30C3CBA62</key>
+		<key>2D6DD123-C2E6-469D-82D1-83472595F430</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://bitbucket.org/xudeheng/xcocoautilspublic.git</string>
+	<string>ssh://github.com/xudeheng/XCocoaUtilsPublic.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B532F0C4-4E48-4A59-AF51-0AE30C3CBA62</string>
+	<string>2D6DD123-C2E6-469D-82D1-83472595F430</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B532F0C4-4E48-4A59-AF51-0AE30C3CBA62</string>
+			<string>2D6DD123-C2E6-469D-82D1-83472595F430</string>
 			<key>IDESourceControlWCCName</key>
 			<string>XCocoaUtilsPublic</string>
 		</dict>
