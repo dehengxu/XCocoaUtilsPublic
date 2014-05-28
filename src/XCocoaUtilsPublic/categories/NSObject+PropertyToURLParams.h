@@ -27,11 +27,4 @@
  */
 - (NSString *)URLParamsExcludeProperties:(NSArray*)properties;
 
-/**
- Look up all properties' value.
- 
- @return properties value string.
- */
-- (NSString *)lookupDescription;
-
 @end

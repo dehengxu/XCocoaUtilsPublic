@@ -65,4 +65,27 @@
     }
 }
 
+- (NSString *)lookupDescription
+{
+    NSMutableString *rtn = [NSMutableString stringWithFormat:@""];
+    unsigned int propertyCount = 0;
+    objc_property_t *property_list = class_copyPropertyList([self class], &propertyCount);
+    if (propertyCount) {
+        for (unsigned int c = 0; c < propertyCount; c++) {
+            //get name
+            const char *name = property_getName(property_list[c]);
+            if (c > 0) {
+                [rtn appendFormat:@","];
+            }else {
+                [rtn appendFormat:@"%@\\@%u [", [self classForCoder], (NSUInteger)self];
+            }
+            
+            [rtn appendFormat:@"%s=%@", name, [self valueForKeyPath:[NSString stringWithFormat:@"%s", name]]];
+        }
+    }
+    [rtn appendFormat:@"]"];
+    
+    return [NSString stringWithString:rtn];
+}
+
 @end
