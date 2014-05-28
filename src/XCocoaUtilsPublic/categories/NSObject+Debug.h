@@ -14,4 +14,11 @@
 
 - (id)performSelector:(SEL)aSelector withObjects:(NSArray *)objects;
 
+/**
+ Look up all properties' value.
+ 
+ @return properties value string.
+ */
+- (NSString *)lookupDescription;
+
 @end
