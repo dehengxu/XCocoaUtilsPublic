@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "XCocoaUtilsPublic"
-  s.version      = "0.1"
+  s.version      = "0.3"
   s.summary      = "Utils for iOS development"
 
   s.description  = <<-DESC
@@ -52,11 +52,11 @@ Pod::Spec.new do |s|
   #  Specify a social_media_url where others can refer to, for example a twitter
   #  profile URL.
   #
-  
-  s.author             = { "CyberLion" => "dehengxu@outlook.com" }
-  # Or just: s.author    = "CyberLion"
-  # s.authors            = { "CyberLion" => "dehengxu@outlook.com" }
-  # s.social_media_url   = "http://twitter.com/CyberLion"
+
+  s.author             = { "DehengXu" => "dehengxu@outlook.com" }
+  # Or just: s.author    = "DehengXu"
+  # s.authors            = { "DehengXu" => "dehengxu@outlook.com" }
+  # s.social_media_url   = "http://twitter.com/dehengxu"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "src", "src/**/*.{h,m}"
-  
+
   # Remove file from link list.
   s.exclude_files = "src/**/RegexKitLite.{h,m}"
 
@@ -115,7 +115,7 @@ Pod::Spec.new do |s|
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  
+
   s.requires_arc = false
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "RegexKitLite"
