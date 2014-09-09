@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24B5A12619BEF7E9009B474C /* FunctionSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B5A12419BEF7E9009B474C /* FunctionSet.h */; };
+		24B5A12719BEF7E9009B474C /* FunctionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* FunctionSet.m */; };
+		24B5A12819BEF7E9009B474C /* FunctionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* FunctionSet.m */; };
 		41BBDE0C192620AA00A05DC9 /* NSObject+PropertyToURLParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41BBDE0D192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
 		41BBDE0E192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
@@ -84,9 +87,6 @@
 		74419E9618448DD100E28DD4 /* FileIOHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4618448DD000E28DD4 /* FileIOHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74419E9718448DD100E28DD4 /* FileIOHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4718448DD000E28DD4 /* FileIOHelper.m */; };
 		74419E9818448DD100E28DD4 /* FileIOHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4718448DD000E28DD4 /* FileIOHelper.m */; };
-		74419E9918448DD100E28DD4 /* FunctionSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4818448DD000E28DD4 /* FunctionSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74419E9A18448DD100E28DD4 /* FunctionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4918448DD000E28DD4 /* FunctionSet.m */; };
-		74419E9B18448DD100E28DD4 /* FunctionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4918448DD000E28DD4 /* FunctionSet.m */; };
 		74419E9C18448DD100E28DD4 /* NameValuePaire.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4A18448DD000E28DD4 /* NameValuePaire.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74419E9D18448DD100E28DD4 /* NameValuePaire.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4B18448DD000E28DD4 /* NameValuePaire.m */; };
 		74419E9E18448DD100E28DD4 /* NameValuePaire.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4B18448DD000E28DD4 /* NameValuePaire.m */; };
@@ -112,6 +112,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		24B5A12419BEF7E9009B474C /* FunctionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionSet.h; sourceTree = "<group>"; };
+		24B5A12519BEF7E9009B474C /* FunctionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionSet.m; sourceTree = "<group>"; };
 		41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertyToURLParams.h"; sourceTree = "<group>"; };
 		41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyToURLParams.m"; sourceTree = "<group>"; };
 		74419E1318448DD000E28DD4 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
@@ -165,8 +167,6 @@
 		74419E4518448DD000E28DD4 /* DefaultSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultSettings.m; sourceTree = "<group>"; };
 		74419E4618448DD000E28DD4 /* FileIOHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileIOHelper.h; sourceTree = "<group>"; };
 		74419E4718448DD000E28DD4 /* FileIOHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileIOHelper.m; sourceTree = "<group>"; };
-		74419E4818448DD000E28DD4 /* FunctionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionSet.h; sourceTree = "<group>"; };
-		74419E4918448DD000E28DD4 /* FunctionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionSet.m; sourceTree = "<group>"; };
 		74419E4A18448DD000E28DD4 /* NameValuePaire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameValuePaire.h; sourceTree = "<group>"; };
 		74419E4B18448DD000E28DD4 /* NameValuePaire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameValuePaire.m; sourceTree = "<group>"; };
 		74419E4C18448DD000E28DD4 /* XCocoaUtilsPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublic.h; sourceTree = "<group>"; };
@@ -211,14 +211,14 @@
 				74419E1218448DD000E28DD4 /* 3rdParty */,
 				74419E1518448DD000E28DD4 /* BlockAlertView.h */,
 				74419E1618448DD000E28DD4 /* BlockAlertView.m */,
+				24B5A12419BEF7E9009B474C /* FunctionSet.h */,
+				24B5A12519BEF7E9009B474C /* FunctionSet.m */,
 				74419E1718448DD000E28DD4 /* categories */,
 				74419E3F18448DD000E28DD4 /* debug */,
 				74419E4418448DD000E28DD4 /* DefaultSettings.h */,
 				74419E4518448DD000E28DD4 /* DefaultSettings.m */,
 				74419E4618448DD000E28DD4 /* FileIOHelper.h */,
 				74419E4718448DD000E28DD4 /* FileIOHelper.m */,
-				74419E4818448DD000E28DD4 /* FunctionSet.h */,
-				74419E4918448DD000E28DD4 /* FunctionSet.m */,
 				74419E4A18448DD000E28DD4 /* NameValuePaire.h */,
 				74419E4B18448DD000E28DD4 /* NameValuePaire.m */,
 				74419E4C18448DD000E28DD4 /* XCocoaUtilsPublic.h */,
@@ -384,6 +384,7 @@
 				74419E5A18448DD000E28DD4 /* NSData+String.h in Headers */,
 				74419E8D18448DD100E28DD4 /* DebugUtility.h in Headers */,
 				74419E5718448DD000E28DD4 /* NSData+Base64.h in Headers */,
+				24B5A12619BEF7E9009B474C /* FunctionSet.h in Headers */,
 				74419E9618448DD100E28DD4 /* FileIOHelper.h in Headers */,
 				74419E9318448DD100E28DD4 /* DefaultSettings.h in Headers */,
 				74419E9C18448DD100E28DD4 /* NameValuePaire.h in Headers */,
@@ -393,7 +394,6 @@
 				74419E6618448DD100E28DD4 /* NSString+Ext.h in Headers */,
 				74419E7518448DD100E28DD4 /* UIButton+Ext.h in Headers */,
 				74419E9018448DD100E28DD4 /* NSURL+Test.h in Headers */,
-				74419E9918448DD100E28DD4 /* FunctionSet.h in Headers */,
 				74419E5318448DD000E28DD4 /* extensions.h in Headers */,
 				74419E8118448DD100E28DD4 /* UIScreen+Ext.h in Headers */,
 				74419E8718448DD100E28DD4 /* UIView+Ext.h in Headers */,
@@ -539,6 +539,7 @@
 				74419E8E18448DD100E28DD4 /* DebugUtility.m in Sources */,
 				41BBDE0D192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */,
 				74419E9D18448DD100E28DD4 /* NameValuePaire.m in Sources */,
+				24B5A12719BEF7E9009B474C /* FunctionSet.m in Sources */,
 				74419E5518448DD000E28DD4 /* NSArray+Ext.m in Sources */,
 				74419E7618448DD100E28DD4 /* UIButton+Ext.m in Sources */,
 				74419E7018448DD100E28DD4 /* SKProduct+Ext.m in Sources */,
@@ -559,7 +560,6 @@
 				74419E9418448DD100E28DD4 /* DefaultSettings.m in Sources */,
 				74419E8818448DD100E28DD4 /* UIView+Ext.m in Sources */,
 				74419E8B18448DD100E28DD4 /* UIViewController+Ext.m in Sources */,
-				74419E9A18448DD100E28DD4 /* FunctionSet.m in Sources */,
 				74419E8218448DD100E28DD4 /* UIScreen+Ext.m in Sources */,
 				74419E7F18448DD100E28DD4 /* UIImage+Ext.m in Sources */,
 				74419E5118448DD000E28DD4 /* BlockAlertView.m in Sources */,
@@ -573,6 +573,7 @@
 				74419E8F18448DD100E28DD4 /* DebugUtility.m in Sources */,
 				41BBDE0E192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */,
 				74419E9E18448DD100E28DD4 /* NameValuePaire.m in Sources */,
+				24B5A12819BEF7E9009B474C /* FunctionSet.m in Sources */,
 				74419E5618448DD000E28DD4 /* NSArray+Ext.m in Sources */,
 				74419E7718448DD100E28DD4 /* UIButton+Ext.m in Sources */,
 				74419E7118448DD100E28DD4 /* SKProduct+Ext.m in Sources */,
@@ -593,7 +594,6 @@
 				74419E9518448DD100E28DD4 /* DefaultSettings.m in Sources */,
 				74419E8918448DD100E28DD4 /* UIView+Ext.m in Sources */,
 				74419E8C18448DD100E28DD4 /* UIViewController+Ext.m in Sources */,
-				74419E9B18448DD100E28DD4 /* FunctionSet.m in Sources */,
 				74419E8318448DD100E28DD4 /* UIScreen+Ext.m in Sources */,
 				74419E8018448DD100E28DD4 /* UIImage+Ext.m in Sources */,
 				74419E5218448DD000E28DD4 /* BlockAlertView.m in Sources */,
