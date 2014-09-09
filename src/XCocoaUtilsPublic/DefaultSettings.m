@@ -35,7 +35,9 @@ static DefaultSettings *__shared_instance = nil;
 
 - (void)dealloc
 {
-//    [super dealloc];
+#if ARC_DISABLED
+    [super dealloc];
+#endif
 }
 
 - (id)loadSettingValueForKey:(NSString *)theKey
