@@ -29,7 +29,7 @@ extern inline const char *CStringFromNSString(NSString *string)
 	unsigned char result[CC_MD5_DIGEST_LENGTH] = {
 		0,
 	};
-	CC_MD5(cStr, strlen(cStr), (unsigned char *)result);
+	CC_MD5(cStr, (CC_LONG)strlen(cStr), result);
 	
 	return [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
 			result[0], result[1], result[2], result[3],
