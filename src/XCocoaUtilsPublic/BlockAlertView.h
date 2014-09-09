@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void(^AlertCancelBlock)(void);
-typedef void(^AlertOtherBlock)(int index);
+typedef void(^AlertOtherBlock)(NSInteger index);
 
 @interface BlockAlertView : UIAlertView<UIAlertViewDelegate>
 @property (nonatomic, copy) void(^cancelBlock)(void);
