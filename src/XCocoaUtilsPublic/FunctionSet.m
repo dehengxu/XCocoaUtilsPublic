@@ -149,7 +149,7 @@ char * hex2dec(const char * source)
     /* log(16) = 1.204 */
     const double length_rate = 1.3;
     
-    int hex_length = strlen(source);
+    unsigned long hex_length = strlen(source);
     int dec_length = hex_length * length_rate + 1;
     
     /* Result goes here. */
