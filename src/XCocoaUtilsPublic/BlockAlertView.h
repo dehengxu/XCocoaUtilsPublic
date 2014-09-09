@@ -13,7 +13,7 @@ typedef void(^AlertOtherBlock)(int index);
 
 @interface BlockAlertView : UIAlertView<UIAlertViewDelegate>
 @property (nonatomic, copy) void(^cancelBlock)(void);
-@property (nonatomic, copy) void(^otherBlock)(int index);
+@property (nonatomic, copy) void(^otherBlock)(NSInteger index);
 
 + (id)showAlertViewWithTitle:(NSString *)title message:(NSString *)message cancelBlock:(AlertCancelBlock)cancelBlock otherBlock:(AlertOtherBlock)otherBlock cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION;
 
