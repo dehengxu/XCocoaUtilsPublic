@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonHMAC.h>
 
-extern inline NSString* NSStringFromBool(BOOL bValue);
+extern NSString* NSStringFromBool(BOOL bValue);
 
-extern inline const char *CStringFromNSString(NSString *string);
+extern const char *CStringFromNSString(NSString *string);
 
 @interface NSString (Ext)
 

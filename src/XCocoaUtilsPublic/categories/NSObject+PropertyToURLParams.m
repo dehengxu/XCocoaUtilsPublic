@@ -7,6 +7,7 @@
 //
 #import <objc/runtime.h>
 #import "NSObject+PropertyToURLParams.h"
+#import "NSArray+Ext.h"
 
 @implementation NSObject (PropertyToURLParams)
 
@@ -52,7 +53,7 @@
             if (c > 0) {
                 [rtn appendFormat:@","];
             }else {
-                [rtn appendFormat:@"%@\@%llu [", [self classForCoder], (NSUInteger)self];
+                [rtn appendFormat:@"%@ \\ @%lu [", [self classForCoder], (unsigned long)self];
             }
             
             [rtn appendFormat:@"%s=%@", name, [self valueForKeyPath:[NSString stringWithFormat:@"%s", name]]];
