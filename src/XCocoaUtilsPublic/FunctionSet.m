@@ -169,7 +169,7 @@ char * hex2dec(const char * source)
     for (hex_index = 0; hex_index < hex_length; hex_index++)
     {
         /* Convert from right to left. */
-        int hex_pos = hex_length - 1 - hex_index;
+        unsigned long hex_pos = hex_length - 1 - hex_index;
         char hex_curr_value = source[hex_pos];
         int dec_curr_value, dec_index, curr_index;
         
