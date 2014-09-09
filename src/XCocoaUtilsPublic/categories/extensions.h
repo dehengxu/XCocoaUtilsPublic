@@ -25,5 +25,6 @@
 #import "UIScrollView+Ext.h"
 #import "UIViewController+Ext.h"
 #import "NSURL+Ext.h"
+#import "NSObject+PropertyToURLParams.h"
 
 #endif
