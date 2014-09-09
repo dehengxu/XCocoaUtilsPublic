@@ -77,7 +77,7 @@
             if (c > 0) {
                 [rtn appendFormat:@","];
             }else {
-                [rtn appendFormat:@"%@\\@%u [", [self classForCoder], (NSUInteger)self];
+                [rtn appendFormat:@"%@\\@%lu [", [self classForCoder], (unsigned long)self];
             }
             
             [rtn appendFormat:@"%s=%@", name, [self valueForKeyPath:[NSString stringWithFormat:@"%s", name]]];
