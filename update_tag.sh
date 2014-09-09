@@ -7,7 +7,7 @@ then
   exit 0
 fi
 
-echo "Tag $tagname"
+echo "Generate tag :$tagname"
 
 git add --all
 git commit -m "Update commit"
