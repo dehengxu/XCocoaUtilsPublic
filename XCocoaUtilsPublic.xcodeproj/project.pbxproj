@@ -10,6 +10,7 @@
 		41BBDE0C192620AA00A05DC9 /* NSObject+PropertyToURLParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41BBDE0D192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
 		41BBDE0E192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
+		7434EA1D19C5BE13001E6989 /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = 7434EA1C19C5BE13001E6989 /* XCocoaUtilsPublic.h */; };
 		74419E4D18448DD000E28DD4 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1318448DD000E28DD4 /* RegexKitLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74419E5018448DD000E28DD4 /* BlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1518448DD000E28DD4 /* BlockAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74419E5118448DD000E28DD4 /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1618448DD000E28DD4 /* BlockAlertView.m */; };
@@ -90,7 +91,6 @@
 		74419E9C18448DD100E28DD4 /* NameValuePaire.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4A18448DD000E28DD4 /* NameValuePaire.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74419E9D18448DD100E28DD4 /* NameValuePaire.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4B18448DD000E28DD4 /* NameValuePaire.m */; };
 		74419E9E18448DD100E28DD4 /* NameValuePaire.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4B18448DD000E28DD4 /* NameValuePaire.m */; };
-		74419E9F18448DD100E28DD4 /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4C18448DD000E28DD4 /* XCocoaUtilsPublic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A21415A1180CDF790067EBE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415A0180CDF790067EBE8 /* Foundation.framework */; };
 		A21415E7180CE0790067EBE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A21415E5180CE0790067EBE8 /* InfoPlist.strings */; };
 		A21416BD180CF6950067EBE8 /* XCocoaUtilsPublicFW.h in Headers */ = {isa = PBXBuildFile; fileRef = A21416B8180CF5C00067EBE8 /* XCocoaUtilsPublicFW.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -114,6 +114,7 @@
 /* Begin PBXFileReference section */
 		41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertyToURLParams.h"; sourceTree = "<group>"; };
 		41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyToURLParams.m"; sourceTree = "<group>"; };
+		7434EA1C19C5BE13001E6989 /* XCocoaUtilsPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublic.h; sourceTree = "<group>"; };
 		74419E1318448DD000E28DD4 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		74419E1418448DD000E28DD4 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		74419E1518448DD000E28DD4 /* BlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockAlertView.h; sourceTree = "<group>"; };
@@ -169,7 +170,6 @@
 		74419E4918448DD000E28DD4 /* FunctionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionSet.m; sourceTree = "<group>"; };
 		74419E4A18448DD000E28DD4 /* NameValuePaire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameValuePaire.h; sourceTree = "<group>"; };
 		74419E4B18448DD000E28DD4 /* NameValuePaire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameValuePaire.m; sourceTree = "<group>"; };
-		74419E4C18448DD000E28DD4 /* XCocoaUtilsPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublic.h; sourceTree = "<group>"; };
 		74875C70186C3181000A0331 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A214159D180CDF790067EBE8 /* libXCocoaUtilsPublic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXCocoaUtilsPublic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A21415A0180CDF790067EBE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -221,7 +221,7 @@
 				74419E4918448DD000E28DD4 /* FunctionSet.m */,
 				74419E4A18448DD000E28DD4 /* NameValuePaire.h */,
 				74419E4B18448DD000E28DD4 /* NameValuePaire.m */,
-				74419E4C18448DD000E28DD4 /* XCocoaUtilsPublic.h */,
+				7434EA1C19C5BE13001E6989 /* XCocoaUtilsPublic.h */,
 			);
 			path = XCocoaUtilsPublic;
 			sourceTree = "<group>";
@@ -396,8 +396,8 @@
 				74419E9918448DD100E28DD4 /* FunctionSet.h in Headers */,
 				74419E5318448DD000E28DD4 /* extensions.h in Headers */,
 				74419E8118448DD100E28DD4 /* UIScreen+Ext.h in Headers */,
+				7434EA1D19C5BE13001E6989 /* XCocoaUtilsPublic.h in Headers */,
 				74419E8718448DD100E28DD4 /* UIView+Ext.h in Headers */,
-				74419E9F18448DD100E28DD4 /* XCocoaUtilsPublic.h in Headers */,
 				74419E5018448DD000E28DD4 /* BlockAlertView.h in Headers */,
 				74419E8A18448DD100E28DD4 /* UIViewController+Ext.h in Headers */,
 				74419E6F18448DD100E28DD4 /* SKProduct+Ext.h in Headers */,
