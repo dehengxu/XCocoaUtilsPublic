@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface UIView (Ext)
 
 @property (nonatomic) CGPoint origin;
@@ -18,6 +19,16 @@
 @property (nonatomic) CGFloat width;
 @property (nonatomic) CGFloat height;
 
+@property (nonatomic,readonly) CGFloat right;
+@property (nonatomic,readonly) CGFloat bottom;
+
+@property (nonatomic) CGFloat centerX;
+@property (nonatomic) CGFloat centerY;
+
 - (void)clearBackgroundColor;
+
+- (UIBezierPath *)bezierPathWithCorner:(CGFloat)radius;
+- (void)drawColorBorder:(UIColor *)color path:(UIBezierPath *)path borderWidth:(CGFloat)width cornerRadius:(CGFloat)radius inContext:(CGContextRef)ctx;
+- (void)fillInnerWithColor:(UIColor *)color path:(UIBezierPath *)path inContext:(CGContextRef)ctx;
 
 @end
