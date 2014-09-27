@@ -24,7 +24,7 @@
 
 - (CGSize)size
 {
-    return self.frame.size;
+    return self.bounds.size;
 }
 
 - (void)setSize:(CGSize)size
@@ -85,6 +85,64 @@
 - (void)clearBackgroundColor
 {
     [self setBackgroundColor:[UIColor clearColor]];
+}
+
+- (UIBezierPath *)bezierPathWithCorner:(CGFloat)radius
+{
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:radius];
+    return path;
+}
+
+- (void)drawColorBorder:(UIColor *)borderColor path:(UIBezierPath *)path borderWidth:(CGFloat)width cornerRadius:(CGFloat)radius inContext:(CGContextRef)ctx
+{
+    [path addClip];
+    
+    if (borderColor) {
+        CGContextSetLineWidth(ctx, width);
+        CGContextSetStrokeColorWithColor(ctx, borderColor.CGColor);
+        CGContextAddPath(ctx, [path CGPath]);
+        CGContextDrawPath(ctx, kCGPathStroke);
+    }
+}
+
+- (void)fillInnerWithColor:(UIColor *)color path:(UIBezierPath *)path inContext:(CGContextRef)ctx
+{
+    CGContextSetFillColorWithColor(ctx, [color CGColor]);
+    CGContextFillRect(ctx, self.bounds);
+}
+
+-(CGFloat)right
+{
+    return self.x + self.width;
+}
+
+-(CGFloat)bottom
+{
+    return self.y + self.height;
+}
+
+- (CGFloat)centerX
+{
+    return self.center.x;
+}
+
+- (void)setCenterX:(CGFloat)centerX
+{
+    CGPoint p = self.center;
+    p.x = centerX;
+    self.center = p;
+}
+
+- (CGFloat)centerY
+{
+    return self.center.y;
+}
+
+- (void)setCenterY:(CGFloat)centerY
+{
+    CGPoint p = self.center;
+    p.y = centerY;
+    self.center = p;
 }
 
 @end
