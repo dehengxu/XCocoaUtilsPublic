@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   s.source_files  = "src/XCocoaUtilsPublic/**/*.{h,m}"
 
   # Remove file from link list.
-  s.exclude_files = "src/**/RegexKitLite.{m}"
+  # s.exclude_files = "src/**/RegexKitLite.{m}"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -118,6 +118,6 @@ Pod::Spec.new do |s|
 
   # s.requires_arc = false
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "RegexKitLite"
+  s.dependency "RegexKitLite"
 
 end
