@@ -94,7 +94,7 @@ Pod::Spec.new do |s|
   s.source_files  = "src/XCocoaUtilsPublic/**/*.{h,m}"
 
   # Remove file from link list.
-  # s.exclude_files = "src/**/RegexKitLite.{m}"
+  s.exclude_files = "src/**/RegexKitLite.{m}"
 
   # s.public_header_files = "Classes/**/*.h"
 
