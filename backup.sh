@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 git add --all
-git commit -m "Update commit"
-git push local --all
+git commit -m "update"
+git push local master && git push origin master
