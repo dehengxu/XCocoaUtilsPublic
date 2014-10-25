@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "XCocoaUtilsPublic"
+
   s.version      = "0.3"
   s.summary      = "Utils for iOS development"
 
@@ -29,6 +30,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/xudeheng/XCocoaUtilsPublic"
+  # s.homepage     = "git@bitbucket.org:xudeheng/XCocoaUtilsPublic"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -98,6 +100,12 @@ Pod::Spec.new do |s|
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #
+  #  A list of resources included with the Pod. These are copied into the
+  #  target bundle with a build phase script. Anything else will be cleaned.
+  #  You can preserve files from being cleaned, please don't preserve
+  #  non-essential files like tests, examples and documentation.
+  #
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
@@ -106,6 +114,10 @@ Pod::Spec.new do |s|
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #
+  #  Link your library with frameworks, or libraries. Libraries do not include
+  #  the lib prefix of their name.
+  #
 
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
