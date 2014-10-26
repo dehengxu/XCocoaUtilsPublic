@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://xudeheng@localhost:8080/gitblit/r/XCocoaUtilsPublic.git", :tag => "0.3" }
+  s.source       = { :git => "https://github.com/xudeheng/XCocoaUtilsPublic.git", :tag => "0.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
