@@ -263,6 +263,11 @@ return self; \
 + (void)purgeSharedInstance;
 #endif
 
+#ifndef CheckIfDelegateResponseSelector
+#define CheckIfDelegateResponseSelector(delegate, selector)\
+((delegate) && [(delegate) respondsToSelector:selector])
+#endif
+
 #pragma mark - function
 
 //Used for delegate selector call, auto check delegate value and selector implementation.
