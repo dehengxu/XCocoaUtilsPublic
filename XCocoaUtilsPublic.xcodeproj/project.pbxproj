@@ -13,6 +13,9 @@
 		41BBDE0C192620AA00A05DC9 /* NSObject+PropertyToURLParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41BBDE0D192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
 		41BBDE0E192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
+		741A503919FE8C2B007840FD /* NSLayoutConstraint+Convenient.h in Headers */ = {isa = PBXBuildFile; fileRef = 741A503719FE8C2B007840FD /* NSLayoutConstraint+Convenient.h */; };
+		741A503A19FE8C2B007840FD /* NSLayoutConstraint+Convenient.m in Sources */ = {isa = PBXBuildFile; fileRef = 741A503819FE8C2B007840FD /* NSLayoutConstraint+Convenient.m */; };
+		741A503B19FE8C2B007840FD /* NSLayoutConstraint+Convenient.m in Sources */ = {isa = PBXBuildFile; fileRef = 741A503819FE8C2B007840FD /* NSLayoutConstraint+Convenient.m */; };
 		7434EA1D19C5BE13001E6989 /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = 7434EA1C19C5BE13001E6989 /* XCocoaUtilsPublic.h */; };
 		74419E4D18448DD000E28DD4 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1318448DD000E28DD4 /* RegexKitLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74419E5018448DD000E28DD4 /* BlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1518448DD000E28DD4 /* BlockAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -116,6 +119,8 @@
 		24B5A12519BEF7E9009B474C /* FunctionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionSet.m; sourceTree = "<group>"; };
 		41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertyToURLParams.h"; sourceTree = "<group>"; };
 		41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyToURLParams.m"; sourceTree = "<group>"; };
+		741A503719FE8C2B007840FD /* NSLayoutConstraint+Convenient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+Convenient.h"; sourceTree = "<group>"; };
+		741A503819FE8C2B007840FD /* NSLayoutConstraint+Convenient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+Convenient.m"; sourceTree = "<group>"; };
 		7434EA1C19C5BE13001E6989 /* XCocoaUtilsPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublic.h; sourceTree = "<group>"; };
 		74419E1318448DD000E28DD4 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		74419E1418448DD000E28DD4 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
@@ -247,6 +252,8 @@
 				74419E1E18448DD000E28DD4 /* NSData+String.m */,
 				74419E1F18448DD000E28DD4 /* NSDate+Ext.h */,
 				74419E2018448DD000E28DD4 /* NSDate+Ext.m */,
+				741A503719FE8C2B007840FD /* NSLayoutConstraint+Convenient.h */,
+				741A503819FE8C2B007840FD /* NSLayoutConstraint+Convenient.m */,
 				74419E2118448DD000E28DD4 /* NSObject+Debug.h */,
 				74419E2218448DD000E28DD4 /* NSObject+Debug.m */,
 				74419E2318448DD000E28DD4 /* NSObject+Ext.h */,
@@ -403,6 +410,7 @@
 				74419E6F18448DD100E28DD4 /* SKProduct+Ext.h in Headers */,
 				74419E6018448DD100E28DD4 /* NSObject+Debug.h in Headers */,
 				74419E7218448DD100E28DD4 /* UIAlertView+Ext.h in Headers */,
+				741A503919FE8C2B007840FD /* NSLayoutConstraint+Convenient.h in Headers */,
 				74419E8418448DD100E28DD4 /* UIScrollView+Ext.h in Headers */,
 				74419E7B18448DD100E28DD4 /* UIFont+Ext.h in Headers */,
 			);
@@ -558,6 +566,7 @@
 				74419E9118448DD100E28DD4 /* NSURL+Test.m in Sources */,
 				74419E7318448DD100E28DD4 /* UIAlertView+Ext.m in Sources */,
 				74419E9418448DD100E28DD4 /* DefaultSettings.m in Sources */,
+				741A503A19FE8C2B007840FD /* NSLayoutConstraint+Convenient.m in Sources */,
 				74419E8818448DD100E28DD4 /* UIView+Ext.m in Sources */,
 				74419E8B18448DD100E28DD4 /* UIViewController+Ext.m in Sources */,
 				74419E8218448DD100E28DD4 /* UIScreen+Ext.m in Sources */,
@@ -592,6 +601,7 @@
 				74419E9218448DD100E28DD4 /* NSURL+Test.m in Sources */,
 				74419E7418448DD100E28DD4 /* UIAlertView+Ext.m in Sources */,
 				74419E9518448DD100E28DD4 /* DefaultSettings.m in Sources */,
+				741A503B19FE8C2B007840FD /* NSLayoutConstraint+Convenient.m in Sources */,
 				74419E8918448DD100E28DD4 /* UIView+Ext.m in Sources */,
 				74419E8C18448DD100E28DD4 /* UIViewController+Ext.m in Sources */,
 				74419E8318448DD100E28DD4 /* UIScreen+Ext.m in Sources */,
