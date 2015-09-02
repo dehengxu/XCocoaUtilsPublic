@@ -21,12 +21,10 @@ Pod::Spec.new do |s|
   s.summary      = "Utils for iOS development"
 
   s.description  = <<-DESC
-                   A longer description of XCocoaUtilsPublic in Markdown format.
+                   XCocoaUtilsPublic is a utilities set for Cocoa development.
 
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
+                   * It's a convenient tools set.
+                   * In future I will integrate some osx support in it.
                    DESC
 
   s.homepage     = "https://github.com/xudeheng/XCocoaUtilsPublic"
@@ -58,7 +56,7 @@ Pod::Spec.new do |s|
   s.author             = { "DehengXu" => "dehengxu@outlook.com" }
   # Or just: s.author    = "DehengXu"
   # s.authors            = { "DehengXu" => "dehengxu@outlook.com" }
-  # s.social_media_url   = "http://twitter.com/dehengxu"
+  s.social_media_url   = "http://twitter.com/dehengxu"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -94,7 +92,7 @@ Pod::Spec.new do |s|
   s.source_files  = "src/XCocoaUtilsPublic/**/*.{h,m}"
 
   # Remove file from link list.
-  s.exclude_files = "src/**/RegexKitLite.{m}"
+  s.exclude_files = "src/**/RegexKitLite.{h,m}"
 
   # s.public_header_files = "Classes/**/*.h"
 
