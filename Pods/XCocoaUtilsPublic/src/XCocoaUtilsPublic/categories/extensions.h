@@ -19,7 +19,7 @@
 #import "UIAlertView+Ext.h"
 #import "UIButton+Ext.h"
 #import "UIColor+Ext.h"
-//#import "UIDevice+Ext.h"
+#import "UIDevice+Ext.h"
 #import "UIImage+Ext.h"
 #import "UIView+Ext.h"
 #import "UIScrollView+Ext.h"

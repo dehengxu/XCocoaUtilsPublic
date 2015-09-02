@@ -1,0 +1,13 @@
+PODS:
+  - RegexKitLite (4.0)
+  - XCocoaUtilsPublic (0.3):
+    - RegexKitLite
+
+DEPENDENCIES:
+  - XCocoaUtilsPublic
+
+SPEC CHECKSUMS:
+  RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
+  XCocoaUtilsPublic: 5bc4a4ab839e8cf68c6b8d638ee6a1cc70083a77
+
+COCOAPODS: 0.38.2
