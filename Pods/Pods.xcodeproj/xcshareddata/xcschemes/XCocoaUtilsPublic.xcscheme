@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "49CFCD0335C4D1F75A272570"
+               BlueprintIdentifier = "8B90EF26124C3BB78D5D450D"
                BuildableName = "libXCocoaUtilsPublic.a"
                BlueprintName = "XCocoaUtilsPublic"
                ReferencedContainer = "container:Pods.xcodeproj">

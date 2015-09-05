@@ -273,7 +273,7 @@ return self; \
 //Used for delegate selector call, auto check delegate value and selector implementation.
 //#ifndef CALL_DELEGATE_WITH_ARGS
 //#define CALL_DELEGATE_WITH_ARGS(delegate, selector, args)   CallDelegateWithArgs(&delegate, selector, args)
-extern inline void CallDelegateWithArgs(NSObject **delegate, SEL selector, NSArray *args);
+extern inline BOOL CallDelegateWithArgs(NSObject **delegate, SEL selector, NSArray *args);
 //#endif
 
 extern inline CGRect CGRectResizeToCGSize(CGRect rect, CGSize size);

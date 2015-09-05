@@ -1,1 +1,1 @@
-../../../XCocoaUtilsPublic/src/XCocoaUtilsPublic/categories/UIScreen+Ext.h
+../../../../src/XCocoaUtilsPublic/categories/UIScreen+Ext.h

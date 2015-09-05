@@ -1,1 +1,1 @@
-../../../XCocoaUtilsPublic/src/XCocoaUtilsPublic/categories/UIImage+Ext.h
+../../../../src/XCocoaUtilsPublic/categories/UIImage+Ext.h

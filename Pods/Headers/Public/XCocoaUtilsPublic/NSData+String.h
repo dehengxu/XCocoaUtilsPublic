@@ -1,1 +1,1 @@
-../../../XCocoaUtilsPublic/src/XCocoaUtilsPublic/categories/NSData+String.h
+../../../../src/XCocoaUtilsPublic/categories/NSData+String.h
