@@ -9,7 +9,7 @@
 #import "FunctionSet.h"
 //#import "NSObject+Ext.h"
 
-extern inline void CallDelegateWithArgs(NSObject **delegate, SEL selector, NSArray *args)
+extern inline BOOL CallDelegateWithArgs(NSObject **delegate, SEL selector, NSArray *args)
 {
     if (*delegate && [*delegate respondsToSelector:selector]) {
         NSInvocation *invoc = [NSInvocation invocationWithMethodSignature:[*delegate methodSignatureForSelector:selector]];
@@ -21,7 +21,9 @@ extern inline void CallDelegateWithArgs(NSObject **delegate, SEL selector, NSArr
             starti ++;
         }
         [invoc invoke];
+        return YES;
     }
+    return NO;
 }
 
 // Candidate.

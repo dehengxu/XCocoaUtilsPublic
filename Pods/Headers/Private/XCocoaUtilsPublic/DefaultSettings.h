@@ -1,1 +1,1 @@
-../../../XCocoaUtilsPublic/src/XCocoaUtilsPublic/DefaultSettings.h
+../../../../src/XCocoaUtilsPublic/DefaultSettings.h

@@ -25,6 +25,7 @@
 #import "UIScrollView+Ext.h"
 #import "UIViewController+Ext.h"
 #import "NSURL+Ext.h"
+#import "FLNSOperationTemplate.h"
 
 #import "FunctionSet.h"
 #import "BlockAlertView.h"

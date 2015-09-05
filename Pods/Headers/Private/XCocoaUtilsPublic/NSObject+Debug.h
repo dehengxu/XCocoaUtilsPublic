@@ -1,1 +1,1 @@
-../../../XCocoaUtilsPublic/src/XCocoaUtilsPublic/categories/NSObject+Debug.h
+../../../../src/XCocoaUtilsPublic/categories/NSObject+Debug.h

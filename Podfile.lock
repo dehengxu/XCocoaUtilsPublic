@@ -1,13 +1,17 @@
 PODS:
   - RegexKitLite (4.0)
-  - XCocoaUtilsPublic (0.3):
+  - XCocoaUtilsPublic (0.4):
     - RegexKitLite
 
 DEPENDENCIES:
-  - XCocoaUtilsPublic
+  - XCocoaUtilsPublic (from `./`)
+
+EXTERNAL SOURCES:
+  XCocoaUtilsPublic:
+    :path: "./"
 
 SPEC CHECKSUMS:
   RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
-  XCocoaUtilsPublic: 5bc4a4ab839e8cf68c6b8d638ee6a1cc70083a77
+  XCocoaUtilsPublic: 52bfbb215018a11d01316a2726fbb497fae86d0e
 
 COCOAPODS: 0.38.2
