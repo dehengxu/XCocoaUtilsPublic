@@ -65,6 +65,18 @@
     }
 }
 
+- (void)measureRunningBlock:(void(^)(void))aBlock times:(NSInteger)times
+{
+    NSAssert(aBlock != NULL, @"aBlock must be non-null.");
+
+    NSDate *startDate = [NSDate date];
+    for (int i = 0; i < times; i++) {
+        aBlock();
+    }
+    
+    NSLog(@"Running %lu times, cost time :%f", times, [[NSDate date] timeIntervalSinceDate:startDate]);
+}
+
 - (NSString *)lookupDescription
 {
     NSMutableString *rtn = [NSMutableString stringWithFormat:@""];

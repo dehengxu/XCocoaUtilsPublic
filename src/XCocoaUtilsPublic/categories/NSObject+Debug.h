@@ -14,6 +14,8 @@
 
 - (id)performSelector:(SEL)aSelector withObjects:(NSArray *)objects;
 
+- (void)measureRunningBlock:(void(^)(void))aBlock times:(NSInteger)times;
+
 /**
  Look up all properties' value.
  
