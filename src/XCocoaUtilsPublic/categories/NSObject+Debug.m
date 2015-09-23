@@ -74,7 +74,7 @@
         aBlock();
     }
     NSTimeInterval time = [[NSDate date] timeIntervalSinceDate:startDate];
-    NSLog(@"Running %lu times, cost time :%f", times, time);
+    NSLog(@"Running %lu times, cost time :%f(s)", times, time);
     return time;
 }
 
