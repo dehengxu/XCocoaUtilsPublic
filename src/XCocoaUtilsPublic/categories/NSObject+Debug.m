@@ -65,7 +65,7 @@
     }
 }
 
-- (void)measureRunningBlock:(void(^)(void))aBlock times:(NSInteger)times
+- (NSTimeInterval)measureRunningBlock:(void(^)(void))aBlock times:(NSInteger)times
 {
     NSAssert(aBlock != NULL, @"aBlock must be non-null.");
 
@@ -73,8 +73,9 @@
     for (int i = 0; i < times; i++) {
         aBlock();
     }
-    
-    NSLog(@"Running %lu times, cost time :%f", times, [[NSDate date] timeIntervalSinceDate:startDate]);
+    NSTimeInterval time = [[NSDate date] timeIntervalSinceDate:startDate];
+    NSLog(@"Running %lu times, cost time :%f", times, time);
+    return time;
 }
 
 - (NSString *)lookupDescription
