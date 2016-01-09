@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "XCocoaUtilsPublic"
 
-  s.version      = "0.4"
+  s.version      = "0.4.1"
   s.summary      = "Utils for iOS development"
 
   s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/xudeheng/XCocoaUtilsPublic.git", :tag => "0.4" }
+  s.source       = { :git => "https://github.com/xudeheng/XCocoaUtilsPublic.git", :tag => "0.4.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
