@@ -12,7 +12,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FLNSOperationTemplate : NSOperation
+@interface XOperationTemplate : NSOperation
 {
 
 @protected
