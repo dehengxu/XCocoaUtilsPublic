@@ -6,13 +6,13 @@
 //  Copyright (c) 2013年 Nicholas.Xu. All rights reserved.
 //
 
-#import "FLNSOperationTemplate.h"
+#import "XOperationTemplate.h"
 
-@interface FLNSOperationTemplate ()
+@interface XOperationTemplate ()
 
 @end
 
-@implementation FLNSOperationTemplate
+@implementation XOperationTemplate
 
 - (id)init
 {
