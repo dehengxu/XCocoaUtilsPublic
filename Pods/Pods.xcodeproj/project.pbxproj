@@ -43,7 +43,7 @@
 		6BAE983A3E91E3F6744188DA613D1184 /* DebugUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6E96742A94C27B6DCA42ED60CFEE00 /* DebugUtility.h */; };
 		6E33E088FC6CFA90466D8D26C88C14EE /* NSData+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 355A803545DA7A944622D3CF98003EC3 /* NSData+String.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		716C3FE849875BFD557946B8FD10CB3E /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = FA44F2100E46291F89B540D57C8A6B65 /* XCocoaUtilsPublic.h */; };
-		72FB24892F34EF873E659FB64AFD8515 /* FLNSOperationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2613D991EE0D117A675C3D30B0B8B328 /* FLNSOperationTemplate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		72FB24892F34EF873E659FB64AFD8515 /* XOperationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2613D991EE0D117A675C3D30B0B8B328 /* XOperationTemplate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7A6DC4CA3F00A0CA555F025CDDECFF4A /* XCocoaUtilsPublic-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D926DCB3017FA92929BE80FD7629DBCF /* XCocoaUtilsPublic-dummy.m */; };
 		878675EEAAD8CA53CCB29F2CA7D5D4BA /* NSURL+Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 98847533676D1831C13117EDC8AC7F4E /* NSURL+Test.h */; };
 		903BFFC0F2D333DC907440F31E08440E /* UIScrollView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 623E566E64A3ADDEA48C4E29ECAA7BE4 /* UIScrollView+Ext.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -73,7 +73,7 @@
 		D6839A85C350F9FF2F00F3580AB2CA32 /* NSArray+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5785E9F1EB979258F75C2D44340F60 /* NSArray+Ext.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D6F51E1E9D7CE0A4D703AA13719E5E17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CEEEB366FCF541A7694663860B7467 /* Foundation.framework */; };
 		E484D6B5A2E0754E90ECE7BBE8331583 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D9C6DF7DB4A17B5BC666238ACEFDA /* NSObject+PropertyToURLParams.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E52354B64AB39886EAC195718A002570 /* FLNSOperationTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E23F03AC8AC32ECB3BC1B741C5278B9 /* FLNSOperationTemplate.h */; };
+		E52354B64AB39886EAC195718A002570 /* XOperationTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E23F03AC8AC32ECB3BC1B741C5278B9 /* XOperationTemplate.h */; };
 		F8FD26D9C850DB21C4578EDE3FA032E1 /* FileIOHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 72D9135EE39ABAD1A094FE3EB47A8ABD /* FileIOHelper.h */; };
 /* End PBXBuildFile section */
 
@@ -116,7 +116,7 @@
 		1C0165DDC2376DC59F1E3CE62DB73CAC /* libXCocoaUtilsPublic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXCocoaUtilsPublic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA2D68BD2791D04504DC854D1C2EF6C /* UIButton+Ext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Ext.m"; sourceTree = "<group>"; };
 		240B3F6808A29514A56781CC08380E21 /* NSDate+Ext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+Ext.h"; sourceTree = "<group>"; };
-		2613D991EE0D117A675C3D30B0B8B328 /* FLNSOperationTemplate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FLNSOperationTemplate.m; sourceTree = "<group>"; };
+		2613D991EE0D117A675C3D30B0B8B328 /* XOperationTemplate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XOperationTemplate.m; sourceTree = "<group>"; };
 		355A803545DA7A944622D3CF98003EC3 /* NSData+String.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+String.m"; sourceTree = "<group>"; };
 		3F11273562DC1A535999AEB63B81985B /* RegexKitLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		45E15FD863A5F54FA8623F9FDE9A10A4 /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +145,7 @@
 		840D9C6DF7DB4A17B5BC666238ACEFDA /* NSObject+PropertyToURLParams.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyToURLParams.m"; sourceTree = "<group>"; };
 		866C4DBD9BC4A039BE64FE631809CB29 /* XCocoaUtilsPublic-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "XCocoaUtilsPublic-Private.xcconfig"; sourceTree = "<group>"; };
 		88D936A9300B6BD7AF3479D9B6571637 /* SKProduct+Ext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKProduct+Ext.h"; sourceTree = "<group>"; };
-		8E23F03AC8AC32ECB3BC1B741C5278B9 /* FLNSOperationTemplate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FLNSOperationTemplate.h; sourceTree = "<group>"; };
+		8E23F03AC8AC32ECB3BC1B741C5278B9 /* XOperationTemplate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XOperationTemplate.h; sourceTree = "<group>"; };
 		8EF14B2CBB24CBAC1DA33FB5E3F99AD9 /* UIFont+Ext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIFont+Ext.h"; sourceTree = "<group>"; };
 		91E452D299E288BA54246ABEBB6F8FF3 /* NSData+String.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+String.h"; sourceTree = "<group>"; };
 		96848C72E8691B650ACD3F035DE1973C /* UIScreen+Ext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Ext.h"; sourceTree = "<group>"; };
@@ -349,8 +349,8 @@
 				156FBCC26EB0315CD8A2AF89AA6601D5 /* BlockAlertView.m */,
 				BCDD7CADED37DA8983F42370FB02CA19 /* DefaultSettings.h */,
 				CA80AD00715574FFAE7A90E5735B5326 /* DefaultSettings.m */,
-				8E23F03AC8AC32ECB3BC1B741C5278B9 /* FLNSOperationTemplate.h */,
-				2613D991EE0D117A675C3D30B0B8B328 /* FLNSOperationTemplate.m */,
+				8E23F03AC8AC32ECB3BC1B741C5278B9 /* XOperationTemplate.h */,
+				2613D991EE0D117A675C3D30B0B8B328 /* XOperationTemplate.m */,
 				72D9135EE39ABAD1A094FE3EB47A8ABD /* FileIOHelper.h */,
 				4ED90B71929E6B1EC8E20B0F08DC8119 /* FileIOHelper.m */,
 				F086E4C3FEEF5A5159C0D32305D39528 /* FunctionSet.h */,
@@ -434,7 +434,7 @@
 				20ECC8BCA8221F6835898EDD35BFD981 /* BlockAlertView.h in Headers */,
 				6BAE983A3E91E3F6744188DA613D1184 /* DebugUtility.h in Headers */,
 				115F4BC98122073A4AB5103F8CB96FF1 /* DefaultSettings.h in Headers */,
-				E52354B64AB39886EAC195718A002570 /* FLNSOperationTemplate.h in Headers */,
+				E52354B64AB39886EAC195718A002570 /* XOperationTemplate.h in Headers */,
 				F8FD26D9C850DB21C4578EDE3FA032E1 /* FileIOHelper.h in Headers */,
 				351FA7DE1B347E26E3ADC7F7E3D2EDFD /* FunctionSet.h in Headers */,
 				B8F9E460C5E1DA1C71F01F81FBEEB9A3 /* NSArray+Ext.h in Headers */,
@@ -573,7 +573,7 @@
 				01E9F36C326BDF0FFF270B0517913D92 /* BlockAlertView.m in Sources */,
 				4BE9A8D9674D0C262AE3D0690E07E6DF /* DebugUtility.m in Sources */,
 				150F0681AE03E94E6657B4E2F8B15436 /* DefaultSettings.m in Sources */,
-				72FB24892F34EF873E659FB64AFD8515 /* FLNSOperationTemplate.m in Sources */,
+				72FB24892F34EF873E659FB64AFD8515 /* XOperationTemplate.m in Sources */,
 				1AE32F60442004C02A15B368B1D2EAD6 /* FileIOHelper.m in Sources */,
 				35CA92AE4303A2FD829D24A9AFC741CC /* FunctionSet.m in Sources */,
 				D6839A85C350F9FF2F00F3580AB2CA32 /* NSArray+Ext.m in Sources */,
