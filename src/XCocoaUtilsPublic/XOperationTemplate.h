@@ -1,5 +1,5 @@
 //
-//  FLNSOperationTemplate.h
+//  XOperationTemplate.h
 //  FeedLibrary
 //
 //  NSOperation implementation template.
