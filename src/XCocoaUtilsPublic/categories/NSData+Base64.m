@@ -2,8 +2,6 @@
 
 #import "NSData+Base64.h"
 
-#import "FunctionSet.h"
-
 static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
 @implementation NSData (Base64)

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 Nicholas.Xu. All rights reserved.
 //
 
-#import "FunctionSet.h"
+#import "CGFunctions.h"
 //#import "NSObject+Ext.h"
 
 extern inline BOOL CallDelegateWithArgs(NSObject **delegate, SEL selector, NSArray *args)
@@ -258,11 +258,5 @@ BOOL IsResponserCompressed(NSDictionary *responseHeaders) {
     }
     return NO;
 }
-
-@implementation FunctionSet
-
-
-
-@end
 
 

@@ -9,7 +9,7 @@
 #if TARGET_OS_IPHONE
 
 #import <UIKit/UIKit.h>
-#import "FunctionSet.h"
+
 /* Fix: Implicit declaration of method 'osVersion' in C99 */
 //#import "UIDevice+Ext.h"
 

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24B5A12619BEF7E9009B474C /* FunctionSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B5A12419BEF7E9009B474C /* FunctionSet.h */; };
-		24B5A12719BEF7E9009B474C /* FunctionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* FunctionSet.m */; };
-		24B5A12819BEF7E9009B474C /* FunctionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* FunctionSet.m */; };
+		24B5A12619BEF7E9009B474C /* CGFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B5A12419BEF7E9009B474C /* CGFunctions.h */; };
+		24B5A12719BEF7E9009B474C /* CGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* CGFunctions.m */; };
+		24B5A12819BEF7E9009B474C /* CGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* CGFunctions.m */; };
 		41BBDE0C192620AA00A05DC9 /* NSObject+PropertyToURLParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41BBDE0D192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
 		41BBDE0E192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
@@ -101,7 +101,21 @@
 		7461B7831B959EB300EB5D6D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7461B7821B959EB300EB5D6D /* Images.xcassets */; };
 		7461B7861B959EB300EB5D6D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7461B7841B959EB300EB5D6D /* LaunchScreen.xib */; };
 		7461B7921B959EB300EB5D6D /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B7911B959EB300EB5D6D /* DemoTests.m */; };
+		74C355FE21BEA787001B0C4C /* TCObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C355FB21BEA787001B0C4C /* TCObjectMapping.h */; };
+		74C3560021BEA787001B0C4C /* TCObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C355FC21BEA787001B0C4C /* TCObjectMapping.m */; };
+		74C3560121BEA787001B0C4C /* TCObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C355FC21BEA787001B0C4C /* TCObjectMapping.m */; };
+		74C3560221BEA787001B0C4C /* TCObjectMappingDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C355FD21BEA787001B0C4C /* TCObjectMappingDelegate.h */; };
+		74C3560821BEA897001B0C4C /* BenchMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560421BEA896001B0C4C /* BenchMark.h */; };
+		74C3560921BEA897001B0C4C /* cbench_mark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560521BEA897001B0C4C /* cbench_mark.h */; };
+		74C3560A21BEA897001B0C4C /* cbench_mark.c in Sources */ = {isa = PBXBuildFile; fileRef = 74C3560621BEA897001B0C4C /* cbench_mark.c */; };
+		74C3560B21BEA897001B0C4C /* cbench_mark.c in Sources */ = {isa = PBXBuildFile; fileRef = 74C3560621BEA897001B0C4C /* cbench_mark.c */; };
+		74C3560C21BEA897001B0C4C /* BenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3560721BEA897001B0C4C /* BenchMark.m */; };
+		74C3560D21BEA897001B0C4C /* BenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3560721BEA897001B0C4C /* BenchMark.m */; };
+		74C3561821BEC458001B0C4C /* XOperationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3561621BEC458001B0C4C /* XOperationTemplate.m */; };
+		74C3561921BEC458001B0C4C /* XOperationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3561621BEC458001B0C4C /* XOperationTemplate.m */; };
+		74C3561A21BEC458001B0C4C /* XOperationTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561721BEC458001B0C4C /* XOperationTemplate.h */; };
 		925EEDA9778C69CF219F2E8B /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D42116A5733F0C5FBA873E7 /* libPods-Demo.a */; };
+		9D47966F2ACC00ABFFFDB620 /* libPods-DemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC97F62E93CA30D742BAEEDA /* libPods-DemoTests.a */; };
 		A21415A1180CDF790067EBE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415A0180CDF790067EBE8 /* Foundation.framework */; };
 		A21415E7180CE0790067EBE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A21415E5180CE0790067EBE8 /* InfoPlist.strings */; };
 		A21416BD180CF6950067EBE8 /* XCocoaUtilsPublicFW.h in Headers */ = {isa = PBXBuildFile; fileRef = A21416B8180CF5C00067EBE8 /* XCocoaUtilsPublicFW.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -133,8 +147,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		24B5A12419BEF7E9009B474C /* FunctionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionSet.h; sourceTree = "<group>"; };
-		24B5A12519BEF7E9009B474C /* FunctionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionSet.m; sourceTree = "<group>"; };
+		18988A0BF756C2B7EA4A44F8 /* Pods-DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoTests/Pods-DemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		24B5A12419BEF7E9009B474C /* CGFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGFunctions.h; sourceTree = "<group>"; };
+		24B5A12519BEF7E9009B474C /* CGFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFunctions.m; sourceTree = "<group>"; };
 		3D42116A5733F0C5FBA873E7 /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertyToURLParams.h"; sourceTree = "<group>"; };
 		41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyToURLParams.m"; sourceTree = "<group>"; };
@@ -208,6 +223,20 @@
 		7461B7901B959EB300EB5D6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7461B7911B959EB300EB5D6D /* DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTests.m; sourceTree = "<group>"; };
 		74875C70186C3181000A0331 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		74C355FB21BEA787001B0C4C /* TCObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCObjectMapping.h; sourceTree = "<group>"; };
+		74C355FC21BEA787001B0C4C /* TCObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCObjectMapping.m; sourceTree = "<group>"; };
+		74C355FD21BEA787001B0C4C /* TCObjectMappingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCObjectMappingDelegate.h; sourceTree = "<group>"; };
+		74C3560421BEA896001B0C4C /* BenchMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BenchMark.h; sourceTree = "<group>"; };
+		74C3560521BEA897001B0C4C /* cbench_mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cbench_mark.h; sourceTree = "<group>"; };
+		74C3560621BEA897001B0C4C /* cbench_mark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cbench_mark.c; sourceTree = "<group>"; };
+		74C3560721BEA897001B0C4C /* BenchMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BenchMark.m; sourceTree = "<group>"; };
+		74C3561021BEB283001B0C4C /* memory_macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = memory_macros.h; sourceTree = "<group>"; };
+		74C3561221BEB728001B0C4C /* singletone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singletone.h; sourceTree = "<group>"; };
+		74C3561321BEB7A9001B0C4C /* UIKit_macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKit_macros.h; sourceTree = "<group>"; };
+		74C3561421BEB7CE001B0C4C /* web_macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = web_macros.h; sourceTree = "<group>"; };
+		74C3561521BEBA08001B0C4C /* CF_macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CF_macros.h; sourceTree = "<group>"; };
+		74C3561621BEC458001B0C4C /* XOperationTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XOperationTemplate.m; sourceTree = "<group>"; };
+		74C3561721BEC458001B0C4C /* XOperationTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XOperationTemplate.h; sourceTree = "<group>"; };
 		74E15A0B1B9542CC00E522A3 /* XCocoaUtilsPublic.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = XCocoaUtilsPublic.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A214159D180CDF790067EBE8 /* libXCocoaUtilsPublic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXCocoaUtilsPublic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A21415A0180CDF790067EBE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -219,8 +248,10 @@
 		A21415E8180CE0790067EBE8 /* XCocoaUtilsPublicFW-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCocoaUtilsPublicFW-Prefix.pch"; sourceTree = "<group>"; };
 		A21416B8180CF5C00067EBE8 /* XCocoaUtilsPublicFW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublicFW.h; sourceTree = "<group>"; };
 		A23B2A13180D2A4800C270A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B4007AF7FEADF6E24E82DB39 /* Pods-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoTests/Pods-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC000DA0AC340C4FE978318C /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		F0641409338246BAC2463C7B /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		FC97F62E93CA30D742BAEEDA /* libPods-DemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +267,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D47966F2ACC00ABFFFDB620 /* libPods-DemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +297,8 @@
 			children = (
 				F0641409338246BAC2463C7B /* Pods-Demo.debug.xcconfig */,
 				EC000DA0AC340C4FE978318C /* Pods-Demo.release.xcconfig */,
+				B4007AF7FEADF6E24E82DB39 /* Pods-DemoTests.debug.xcconfig */,
+				18988A0BF756C2B7EA4A44F8 /* Pods-DemoTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -272,19 +306,15 @@
 		74419E1118448DD000E28DD4 /* XCocoaUtilsPublic */ = {
 			isa = PBXGroup;
 			children = (
+				74C3561B21BEC467001B0C4C /* concurrency */,
+				74C3561121BEB676001B0C4C /* UIKit */,
+				74C3560F21BEB268001B0C4C /* macros */,
+				74C3560E21BEAAA0001B0C4C /* io */,
+				74C355FA21BEA72B001B0C4C /* http */,
+				74C355F921BEA717001B0C4C /* benchmark */,
 				74419E1218448DD000E28DD4 /* 3rdParty */,
-				74419E1518448DD000E28DD4 /* BlockAlertView.h */,
-				74419E1618448DD000E28DD4 /* BlockAlertView.m */,
-				24B5A12419BEF7E9009B474C /* FunctionSet.h */,
-				24B5A12519BEF7E9009B474C /* FunctionSet.m */,
 				74419E1718448DD000E28DD4 /* categories */,
 				74419E3F18448DD000E28DD4 /* debug */,
-				74419E4418448DD000E28DD4 /* DefaultSettings.h */,
-				74419E4518448DD000E28DD4 /* DefaultSettings.m */,
-				74419E4618448DD000E28DD4 /* FileIOHelper.h */,
-				74419E4718448DD000E28DD4 /* FileIOHelper.m */,
-				74419E4A18448DD000E28DD4 /* NameValuePaire.h */,
-				74419E4B18448DD000E28DD4 /* NameValuePaire.m */,
 				7434EA1C19C5BE13001E6989 /* XCocoaUtilsPublic.h */,
 			);
 			path = XCocoaUtilsPublic;
@@ -401,6 +431,72 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		74C355F921BEA717001B0C4C /* benchmark */ = {
+			isa = PBXGroup;
+			children = (
+				74C3560421BEA896001B0C4C /* BenchMark.h */,
+				74C3560721BEA897001B0C4C /* BenchMark.m */,
+				74C3560621BEA897001B0C4C /* cbench_mark.c */,
+				74C3560521BEA897001B0C4C /* cbench_mark.h */,
+			);
+			path = benchmark;
+			sourceTree = "<group>";
+		};
+		74C355FA21BEA72B001B0C4C /* http */ = {
+			isa = PBXGroup;
+			children = (
+				74C355FB21BEA787001B0C4C /* TCObjectMapping.h */,
+				74C355FC21BEA787001B0C4C /* TCObjectMapping.m */,
+				74C355FD21BEA787001B0C4C /* TCObjectMappingDelegate.h */,
+				74419E4A18448DD000E28DD4 /* NameValuePaire.h */,
+				74419E4B18448DD000E28DD4 /* NameValuePaire.m */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
+		74C3560E21BEAAA0001B0C4C /* io */ = {
+			isa = PBXGroup;
+			children = (
+				74419E4418448DD000E28DD4 /* DefaultSettings.h */,
+				74419E4518448DD000E28DD4 /* DefaultSettings.m */,
+				74419E4618448DD000E28DD4 /* FileIOHelper.h */,
+				74419E4718448DD000E28DD4 /* FileIOHelper.m */,
+			);
+			path = io;
+			sourceTree = "<group>";
+		};
+		74C3560F21BEB268001B0C4C /* macros */ = {
+			isa = PBXGroup;
+			children = (
+				74C3561021BEB283001B0C4C /* memory_macros.h */,
+				74C3561221BEB728001B0C4C /* singletone.h */,
+				74C3561321BEB7A9001B0C4C /* UIKit_macros.h */,
+				74C3561421BEB7CE001B0C4C /* web_macros.h */,
+				74C3561521BEBA08001B0C4C /* CF_macros.h */,
+			);
+			path = macros;
+			sourceTree = "<group>";
+		};
+		74C3561121BEB676001B0C4C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				24B5A12419BEF7E9009B474C /* CGFunctions.h */,
+				24B5A12519BEF7E9009B474C /* CGFunctions.m */,
+				74419E1518448DD000E28DD4 /* BlockAlertView.h */,
+				74419E1618448DD000E28DD4 /* BlockAlertView.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		74C3561B21BEC467001B0C4C /* concurrency */ = {
+			isa = PBXGroup;
+			children = (
+				74C3561721BEC458001B0C4C /* XOperationTemplate.h */,
+				74C3561621BEC458001B0C4C /* XOperationTemplate.m */,
+			);
+			path = concurrency;
+			sourceTree = "<group>";
+		};
 		A2141594180CDF790067EBE8 = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +530,7 @@
 				A21415A0180CDF790067EBE8 /* Foundation.framework */,
 				A21415AE180CDF790067EBE8 /* XCTest.framework */,
 				3D42116A5733F0C5FBA873E7 /* libPods-Demo.a */,
+				FC97F62E93CA30D742BAEEDA /* libPods-DemoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -488,17 +585,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74C3560221BEA787001B0C4C /* TCObjectMappingDelegate.h in Headers */,
 				A21416BD180CF6950067EBE8 /* XCocoaUtilsPublicFW.h in Headers */,
 				74419E6918448DD100E28DD4 /* NSTimer+Ext.h in Headers */,
 				74419E5418448DD000E28DD4 /* NSArray+Ext.h in Headers */,
+				74C3560821BEA897001B0C4C /* BenchMark.h in Headers */,
 				74419E7818448DD100E28DD4 /* UIColor+Ext.h in Headers */,
 				74419E6C18448DD100E28DD4 /* NSURL+Ext.h in Headers */,
 				74419E6318448DD100E28DD4 /* NSObject+Ext.h in Headers */,
 				41BBDE0C192620AA00A05DC9 /* NSObject+PropertyToURLParams.h in Headers */,
+				74C3561A21BEC458001B0C4C /* XOperationTemplate.h in Headers */,
 				74419E5A18448DD000E28DD4 /* NSData+String.h in Headers */,
 				74419E8D18448DD100E28DD4 /* DebugUtility.h in Headers */,
 				74419E5718448DD000E28DD4 /* NSData+Base64.h in Headers */,
-				24B5A12619BEF7E9009B474C /* FunctionSet.h in Headers */,
+				24B5A12619BEF7E9009B474C /* CGFunctions.h in Headers */,
 				74419E9618448DD100E28DD4 /* FileIOHelper.h in Headers */,
 				74419E9318448DD100E28DD4 /* DefaultSettings.h in Headers */,
 				74419E9C18448DD100E28DD4 /* NameValuePaire.h in Headers */,
@@ -506,6 +606,7 @@
 				74419E4D18448DD000E28DD4 /* RegexKitLite.h in Headers */,
 				74419E5D18448DD000E28DD4 /* NSDate+Ext.h in Headers */,
 				74419E6618448DD100E28DD4 /* NSString+Ext.h in Headers */,
+				74C3560921BEA897001B0C4C /* cbench_mark.h in Headers */,
 				74419E7518448DD100E28DD4 /* UIButton+Ext.h in Headers */,
 				74419E9018448DD100E28DD4 /* NSURL+Test.h in Headers */,
 				74419E5318448DD000E28DD4 /* extensions.h in Headers */,
@@ -516,6 +617,7 @@
 				74419E8A18448DD100E28DD4 /* UIViewController+Ext.h in Headers */,
 				74419E6F18448DD100E28DD4 /* SKProduct+Ext.h in Headers */,
 				74419E6018448DD100E28DD4 /* NSObject+Debug.h in Headers */,
+				74C355FE21BEA787001B0C4C /* TCObjectMapping.h in Headers */,
 				74419E7218448DD100E28DD4 /* UIAlertView+Ext.h in Headers */,
 				741A503919FE8C2B007840FD /* NSLayoutConstraint+Convenient.h in Headers */,
 				74419E8418448DD100E28DD4 /* UIScrollView+Ext.h in Headers */,
@@ -534,8 +636,6 @@
 				7461B76F1B959EB300EB5D6D /* Sources */,
 				7461B7701B959EB300EB5D6D /* Frameworks */,
 				7461B7711B959EB300EB5D6D /* Resources */,
-				C696A4F28A05EDF0D5EF48B7 /* [CP] Embed Pods Frameworks */,
-				109F7A48A10EF67DCD219E98 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -550,6 +650,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7461B7981B959EB300EB5D6D /* Build configuration list for PBXNativeTarget "DemoTests" */;
 			buildPhases = (
+				764C40791C85AE55953AEDA8 /* [CP] Check Pods Manifest.lock */,
 				7461B7871B959EB300EB5D6D /* Sources */,
 				7461B7881B959EB300EB5D6D /* Frameworks */,
 				7461B7891B959EB300EB5D6D /* Resources */,
@@ -690,19 +791,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		109F7A48A10EF67DCD219E98 /* [CP] Copy Pods Resources */ = {
+		764C40791C85AE55953AEDA8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DemoTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A21415D9180CE0790067EBE8 /* ShellScript */ = {
@@ -744,21 +852,6 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\nif [[ \"$XCODE_VERSION_MAJOR\" == \"0500\" ]]\nthen\n    echo \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nelse\n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nfi \n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build framework structure\n\necho \"Build symlinks\"\n\necho ln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\nln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\necho ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\necho ln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\necho ln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\nln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\n\n\n# Link to binary for unit tests\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework\"\nln -sfh \"../${WRAPPER_NAME}/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework/.fake_fw_testing\"\n\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
 		};
-		C696A4F28A05EDF0D5EF48B7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -785,9 +878,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				74419E8E18448DD100E28DD4 /* DebugUtility.m in Sources */,
+				74C3560021BEA787001B0C4C /* TCObjectMapping.m in Sources */,
 				41BBDE0D192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */,
 				74419E9D18448DD100E28DD4 /* NameValuePaire.m in Sources */,
-				24B5A12719BEF7E9009B474C /* FunctionSet.m in Sources */,
+				24B5A12719BEF7E9009B474C /* CGFunctions.m in Sources */,
 				74419E5518448DD000E28DD4 /* NSArray+Ext.m in Sources */,
 				74419E7618448DD100E28DD4 /* UIButton+Ext.m in Sources */,
 				74419E7018448DD100E28DD4 /* SKProduct+Ext.m in Sources */,
@@ -800,12 +894,15 @@
 				74419E7C18448DD100E28DD4 /* UIFont+Ext.m in Sources */,
 				74419E6418448DD100E28DD4 /* NSObject+Ext.m in Sources */,
 				74419E7918448DD100E28DD4 /* UIColor+Ext.m in Sources */,
+				74C3560C21BEA897001B0C4C /* BenchMark.m in Sources */,
 				74419E6718448DD100E28DD4 /* NSString+Ext.m in Sources */,
 				74419E8518448DD100E28DD4 /* UIScrollView+Ext.m in Sources */,
+				74C3561821BEC458001B0C4C /* XOperationTemplate.m in Sources */,
 				74419E5B18448DD000E28DD4 /* NSData+String.m in Sources */,
 				74419E9118448DD100E28DD4 /* NSURL+Test.m in Sources */,
 				74419E7318448DD100E28DD4 /* UIAlertView+Ext.m in Sources */,
 				74419E9418448DD100E28DD4 /* DefaultSettings.m in Sources */,
+				74C3560A21BEA897001B0C4C /* cbench_mark.c in Sources */,
 				741A503A19FE8C2B007840FD /* NSLayoutConstraint+Convenient.m in Sources */,
 				74419E8818448DD100E28DD4 /* UIView+Ext.m in Sources */,
 				74419E8B18448DD100E28DD4 /* UIViewController+Ext.m in Sources */,
@@ -820,9 +917,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				74419E8F18448DD100E28DD4 /* DebugUtility.m in Sources */,
+				74C3560121BEA787001B0C4C /* TCObjectMapping.m in Sources */,
 				41BBDE0E192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */,
 				74419E9E18448DD100E28DD4 /* NameValuePaire.m in Sources */,
-				24B5A12819BEF7E9009B474C /* FunctionSet.m in Sources */,
+				24B5A12819BEF7E9009B474C /* CGFunctions.m in Sources */,
 				74419E5618448DD000E28DD4 /* NSArray+Ext.m in Sources */,
 				74419E7718448DD100E28DD4 /* UIButton+Ext.m in Sources */,
 				74419E7118448DD100E28DD4 /* SKProduct+Ext.m in Sources */,
@@ -835,12 +933,15 @@
 				74419E7D18448DD100E28DD4 /* UIFont+Ext.m in Sources */,
 				74419E6518448DD100E28DD4 /* NSObject+Ext.m in Sources */,
 				74419E7A18448DD100E28DD4 /* UIColor+Ext.m in Sources */,
+				74C3560D21BEA897001B0C4C /* BenchMark.m in Sources */,
 				74419E6818448DD100E28DD4 /* NSString+Ext.m in Sources */,
 				74419E8618448DD100E28DD4 /* UIScrollView+Ext.m in Sources */,
+				74C3561921BEC458001B0C4C /* XOperationTemplate.m in Sources */,
 				74419E5C18448DD000E28DD4 /* NSData+String.m in Sources */,
 				74419E9218448DD100E28DD4 /* NSURL+Test.m in Sources */,
 				74419E7418448DD100E28DD4 /* UIAlertView+Ext.m in Sources */,
 				74419E9518448DD100E28DD4 /* DefaultSettings.m in Sources */,
+				74C3560B21BEA897001B0C4C /* cbench_mark.c in Sources */,
 				741A503B19FE8C2B007840FD /* NSLayoutConstraint+Convenient.m in Sources */,
 				74419E8918448DD100E28DD4 /* UIView+Ext.m in Sources */,
 				74419E8C18448DD100E28DD4 /* UIViewController+Ext.m in Sources */,
@@ -936,6 +1037,7 @@
 		};
 		7461B7951B959EB300EB5D6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4007AF7FEADF6E24E82DB39 /* Pods-DemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -962,6 +1064,7 @@
 		};
 		7461B7961B959EB300EB5D6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18988A0BF756C2B7EA4A44F8 /* Pods-DemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_UNREACHABLE_CODE = YES;

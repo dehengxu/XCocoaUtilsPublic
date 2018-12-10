@@ -8,7 +8,7 @@
 
 #import "UIAlertView+Ext.h"
 
-#import "FunctionSet.h"
+#import "../macros/memory_macros.h"
 
 #if TARGET_OS_IPHONE
 
