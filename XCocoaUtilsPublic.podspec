@@ -17,14 +17,15 @@ Pod::Spec.new do |s|
 
   s.name         = "XCocoaUtilsPublic"
 
-  s.version      = "0.4.2"
+  s.version      = "0.4.3"
   s.summary      = "Utils for iOS development"
 
   s.description  = <<-DESC
-                   XCocoaUtilsPublic is a utilities set for Cocoa development.
+                   XCocoaUtilsPublic is a utilities set for iOS development.
 
                    * It's a convenient tools set.
-                   * In future I will integrate some osx support in it.
+                   * I will add osx support in future.
+                   
                    DESC
 
   s.homepage     = "https://github.com/xudeheng/XCocoaUtilsPublic"
@@ -126,8 +127,41 @@ Pod::Spec.new do |s|
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
+  s.subspec 'macros' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/macros/*.h"
+  end
+
+  s.subspec 'io' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/io/*.{h,m}"
+  end
+  
+  s.subspec 'http' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/http/*.{h,m}"
+  end
+
+  s.subspec 'benchmark' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/benchmark/*.{h,m}"
+  end
+  
+  s.subspec 'categories' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/categories/*.{h,m}"
+      sp.dependency 'XCocoaUtilsPublic/macros'
+  end
+  
+  s.subspec 'debug' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/debug/*.{h,m}"
+  end
+  
+  s.subspec 'UIKit' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/UIKit/*.{h,m}"
+  end
+  
+  s.subspec 'concurrency' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/concurrency/*.{h,m}"
+  end
+  
   s.requires_arc = false
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "RegexKitLite"
+  s.dependency 'RegexKitLite', '~> 4.0'
 
 end

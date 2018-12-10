@@ -3,11 +3,11 @@
 //  XUtils
 //
 //  Created by Xu Deheng on 12-5-14.
-//  Copyright (c) 2012年 __MyCompany__ All rights reserved.
+//  Copyright (c) 2012年 DehengXu All rights reserved.
 //
 
 #import "NameValuePaire.h"
-#import "FunctionSet.h"
+#import "../macros/memory_macros.h"
 #import "NSString+Ext.h"
 #import "NSObject+Ext.h"
 

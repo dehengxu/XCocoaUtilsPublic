@@ -7,7 +7,6 @@
 //
 
 #import "DefaultSettings.h"
-#import "FunctionSet.h"
 
 @implementation DefaultSettings
 
