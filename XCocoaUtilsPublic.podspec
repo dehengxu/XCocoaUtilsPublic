@@ -137,6 +137,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'http' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/http/*.{h,m}"
+      sp.dependency 'XCocoaUtilsPublic/categories'
   end
 
   s.subspec 'benchmark' do |sp|
