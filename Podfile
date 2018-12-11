@@ -4,11 +4,11 @@ project 'XCocoaUtilsPublic.xcodeproj'
 platform :ios, '6.0'
 
 target 'Demo' do
-	pod 'XCocoaUtilsPublic', :path => './', :subspecs => ['macros']
+	pod 'XCocoaUtilsPublic', :path => './', :subspecs => ['macros', 'http']
 end
 
  target 'DemoTests' do
-     pod 'XCocoaUtilsPublic', :path => './', :subspecs => ['macros']
+     pod 'XCocoaUtilsPublic', :path => './', :subspecs => ['macros', 'http']
  end
 
 # target 'XCocoaUtilsPublic' do
