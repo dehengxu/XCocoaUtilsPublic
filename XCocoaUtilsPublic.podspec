@@ -128,25 +128,25 @@ Pod::Spec.new do |s|
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.subspec 'macros' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/macros/*.h"
+      sp.source_files = "src/XCocoaUtilsPublic/macros/*.{h}"
   end
 
+  s.subspec 'categories' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/categories/*.{h,m}"
+      sp.dependency "XCocoaUtilsPublic/macros"
+  end
+  
   s.subspec 'io' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/io/*.{h,m}"
   end
   
   s.subspec 'http' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/http/*.{h,m}"
-      sp.dependency 'XCocoaUtilsPublic/categories'
+      sp.dependency "XCocoaUtilsPublic/categories"
   end
 
   s.subspec 'benchmark' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/benchmark/*.{h,m}"
-  end
-  
-  s.subspec 'categories' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/categories/*.{h,m}"
-      sp.dependency 'XCocoaUtilsPublic/macros'
   end
   
   s.subspec 'debug' do |sp|
