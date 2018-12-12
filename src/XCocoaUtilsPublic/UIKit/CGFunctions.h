@@ -1,5 +1,5 @@
 //
-//  FunctionSet.h
+//  CGFunctionSet.h
 //  XUtilities
 //
 //  Created by Deheng.Xu on 13-4-28.

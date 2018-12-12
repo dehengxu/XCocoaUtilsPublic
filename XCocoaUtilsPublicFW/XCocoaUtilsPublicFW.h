@@ -24,7 +24,7 @@
 #import "UIViewController+Ext.h"
 #import "NSURL+Ext.h"
 
-#import "FunctionSet.h"
+#import "CGFunctionSet.h"
 #import "BlockAlertView.h"
 #import "DefaultSettings.h"
 #import "FileIOHelper.h"

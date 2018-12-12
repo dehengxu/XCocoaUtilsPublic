@@ -151,10 +151,13 @@ Pod::Spec.new do |s|
   
   s.subspec 'debug' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/debug/*.{h,m}"
+      sp.dependency "XCocoaUtilsPublic/categories"
+      sp.dependency "XCocoaUtilsPublic/http"
   end
   
   s.subspec 'UIKit' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/UIKit/*.{h,m}"
+      sp.dependency "XCocoaUtilsPublic/categories"
   end
   
   s.subspec 'concurrency' do |sp|

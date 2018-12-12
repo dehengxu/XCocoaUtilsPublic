@@ -5,7 +5,16 @@ platform :ios, '6.0'
 
 target 'Demo' do
     #pod 'AFNetworking'
-	pod 'XCocoaUtilsPublic', :path => './', :subspecs => ['categories', 'macros', 'http', 'io', 'debug']
+	pod 'XCocoaUtilsPublic', :path => './', :subspecs => [
+#    'categories',
+#    'http',
+#    'debug',
+#    'macros',
+#    'io',
+#    'UIKit',
+    'concurrency',
+#    'benchmark',
+    ]
 end
 
  target 'DemoTests' do
