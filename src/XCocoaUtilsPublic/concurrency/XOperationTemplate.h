@@ -7,7 +7,7 @@
 //  Implement statue notify.
 //
 //  Created by Deheng.Xu on 13-3-28.
-//  Copyright (c) 2013年 Nicholas.Xu. All rights reserved.
+//  Copyright (c) 2013年 Deheng.Xu. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
