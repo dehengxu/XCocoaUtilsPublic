@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/xudeheng/XCocoaUtilsPublic.git", :tag => "0.4.2" }
+  s.source       = { :git => "https://github.com/xudeheng/XCocoaUtilsPublic.git", :tag => "0.4.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "src/XCocoaUtilsPublic/**/*.{h,m}"
+  s.source_files  = "src/XCocoaUtilsPublic/*.{h,m}"
 
   # Remove file from link list.
   s.exclude_files = "src/**/RegexKitLite.{h,m}"
