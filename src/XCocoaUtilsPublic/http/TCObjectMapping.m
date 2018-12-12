@@ -122,7 +122,7 @@ NSString *const TCObjectMappingJSONFormatException = @"TCObjectMapping: JSON con
     unsigned long length = strlen(pbegin) - strlen(pend) - 1;
     
     char *substr = malloc(sizeof(char) * (length + 1));
-    char *sub = strncpy(substr, pbegin + 1, length);
+    __unused char *sub = strncpy(substr, pbegin + 1, length);
     substr[length] = '\0';
     if (substr == NULL) {
         return nil;
