@@ -9,8 +9,8 @@
 #import "NSString+Ext.h"
 #import "NSObject+Ext.h"
 #import "RegexKitLite.h"
-#import <memory_macros.h>
-#import <CF_macros.h>
+#import "memory_macros.h"
+#import "CF_macros.h"
 #import <CoreFoundation/CoreFoundation.h>
 
 extern inline NSString* NSStringFromBool(BOOL bValue)
