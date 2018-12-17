@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "XCocoaUtilsPublic"
 
-  s.version      = "0.4.3"
+  s.version      = "0.4.4"
   s.summary      = "Utils for iOS development"
 
   s.description  = <<-DESC
@@ -32,7 +32,8 @@ Pod::Spec.new do |s|
   # s.homepage     = "git@bitbucket.org:xudeheng/XCocoaUtilsPublic"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
-
+  s.module_name = "XCocoaUtilsPublic"
+  
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  Licensing your code is important. See http://choosealicense.com for more info.
@@ -66,7 +67,7 @@ Pod::Spec.new do |s|
   #
 
   s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+   s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -79,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/xudeheng/XCocoaUtilsPublic.git", :tag => "0.4.3" }
+  s.source       = { :git => "https://github.com/xudeheng/XCocoaUtilsPublic.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -95,7 +96,7 @@ Pod::Spec.new do |s|
   # Remove file from link list.
   s.exclude_files = "src/**/RegexKitLite.{h,m}"
 
-  # s.public_header_files = "Classes/**/*.h"
+   s.public_header_files = "src/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
