@@ -20,7 +20,37 @@
  */
 __unused static NSString * const lowerCase = @"abcdefghijklmnopqrstuvwxyz";
 __unused static NSString * const upperCase = @"ABCDEFTHIJKLMNOPQRSTUVWXYZ";
-__unused static NSString * const numbers = @"0123456789";
+__unused static NSString * const digit = @"0123456789";
+
+/*
+ Unreserved Characters
+ 
+ Characters that are allowed in a URI but do not have a reserved
+ purpose are called unreserved.  These include uppercase and lowercase
+ letters, decimal digits, hyphen, period, underscore, and tilde.
+ 
+ unreserved  = ALPHA / DIGIT / "-" / "." / "_" / "~"
+ 
+ 
+ 
+ 
+ 
+ Berners-Lee, et al.         Standards Track                    [Page 13]
+ 
+ RFC 3986                   URI Generic Syntax               January 2005
+ 
+ 
+ URIs that differ in the replacement of an unreserved character with
+ its corresponding percent-encoded US-ASCII octet are equivalent: they
+ identify the same resource.  However, URI comparison implementations
+ do not always perform normalization prior to comparison (see Section
+ 6).  For consistency, percent-encoded octets in the ranges of ALPHA
+ (%41-%5A and %61-%7A), DIGIT (%30-%39), hyphen (%2D), period (%2E),
+ underscore (%5F), or tilde (%7E) should not be created by URI
+ producers and, when found in a URI, should be decoded to their
+ corresponding unreserved characters by URI normalizers.
+ */
+__unused static NSString * const unreservedSymbols = @"-._~";
 //unreserved = lowercase + uppercase + numbers + "-" + "." + "_" + "~"
 //static NSString *unreserved = [NSString stringWithFormat:@"%@%@%@-._~", lowerCase, upperCase, numbers];
 
@@ -75,20 +105,57 @@ __unused static NSString * const reserved = @":/?#[]@!$&'()*+,;=";
 
 @implementation NSString (URI)
 
++ (NSString *)xcup_reservedCharacters
+{
+    return reserved;
+}
+
++ (NSString *)xcup_unreservedCharacters
+{
+    static NSString *unreserved;
+    if (!unreserved) {
+        unreserved = [NSString stringWithFormat:@"%@%@%@%@", lowerCase, upperCase, digit, unreservedSymbols];
+    }
+    return unreserved;
+}
+
++ (NSString *)xcup_lowerCaseCharacters
+{
+    return lowerCase;
+}
+
++ (NSString *)xcup_upperCaseCharacters
+{
+    return upperCase;
+}
+
++ (NSString *)xcup_alphaCharacters
+{
+    static NSString *alpha;
+    if (!alpha) {
+        alpha = [NSString stringWithFormat:@"%@%@", lowerCase, upperCase];
+    }
+    return alpha;
+}
+
++ (NSString *)xcup_digitCharacters
+{
+    return digit;
+}
+
 - (NSString *)xcup_URLEncoding
 {
     //rfc3986: https://tools.ietf.org/html/rfc3986#page-12
-    
     if (@available(iOS 9, *)) {
-        NSString *rtn = NSStringByCFStringRef(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, NULL, (CFStringRef)reserved, kCFStringEncodingUTF8));
-        return XAutorelease(rtn);
+        static NSCharacterSet *charset = nil;
+        if (!charset) {
+            charset = [NSCharacterSet characterSetWithCharactersInString:reserved];
+        }
+        return [self stringByAddingPercentEncodingWithAllowedCharacters:charset];
     }
     
-    static NSCharacterSet *charset = nil;
-    if (!charset) {
-        charset = [NSCharacterSet characterSetWithCharactersInString:reserved];
-    }
-    return [self stringByAddingPercentEncodingWithAllowedCharacters:charset];
+    NSString *rtn = NSStringByCFStringRef(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, NULL, (CFStringRef)reserved, kCFStringEncodingUTF8));
+    return XAutorelease(rtn);
 }
 
 - (NSString *)xcup_URLDecoding
@@ -101,25 +168,25 @@ __unused static NSString * const reserved = @":/?#[]@!$&'()*+,;=";
 }
 
 - (NSString *)xcup_UTF8AddingPercentEscape
-{
-    if (@available(iOS 2, macOS 10.11, tvOS 9.0, watchOS 2.0, *)) {
-        return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+{    
+    if (@available(iOS 7, macOS 10.9, tvOS 9.0, watchOS 2.0, *)) {
+        static NSCharacterSet *charset = nil;
+        if (!charset) {
+            charset = [NSCharacterSet characterSetWithCharactersInString:[NSString stringWithFormat:@"%@%@%@%@", lowerCase, upperCase, digit, reserved]];
+        }
+        return [self stringByAddingPercentEncodingWithAllowedCharacters:charset];
     }
+    return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
-    static NSCharacterSet *charset = nil;
-    if (!charset) {
-        [NSCharacterSet characterSetWithCharactersInString:@""];
-    }
-    return [self stringByAddingPercentEncodingWithAllowedCharacters:charset];
 }
 
 - (NSString *)xcup_UTF8RemovingPercentEscape
 {
-    if (@available(iOS 2.0, *)) {
+    if (@available(iOS 7, macOS 10.9, tvOS 9.0, watchOS 2.0, *)) {
+        return [self stringByRemovingPercentEncoding];
+    }else {
         return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     }
-    
-    return [self stringByRemovingPercentEncoding];
 }
 
 @end

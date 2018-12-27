@@ -23,6 +23,7 @@
 
 @interface NSMutableArray (Ext)
 
+- (void)removeFirstObject;
 - (void)removeObjectForKey:(id)key atKeyPath:(NSString *)keyPath;
 
 @end

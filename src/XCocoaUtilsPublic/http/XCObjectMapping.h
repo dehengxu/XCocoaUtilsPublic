@@ -1,6 +1,5 @@
 //
-//  TCObjectMapping.h
-//  TCFinance
+//  XCObjectMapping.h
 //
 //  Created by DehengXu on 15/11/18.
 //  Copyright © 2015年 DehengXu. All rights reserved.
@@ -8,11 +7,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TCObjectMappingDelegate.h"
+#import "XCObjectMappingDelegate.h"
 
 #define MappingClass(class_name) protocol class_name
 
-@interface TCObjectMapping : NSObject<TCObjectMappingDelegate>
+@interface XCObjectMapping : NSObject<XCObjectMappingDelegate>
 
 @end
 
@@ -21,14 +20,7 @@
 - (nullable id)realValueForTypeEncode:(nonnull const char *)type fromString:(nonnull NSString *)string;
 - (nullable NSDictionary *)dictionary;
 - (nullable NSString *)fetchFirstProtocolName:(const char * _Nullable)attribute;
-
-/**
- *  Inspect a class.
- *  Print a class property structure.
- *
- *  @param aClass
- */
-- (void)inspect:(Class _Nullable)aClass;
+- (NSDictionary *)propertiesMapping;
 
 @end
 
