@@ -1,20 +1,19 @@
 //
-//  TCObjectMapping.m
-//  TCFinance
+//  XCObjectMapping.m
 //
 //  Created by DehengXu on 15/11/18.
 //  Copyright © 2015年 DehengXu. All rights reserved.
 //
 
-#import "TCObjectMapping.h"
+#import "XCObjectMapping.h"
 #import <objc/runtime.h>
 #import <objc/objc.h>
 #import <objc/message.h>
 
-NSString *const TCObjectMappingJSONFormatException = @"TCObjectMapping: JSON content type exception.";
+NSString *const XCObjectMappingJSONFormatException = @"XCObjectMapping: JSON content type exception.";
 
 
-@implementation TCObjectMapping
+@implementation XCObjectMapping
 
 - (id)mapObject:(id)object toClass:(Class)aClass
 {
@@ -56,7 +55,7 @@ NSString *const TCObjectMappingJSONFormatException = @"TCObjectMapping: JSON con
     }
     
     
-    [[[NSException alloc] initWithName:TCObjectMappingJSONFormatException reason:@"JSON data must be NSDictionary or NSArray object." userInfo:nil] raise];
+    [[[NSException alloc] initWithName:XCObjectMappingJSONFormatException reason:@"JSON data must be NSDictionary or NSArray object." userInfo:nil] raise];
     
     return jsonObj;
 }
@@ -100,7 +99,6 @@ NSString *const TCObjectMappingJSONFormatException = @"TCObjectMapping: JSON con
         iVar = iVarList[i];
         const char * varName = ivar_getName(iVar);
         const char * typeEncode = ivar_getTypeEncoding(iVar);
-        //NSLog(@"type encode :%s", typeEncode);
         if (typeEncode[0] == '@') {
             [mutableDict setObject:[object_getIvar(self, iVar) dictionary] forKey:[[[NSString alloc] initWithFormat:@"%s", varName] substringFromIndex:1]];
         }else {
@@ -129,6 +127,11 @@ NSString *const TCObjectMappingJSONFormatException = @"TCObjectMapping: JSON con
     }
     
     return [NSString stringWithCString:substr encoding:NSUTF8StringEncoding];
+}
+
+- (NSDictionary *)propertiesMapping
+{
+    return nil;
 }
 
 @end
@@ -160,7 +163,7 @@ NSString *const TCObjectMappingJSONFormatException = @"TCObjectMapping: JSON con
         return obj;
     }
     
-    [[[NSException alloc] initWithName:TCObjectMappingJSONFormatException reason:@"JSON data must be NSDictionary or NSArray object." userInfo:nil] raise];
+    [[[NSException alloc] initWithName:XCObjectMappingJSONFormatException reason:@"JSON data must be NSDictionary or NSArray object." userInfo:nil] raise];
     
     return nil;
 }
@@ -184,17 +187,11 @@ NSString *const TCObjectMappingJSONFormatException = @"TCObjectMapping: JSON con
         }else if ([dict isKindOfClass:[NSDictionary class]]) {
             value = [dict forkFromClass:aClass];
         }else {
-            [[[NSException alloc] initWithName:TCObjectMappingJSONFormatException reason:@"JSON array must be composed of NSDictionary object for mapping." userInfo:nil] raise];
+            [[[NSException alloc] initWithName:XCObjectMappingJSONFormatException reason:@"JSON array must be composed of NSDictionary object for mapping." userInfo:nil] raise];
         }
-//        if (value) {
-//            TCLog(@"value=index=%d",idx);
-//            rtn[idx] = value;
-//        }else{
-//            TCLog(@"idx=%d",idx);
-//        }
         rtn[idx] = value;
         idx ++;
-    } //TCLog(@"rtn=%@",rtn);
+    }
     return rtn;
 }
 
@@ -219,7 +216,7 @@ NSString *const TCObjectMappingJSONFormatException = @"TCObjectMapping: JSON con
     Class aClass = [obj class];
     unsigned int varCount = 0;
     
-    Ivar *pVarList = class_copyIvarList(aClass, &varCount);
+    __unused Ivar *pVarList = class_copyIvarList(aClass, &varCount);
     
     Ivar iVar = NULL;
     NSString *propertyKey = nil;
@@ -237,15 +234,13 @@ NSString *const TCObjectMappingJSONFormatException = @"TCObjectMapping: JSON con
     if ([aClass respondsToSelector:mappingSelector]) {
         Method method = class_getClassMethod(aClass, mappingSelector);
         properties = ((NSDictionary* (*)(Class, Method))method_invoke)(aClass, method);
-//        NSLog(@"properties: %@", properties);
     }
     
-#if 1
     for (int i = 0; i < propertyCount; i++) {
         property = propertyList[i];
         const char *name = property_getName(property);
         
-        unsigned len = strlen(name);
+        unsigned long len = strlen(name);
         char *ivar_name = malloc(sizeof(char) * (len + 2));
         ivar_name[0] = '\0';
         strcat(ivar_name, "_");
@@ -267,18 +262,23 @@ NSString *const TCObjectMappingJSONFormatException = @"TCObjectMapping: JSON con
             continue;
         }
         
-//        NSLog(@"key :%@, type: %@; value :%@", propertyKey, [value class], value);
+        //NSLog(@"key :%@, type: %@; value :%@", propertyKey, [value class], value);
         
         id realValue = value;//[self realValueForTypeEncode:typeEncode fromString:value];
         
         if ([realValue isKindOfClass:[NSDictionary class]]) {
             NSString *className = [[NSString stringWithCString:typeEncode encoding:NSUTF8StringEncoding] substringWithRange:NSMakeRange(2, strlen(typeEncode) - 3)];
-            realValue = [realValue forkFromClass:NSClassFromString(className)];
+            
+            if (![NSClassFromString(className) isSubclassOfClass:[NSDictionary class]]) {
+                //直接保留映射为 className 的情况
+                realValue = [realValue forkFromClass:NSClassFromString(className)];
+            }else {
+                //直接保留映射为 NSDictionary 的情况
+            }
+
             [obj setValue:realValue forKey:propertyKey];
-            //object_setIvar(obj, iVar, realValue);
         }else if ([realValue isKindOfClass:[NSArray class]]) {
             NSString *className = [obj fetchFirstProtocolName:attributes];
-            //NSLog(@"class name :%@", className);
             realValue = [(NSArray *)realValue forkFromClass:NSClassFromString(className)];
             if (realValue) {
                 //[obj setValue:realValue forKey:propertyKey];
@@ -288,33 +288,6 @@ NSString *const TCObjectMappingJSONFormatException = @"TCObjectMapping: JSON con
             [obj setValue:value forKey:propertyKey];
             //object_setIvar(obj, iVar, realValue);
         }
-        
-#else
-    for (int i = 0; i < varCount; i++) {
-
-        iVar = pVarList[i];
-        typeEncode = ivar_getTypeEncoding(iVar);
-        NSLog(@"type encode : |%s|", typeEncode);
-        propertyKey = [NSString stringWithCString:ivar_getName(iVar) encoding:NSUTF8StringEncoding];
-        value = [self valueForKey:[propertyKey substringFromIndex:1]];
-        
-        if (!value) {
-            continue;
-        }
-        
-        
-        id realValue = [self realValueForTypeEncode:typeEncode fromString:value];
-        
-        if ([realValue isKindOfClass:[NSDictionary class]]) {
-            NSString *className = [[NSString stringWithCString:typeEncode encoding:NSUTF8StringEncoding] substringWithRange:NSMakeRange(2, strlen(typeEncode) - 3)];
-            realValue = [realValue forkFromClass:NSClassFromString(className)];
-            [obj setValue:realValue forKey:propertyKey];
-            //object_setIvar(obj, iVar, realValue);
-        }else {
-            [obj setValue:value forKey:propertyKey];
-            //object_setIvar(obj, iVar, realValue);
-        }
-#endif
     }
 }
 

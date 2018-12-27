@@ -93,7 +93,6 @@
 		74419E9818448DD100E28DD4 /* FileIOHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4718448DD000E28DD4 /* FileIOHelper.m */; };
 		74419E9C18448DD100E28DD4 /* NameValuePaire.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4A18448DD000E28DD4 /* NameValuePaire.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74419E9D18448DD100E28DD4 /* NameValuePaire.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4B18448DD000E28DD4 /* NameValuePaire.m */; };
-		74419E9E18448DD100E28DD4 /* NameValuePaire.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4B18448DD000E28DD4 /* NameValuePaire.m */; };
 		7461B7781B959EB300EB5D6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B7771B959EB300EB5D6D /* main.m */; };
 		7461B77B1B959EB300EB5D6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B77A1B959EB300EB5D6D /* AppDelegate.m */; };
 		7461B77E1B959EB300EB5D6D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B77D1B959EB300EB5D6D /* ViewController.m */; };
@@ -101,10 +100,13 @@
 		7461B7831B959EB300EB5D6D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7461B7821B959EB300EB5D6D /* Images.xcassets */; };
 		7461B7861B959EB300EB5D6D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7461B7841B959EB300EB5D6D /* LaunchScreen.xib */; };
 		7461B7921B959EB300EB5D6D /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B7911B959EB300EB5D6D /* DemoTests.m */; };
-		74C355FE21BEA787001B0C4C /* TCObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C355FB21BEA787001B0C4C /* TCObjectMapping.h */; };
-		74C3560021BEA787001B0C4C /* TCObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C355FC21BEA787001B0C4C /* TCObjectMapping.m */; };
-		74C3560121BEA787001B0C4C /* TCObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C355FC21BEA787001B0C4C /* TCObjectMapping.m */; };
-		74C3560221BEA787001B0C4C /* TCObjectMappingDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C355FD21BEA787001B0C4C /* TCObjectMappingDelegate.h */; };
+		746AAF6221CCD3DC005B29F6 /* NSString+URI.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF5D21CCD3DC005B29F6 /* NSString+URI.m */; };
+		746AAF6321CCD3DC005B29F6 /* XCObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF5F21CCD3DC005B29F6 /* XCObjectMapping.m */; };
+		746AAF6621CCD406005B29F6 /* NSDictionary+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */; };
+		746AAF6821CCD459005B29F6 /* NameValuePaire.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4B18448DD000E28DD4 /* NameValuePaire.m */; };
+		746AAF6921CCD459005B29F6 /* NSDictionary+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */; };
+		746AAF6A21CCD45E005B29F6 /* NSString+URI.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF5D21CCD3DC005B29F6 /* NSString+URI.m */; };
+		746AAF6B21CCD45E005B29F6 /* XCObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF5F21CCD3DC005B29F6 /* XCObjectMapping.m */; };
 		74C3560821BEA897001B0C4C /* BenchMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560421BEA896001B0C4C /* BenchMark.h */; };
 		74C3560921BEA897001B0C4C /* cbench_mark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560521BEA897001B0C4C /* cbench_mark.h */; };
 		74C3560A21BEA897001B0C4C /* cbench_mark.c in Sources */ = {isa = PBXBuildFile; fileRef = 74C3560621BEA897001B0C4C /* cbench_mark.c */; };
@@ -222,10 +224,14 @@
 		7461B78B1B959EB300EB5D6D /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7461B7901B959EB300EB5D6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7461B7911B959EB300EB5D6D /* DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTests.m; sourceTree = "<group>"; };
+		746AAF5D21CCD3DC005B29F6 /* NSString+URI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URI.m"; sourceTree = "<group>"; };
+		746AAF5E21CCD3DC005B29F6 /* XCObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCObjectMapping.h; sourceTree = "<group>"; };
+		746AAF5F21CCD3DC005B29F6 /* XCObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCObjectMapping.m; sourceTree = "<group>"; };
+		746AAF6021CCD3DC005B29F6 /* XCObjectMappingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCObjectMappingDelegate.h; sourceTree = "<group>"; };
+		746AAF6121CCD3DC005B29F6 /* NSString+URI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URI.h"; sourceTree = "<group>"; };
+		746AAF6421CCD406005B29F6 /* NSDictionary+HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HTTP.h"; sourceTree = "<group>"; };
+		746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HTTP.m"; sourceTree = "<group>"; };
 		74875C70186C3181000A0331 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		74C355FB21BEA787001B0C4C /* TCObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCObjectMapping.h; sourceTree = "<group>"; };
-		74C355FC21BEA787001B0C4C /* TCObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCObjectMapping.m; sourceTree = "<group>"; };
-		74C355FD21BEA787001B0C4C /* TCObjectMappingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCObjectMappingDelegate.h; sourceTree = "<group>"; };
 		74C3560421BEA896001B0C4C /* BenchMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BenchMark.h; sourceTree = "<group>"; };
 		74C3560521BEA897001B0C4C /* cbench_mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cbench_mark.h; sourceTree = "<group>"; };
 		74C3560621BEA897001B0C4C /* cbench_mark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cbench_mark.c; sourceTree = "<group>"; };
@@ -445,11 +451,15 @@
 		74C355FA21BEA72B001B0C4C /* http */ = {
 			isa = PBXGroup;
 			children = (
-				74C355FB21BEA787001B0C4C /* TCObjectMapping.h */,
-				74C355FC21BEA787001B0C4C /* TCObjectMapping.m */,
-				74C355FD21BEA787001B0C4C /* TCObjectMappingDelegate.h */,
+				746AAF6121CCD3DC005B29F6 /* NSString+URI.h */,
+				746AAF5D21CCD3DC005B29F6 /* NSString+URI.m */,
+				746AAF5E21CCD3DC005B29F6 /* XCObjectMapping.h */,
+				746AAF5F21CCD3DC005B29F6 /* XCObjectMapping.m */,
+				746AAF6021CCD3DC005B29F6 /* XCObjectMappingDelegate.h */,
 				74419E4A18448DD000E28DD4 /* NameValuePaire.h */,
 				74419E4B18448DD000E28DD4 /* NameValuePaire.m */,
+				746AAF6421CCD406005B29F6 /* NSDictionary+HTTP.h */,
+				746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */,
 			);
 			path = http;
 			sourceTree = "<group>";
@@ -585,7 +595,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C3560221BEA787001B0C4C /* TCObjectMappingDelegate.h in Headers */,
 				A21416BD180CF6950067EBE8 /* XCocoaUtilsPublicFW.h in Headers */,
 				74419E6918448DD100E28DD4 /* NSTimer+Ext.h in Headers */,
 				74419E5418448DD000E28DD4 /* NSArray+Ext.h in Headers */,
@@ -617,7 +626,6 @@
 				74419E8A18448DD100E28DD4 /* UIViewController+Ext.h in Headers */,
 				74419E6F18448DD100E28DD4 /* SKProduct+Ext.h in Headers */,
 				74419E6018448DD100E28DD4 /* NSObject+Debug.h in Headers */,
-				74C355FE21BEA787001B0C4C /* TCObjectMapping.h in Headers */,
 				74419E7218448DD100E28DD4 /* UIAlertView+Ext.h in Headers */,
 				741A503919FE8C2B007840FD /* NSLayoutConstraint+Convenient.h in Headers */,
 				74419E8418448DD100E28DD4 /* UIScrollView+Ext.h in Headers */,
@@ -879,7 +887,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				74419E8E18448DD100E28DD4 /* DebugUtility.m in Sources */,
-				74C3560021BEA787001B0C4C /* TCObjectMapping.m in Sources */,
 				41BBDE0D192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */,
 				74419E9D18448DD100E28DD4 /* NameValuePaire.m in Sources */,
 				24B5A12719BEF7E9009B474C /* CGFunctions.m in Sources */,
@@ -887,6 +894,7 @@
 				74419E7618448DD100E28DD4 /* UIButton+Ext.m in Sources */,
 				74419E7018448DD100E28DD4 /* SKProduct+Ext.m in Sources */,
 				74419E6D18448DD100E28DD4 /* NSURL+Ext.m in Sources */,
+				746AAF6621CCD406005B29F6 /* NSDictionary+HTTP.m in Sources */,
 				74419E5818448DD000E28DD4 /* NSData+Base64.m in Sources */,
 				74419E6A18448DD100E28DD4 /* NSTimer+Ext.m in Sources */,
 				74419E6118448DD100E28DD4 /* NSObject+Debug.m in Sources */,
@@ -907,8 +915,10 @@
 				741A503A19FE8C2B007840FD /* NSLayoutConstraint+Convenient.m in Sources */,
 				74419E8818448DD100E28DD4 /* UIView+Ext.m in Sources */,
 				74419E8B18448DD100E28DD4 /* UIViewController+Ext.m in Sources */,
+				746AAF6221CCD3DC005B29F6 /* NSString+URI.m in Sources */,
 				74419E8218448DD100E28DD4 /* UIScreen+Ext.m in Sources */,
 				74419E7F18448DD100E28DD4 /* UIImage+Ext.m in Sources */,
+				746AAF6321CCD3DC005B29F6 /* XCObjectMapping.m in Sources */,
 				74419E5118448DD000E28DD4 /* BlockAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -918,9 +928,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74419E8F18448DD100E28DD4 /* DebugUtility.m in Sources */,
-				74C3560121BEA787001B0C4C /* TCObjectMapping.m in Sources */,
 				41BBDE0E192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */,
-				74419E9E18448DD100E28DD4 /* NameValuePaire.m in Sources */,
 				24B5A12819BEF7E9009B474C /* CGFunctions.m in Sources */,
 				74419E5618448DD000E28DD4 /* NSArray+Ext.m in Sources */,
 				74419E7718448DD100E28DD4 /* UIButton+Ext.m in Sources */,
@@ -935,18 +943,22 @@
 				74419E6518448DD100E28DD4 /* NSObject+Ext.m in Sources */,
 				74419E7A18448DD100E28DD4 /* UIColor+Ext.m in Sources */,
 				74C3560D21BEA897001B0C4C /* BenchMark.m in Sources */,
+				746AAF6921CCD459005B29F6 /* NSDictionary+HTTP.m in Sources */,
 				74419E6818448DD100E28DD4 /* NSString+Ext.m in Sources */,
 				74419E8618448DD100E28DD4 /* UIScrollView+Ext.m in Sources */,
+				746AAF6A21CCD45E005B29F6 /* NSString+URI.m in Sources */,
 				74C3561921BEC458001B0C4C /* XOperationTemplate.m in Sources */,
 				74419E5C18448DD000E28DD4 /* NSData+String.m in Sources */,
 				74419E9218448DD100E28DD4 /* NSURL+Test.m in Sources */,
 				74419E7418448DD100E28DD4 /* UIAlertView+Ext.m in Sources */,
+				746AAF6B21CCD45E005B29F6 /* XCObjectMapping.m in Sources */,
 				74419E9518448DD100E28DD4 /* DefaultSettings.m in Sources */,
 				74C3560B21BEA897001B0C4C /* cbench_mark.c in Sources */,
 				741A503B19FE8C2B007840FD /* NSLayoutConstraint+Convenient.m in Sources */,
 				74419E8918448DD100E28DD4 /* UIView+Ext.m in Sources */,
 				74419E8C18448DD100E28DD4 /* UIViewController+Ext.m in Sources */,
 				74419E8318448DD100E28DD4 /* UIScreen+Ext.m in Sources */,
+				746AAF6821CCD459005B29F6 /* NameValuePaire.m in Sources */,
 				74419E8018448DD100E28DD4 /* UIImage+Ext.m in Sources */,
 				74419E5218448DD000E28DD4 /* BlockAlertView.m in Sources */,
 			);

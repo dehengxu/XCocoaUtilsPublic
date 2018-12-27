@@ -96,7 +96,7 @@ Pod::Spec.new do |s|
   # Remove file from link list.
   s.exclude_files = "src/**/RegexKitLite.{h,m}"
 
-   s.public_header_files = "src/**/*.h"
+  #   s.public_header_files = "src/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
