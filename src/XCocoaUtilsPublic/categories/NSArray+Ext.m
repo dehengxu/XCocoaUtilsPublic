@@ -7,6 +7,7 @@
 //
 
 #import "NSArray+Ext.h"
+#import <pthread.h>
 
 @implementation NSArray (Ext)
 
@@ -92,9 +93,17 @@
 
 @end
 
-
-
 @implementation NSMutableArray (Ext)
+
+- (void)removeFirstObject
+{
+    pthread_rwlock_t lock;
+//    while(!pthread_rwlock_tryrdlock(&lock)) {
+//        [NSThread sleepForTimeInterval:0.1f];
+//    }
+    [self removeObject:self.firstObject];
+//    pthread_rwlock_unlock(&lock);
+}
 
 - (void)removeObjectForKey:(id)key atKeyPath:(NSString *)keyPath
 {

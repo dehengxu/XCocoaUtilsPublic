@@ -40,8 +40,11 @@ NSLog(@"%s:%d   %@:\n%@\n", __FUNCTION__, (__LINE__ - 1), [exception name], [exc
  Print function name, object address and some args.
  */
 #define LOG_FUNCTION_NAME(x,...) NSLog(@"%s addr:0x%x; %@", __FUNCTION__, (NSUInteger)self,##__VA_ARGS__)
+#define XLog LOG_FUNCTION_NAME
 
 #define xprint(fmt,...) printf(fmt,##__VA_ARGS__)
+
+#define descriptionOfCocoaObject(obj) ((obj == nil) ? @""#obj "is null" : [NSString stringWithFormat:@"%@%@", @"\""#obj"\" is", [(obj) class]])
 
 #import <Foundation/Foundation.h>
 
