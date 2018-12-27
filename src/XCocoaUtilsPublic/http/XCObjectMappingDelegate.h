@@ -1,17 +1,16 @@
 //
-//  TCObjectMappingProtocol.h
-//  TCFinance
+//  XCObjectMappingProtocol.h
 //
 //  Created by NicholasXu on 15/12/11.
 //  Copyright © 2015年 DehengXu. All rights reserved.
 //
 
-#ifndef TCObjectMappingDelegate_h
-#define TCObjectMappingDelegate_h
+#ifndef XCObjectMappingDelegate_h
+#define XCObjectMappingDelegate_h
 
-#pragma mark - TCObjectMappingDelegate definition
+#pragma mark - XCObjectMappingDelegate definition
 
-@protocol TCObjectMappingDelegate
+@protocol XCObjectMappingDelegate
 
 @required
 - (id _Nullable)mapObject:(id _Nullable)object toClass:(Class _Nullable)aClass;
@@ -22,4 +21,4 @@
 @end
 
 
-#endif /* TCObjectMappingDelegate_h */
+#endif /* XCObjectMappingDelegate_h */

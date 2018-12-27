@@ -33,8 +33,9 @@
             if (c > 0) {
                 [rtn appendFormat:@"&"];
             }
-            
-            [rtn appendFormat:@"%s=%@", name, [self valueForKeyPath:[NSString stringWithFormat:@"%s", name]]];
+            if ([self valueForKeyPath:[NSString stringWithFormat:@"%s", name]]) {
+                [rtn appendFormat:@"%s=%@", name, [self valueForKeyPath:[NSString stringWithFormat:@"%s", name]]];
+            }
         }
     }
     
