@@ -43,11 +43,24 @@
     (*aDestString) = str;
 }
 
-+ (void)printDictionary:(NSDictionary*)anDictionary
++ (void)printDictionary:(NSDictionary *)anDictionary
 {
     NSArray *keys = [anDictionary allKeys];
     for (NSString *key in keys) {
         NSLog(@"key :%@; value:%@", key, [anDictionary valueForKey:key]);
+    }
+}
+
++ (void)printCollection:(id)anyCollection
+{
+    if (nil == anyCollection) { NSLog(@"printCollection: %@", anyCollection); }
+    
+    if ([anyCollection isKindOfClass:[NSArray class]]) {
+        [self printArray:anyCollection];
+    }else if ([anyCollection isKindOfClass:[NSDictionary class]]) {
+        [self printDictionary:anyCollection];
+    }else if ([anyCollection isKindOfClass:[NSSet class]]) {
+        
     }
 }
 
