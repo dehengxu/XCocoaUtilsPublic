@@ -55,6 +55,7 @@ NSLog(@"%s:%d   %@:\n%@\n", __FUNCTION__, (__LINE__ - 1), [exception name], [exc
 + (void)printArray:(NSArray *)anArray;
 + (void)printArray:(NSArray *)anArray ToDestinateString:(NSString **)aDestString;
 + (void)printDictionary:(NSDictionary *)anDictionary;
++ (void)printCollection:(id)anyCollection;
 
 #if TARGET_OS_IPHONE
 - (void)resetDataForTravelingSubviews;
