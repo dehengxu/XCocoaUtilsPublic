@@ -164,7 +164,11 @@ Pod::Spec.new do |s|
   s.subspec 'concurrency' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/concurrency/*.{h,m}"
   end
-  
+
+  s.subspec 'runtime' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/Runtime/*.{h,m}"
+  end
+
   s.requires_arc = false
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency 'RegexKitLite', '~> 4.0'
