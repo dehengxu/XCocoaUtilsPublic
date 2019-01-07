@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2426B59B21E24C4700B9BA7E /* XLogging.c in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59A21E24C4700B9BA7E /* XLogging.c */; };
+		2426B59D21E24CB400B9BA7E /* LoggingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59C21E24CB400B9BA7E /* LoggingTests.m */; };
 		24B5A12619BEF7E9009B474C /* CGFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B5A12419BEF7E9009B474C /* CGFunctions.h */; };
 		24B5A12719BEF7E9009B474C /* CGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* CGFunctions.m */; };
 		24B5A12819BEF7E9009B474C /* CGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* CGFunctions.m */; };
@@ -151,6 +153,9 @@
 
 /* Begin PBXFileReference section */
 		18988A0BF756C2B7EA4A44F8 /* Pods-DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoTests/Pods-DemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		2426B59921E24C4700B9BA7E /* XLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLogging.h; sourceTree = "<group>"; };
+		2426B59A21E24C4700B9BA7E /* XLogging.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = XLogging.c; sourceTree = "<group>"; };
+		2426B59C21E24CB400B9BA7E /* LoggingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoggingTests.m; sourceTree = "<group>"; };
 		24B5A12419BEF7E9009B474C /* CGFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGFunctions.h; sourceTree = "<group>"; };
 		24B5A12519BEF7E9009B474C /* CGFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFunctions.m; sourceTree = "<group>"; };
 		3D42116A5733F0C5FBA873E7 /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,6 +306,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2426B59821E24C2900B9BA7E /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				2426B59921E24C4700B9BA7E /* XLogging.h */,
+				2426B59A21E24C4700B9BA7E /* XLogging.c */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
 		29EF8ABF903E6BBF7D52D683 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +329,7 @@
 		74419E1118448DD000E28DD4 /* XCocoaUtilsPublic */ = {
 			isa = PBXGroup;
 			children = (
+				2426B59821E24C2900B9BA7E /* Logging */,
 				748BB40D21DC97BD0094B4CE /* Runtime */,
 				74C3561B21BEC467001B0C4C /* concurrency */,
 				74C3561121BEB676001B0C4C /* UIKit */,
@@ -428,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				7461B7911B959EB300EB5D6D /* DemoTests.m */,
+				2426B59C21E24CB400B9BA7E /* LoggingTests.m */,
 				7461B78F1B959EB300EB5D6D /* Supporting Files */,
 			);
 			path = DemoTests;
@@ -892,6 +908,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7461B7921B959EB300EB5D6D /* DemoTests.m in Sources */,
+				2426B59D21E24CB400B9BA7E /* LoggingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,6 +922,7 @@
 				24B5A12719BEF7E9009B474C /* CGFunctions.m in Sources */,
 				74419E5518448DD000E28DD4 /* NSArray+Ext.m in Sources */,
 				74419E7618448DD100E28DD4 /* UIButton+Ext.m in Sources */,
+				2426B59B21E24C4700B9BA7E /* XLogging.c in Sources */,
 				74419E7018448DD100E28DD4 /* SKProduct+Ext.m in Sources */,
 				74419E6D18448DD100E28DD4 /* NSURL+Ext.m in Sources */,
 				746AAF6621CCD406005B29F6 /* NSDictionary+HTTP.m in Sources */,
@@ -1038,7 +1056,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1060,7 +1078,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

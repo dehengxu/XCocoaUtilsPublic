@@ -169,6 +169,10 @@ Pod::Spec.new do |s|
       sp.source_files = "src/XCocoaUtilsPublic/Runtime/*.{h,m}"
   end
 
+  s.subspec 'logging' do |sp|
+	  sp.source_files = "src/XCocoaUtilsPublic/Logging/*.{h,m}"
+  end
+
   s.requires_arc = false
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency 'RegexKitLite', '~> 4.0'
