@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 //#import <NSObject+Ext.h>
+#import "Demo.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+	demoLog(@"%s", __func__);
 }
 
 - (void)didReceiveMemoryWarning {
