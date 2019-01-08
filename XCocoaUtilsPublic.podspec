@@ -170,7 +170,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'logging' do |sp|
-	  sp.source_files = "src/XCocoaUtilsPublic/Logging/*.{h,m}"
+	  sp.source_files = "src/XCocoaUtilsPublic/Logging/*.{h,m,c,cpp,cxx,cc}"
   end
 
   s.requires_arc = false
