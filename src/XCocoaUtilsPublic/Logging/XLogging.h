@@ -23,8 +23,12 @@ extern "C" {
 	#define TagLoggingv(TAG, fmt, args) NSLogv([NSString stringWithFormat:@"<"#TAG"> %@", fmt], args)
 #endif
 
+#ifndef DeclareNewLogPrefixAndTag
+	#define DeclareNewLogPrefixAndTag(prefix, tag) extern void prefix##Log(NSString *fmt, ...) NS_FORMAT_FUNCTION(1,2)
+#endif
+
 #ifndef DeclareNewLog
-	#define DeclareNewLog(prefix, tag) extern void prefix##Log(NSString *fmt, ...) NS_FORMAT_FUNCTION(1,2)
+#define DeclareNewLog(prefix) DeclareNewLogPrefixAndTag(prefix, prefix)
 #endif
 
 #ifndef DefineNewLog
@@ -33,9 +37,9 @@ va_list args; va_start(args, fmt); TagLoggingv(tag, fmt, args); va_end(args);\
 }
 #endif
 
-#ifndef DefineNewLogWithClass
-#define DefineNewLogWithClass(prefix, tag, aClass) void prefix##Log(NSString *fmt, ...) {\
-if ([aClass respondsToSelector:@selector(isLoggingEnabled)] && ![aClass isLoggingEnabled]) return;\
+#ifndef DefineNewLogWithModuleClass
+#define DefineNewLogWithModuleClass(prefix, tag, ModuleClass) void prefix##Log(NSString *fmt, ...) {\
+if ([ModuleClass respondsToSelector:@selector(isLoggingEnabled)] && ![ModuleClass isLoggingEnabled]) return;\
 va_list args; va_start(args, fmt); TagLoggingv(tag, fmt, args); va_end(args);\
 }
 #endif
