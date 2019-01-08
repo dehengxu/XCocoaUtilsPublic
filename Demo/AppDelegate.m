@@ -20,6 +20,8 @@
     // Override point for customization after application launch.
 	[Demo setLoggingEnabled:YES];
 	demoLog(@"%s", __func__);
+    os_log_t log = OS_LOG_DEFAULT;
+    os_log(log, "os log ..%s", __func__);
     return YES;
 }
 
