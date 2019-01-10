@@ -24,7 +24,7 @@ extern "C" {
 #endif
 
 #ifndef DeclareNewLogPrefixAndTag
-	#define DeclareNewLogPrefixAndTag(prefix, tag) extern void prefix##Log(NSString *fmt, ...) NS_FORMAT_FUNCTION(1,2)
+	#define DeclareNewLogPrefixAndTag(prefix, tag) extern void prefix##Log(NSString *fmt, ...) NS_FORMAT_FUNCTION(1,2) NS_NO_TAIL_CALL
 #endif
 
 #ifndef DeclareNewLog
