@@ -9,7 +9,7 @@
 #import "Demo.h"
 #import <objc/runtime.h>
 
-DefineNewLogWithClass(demo, Demo, Demo);
+DefineNewLogWithModuleClass(demo, demo, Demo);
 
 @implementation Demo
 
