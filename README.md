@@ -15,3 +15,7 @@ or
 ```
 pod "XCocoaUtilsPublic", '~> 0.4.3', :subspecs => ['benchmark']
 ```
+
+### subspecs
+
+`macros`, `categories`, `io`, `http`, `benchmark`, `debug`, `UIKit`, `concurrency`, `runtime`, `logging`
