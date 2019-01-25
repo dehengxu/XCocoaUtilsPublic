@@ -2,6 +2,10 @@ os: osx
 osx_image: xcode10.1
 language: objective-c
 
+before_install:
+  include:
+    script: instruments -s devices
+
 jobs:
   include:
     - stage: verify
