@@ -4,7 +4,8 @@ language: objective-c
 
 before_install:
   include:
-    script: instruments -s devices
+    - stage: install
+      script: instruments -s devices
 
 jobs:
   include:
