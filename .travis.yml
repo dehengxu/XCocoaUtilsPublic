@@ -1,2 +1,6 @@
-os: osx
 osx_image: xcode10.1
+
+jobs:
+  include:
+    - stage: verify
+      script: xcodebuild -showsdks
