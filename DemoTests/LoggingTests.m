@@ -10,6 +10,8 @@
 #import <XLogging.h>
 #import <objc/runtime.h>
 
+DeclareNewLog(LTC);
+
 @interface LoggingTests : XCTestCase
 
 DeclareLoggingSwitcher();
@@ -20,7 +22,7 @@ DeclareLoggingSwitcher();
 
 DefineLoggingSwitcher();
 
-DefineNewLogWithClass(LTC, Logging, LoggingTests);
+DefineNewLogWithModuleClass(LTC, Logging, LoggingTests);
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
