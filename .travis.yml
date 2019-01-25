@@ -1,6 +1,7 @@
 os: osx
 osx_image: xcode10.1
 language: objective-c
+cache: bundler
 
 jobs:
   include:
