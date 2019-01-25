@@ -7,3 +7,6 @@ jobs:
     - stage: verify
       script: xcodebuild -showsdks
       script: instruments -s devices
+
+    - stage: test
+      script: xcodebuild test -workspace XCocoaUtilsPublic.xcworkspace -scheme DemoTests -sdk iphonesimulator #-destination 'name="iPhone X"'
