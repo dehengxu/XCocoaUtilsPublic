@@ -1,5 +1,6 @@
-# XCocoaUtilsPublic
-Utils for iOS development
+# XCocoaUtilsPublic 
+
+[![Build Status](https://travis-ci.org/xudeheng/XCocoaUtilsPublic.svg?branch=master)](https://travis-ci.org/xudeheng/XCocoaUtilsPublic) Utils for iOS development
 
 Subspecs name list: macros, io, http, benchmark, categories, debug, UIKit, concurrency.
 
