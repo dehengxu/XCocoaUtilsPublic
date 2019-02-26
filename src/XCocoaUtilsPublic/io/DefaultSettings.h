@@ -6,6 +6,8 @@
 //
 //
 
+#import <UIKit/UIKit.h>
+
 @protocol DefaultSettingsProtocol <NSObject>
 
 @optional
