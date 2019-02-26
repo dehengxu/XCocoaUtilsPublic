@@ -13,9 +13,9 @@
 		24B5A12619BEF7E9009B474C /* CGFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B5A12419BEF7E9009B474C /* CGFunctions.h */; };
 		24B5A12719BEF7E9009B474C /* CGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* CGFunctions.m */; };
 		24B5A12819BEF7E9009B474C /* CGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* CGFunctions.m */; };
-		24C11ED32225A06C00733658 /* XCocoaUtilsPublic_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C11ED12225A06C00733658 /* XCocoaUtilsPublic_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24C11ED62225A06C00733658 /* XCocoaUtilsPublic_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C11ECF2225A06B00733658 /* XCocoaUtilsPublic_iOS.framework */; };
-		24C11ED72225A06C00733658 /* XCocoaUtilsPublic_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24C11ECF2225A06B00733658 /* XCocoaUtilsPublic_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		24C11ED32225A06C00733658 /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C11ED12225A06C00733658 /* XCocoaUtilsPublic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11ED62225A06C00733658 /* XCocoaUtilsPublic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */; };
+		24C11ED72225A06C00733658 /* XCocoaUtilsPublic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24C11F012225A0C000733658 /* XLogging.c in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59A21E24C4700B9BA7E /* XLogging.c */; };
 		24C11F022225A0C000733658 /* NSInvocation+XCocoaUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BB41021DC98070094B4CE /* NSInvocation+XCocoaUtils.m */; };
 		24C11F032225A0C000733658 /* XOperationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3561621BEC458001B0C4C /* XOperationTemplate.m */; };
@@ -240,7 +240,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				24C11ED72225A06C00733658 /* XCocoaUtilsPublic_iOS.framework in Embed Frameworks */,
+				24C11ED72225A06C00733658 /* XCocoaUtilsPublic.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,8 +265,8 @@
 		2426B59F21E3A67D00B9BA7E /* Demo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo.m; sourceTree = "<group>"; };
 		24B5A12419BEF7E9009B474C /* CGFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGFunctions.h; sourceTree = "<group>"; };
 		24B5A12519BEF7E9009B474C /* CGFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFunctions.m; sourceTree = "<group>"; };
-		24C11ECF2225A06B00733658 /* XCocoaUtilsPublic_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCocoaUtilsPublic_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		24C11ED12225A06C00733658 /* XCocoaUtilsPublic_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublic_iOS.h; sourceTree = "<group>"; };
+		24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCocoaUtilsPublic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C11ED12225A06C00733658 /* XCocoaUtilsPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublic.h; sourceTree = "<group>"; };
 		24C11ED22225A06C00733658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C11F552225A20300733658 /* XCocoaUtilsPublic_iOS-prefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCocoaUtilsPublic_iOS-prefix.h"; sourceTree = "<group>"; };
 		3D42116A5733F0C5FBA873E7 /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,7 +393,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24C11ED62225A06C00733658 /* XCocoaUtilsPublic_iOS.framework in Frameworks */,
+				24C11ED62225A06C00733658 /* XCocoaUtilsPublic.framework in Frameworks */,
 				925EEDA9778C69CF219F2E8B /* libPods-Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,7 +439,7 @@
 		24C11ED02225A06C00733658 /* XCocoaUtilsPublic iOS */ = {
 			isa = PBXGroup;
 			children = (
-				24C11ED12225A06C00733658 /* XCocoaUtilsPublic_iOS.h */,
+				24C11ED12225A06C00733658 /* XCocoaUtilsPublic.h */,
 				24C11ED22225A06C00733658 /* Info.plist */,
 				24C11F552225A20300733658 /* XCocoaUtilsPublic_iOS-prefix.h */,
 			);
@@ -692,7 +692,7 @@
 				A21415E1180CE0790067EBE8 /* XCocoaUtilsPublic.framework */,
 				7461B7731B959EB300EB5D6D /* Demo.app */,
 				7461B78B1B959EB300EB5D6D /* DemoTests.xctest */,
-				24C11ECF2225A06B00733658 /* XCocoaUtilsPublic_iOS.framework */,
+				24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -768,7 +768,7 @@
 				24C11F332225A13400733658 /* XCObjectMapping.h in Headers */,
 				24C11F472225A13400733658 /* UIAlertView+Ext.h in Headers */,
 				24C11F412225A13400733658 /* NSObject+Ext.h in Headers */,
-				24C11ED32225A06C00733658 /* XCocoaUtilsPublic_iOS.h in Headers */,
+				24C11ED32225A06C00733658 /* XCocoaUtilsPublic.h in Headers */,
 				24C11F522225A14600733658 /* XCocoaUtilsPublic.h in Headers */,
 				24C11F2E2225A13400733658 /* web_macros.h in Headers */,
 				24C11F3F2225A13400733658 /* NSLayoutConstraint+Convenient.h in Headers */,
@@ -868,7 +868,7 @@
 			);
 			name = "XCocoaUtilsPublic iOS";
 			productName = "XCocoaUtilsPublic iOS";
-			productReference = 24C11ECF2225A06B00733658 /* XCocoaUtilsPublic_iOS.framework */;
+			productReference = 24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7461B7721B959EB300EB5D6D /* Demo */ = {
@@ -1348,7 +1348,8 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dehengxu.ios.XCocoaUtilsPublic-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME)";
+				PRODUCT_NAME = XCocoaUtilsPublic;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1399,7 +1400,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dehengxu.ios.XCocoaUtilsPublic-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME)";
+				PRODUCT_NAME = XCocoaUtilsPublic;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
