@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "24C11ECE2225A06B00733658"
-               BuildableName = "XCocoaUtilsPublic_iOS.framework"
+               BuildableName = "XCocoaUtilsPublic.framework"
                BlueprintName = "XCocoaUtilsPublic iOS"
                ReferencedContainer = "container:XCocoaUtilsPublic.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24C11ECE2225A06B00733658"
-            BuildableName = "XCocoaUtilsPublic_iOS.framework"
+            BuildableName = "XCocoaUtilsPublic.framework"
             BlueprintName = "XCocoaUtilsPublic iOS"
             ReferencedContainer = "container:XCocoaUtilsPublic.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24C11ECE2225A06B00733658"
-            BuildableName = "XCocoaUtilsPublic_iOS.framework"
+            BuildableName = "XCocoaUtilsPublic.framework"
             BlueprintName = "XCocoaUtilsPublic iOS"
             ReferencedContainer = "container:XCocoaUtilsPublic.xcodeproj">
          </BuildableReference>
