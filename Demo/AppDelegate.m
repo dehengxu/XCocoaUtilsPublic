@@ -20,8 +20,14 @@
     // Override point for customization after application launch.
 	[Demo setLoggingEnabled:YES];
 	demoLog(@"%s", __func__);
+    
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_10_0
     os_log_t log = OS_LOG_DEFAULT;
-    os_log(log, "os log ..%s", __func__);
+    os_log_info(log, "os log ..%s", __func__);
+    os_log_error(log, "os log ..%s", __func__);
+#else
+    NSLog(@"");
+#endif
     return YES;
 }
 

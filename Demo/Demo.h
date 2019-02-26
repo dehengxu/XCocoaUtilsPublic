@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-DeclareNewLog(demo, Demo);
+DeclareNewLog(demo);
 
 @interface Demo : NSObject
 
