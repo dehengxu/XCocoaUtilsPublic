@@ -52,61 +52,64 @@
 		24C11F232225A0C000733658 /* UIViewController+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E3E18448DD000E28DD4 /* UIViewController+Ext.m */; };
 		24C11F242225A0C000733658 /* DebugUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4118448DD000E28DD4 /* DebugUtility.m */; };
 		24C11F252225A0C000733658 /* NSURL+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4318448DD000E28DD4 /* NSURL+Test.m */; };
-		24C11F262225A11300733658 /* XLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 2426B59921E24C4700B9BA7E /* XLogging.h */; };
-		24C11F272225A13400733658 /* NSInvocation+XCocoaUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 748BB40F21DC98070094B4CE /* NSInvocation+XCocoaUtils.h */; };
-		24C11F282225A13400733658 /* XOperationTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561721BEC458001B0C4C /* XOperationTemplate.h */; };
-		24C11F292225A13400733658 /* CGFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B5A12419BEF7E9009B474C /* CGFunctions.h */; };
-		24C11F2A2225A13400733658 /* BlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1518448DD000E28DD4 /* BlockAlertView.h */; };
-		24C11F2B2225A13400733658 /* memory_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561021BEB283001B0C4C /* memory_macros.h */; };
-		24C11F2C2225A13400733658 /* singletone.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561221BEB728001B0C4C /* singletone.h */; };
-		24C11F2D2225A13400733658 /* UIKit_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561321BEB7A9001B0C4C /* UIKit_macros.h */; };
-		24C11F2E2225A13400733658 /* web_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561421BEB7CE001B0C4C /* web_macros.h */; };
-		24C11F2F2225A13400733658 /* CF_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561521BEBA08001B0C4C /* CF_macros.h */; };
-		24C11F302225A13400733658 /* DefaultSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4418448DD000E28DD4 /* DefaultSettings.h */; };
-		24C11F312225A13400733658 /* FileIOHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4618448DD000E28DD4 /* FileIOHelper.h */; };
-		24C11F322225A13400733658 /* NSString+URI.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6121CCD3DC005B29F6 /* NSString+URI.h */; };
-		24C11F332225A13400733658 /* XCObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF5E21CCD3DC005B29F6 /* XCObjectMapping.h */; };
-		24C11F342225A13400733658 /* XCObjectMappingDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6021CCD3DC005B29F6 /* XCObjectMappingDelegate.h */; };
-		24C11F352225A13400733658 /* NameValuePaire.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4A18448DD000E28DD4 /* NameValuePaire.h */; };
-		24C11F362225A13400733658 /* NSDictionary+HTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6421CCD406005B29F6 /* NSDictionary+HTTP.h */; };
-		24C11F372225A13400733658 /* BenchMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560421BEA896001B0C4C /* BenchMark.h */; };
-		24C11F382225A13400733658 /* cbench_mark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560521BEA897001B0C4C /* cbench_mark.h */; };
-		24C11F392225A13400733658 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1318448DD000E28DD4 /* RegexKitLite.h */; };
+		24C11F262225A11300733658 /* XLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 2426B59921E24C4700B9BA7E /* XLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F272225A13400733658 /* NSInvocation+XCocoaUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 748BB40F21DC98070094B4CE /* NSInvocation+XCocoaUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F282225A13400733658 /* XOperationTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561721BEC458001B0C4C /* XOperationTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F292225A13400733658 /* CGFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B5A12419BEF7E9009B474C /* CGFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F2A2225A13400733658 /* BlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1518448DD000E28DD4 /* BlockAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F2B2225A13400733658 /* memory_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561021BEB283001B0C4C /* memory_macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F2C2225A13400733658 /* singletone.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561221BEB728001B0C4C /* singletone.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F2D2225A13400733658 /* UIKit_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561321BEB7A9001B0C4C /* UIKit_macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F2E2225A13400733658 /* web_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561421BEB7CE001B0C4C /* web_macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F2F2225A13400733658 /* CF_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561521BEBA08001B0C4C /* CF_macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F302225A13400733658 /* DefaultSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4418448DD000E28DD4 /* DefaultSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F312225A13400733658 /* FileIOHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4618448DD000E28DD4 /* FileIOHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F322225A13400733658 /* NSString+URI.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6121CCD3DC005B29F6 /* NSString+URI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F332225A13400733658 /* XCObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF5E21CCD3DC005B29F6 /* XCObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F342225A13400733658 /* XCObjectMappingDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6021CCD3DC005B29F6 /* XCObjectMappingDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F352225A13400733658 /* NameValuePaire.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4A18448DD000E28DD4 /* NameValuePaire.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F362225A13400733658 /* NSDictionary+HTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6421CCD406005B29F6 /* NSDictionary+HTTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F372225A13400733658 /* BenchMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560421BEA896001B0C4C /* BenchMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F382225A13400733658 /* cbench_mark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560521BEA897001B0C4C /* cbench_mark.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F3A2225A13400733658 /* extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1818448DD000E28DD4 /* extensions.h */; };
-		24C11F3B2225A13400733658 /* NSArray+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1918448DD000E28DD4 /* NSArray+Ext.h */; };
-		24C11F3C2225A13400733658 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1B18448DD000E28DD4 /* NSData+Base64.h */; };
-		24C11F3D2225A13400733658 /* NSData+String.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1D18448DD000E28DD4 /* NSData+String.h */; };
-		24C11F3E2225A13400733658 /* NSDate+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1F18448DD000E28DD4 /* NSDate+Ext.h */; };
-		24C11F3F2225A13400733658 /* NSLayoutConstraint+Convenient.h in Headers */ = {isa = PBXBuildFile; fileRef = 741A503719FE8C2B007840FD /* NSLayoutConstraint+Convenient.h */; };
-		24C11F402225A13400733658 /* NSObject+Debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2118448DD000E28DD4 /* NSObject+Debug.h */; };
-		24C11F412225A13400733658 /* NSObject+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2318448DD000E28DD4 /* NSObject+Ext.h */; };
-		24C11F422225A13400733658 /* NSObject+PropertyToURLParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */; };
-		24C11F432225A13400733658 /* NSString+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2518448DD000E28DD4 /* NSString+Ext.h */; };
-		24C11F442225A13400733658 /* NSTimer+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2718448DD000E28DD4 /* NSTimer+Ext.h */; };
-		24C11F452225A13400733658 /* NSURL+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2918448DD000E28DD4 /* NSURL+Ext.h */; };
-		24C11F462225A13400733658 /* SKProduct+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2B18448DD000E28DD4 /* SKProduct+Ext.h */; };
-		24C11F472225A13400733658 /* UIAlertView+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2D18448DD000E28DD4 /* UIAlertView+Ext.h */; };
-		24C11F482225A13400733658 /* UIButton+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2F18448DD000E28DD4 /* UIButton+Ext.h */; };
-		24C11F492225A13400733658 /* UIColor+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3118448DD000E28DD4 /* UIColor+Ext.h */; };
-		24C11F4A2225A14600733658 /* UIFont+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3318448DD000E28DD4 /* UIFont+Ext.h */; };
-		24C11F4B2225A14600733658 /* UIImage+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3518448DD000E28DD4 /* UIImage+Ext.h */; };
-		24C11F4C2225A14600733658 /* UIScreen+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3718448DD000E28DD4 /* UIScreen+Ext.h */; };
-		24C11F4D2225A14600733658 /* UIScrollView+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3918448DD000E28DD4 /* UIScrollView+Ext.h */; };
-		24C11F4E2225A14600733658 /* UIView+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3B18448DD000E28DD4 /* UIView+Ext.h */; };
-		24C11F4F2225A14600733658 /* UIViewController+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3D18448DD000E28DD4 /* UIViewController+Ext.h */; };
-		24C11F502225A14600733658 /* DebugUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4018448DD000E28DD4 /* DebugUtility.h */; };
-		24C11F512225A14600733658 /* NSURL+Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4218448DD000E28DD4 /* NSURL+Test.h */; };
+		24C11F3B2225A13400733658 /* NSArray+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1918448DD000E28DD4 /* NSArray+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F3C2225A13400733658 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1B18448DD000E28DD4 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F3D2225A13400733658 /* NSData+String.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1D18448DD000E28DD4 /* NSData+String.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F3E2225A13400733658 /* NSDate+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1F18448DD000E28DD4 /* NSDate+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F3F2225A13400733658 /* NSLayoutConstraint+Convenient.h in Headers */ = {isa = PBXBuildFile; fileRef = 741A503719FE8C2B007840FD /* NSLayoutConstraint+Convenient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F402225A13400733658 /* NSObject+Debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2118448DD000E28DD4 /* NSObject+Debug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F412225A13400733658 /* NSObject+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2318448DD000E28DD4 /* NSObject+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F422225A13400733658 /* NSObject+PropertyToURLParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F432225A13400733658 /* NSString+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2518448DD000E28DD4 /* NSString+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F442225A13400733658 /* NSTimer+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2718448DD000E28DD4 /* NSTimer+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F452225A13400733658 /* NSURL+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2918448DD000E28DD4 /* NSURL+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F462225A13400733658 /* SKProduct+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2B18448DD000E28DD4 /* SKProduct+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F472225A13400733658 /* UIAlertView+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2D18448DD000E28DD4 /* UIAlertView+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F482225A13400733658 /* UIButton+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2F18448DD000E28DD4 /* UIButton+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F492225A13400733658 /* UIColor+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3118448DD000E28DD4 /* UIColor+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F4A2225A14600733658 /* UIFont+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3318448DD000E28DD4 /* UIFont+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F4B2225A14600733658 /* UIImage+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3518448DD000E28DD4 /* UIImage+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F4C2225A14600733658 /* UIScreen+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3718448DD000E28DD4 /* UIScreen+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F4D2225A14600733658 /* UIScrollView+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3918448DD000E28DD4 /* UIScrollView+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F4E2225A14600733658 /* UIView+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3B18448DD000E28DD4 /* UIView+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F4F2225A14600733658 /* UIViewController+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3D18448DD000E28DD4 /* UIViewController+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F502225A14600733658 /* DebugUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4018448DD000E28DD4 /* DebugUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F512225A14600733658 /* NSURL+Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4218448DD000E28DD4 /* NSURL+Test.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F522225A14600733658 /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = 7434EA1C19C5BE13001E6989 /* XCocoaUtilsPublic.h */; };
 		24C11F532225A15D00733658 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23B2A13180D2A4800C270A4 /* UIKit.framework */; };
 		24C11F542225A16100733658 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415A0180CDF790067EBE8 /* Foundation.framework */; };
+		24C11F86222603B000733658 /* NSInvocation+XCocoaUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 748BB40F21DC98070094B4CE /* NSInvocation+XCocoaUtils.h */; };
+		24C11F87222603EE00733658 /* XCObjectMappingDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6021CCD3DC005B29F6 /* XCObjectMappingDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F88222603F500733658 /* NSString+URI.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6121CCD3DC005B29F6 /* NSString+URI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F89222603FF00733658 /* XCObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF5E21CCD3DC005B29F6 /* XCObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F8A222603FF00733658 /* NSDictionary+HTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6421CCD406005B29F6 /* NSDictionary+HTTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41BBDE0C192620AA00A05DC9 /* NSObject+PropertyToURLParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41BBDE0D192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
 		41BBDE0E192620AA00A05DC9 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
-		741A503919FE8C2B007840FD /* NSLayoutConstraint+Convenient.h in Headers */ = {isa = PBXBuildFile; fileRef = 741A503719FE8C2B007840FD /* NSLayoutConstraint+Convenient.h */; };
+		741A503919FE8C2B007840FD /* NSLayoutConstraint+Convenient.h in Headers */ = {isa = PBXBuildFile; fileRef = 741A503719FE8C2B007840FD /* NSLayoutConstraint+Convenient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		741A503A19FE8C2B007840FD /* NSLayoutConstraint+Convenient.m in Sources */ = {isa = PBXBuildFile; fileRef = 741A503819FE8C2B007840FD /* NSLayoutConstraint+Convenient.m */; };
 		741A503B19FE8C2B007840FD /* NSLayoutConstraint+Convenient.m in Sources */ = {isa = PBXBuildFile; fileRef = 741A503819FE8C2B007840FD /* NSLayoutConstraint+Convenient.m */; };
 		7434EA1D19C5BE13001E6989 /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = 7434EA1C19C5BE13001E6989 /* XCocoaUtilsPublic.h */; };
-		74419E4D18448DD000E28DD4 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1318448DD000E28DD4 /* RegexKitLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74419E5018448DD000E28DD4 /* BlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1518448DD000E28DD4 /* BlockAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74419E5118448DD000E28DD4 /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1618448DD000E28DD4 /* BlockAlertView.m */; };
 		74419E5218448DD000E28DD4 /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1618448DD000E28DD4 /* BlockAlertView.m */; };
@@ -197,8 +200,8 @@
 		746AAF6A21CCD45E005B29F6 /* NSString+URI.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF5D21CCD3DC005B29F6 /* NSString+URI.m */; };
 		746AAF6B21CCD45E005B29F6 /* XCObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF5F21CCD3DC005B29F6 /* XCObjectMapping.m */; };
 		748BB41121DC98070094B4CE /* NSInvocation+XCocoaUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BB41021DC98070094B4CE /* NSInvocation+XCocoaUtils.m */; };
-		74C3560821BEA897001B0C4C /* BenchMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560421BEA896001B0C4C /* BenchMark.h */; };
-		74C3560921BEA897001B0C4C /* cbench_mark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560521BEA897001B0C4C /* cbench_mark.h */; };
+		74C3560821BEA897001B0C4C /* BenchMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560421BEA896001B0C4C /* BenchMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74C3560921BEA897001B0C4C /* cbench_mark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560521BEA897001B0C4C /* cbench_mark.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74C3560A21BEA897001B0C4C /* cbench_mark.c in Sources */ = {isa = PBXBuildFile; fileRef = 74C3560621BEA897001B0C4C /* cbench_mark.c */; };
 		74C3560B21BEA897001B0C4C /* cbench_mark.c in Sources */ = {isa = PBXBuildFile; fileRef = 74C3560621BEA897001B0C4C /* cbench_mark.c */; };
 		74C3560C21BEA897001B0C4C /* BenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3560721BEA897001B0C4C /* BenchMark.m */; };
@@ -796,7 +799,6 @@
 				24C11F352225A13400733658 /* NameValuePaire.h in Headers */,
 				24C11F422225A13400733658 /* NSObject+PropertyToURLParams.h in Headers */,
 				24C11F302225A13400733658 /* DefaultSettings.h in Headers */,
-				24C11F392225A13400733658 /* RegexKitLite.h in Headers */,
 				24C11F282225A13400733658 /* XOperationTemplate.h in Headers */,
 				24C11F482225A13400733658 /* UIButton+Ext.h in Headers */,
 				24C11F2B2225A13400733658 /* memory_macros.h in Headers */,
@@ -816,20 +818,23 @@
 				74419E6918448DD100E28DD4 /* NSTimer+Ext.h in Headers */,
 				74419E5418448DD000E28DD4 /* NSArray+Ext.h in Headers */,
 				74C3560821BEA897001B0C4C /* BenchMark.h in Headers */,
+				24C11F87222603EE00733658 /* XCObjectMappingDelegate.h in Headers */,
 				74419E7818448DD100E28DD4 /* UIColor+Ext.h in Headers */,
 				74419E6C18448DD100E28DD4 /* NSURL+Ext.h in Headers */,
 				74419E6318448DD100E28DD4 /* NSObject+Ext.h in Headers */,
 				41BBDE0C192620AA00A05DC9 /* NSObject+PropertyToURLParams.h in Headers */,
 				74C3561A21BEC458001B0C4C /* XOperationTemplate.h in Headers */,
 				74419E5A18448DD000E28DD4 /* NSData+String.h in Headers */,
+				24C11F8A222603FF00733658 /* NSDictionary+HTTP.h in Headers */,
 				74419E8D18448DD100E28DD4 /* DebugUtility.h in Headers */,
 				74419E5718448DD000E28DD4 /* NSData+Base64.h in Headers */,
+				24C11F86222603B000733658 /* NSInvocation+XCocoaUtils.h in Headers */,
 				24B5A12619BEF7E9009B474C /* CGFunctions.h in Headers */,
 				74419E9618448DD100E28DD4 /* FileIOHelper.h in Headers */,
 				74419E9318448DD100E28DD4 /* DefaultSettings.h in Headers */,
 				74419E9C18448DD100E28DD4 /* NameValuePaire.h in Headers */,
 				74419E7E18448DD100E28DD4 /* UIImage+Ext.h in Headers */,
-				74419E4D18448DD000E28DD4 /* RegexKitLite.h in Headers */,
+				24C11F88222603F500733658 /* NSString+URI.h in Headers */,
 				74419E5D18448DD000E28DD4 /* NSDate+Ext.h in Headers */,
 				74419E6618448DD100E28DD4 /* NSString+Ext.h in Headers */,
 				74C3560921BEA897001B0C4C /* cbench_mark.h in Headers */,
@@ -846,6 +851,7 @@
 				74419E7218448DD100E28DD4 /* UIAlertView+Ext.h in Headers */,
 				741A503919FE8C2B007840FD /* NSLayoutConstraint+Convenient.h in Headers */,
 				74419E8418448DD100E28DD4 /* UIScrollView+Ext.h in Headers */,
+				24C11F89222603FF00733658 /* XCObjectMapping.h in Headers */,
 				74419E7B18448DD100E28DD4 /* UIFont+Ext.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
