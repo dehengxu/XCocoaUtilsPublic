@@ -401,6 +401,16 @@ static NSDateFormatter *formatter = nil;
     }
 }
 
+- (NSString *)localizedString
+{
+    return NSLocalizedString(self, nil);
+}
+
+- (NSString *)localizedStringInTable:(NSString *)tbl ofBundle:(NSBundle *)bundle
+{
+    return NSLocalizedStringWithDefaultValue(self, tbl, bundle, self, nil);
+}
+
 @end
 
 

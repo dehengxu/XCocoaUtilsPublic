@@ -33,6 +33,9 @@ extern const char *CStringFromNSString(NSString *string);
 - (NSString *)stringByRemoveHTMLTags;
 - (NSString *)stringByRemoveHTMLTag:(NSString *)tag;
 
+- (NSString *)localizedString;
+- (NSString *)localizedStringInTable:(NSString *)tbl ofBundle:(NSBundle *)bundle;
+
 @end
 
 @interface NSMutableString (Utils)

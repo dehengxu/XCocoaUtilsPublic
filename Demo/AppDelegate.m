@@ -28,6 +28,7 @@
 	appLog(@"%s", __func__);
     appLog(@"JS: %@", JS_HTML_OUTER);
     //appLog(@"XCocoaUtilsPublic_iOSVersionNumber: %s", XCocoaUtilsPublic_iOSVersionString);
+    appLog(@"title: %@", [@"title" localizedString]);
     
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_10_0
     os_log_t log = OS_LOG_DEFAULT;
