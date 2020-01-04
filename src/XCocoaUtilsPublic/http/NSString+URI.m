@@ -9,7 +9,7 @@
 #import <AvailabilityInternal.h>
 #import <availability.h>
 #import "CF_macros.h"
-#import "NSObject+Ext.h"
+#import "NSObject+XCUP.h"
 #import "memory_macros.h"
 
 

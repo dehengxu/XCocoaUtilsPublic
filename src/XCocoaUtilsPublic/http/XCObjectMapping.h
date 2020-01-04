@@ -20,7 +20,7 @@
 - (nullable id)realValueForTypeEncode:(nonnull const char *)type fromString:(nonnull NSString *)string;
 - (nullable NSDictionary *)dictionary;
 - (nullable NSString *)fetchFirstProtocolName:(const char * _Nullable)attribute;
-- (NSDictionary *)propertiesMapping;
+- (NSDictionary *_Nullable)propertiesMapping;
 
 @end
 

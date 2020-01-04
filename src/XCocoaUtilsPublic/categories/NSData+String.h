@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSData (String)
-- (NSString *)utf8String;
-- (NSString *)stringByEncoding:(NSStringEncoding)encoding;
+@interface NSData (XCUString)
+- (NSString *)xcu_utf8String;
+- (NSString *)xcu_stringByEncoding:(NSStringEncoding)encoding;
 @end

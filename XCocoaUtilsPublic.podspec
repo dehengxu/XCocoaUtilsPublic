@@ -96,7 +96,7 @@ Pod::Spec.new do |s|
   # Remove file from link list.
   s.exclude_files = "src/**/RegexKitLite.{h,m}"
 
-  #   s.public_header_files = "src/**/*.h"
+ s.public_header_files = "src/XCocoaUtilsPublic/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -130,51 +130,61 @@ Pod::Spec.new do |s|
 
   s.subspec 'macros' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/macros/*.{h}"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/macros"
   end
 
   s.subspec 'categories' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/categories/*.{h,m}"
       sp.dependency "XCocoaUtilsPublic/macros"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/categories"
   end
   
   s.subspec 'io' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/io/*.{h,m}"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/io"
   end
   
   s.subspec 'http' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/http/*.{h,m}"
       sp.dependency "XCocoaUtilsPublic/categories"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/http"
   end
 
   s.subspec 'benchmark' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/benchmark/*.{h,m}"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/benchmark"
   end
   
   s.subspec 'debug' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/debug/*.{h,m}"
       sp.dependency "XCocoaUtilsPublic/categories"
       sp.dependency "XCocoaUtilsPublic/http"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/debug"
   end
   
   s.subspec 'UIKit' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/UIKit/*.{h,m}"
       sp.dependency "XCocoaUtilsPublic/categories"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/UIKit"
   end
   
   s.subspec 'concurrency' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/concurrency/*.{h,m}"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/concurrency"
   end
 
   s.subspec 'runtime' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/Runtime/*.{h,m}"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/Runtime"
   end
 
   s.subspec 'logging' do |sp|
 	  sp.source_files = "src/XCocoaUtilsPublic/Logging/*.{h,m,c,cpp,cxx,cc}"
+    sp.preserve_paths = "src/XCocoaUtilsPublic/Logging"
   end
 
   s.requires_arc = false
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency 'RegexKitLite', '~> 4.0'
+  # s.dependency 'RegexKitLite', '~> 4.0'
 
 end
