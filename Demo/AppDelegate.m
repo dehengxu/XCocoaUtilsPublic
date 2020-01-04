@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "Demo.h"
+#import "Logs.h"
 #import <XCocoaUtilsPublic/XCocoaUtilsPublic.h>
+#import <objc/runtime.h>
+
 
 @interface AppDelegate ()
 
@@ -20,11 +22,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    [Demo setLoggingEnabled:1];
-	demoLog(@"%s", __func__);
-
-    demoLog(@"JS: %@", JS_HTML_OUTER);
-    //demoLog(@"XCocoaUtilsPublic_iOSVersionNumber: %s", XCocoaUtilsPublic_iOSVersionString);
+    [log_app setLoggingEnabled:1];
+    [log_mainvc setLoggingEnabled:1];
+    
+	appLog(@"%s", __func__);
+    appLog(@"JS: %@", JS_HTML_OUTER);
+    //appLog(@"XCocoaUtilsPublic_iOSVersionNumber: %s", XCocoaUtilsPublic_iOSVersionString);
     
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_10_0
     os_log_t log = OS_LOG_DEFAULT;
@@ -39,7 +42,7 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-	demoLog(@"%s", __func__);
+	appLog(@"%s", __func__);
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {

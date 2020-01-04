@@ -43,22 +43,22 @@ extern "C" {
 
 /** 声明模块类日志及开关 */
 #ifndef DeclareLoggerWithModuleClass
-#define DeclareLoggerWithModuleClass(ClassN, Tag)\
-@interface ClassN: NSObject @end;\
+#define DeclareLoggerWithModuleClass(Tag)\
+@interface log_##Tag: NSObject @end;\
 DeclareNewLogger(Tag);\
-DeclareLoggingSwitcher(ClassN);
+DeclareLoggingSwitcher(log_##Tag);
 #endif
 
 // Logger definition
 
 /** 定义模块类日志及开关 */
 #ifndef DefineLoggerWithModuleClass
-#define DefineLoggerWithModuleClass(ClassN, prefixAndTag) void prefixAndTag##Log(NSString *fmt, ...) {\
-if ([ClassN respondsToSelector:@selector(isLoggingEnabled)] && ![ClassN isLoggingEnabled]) return;\
+#define DefineLoggerWithModuleClass(prefixAndTag) void prefixAndTag##Log(NSString *fmt, ...) {\
+if ([log_##prefixAndTag respondsToSelector:@selector(isLoggingEnabled)] && ![log_##prefixAndTag isLoggingEnabled]) return;\
 va_list args; va_start(args, fmt); TagLoggingv(prefixAndTag, fmt, args); va_end(args);\
 }\
-@implementation ClassN @end;\
-DefineLoggingSwitcher(ClassN)
+@implementation log_##prefixAndTag @end;\
+DefineLoggingSwitcher(log_##prefixAndTag)
 #endif
 
 // Logging switcher

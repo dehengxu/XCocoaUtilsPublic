@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-//#import <NSObject+Ext.h>
-#import "Demo.h"
+#import "Logs.h"
 
 @interface ViewController ()
 
@@ -19,7 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-	demoLog(@"%s", __func__);
+	mainvcLog(@"-->>%s", __func__);
+    //Close logging
+    [log_mainvc setLoggingEnabled:false];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    mainvcLog(@"-->>%s", __func__);
 }
 
 - (void)didReceiveMemoryWarning {

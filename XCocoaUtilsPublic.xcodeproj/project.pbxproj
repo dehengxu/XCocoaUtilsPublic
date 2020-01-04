@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2426B59B21E24C4700B9BA7E /* XLogging.c in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59A21E24C4700B9BA7E /* XLogging.c */; };
 		2426B59D21E24CB400B9BA7E /* LoggingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59C21E24CB400B9BA7E /* LoggingTests.m */; };
-		2426B5A021E3A67D00B9BA7E /* Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59F21E3A67D00B9BA7E /* Demo.m */; };
+		2426B5A021E3A67D00B9BA7E /* Logs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59F21E3A67D00B9BA7E /* Logs.m */; };
 		24B5A12719BEF7E9009B474C /* XCUPCGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* XCUPCGFunctions.m */; };
 		24C11ED72225A06C00733658 /* XCocoaUtilsPublic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24C11F012225A0C000733658 /* XLogging.c in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59A21E24C4700B9BA7E /* XLogging.c */; };
@@ -176,8 +176,8 @@
 		2426B59921E24C4700B9BA7E /* XLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLogging.h; sourceTree = "<group>"; };
 		2426B59A21E24C4700B9BA7E /* XLogging.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = XLogging.c; sourceTree = "<group>"; };
 		2426B59C21E24CB400B9BA7E /* LoggingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoggingTests.m; sourceTree = "<group>"; };
-		2426B59E21E3A67D00B9BA7E /* Demo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo.h; sourceTree = "<group>"; };
-		2426B59F21E3A67D00B9BA7E /* Demo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo.m; sourceTree = "<group>"; };
+		2426B59E21E3A67D00B9BA7E /* Logs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logs.h; sourceTree = "<group>"; };
+		2426B59F21E3A67D00B9BA7E /* Logs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Logs.m; sourceTree = "<group>"; };
 		243FD97923C0174F006EED9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		243FD97D23C03256006EED9E /* XCUPConcurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUPConcurrency.h; sourceTree = "<group>"; };
 		243FD97E23C03261006EED9E /* XCUPHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUPHttp.h; sourceTree = "<group>"; };
@@ -452,8 +452,8 @@
 			children = (
 				7461B7791B959EB300EB5D6D /* AppDelegate.h */,
 				7461B77A1B959EB300EB5D6D /* AppDelegate.m */,
-				2426B59E21E3A67D00B9BA7E /* Demo.h */,
-				2426B59F21E3A67D00B9BA7E /* Demo.m */,
+				2426B59E21E3A67D00B9BA7E /* Logs.h */,
+				2426B59F21E3A67D00B9BA7E /* Logs.m */,
 				7461B7821B959EB300EB5D6D /* Images.xcassets */,
 				7461B7841B959EB300EB5D6D /* LaunchScreen.xib */,
 				7461B77F1B959EB300EB5D6D /* Main.storyboard */,
@@ -922,7 +922,7 @@
 			files = (
 				7461B77E1B959EB300EB5D6D /* ViewController.m in Sources */,
 				7461B77B1B959EB300EB5D6D /* AppDelegate.m in Sources */,
-				2426B5A021E3A67D00B9BA7E /* Demo.m in Sources */,
+				2426B5A021E3A67D00B9BA7E /* Logs.m in Sources */,
 				7461B7781B959EB300EB5D6D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

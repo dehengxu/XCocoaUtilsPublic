@@ -6,7 +6,7 @@
 //  Copyright © 2019 Deheng.Xu. All rights reserved.
 //
 
-#import "Demo.h"
-#import <objc/runtime.h>
+#import "Logs.h"
 
-DefineLoggerWithModuleClass(Demo, demo);
+DefineLoggerWithModuleClass(app);
+DefineLoggerWithModuleClass(mainvc);
