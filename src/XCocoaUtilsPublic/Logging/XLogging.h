@@ -49,6 +49,25 @@ va_list args; va_start(args, fmt); TagLoggingv(prefixAndTag, fmt, args); va_end(
 
 #pragma mark - Logging module class
 
+#ifndef SwiftDeclareLoggerWithTag
+#define SwiftDeclareLoggerWithTag(Tag)\
+@interface log_##Tag: NSObject @end;\
+extern void Tag##Log(NSString *logs);\
+DeclareLoggingSwitcher(log_##Tag);
+#endif
+
+#ifndef SwiftDefineLoggerWithTag
+#define SwiftDefineLoggerWithTag(prefixAndTag) \
+void prefixAndTag##Log(NSString *fmt) {\
+if ([log_##prefixAndTag respondsToSelector:@selector(isLoggingEnabled)] && ![log_##prefixAndTag isLoggingEnabled]) return;\
+NSLog(@"<"#prefixAndTag"> %@", fmt);\
+}\
+@implementation log_##prefixAndTag @end;\
+DefineLoggingSwitcher(log_##prefixAndTag)
+#endif
+
+
+
 /** 声明模块类日志及开关 */
 #ifndef DeclareLoggerWithTag
 #define DeclareLoggerWithTag(Tag)\
