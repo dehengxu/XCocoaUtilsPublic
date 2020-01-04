@@ -10,4 +10,4 @@
 
 DefineLoggerWithTag(app);
 DefineLoggerWithTag(mainvc);
-SwiftDefineLoggerWithTag(Sw);
+SwiftDefineLoggerWithTag(app);
