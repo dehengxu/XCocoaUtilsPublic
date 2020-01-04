@@ -364,7 +364,6 @@
 		74E15A0B1B9542CC00E522A3 /* XCocoaUtilsPublic.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = XCocoaUtilsPublic.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A214159D180CDF790067EBE8 /* libXCocoaUtilsPublic-lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libXCocoaUtilsPublic-lib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A21415A0180CDF790067EBE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		A21415A4180CDF790067EBE8 /* XCocoaUtilsPublic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCocoaUtilsPublic-Prefix.pch"; sourceTree = "<group>"; };
 		A21415AE180CDF790067EBE8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A21415E1180CE0790067EBE8 /* XCocoaUtilsPublic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCocoaUtilsPublic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23B2A13180D2A4800C270A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -668,7 +667,6 @@
 			children = (
 				74E15A0B1B9542CC00E522A3 /* XCocoaUtilsPublic.podspec */,
 				A21415EC180CE1190067EBE8 /* src */,
-				A21415A2180CDF790067EBE8 /* XCocoaUtilsPublic */,
 				7461B7741B959EB300EB5D6D /* Demo */,
 				7461B78E1B959EB300EB5D6D /* DemoTests */,
 				24C11ED02225A06C00733658 /* XCocoaUtilsPublicFW */,
@@ -700,22 +698,6 @@
 				FC97F62E93CA30D742BAEEDA /* libPods-DemoTests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A21415A2180CDF790067EBE8 /* XCocoaUtilsPublic */ = {
-			isa = PBXGroup;
-			children = (
-				A21415A3180CDF790067EBE8 /* Supporting Files */,
-			);
-			path = XCocoaUtilsPublic;
-			sourceTree = "<group>";
-		};
-		A21415A3180CDF790067EBE8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A21415A4180CDF790067EBE8 /* XCocoaUtilsPublic-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A21415EC180CE1190067EBE8 /* src */ = {
