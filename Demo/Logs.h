@@ -7,11 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 #import "XLogging.h"
-#import <os/log.h>
+//#import <os/log.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-DeclareLoggerWithModuleClass(Demo, demo);
-
-NS_ASSUME_NONNULL_END
+DeclareLoggerWithModuleClass(app);
+DeclareLoggerWithModuleClass(mainvc);
