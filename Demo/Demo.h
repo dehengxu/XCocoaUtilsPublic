@@ -12,12 +12,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-DeclareNewLog(demo);
-
-@interface Demo : NSObject
-
-DeclareLoggingSwitcher();
-
-@end
+DeclareLoggerWithModuleClass(Demo, demo);
 
 NS_ASSUME_NONNULL_END

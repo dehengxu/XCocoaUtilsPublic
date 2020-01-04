@@ -15,6 +15,8 @@
 extern "C" {
 #endif
 
+#pragma mark - Tag logging
+
 #ifndef TagLogging
 	#define TagLogging(TAG, fmt, ...) NSLog(@"<"#TAG"> "fmt, ##__VA_ARGS__)
 #endif
@@ -27,30 +29,52 @@ extern "C" {
 	#define DeclareNewLogPrefixAndTag(prefix, tag) extern void prefix##Log(NSString *fmt, ...) NS_FORMAT_FUNCTION(1,2) NS_NO_TAIL_CALL
 #endif
 
-#ifndef DeclareNewLog
-#define DeclareNewLog(prefix) DeclareNewLogPrefixAndTag(prefix, prefix)
+#ifndef DeclareNewLogger
+#define DeclareNewLogger(prefix) DeclareNewLogPrefixAndTag(prefix, prefix)
 #endif
 
-#ifndef DefineNewLog
-#define DefineNewLog(prefix, tag) void prefix##Log(NSString *fmt, ...) {\
-va_list args; va_start(args, fmt); TagLoggingv(tag, fmt, args); va_end(args);\
-}
+//#ifndef DefineNewLog
+//#define DefineNewLog(prefix, tag) void prefix##Log(NSString *fmt, ...) {\
+//va_list args; va_start(args, fmt); TagLoggingv(tag, fmt, args); va_end(args);\
+//}
+//#endif
+
+#pragma mark - Logging module class
+
+/** 声明模块类日志及开关 */
+#ifndef DeclareLoggerWithModuleClass
+#define DeclareLoggerWithModuleClass(ClassN, Tag)\
+@interface ClassN: NSObject @end;\
+DeclareNewLogger(Tag);\
+DeclareLoggingSwitcher(ClassN);
 #endif
 
-#ifndef DefineNewLogWithModuleClass
-#define DefineNewLogWithModuleClass(prefix, tag, ModuleClass) void prefix##Log(NSString *fmt, ...) {\
-if ([ModuleClass respondsToSelector:@selector(isLoggingEnabled)] && ![ModuleClass isLoggingEnabled]) return;\
-va_list args; va_start(args, fmt); TagLoggingv(tag, fmt, args); va_end(args);\
-}
+// Logger definition
+
+/** 定义模块类日志及开关 */
+#ifndef DefineLoggerWithModuleClass
+#define DefineLoggerWithModuleClass(ClassN, prefixAndTag) void prefixAndTag##Log(NSString *fmt, ...) {\
+if ([ClassN respondsToSelector:@selector(isLoggingEnabled)] && ![ClassN isLoggingEnabled]) return;\
+va_list args; va_start(args, fmt); TagLoggingv(prefixAndTag, fmt, args); va_end(args);\
+}\
+@implementation ClassN @end;\
+DefineLoggingSwitcher(ClassN)
 #endif
 
-#pragma mark - Logging switcher
-
-#define DeclareLoggingSwitcher()\
+// Logging switcher
+/** 声明日志开关*/
+#ifndef DeclareLoggingSwitcher
+#define DeclareLoggingSwitcher(ModuleClass)\
+@interface ModuleClass (Logger)\
 + (BOOL)isLoggingEnabled;\
-+ (void)setLoggingEnabled:(BOOL)isEnabled
++ (void)setLoggingEnabled:(BOOL)isEnabled;\
+@end
+#endif
 
-#define DefineLoggingSwitcher() \
+/** 定义日志开关*/
+#ifndef DefineLoggingSwitcher
+#define DefineLoggingSwitcher(ModuleClass) \
+@implementation ModuleClass (Logger)\
 + (BOOL)isLoggingEnabled\
 {\
 char * const objKey = "is_logging_enabled";\
@@ -63,8 +87,9 @@ return [islogging boolValue];\
 {\
 char * const objKey = "is_logging_enabled";\
 objc_setAssociatedObject(self, objKey, @(isEnabled), OBJC_ASSOCIATION_ASSIGN);\
-}
-
+}\
+@end
+#endif
 
 #ifdef cpusplus
 }
