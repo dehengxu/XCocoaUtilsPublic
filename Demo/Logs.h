@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <objc/runtime.h>
-#import "XLogging.h"
+#import <XLogging.h>
 //#import <os/log.h>
 
 DeclareLoggerWithModuleClass(app);
