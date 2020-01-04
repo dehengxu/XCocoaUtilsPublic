@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 	mainvcLog(@"-->>%s", __func__);
     //Close logging
-    [log_mainvc setLoggingEnabled:false];
+//    [log_mainvc setLoggingEnabled:false];
 }
 
 - (void)viewDidAppear:(BOOL)animated

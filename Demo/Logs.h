@@ -10,7 +10,7 @@
 #import <XLogging.h>
 //#import <os/log.h>
 
-DeclareLoggerWithTag(app);
-DeclareLoggerWithTag(mainvc);
-SwiftDeclareLoggerWithTag(app);
+
+DeclareLogger(app);
+DeclareLogger(mainvc);
 
