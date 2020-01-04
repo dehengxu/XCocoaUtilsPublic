@@ -12,3 +12,5 @@
 
 DeclareLoggerWithTag(app);
 DeclareLoggerWithTag(mainvc);
+SwiftDeclareLoggerWithTag(Sw);
+
