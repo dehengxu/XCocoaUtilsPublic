@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "Demo.h"
 #import <XCocoaUtilsPublic/XCocoaUtilsPublic.h>
-//@import XCocoaUtilsPublic;
 
 @interface AppDelegate ()
 
@@ -20,9 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-	[Demo setLoggingEnabled:YES];
 
+    [Demo setLoggingEnabled:1];
 	demoLog(@"%s", __func__);
+
+    demoLog(@"JS: %@", JS_HTML_OUTER);
+    //demoLog(@"XCocoaUtilsPublic_iOSVersionNumber: %s", XCocoaUtilsPublic_iOSVersionString);
     
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_10_0
     os_log_t log = OS_LOG_DEFAULT;

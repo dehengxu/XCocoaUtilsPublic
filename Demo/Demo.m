@@ -9,10 +9,4 @@
 #import "Demo.h"
 #import <objc/runtime.h>
 
-DefineNewLogWithModuleClass(demo, demo, Demo);
-
-@implementation Demo
-
-DefineLoggingSwitcher();
-
-@end
+DefineLoggerWithModuleClass(Demo, demo);
