@@ -10,6 +10,7 @@
 #define XLogging_h
 
 #include <stdio.h>
+#import <objc/runtime.h>
 
 #ifdef cpusplus
 extern "C" {
