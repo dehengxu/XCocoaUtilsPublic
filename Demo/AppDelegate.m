@@ -22,8 +22,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    [log_app setLoggingEnabled:1];
-    [log_mainvc setLoggingEnabled:1];
+    EnableLogger(@"app");
+    EnableLogger(@"mainvc");
+
+//    [log_app setLoggingEnabled:1];
+//    [log_mainvc setLoggingEnabled:1];
     
 	appLog(@"%s", __func__);
     appLog(@"JS: %@", JS_HTML_OUTER);

@@ -116,6 +116,21 @@ objc_setAssociatedObject(self, objKey, @(isEnabled), OBJC_ASSOCIATION_ASSIGN);\
 @end
 #endif
 
+#ifndef DeclareLogger
+#define DeclareLogger(tag) \
+DeclareLoggerWithTag(tag);\
+SwiftDeclareLoggerWithTag(tag);
+#endif
+
+#ifndef DefineLogger
+#define DefineLogger(tag) \
+DefineLoggerWithTag(tag);\
+SwiftDefineLoggerWithTag(tag)
+#endif
+
+FOUNDATION_EXPORT void EnableLogger(NSString *tag);
+FOUNDATION_EXPORT void DisableLogger(NSString *tag);
+
 #ifdef cpusplus
 }
 #endif

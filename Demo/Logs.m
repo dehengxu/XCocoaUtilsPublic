@@ -8,6 +8,5 @@
 
 #import "Logs.h"
 
-DefineLoggerWithTag(app);
-DefineLoggerWithTag(mainvc);
-SwiftDefineLoggerWithTag(app);
+DefineLogger(app);
+DefineLogger(mainvc);
