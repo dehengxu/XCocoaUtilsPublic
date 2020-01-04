@@ -24,6 +24,7 @@
 
     EnableLogger(@"app");
     EnableLogger(@"mainvc");
+    //DisableLogger(@"app");
 
 //    [log_app setLoggingEnabled:1];
 //    [log_mainvc setLoggingEnabled:1];
