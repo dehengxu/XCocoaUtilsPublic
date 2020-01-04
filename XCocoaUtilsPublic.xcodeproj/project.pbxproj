@@ -10,6 +10,7 @@
 		2426B59B21E24C4700B9BA7E /* XLogging.c in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59A21E24C4700B9BA7E /* XLogging.c */; };
 		2426B59D21E24CB400B9BA7E /* LoggingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59C21E24CB400B9BA7E /* LoggingTests.m */; };
 		2426B5A021E3A67D00B9BA7E /* Logs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59F21E3A67D00B9BA7E /* Logs.m */; };
+		243FD98723C054BF006EED9E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 243FD98923C054BF006EED9E /* Localizable.strings */; };
 		24B5A12719BEF7E9009B474C /* XCUPCGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* XCUPCGFunctions.m */; };
 		24C11ED72225A06C00733658 /* XCocoaUtilsPublic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24C11F012225A0C000733658 /* XLogging.c in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59A21E24C4700B9BA7E /* XLogging.c */; };
@@ -187,6 +188,8 @@
 		243FD98223C03443006EED9E /* XCUPIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCUPIO.h; sourceTree = "<group>"; };
 		243FD98323C034A3006EED9E /* XCUPUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCUPUIKit.h; sourceTree = "<group>"; };
 		243FD98423C03D6B006EED9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		243FD98823C054BF006EED9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		243FD98A23C054D5006EED9E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		24B5A12419BEF7E9009B474C /* XCUPCGFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUPCGFunctions.h; sourceTree = "<group>"; };
 		24B5A12519BEF7E9009B474C /* XCUPCGFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCUPCGFunctions.m; sourceTree = "<group>"; };
 		24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCocoaUtilsPublic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -460,6 +463,7 @@
 				7461B7751B959EB300EB5D6D /* Supporting Files */,
 				7461B77C1B959EB300EB5D6D /* ViewController.h */,
 				7461B77D1B959EB300EB5D6D /* ViewController.m */,
+				243FD98923C054BF006EED9E /* Localizable.strings */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -816,6 +820,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7461B7811B959EB300EB5D6D /* Main.storyboard in Resources */,
+				243FD98723C054BF006EED9E /* Localizable.strings in Resources */,
 				7461B7861B959EB300EB5D6D /* LaunchScreen.xib in Resources */,
 				7461B7831B959EB300EB5D6D /* Images.xcassets in Resources */,
 			);
@@ -989,6 +994,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		243FD98923C054BF006EED9E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				243FD98823C054BF006EED9E /* en */,
+				243FD98A23C054D5006EED9E /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		7461B77F1B959EB300EB5D6D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
