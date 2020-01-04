@@ -7,16 +7,16 @@
 //
 
 #import "NSData+String.h"
-#import "NSObject+Ext.h"
+#import "NSObject+XCUP.h"
 
-@implementation NSData (String)
+@implementation NSData (XCUString)
 
-- (NSString *)utf8String
+- (NSString *)xcu_utf8String
 {
-    return [self stringByEncoding:NSUTF8StringEncoding];
+    return [self xcu_stringByEncoding:NSUTF8StringEncoding];
 }
 
-- (NSString *)stringByEncoding:(NSStringEncoding)encoding
+- (NSString *)xcu_stringByEncoding:(NSStringEncoding)encoding
 {
     return [[[NSString alloc] initWithData:self encoding:encoding] autorelease];
 }

@@ -8,8 +8,8 @@
 
 #import "NameValuePaire.h"
 #import "../macros/memory_macros.h"
-#import "NSString+Ext.h"
-#import "NSObject+Ext.h"
+#import "NSString+XCUP.h"
+#import "NSObject+XCUP.h"
 
 @implementation NameValuePaire
 @synthesize name;

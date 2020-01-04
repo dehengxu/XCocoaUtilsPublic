@@ -3,11 +3,11 @@ project 'XCocoaUtilsPublic.xcodeproj'
 # Uncomment this line to define a global platform for your project
 platform :ios, '8.0'
 
-target 'Demo' do
-    #pod 'AFNetworking'
-    pod 'XCocoaUtilsPublic', :path => './'
-#, :subspecs => [
-#    'categories',
+def useLib
+    pod 'XCocoaUtilsPublic', :path => './' \
+    , :subspecs => [
+    'logging',
+    'categories',
 #    'http',
 #    'debug',
 #    'macros',
@@ -15,12 +15,17 @@ target 'Demo' do
 #    'UIKit',
 #    'concurrency',
 #    'benchmark',
-#    ]
+    ]
+end
+
+target 'Demo' do
+    #pod 'AFNetworking'
+    useLib
 end
 
  target 'DemoTests' do
      #pod 'AFNetworking'
-     pod 'XCocoaUtilsPublic', :path => './' #, :subspecs => ['categories', 'macros', 'http', 'io', 'debug']
+     useLib
  end
 
 # target 'XCocoaUtilsPublic' do

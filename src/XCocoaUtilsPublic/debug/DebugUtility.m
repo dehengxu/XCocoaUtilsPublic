@@ -6,10 +6,12 @@
 //  Copyright (c) 2013年 Nicholas.Xu. All rights reserved.
 //
 
-#import "NSString+Ext.h"
+#import "NSString+XCUP.h"
 #import "DebugUtility.h"
 #import "memory_macros.h"
+#if __has_include("RegexKitLite.h")
 #import "RegexKitLite.h"
+#endif
 #import "NameValuePaire.h"
 
 @interface DebugUtility (private)

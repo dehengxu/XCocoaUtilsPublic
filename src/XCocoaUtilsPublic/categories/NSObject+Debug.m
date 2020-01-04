@@ -7,10 +7,11 @@
 //
 
 #import "NSObject+Debug.h"
-#import "NSObject+Ext.h"
+#import "NSObject+XCUP.h"
 #import <objc/runtime.h>
 
 @implementation NSObject (Debug)
+
 + (NSArray *)propertyList
 {
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:12];
