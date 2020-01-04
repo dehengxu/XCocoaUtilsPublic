@@ -33,11 +33,18 @@ extern "C" {
 #define DeclareNewLogger(prefix) DeclareNewLogPrefixAndTag(prefix, prefix)
 #endif
 
-//#ifndef DefineNewLog
-//#define DefineNewLog(prefix, tag) void prefix##Log(NSString *fmt, ...) {\
+//#ifndef DefineNewLogger
+//#define DefineNewLogger(prefix, tag) void prefix##Log(NSString *fmt, ...) {\
 //va_list args; va_start(args, fmt); TagLoggingv(tag, fmt, args); va_end(args);\
 //}
 //#endif
+
+#ifndef DefineNewLogger
+#define DefineNewLogger(prefixAndTag) void prefixAndTag##Log(NSString *fmt, ...) {\
+if ([log_##prefixAndTag respondsToSelector:@selector(isLoggingEnabled)] && ![log_##prefixAndTag isLoggingEnabled]) return;\
+va_list args; va_start(args, fmt); TagLoggingv(prefixAndTag, fmt, args); va_end(args);\
+}
+#endif
 
 #pragma mark - Logging module class
 
@@ -51,12 +58,10 @@ DeclareLoggingSwitcher(log_##Tag);
 
 // Logger definition
 
-/** 定义模块类日志及开关 */
+/** 定义日志函数及开关 */
 #ifndef DefineLoggerWithModuleClass
-#define DefineLoggerWithModuleClass(prefixAndTag) void prefixAndTag##Log(NSString *fmt, ...) {\
-if ([log_##prefixAndTag respondsToSelector:@selector(isLoggingEnabled)] && ![log_##prefixAndTag isLoggingEnabled]) return;\
-va_list args; va_start(args, fmt); TagLoggingv(prefixAndTag, fmt, args); va_end(args);\
-}\
+#define DefineLoggerWithModuleClass(prefixAndTag) \
+DefineNewLogger(prefixAndTag);\
 @implementation log_##prefixAndTag @end;\
 DefineLoggingSwitcher(log_##prefixAndTag)
 #endif
