@@ -14,7 +14,7 @@ class XCUViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        swiftlog_app.setLoggingEnabled(true)
+        log_app_swift.setLoggingEnabled(true)
         appLogSwift("\(#function)");
     }
     
