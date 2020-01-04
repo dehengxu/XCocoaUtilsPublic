@@ -51,19 +51,19 @@ va_list args; va_start(args, fmt); TagLoggingv(prefixAndTag, fmt, args); va_end(
 
 #ifndef SwiftDeclareLoggerWithTag
 #define SwiftDeclareLoggerWithTag(Tag)\
-@interface log_##Tag: NSObject @end;\
+@interface swiftlog_##Tag: NSObject @end;\
 extern void Tag##Log(NSString *logs);\
-DeclareLoggingSwitcher(log_##Tag);
+DeclareLoggingSwitcher(swiftlog_##Tag);
 #endif
 
 #ifndef SwiftDefineLoggerWithTag
 #define SwiftDefineLoggerWithTag(prefixAndTag) \
 void prefixAndTag##Log(NSString *fmt) {\
-if ([log_##prefixAndTag respondsToSelector:@selector(isLoggingEnabled)] && ![log_##prefixAndTag isLoggingEnabled]) return;\
+if ([swiftlog_##prefixAndTag respondsToSelector:@selector(isLoggingEnabled)] && ![swiftlog_##prefixAndTag isLoggingEnabled]) return;\
 NSLog(@"<"#prefixAndTag"> %@", fmt);\
 }\
-@implementation log_##prefixAndTag @end;\
-DefineLoggingSwitcher(log_##prefixAndTag)
+@implementation swiftlog_##prefixAndTag @end;\
+DefineLoggingSwitcher(swiftlog_##prefixAndTag)
 #endif
 
 
