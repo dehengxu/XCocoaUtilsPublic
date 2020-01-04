@@ -14,7 +14,6 @@
 		24B5A12719BEF7E9009B474C /* CGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* CGFunctions.m */; };
 		24B5A12819BEF7E9009B474C /* CGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* CGFunctions.m */; };
 		24C11ED32225A06C00733658 /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C11ED12225A06C00733658 /* XCocoaUtilsPublic.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24C11ED62225A06C00733658 /* XCocoaUtilsPublic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */; };
 		24C11ED72225A06C00733658 /* XCocoaUtilsPublic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24C11F012225A0C000733658 /* XLogging.c in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59A21E24C4700B9BA7E /* XLogging.c */; };
 		24C11F022225A0C000733658 /* NSInvocation+XCocoaUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BB41021DC98070094B4CE /* NSInvocation+XCocoaUtils.m */; };
@@ -212,8 +211,6 @@
 		925EEDA9778C69CF219F2E8B /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D42116A5733F0C5FBA873E7 /* libPods-Demo.a */; };
 		9D47966F2ACC00ABFFFDB620 /* libPods-DemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC97F62E93CA30D742BAEEDA /* libPods-DemoTests.a */; };
 		A21415A1180CDF790067EBE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415A0180CDF790067EBE8 /* Foundation.framework */; };
-		A21415E7180CE0790067EBE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A21415E5180CE0790067EBE8 /* InfoPlist.strings */; };
-		A21416BD180CF6950067EBE8 /* XCocoaUtilsPublicFW.h in Headers */ = {isa = PBXBuildFile; fileRef = A21416B8180CF5C00067EBE8 /* XCocoaUtilsPublicFW.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A23B2A14180D2A4800C270A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23B2A13180D2A4800C270A4 /* UIKit.framework */; };
 		A23B2A15180D2A5F00C270A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415A0180CDF790067EBE8 /* Foundation.framework */; };
 		A23B2A16180D2A6800C270A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23B2A13180D2A4800C270A4 /* UIKit.framework */; };
@@ -271,7 +268,7 @@
 		24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCocoaUtilsPublic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C11ED12225A06C00733658 /* XCocoaUtilsPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublic.h; sourceTree = "<group>"; };
 		24C11ED22225A06C00733658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24C11F552225A20300733658 /* XCocoaUtilsPublic_iOS-prefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCocoaUtilsPublic_iOS-prefix.h"; sourceTree = "<group>"; };
+		24C11F552225A20300733658 /* XCocoaUtilsPublicFW-prefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCocoaUtilsPublicFW-prefix.h"; sourceTree = "<group>"; };
 		3D42116A5733F0C5FBA873E7 /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertyToURLParams.h"; sourceTree = "<group>"; };
 		41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyToURLParams.m"; sourceTree = "<group>"; };
@@ -351,7 +348,6 @@
 		746AAF6121CCD3DC005B29F6 /* NSString+URI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URI.h"; sourceTree = "<group>"; };
 		746AAF6421CCD406005B29F6 /* NSDictionary+HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HTTP.h"; sourceTree = "<group>"; };
 		746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HTTP.m"; sourceTree = "<group>"; };
-		74875C70186C3181000A0331 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		748BB40F21DC98070094B4CE /* NSInvocation+XCocoaUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+XCocoaUtils.h"; sourceTree = "<group>"; };
 		748BB41021DC98070094B4CE /* NSInvocation+XCocoaUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+XCocoaUtils.m"; sourceTree = "<group>"; };
 		74C3560421BEA896001B0C4C /* BenchMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BenchMark.h; sourceTree = "<group>"; };
@@ -371,10 +367,6 @@
 		A21415A4180CDF790067EBE8 /* XCocoaUtilsPublic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCocoaUtilsPublic-Prefix.pch"; sourceTree = "<group>"; };
 		A21415AE180CDF790067EBE8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A21415E1180CE0790067EBE8 /* XCocoaUtilsPublic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCocoaUtilsPublic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A21415E4180CE0790067EBE8 /* XCocoaUtilsPublicFW-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XCocoaUtilsPublicFW-Info.plist"; sourceTree = "<group>"; };
-		A21415E6180CE0790067EBE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A21415E8180CE0790067EBE8 /* XCocoaUtilsPublicFW-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCocoaUtilsPublicFW-Prefix.pch"; sourceTree = "<group>"; };
-		A21416B8180CF5C00067EBE8 /* XCocoaUtilsPublicFW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublicFW.h; sourceTree = "<group>"; };
 		A23B2A13180D2A4800C270A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B4007AF7FEADF6E24E82DB39 /* Pods-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoTests/Pods-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC000DA0AC340C4FE978318C /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -396,7 +388,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24C11ED62225A06C00733658 /* XCocoaUtilsPublic.framework in Frameworks */,
 				925EEDA9778C69CF219F2E8B /* libPods-Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,14 +430,14 @@
 			path = Logging;
 			sourceTree = "<group>";
 		};
-		24C11ED02225A06C00733658 /* XCocoaUtilsPublic iOS */ = {
+		24C11ED02225A06C00733658 /* XCocoaUtilsPublicFW */ = {
 			isa = PBXGroup;
 			children = (
 				24C11ED12225A06C00733658 /* XCocoaUtilsPublic.h */,
 				24C11ED22225A06C00733658 /* Info.plist */,
-				24C11F552225A20300733658 /* XCocoaUtilsPublic_iOS-prefix.h */,
+				24C11F552225A20300733658 /* XCocoaUtilsPublicFW-prefix.h */,
 			);
-			path = "XCocoaUtilsPublic iOS";
+			path = XCocoaUtilsPublicFW;
 			sourceTree = "<group>";
 		};
 		29EF8ABF903E6BBF7D52D683 /* Pods */ = {
@@ -678,10 +669,9 @@
 				74E15A0B1B9542CC00E522A3 /* XCocoaUtilsPublic.podspec */,
 				A21415EC180CE1190067EBE8 /* src */,
 				A21415A2180CDF790067EBE8 /* XCocoaUtilsPublic */,
-				A21415E2180CE0790067EBE8 /* XCocoaUtilsPublicFW */,
 				7461B7741B959EB300EB5D6D /* Demo */,
 				7461B78E1B959EB300EB5D6D /* DemoTests */,
-				24C11ED02225A06C00733658 /* XCocoaUtilsPublic iOS */,
+				24C11ED02225A06C00733658 /* XCocoaUtilsPublicFW */,
 				A214159F180CDF790067EBE8 /* Frameworks */,
 				A214159E180CDF790067EBE8 /* Products */,
 				29EF8ABF903E6BBF7D52D683 /* Pods */,
@@ -724,25 +714,6 @@
 			isa = PBXGroup;
 			children = (
 				A21415A4180CDF790067EBE8 /* XCocoaUtilsPublic-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A21415E2180CE0790067EBE8 /* XCocoaUtilsPublicFW */ = {
-			isa = PBXGroup;
-			children = (
-				A21415E3180CE0790067EBE8 /* Supporting Files */,
-				A21416B8180CF5C00067EBE8 /* XCocoaUtilsPublicFW.h */,
-			);
-			path = XCocoaUtilsPublicFW;
-			sourceTree = "<group>";
-		};
-		A21415E3180CE0790067EBE8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A21415E4180CE0790067EBE8 /* XCocoaUtilsPublicFW-Info.plist */,
-				A21415E5180CE0790067EBE8 /* InfoPlist.strings */,
-				A21415E8180CE0790067EBE8 /* XCocoaUtilsPublicFW-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -814,7 +785,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A21416BD180CF6950067EBE8 /* XCocoaUtilsPublicFW.h in Headers */,
 				74419E6918448DD100E28DD4 /* NSTimer+Ext.h in Headers */,
 				74419E5418448DD000E28DD4 /* NSArray+Ext.h in Headers */,
 				74C3560821BEA897001B0C4C /* BenchMark.h in Headers */,
@@ -859,9 +829,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		24C11ECE2225A06B00733658 /* XCocoaUtilsPublic iOS */ = {
+		24C11ECE2225A06B00733658 /* XCocoaUtilsPublicFW */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24C11ED82225A06C00733658 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublic iOS" */;
+			buildConfigurationList = 24C11ED82225A06C00733658 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublicFW" */;
 			buildPhases = (
 				24C11ECA2225A06B00733658 /* Headers */,
 				24C11ECB2225A06B00733658 /* Sources */,
@@ -872,7 +842,7 @@
 			);
 			dependencies = (
 			);
-			name = "XCocoaUtilsPublic iOS";
+			name = XCocoaUtilsPublicFW;
 			productName = "XCocoaUtilsPublic iOS";
 			productReference = 24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */;
 			productType = "com.apple.product-type.framework";
@@ -984,6 +954,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				"zh-Hans",
 				Base,
@@ -997,7 +968,7 @@
 				7461B78A1B959EB300EB5D6D /* DemoTests */,
 				A214159C180CDF790067EBE8 /* XCocoaUtilsPublic-lib */,
 				A21415E0180CE0790067EBE8 /* XCocoaUtilsPublic */,
-				24C11ECE2225A06B00733658 /* XCocoaUtilsPublic iOS */,
+				24C11ECE2225A06B00733658 /* XCocoaUtilsPublicFW */,
 			);
 		};
 /* End PBXProject section */
@@ -1031,7 +1002,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A21415E7180CE0790067EBE8 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1272,7 +1242,7 @@
 /* Begin PBXTargetDependency section */
 		24C11ED52225A06C00733658 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 24C11ECE2225A06B00733658 /* XCocoaUtilsPublic iOS */;
+			target = 24C11ECE2225A06B00733658 /* XCocoaUtilsPublicFW */;
 			targetProxy = 24C11ED42225A06C00733658 /* PBXContainerItemProxy */;
 		};
 		7461B78D1B959EB300EB5D6D /* PBXTargetDependency */ = {
@@ -1297,15 +1267,6 @@
 				7461B7851B959EB300EB5D6D /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		A21415E5180CE0790067EBE8 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A21415E6180CE0790067EBE8 /* en */,
-				74875C70186C3181000A0331 /* zh-Hans */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1345,9 +1306,9 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "XCocoaUtilsPublic iOS/XCocoaUtilsPublic_iOS-prefix.h";
+				GCC_PREFIX_HEADER = "XCocoaUtilsPublicFW/XCocoaUtilsPublicFW-prefix.h";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "XCocoaUtilsPublic iOS/Info.plist";
+				INFOPLIST_FILE = XCocoaUtilsPublicFW/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1397,9 +1358,9 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "XCocoaUtilsPublic iOS/XCocoaUtilsPublic_iOS-prefix.h";
+				GCC_PREFIX_HEADER = "XCocoaUtilsPublicFW/XCocoaUtilsPublicFW-prefix.h";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "XCocoaUtilsPublic iOS/Info.plist";
+				INFOPLIST_FILE = XCocoaUtilsPublicFW/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1680,7 +1641,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		24C11ED82225A06C00733658 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublic iOS" */ = {
+		24C11ED82225A06C00733658 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublicFW" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24C11ED92225A06C00733658 /* Debug */,
