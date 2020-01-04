@@ -22,15 +22,17 @@ pod "XCocoaUtilsPublic", '~> 0.4.3', :subspecs => ['benchmark']
 //Import header
 #import <XLogging.h>
 
-// Declare logger with a tag named "app"
+// Declaring logger with a tag named "app"
+// logger output like this: <tag name>.....
 // Macro will generate a class named "Log_app" which have class methods + setLoggingEnabled: and + isLoggingEnabled
 // Logger is disable by default
-DeclareLoggerWithModuleClass(app);
+DeclareLoggerWithTag(app);
 
 ```
 
 ```
-DefineLoggerWithModuleClass(app);
+// Logger definition
+DefineLoggerWithTag(app);
 ```
 
 ```

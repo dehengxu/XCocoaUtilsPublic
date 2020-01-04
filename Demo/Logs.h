@@ -10,5 +10,5 @@
 #import <XLogging.h>
 //#import <os/log.h>
 
-DeclareLoggerWithModuleClass(app);
-DeclareLoggerWithModuleClass(mainvc);
+DeclareLoggerWithTag(app);
+DeclareLoggerWithTag(mainvc);

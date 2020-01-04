@@ -50,8 +50,8 @@ va_list args; va_start(args, fmt); TagLoggingv(prefixAndTag, fmt, args); va_end(
 #pragma mark - Logging module class
 
 /** 声明模块类日志及开关 */
-#ifndef DeclareLoggerWithModuleClass
-#define DeclareLoggerWithModuleClass(Tag)\
+#ifndef DeclareLoggerWithTag
+#define DeclareLoggerWithTag(Tag)\
 @interface log_##Tag: NSObject @end;\
 DeclareNewLogger(Tag);\
 DeclareLoggingSwitcher(log_##Tag);
@@ -60,8 +60,8 @@ DeclareLoggingSwitcher(log_##Tag);
 // Logger definition
 
 /** 定义日志函数及开关 */
-#ifndef DefineLoggerWithModuleClass
-#define DefineLoggerWithModuleClass(prefixAndTag) \
+#ifndef DefineLoggerWithTag
+#define DefineLoggerWithTag(prefixAndTag) \
 DefineNewLogger(prefixAndTag);\
 @implementation log_##prefixAndTag @end;\
 DefineLoggingSwitcher(log_##prefixAndTag)

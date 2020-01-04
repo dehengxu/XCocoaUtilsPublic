@@ -8,5 +8,5 @@
 
 #import "Logs.h"
 
-DefineLoggerWithModuleClass(app);
-DefineLoggerWithModuleClass(mainvc);
+DefineLoggerWithTag(app);
+DefineLoggerWithTag(mainvc);
