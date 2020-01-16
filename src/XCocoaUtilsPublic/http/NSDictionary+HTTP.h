@@ -12,14 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (HTTP)
 
-- (NSDictionary *)x_parameters;
+- (NSDictionary *)xcup_parameters;
 
 @end
 
 @interface NSDictionary (HTTP)
 
-- (NSString *)x_sortedParameterStringAscending:(BOOL)isAscending;
-- (NSString *)x_sortedCaseInsensitiveParameterStringAscending:(BOOL)isAscending;
+- (NSString *)xcup_sortedParameterStringAscending:(BOOL)isAscending;
+- (NSString *)xcup_sortedCaseInsensitiveParameterStringAscending:(BOOL)isAscending;
+- (NSString *)xcup_sortedParameterString:(BOOL)isAscending caseInsensitive:(BOOL)isCaseInsensitive;
 
 @end
 
