@@ -1,5 +1,5 @@
 //
-//  NSURL+Ext.h
+//  NSURL+XCUP.h
 //  XCocoaUtilsPublic
 //
 //  Created by Deheng.Xu on 13-10-23.
@@ -10,6 +10,7 @@
 
 @interface NSURL (XCUP)
 
-- (NSURL *)URLByTrimQuery;
+- (NSURL *)xcup_URLByTrimQuery;
+- (NSURL *)xcup_URLByAppendingQueries:(NSDictionary *)queries;
 
 @end

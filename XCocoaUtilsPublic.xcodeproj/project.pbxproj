@@ -131,6 +131,8 @@
 		746AAF6321CCD3DC005B29F6 /* XCObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF5F21CCD3DC005B29F6 /* XCObjectMapping.m */; };
 		746AAF6621CCD406005B29F6 /* NSDictionary+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */; };
 		748BB41121DC98070094B4CE /* NSInvocation+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BB41021DC98070094B4CE /* NSInvocation+XCUP.m */; };
+		74C279FB23D0576400D5D016 /* mappingmodel.json in Resources */ = {isa = PBXBuildFile; fileRef = 74C279FA23D0576400D5D016 /* mappingmodel.json */; };
+		74C279FD23D0588F00D5D016 /* HttpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C279FC23D0588F00D5D016 /* HttpTests.m */; };
 		74C3560A21BEA897001B0C4C /* cbench_mark.c in Sources */ = {isa = PBXBuildFile; fileRef = 74C3560621BEA897001B0C4C /* cbench_mark.c */; };
 		74C3560C21BEA897001B0C4C /* BenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3560721BEA897001B0C4C /* BenchMark.m */; };
 		74C3561821BEC458001B0C4C /* XOperationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3561621BEC458001B0C4C /* XOperationTemplate.m */; };
@@ -278,6 +280,8 @@
 		746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HTTP.m"; sourceTree = "<group>"; };
 		748BB40F21DC98070094B4CE /* NSInvocation+XCUP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+XCUP.h"; sourceTree = "<group>"; };
 		748BB41021DC98070094B4CE /* NSInvocation+XCUP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+XCUP.m"; sourceTree = "<group>"; };
+		74C279FA23D0576400D5D016 /* mappingmodel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mappingmodel.json; sourceTree = "<group>"; };
+		74C279FC23D0588F00D5D016 /* HttpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpTests.m; sourceTree = "<group>"; };
 		74C3560421BEA896001B0C4C /* BenchMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BenchMark.h; sourceTree = "<group>"; };
 		74C3560521BEA897001B0C4C /* cbench_mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cbench_mark.h; sourceTree = "<group>"; };
 		74C3560621BEA897001B0C4C /* cbench_mark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cbench_mark.c; sourceTree = "<group>"; };
@@ -414,8 +418,6 @@
 				74419E2618448DD000E28DD4 /* NSString+XCUP.m */,
 				74419E2718448DD000E28DD4 /* NSTimer+XCUP.h */,
 				74419E2818448DD000E28DD4 /* NSTimer+XCUP.m */,
-				74419E2918448DD000E28DD4 /* NSURL+XCUP.h */,
-				74419E2A18448DD000E28DD4 /* NSURL+XCUP.m */,
 				74419E2B18448DD000E28DD4 /* SKProduct+XCUP.h */,
 				74419E2C18448DD000E28DD4 /* SKProduct+XCUP.m */,
 				74419E2D18448DD000E28DD4 /* UIAlertView+XCUP.h */,
@@ -485,8 +487,10 @@
 		7461B78E1B959EB300EB5D6D /* DemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				74C279F923D0573B00D5D016 /* resources */,
 				7461B7911B959EB300EB5D6D /* DemoTests.m */,
 				2426B59C21E24CB400B9BA7E /* LoggingTests.m */,
+				74C279FC23D0588F00D5D016 /* HttpTests.m */,
 				7461B78F1B959EB300EB5D6D /* Supporting Files */,
 			);
 			path = DemoTests;
@@ -507,6 +511,14 @@
 				748BB41021DC98070094B4CE /* NSInvocation+XCUP.m */,
 			);
 			path = Runtime;
+			sourceTree = "<group>";
+		};
+		74C279F923D0573B00D5D016 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				74C279FA23D0576400D5D016 /* mappingmodel.json */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		74C355F921BEA717001B0C4C /* benchmark */ = {
@@ -534,6 +546,8 @@
 				746AAF6021CCD3DC005B29F6 /* XCObjectMappingDelegate.h */,
 				74419E4A18448DD000E28DD4 /* NameValuePaire.h */,
 				74419E4B18448DD000E28DD4 /* NameValuePaire.m */,
+				74419E2918448DD000E28DD4 /* NSURL+XCUP.h */,
+				74419E2A18448DD000E28DD4 /* NSURL+XCUP.m */,
 				746AAF6421CCD406005B29F6 /* NSDictionary+HTTP.h */,
 				746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */,
 				2A05C4DD9C94C4DABC628670 /* NSData+Base64.h */,
@@ -770,7 +784,7 @@
 		A2141595180CDF790067EBE8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = XCU;
+				CLASSPREFIX = XCUP;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Deheng.Xu;
 				TargetAttributes = {
@@ -836,6 +850,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74C279FB23D0576400D5D016 /* mappingmodel.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -943,6 +958,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74C279FD23D0588F00D5D016 /* HttpTests.m in Sources */,
 				7461B7921B959EB300EB5D6D /* DemoTests.m in Sources */,
 				2426B59D21E24CB400B9BA7E /* LoggingTests.m in Sources */,
 			);
@@ -1069,6 +1085,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dehengxu.ios.XCocoaUtilsPublic-iOS";
@@ -1121,6 +1138,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dehengxu.ios.XCocoaUtilsPublic-iOS";

@@ -24,7 +24,7 @@ void UpdateLoggerStatus(NSString *tag, const char *key, NSNumber *value) {
     }
     Class c = NSClassFromString([NSString stringWithFormat:@"log_%@_swift", tag]);
     if (c) {
-        //
+        //TODO: fix this warning
         [c setLoggingEnabled:[value boolValue]];
         //-- Under submodule will not works.
         //objc_setAssociatedObject(c, key, value, OBJC_ASSOCIATION_ASSIGN);

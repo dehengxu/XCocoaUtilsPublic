@@ -103,7 +103,7 @@ __unused static NSString * const unreserved = @"abcdefghijklmnopqrstuvwxyzABCDEF
  */
 __unused static NSString * const reserved = @":/?#[]@!$&'()*+,;=";
 
-@implementation NSString (URI)
+@implementation NSString (XCUP_URI)
 
 + (NSString *)xcup_reservedCharacters
 {
@@ -187,6 +187,15 @@ __unused static NSString * const reserved = @":/?#[]@!$&'()*+,;=";
     }else {
         return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     }
+}
+
+@end
+
+@implementation NSString (XCUP_URL)
+
+- (NSURL *)xcup_URL
+{
+    return [NSURL URLWithString:self];
 }
 
 @end

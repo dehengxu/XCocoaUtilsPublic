@@ -13,6 +13,7 @@
 #import "NSObject+PropertyToURLParams.h"
 #import "NSString+URI.h"
 #import "NameValuePaire.h"
+#import "NSURL+XCUP.h"
 #import "XCObjectMapping.h"
 #import "XCObjectMappingDelegate.h"
 

@@ -16,7 +16,6 @@
 #import "NSObject+XCUP.h"
 #import "NSString+XCUP.h"
 #import "NSTimer+XCUP.h"
-#import "NSURL+XCUP.h"
 #import "SKProduct+XCUP.h"
 #import "UIAlertView+XCUP.h"
 #import "UIButton+XCUP.h"
