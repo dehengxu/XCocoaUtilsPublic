@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import <NSObject+Ext.h>
+#import <XCocoaUtilsPublic/NSObject+XCUP.h>
 
 @interface DemoTests : XCTestCase
 

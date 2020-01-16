@@ -6,15 +6,12 @@ platform :ios, '8.0'
 def useLib
     pod 'XCocoaUtilsPublic', :path => './' \
     , :subspecs => [
+    'General',
     'logging',
-    'categories',
-#    'http',
-#    'debug',
-#    'macros',
-#    'io',
-#    'UIKit',
-#    'concurrency',
-#    'benchmark',
+    'debug',
+    'io',
+    'concurrency',
+    'benchmark',
     ]
 end
 
