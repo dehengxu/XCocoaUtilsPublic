@@ -10,37 +10,29 @@
 #import <XLogging.h>
 #import <objc/runtime.h>
 
-DeclareNewLog(LTC);
+DeclareLoggerWithTag(LTC);
+DefineLoggerWithTag(LTC);
 
 @interface LoggingTests : XCTestCase
-
-DeclareLoggingSwitcher();
 
 @end
 
 @implementation LoggingTests
 
-DefineLoggingSwitcher();
-
-DefineNewLogWithModuleClass(LTC, Logging, LoggingTests);
-
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    [log_LTC setLoggingEnabled:YES];
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-DefineNewLog(LT, Logging);
-
 - (void)testTagLogging {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-	LTLog(@"Hello, %@", [self classForCoder]);
-	LTLog(@"XTagLog, %ld");
-	LTLog(@"Hi, %s", __func__);
-	[LoggingTests setLoggingEnabled:NO];
+	LTCLog(@"Hello, %@", [self classForCoder]);
+	LTCLog(@"Hi, %s", __func__);
 	LTCLog(@"Hello, %s", __func__);
 }
 

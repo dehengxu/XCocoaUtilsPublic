@@ -128,6 +128,14 @@ Pod::Spec.new do |s|
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
+  # General module | 常用模块组
+  s.subspec 'General' do |sp|
+    sp.dependency 'XCocoaUtilsPublic/categories'
+    sp.dependency 'XCocoaUtilsPublic/UIKit'
+    sp.dependency 'XCocoaUtilsPublic/http'
+  end
+  
+  # Basically module | 基础模块
   s.subspec 'macros' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/macros/*.{h}"
       sp.preserve_paths = "src/XCocoaUtilsPublic/macros"
@@ -138,34 +146,37 @@ Pod::Spec.new do |s|
       sp.dependency "XCocoaUtilsPublic/macros"
       sp.preserve_paths = "src/XCocoaUtilsPublic/categories"
   end
+
+  # Application module | 应用模块
+  s.subspec 'http' do |sp|
+    sp.source_files = "src/XCocoaUtilsPublic/http/*.{h,m}"
+    sp.dependency "XCocoaUtilsPublic/categories"
+    sp.preserve_paths = "src/XCocoaUtilsPublic/http"
+  end
+  
+  s.subspec 'UIKit' do |sp|
+    sp.source_files = "src/XCocoaUtilsPublic/UIKit/*.{h,m}"
+    sp.dependency "XCocoaUtilsPublic/categories"
+    sp.preserve_paths = "src/XCocoaUtilsPublic/UIKit"
+  end
+  
+  s.subspec 'debug' do |sp|
+    sp.source_files = "src/XCocoaUtilsPublic/debug/*.{h,m}"
+    sp.dependency "XCocoaUtilsPublic/categories"
+    sp.dependency "XCocoaUtilsPublic/http"
+    sp.preserve_paths = "src/XCocoaUtilsPublic/debug"
+  end
+  
+  # Independent module | 独立模块
   
   s.subspec 'io' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/io/*.{h,m}"
       sp.preserve_paths = "src/XCocoaUtilsPublic/io"
   end
   
-  s.subspec 'http' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/http/*.{h,m}"
-      sp.dependency "XCocoaUtilsPublic/categories"
-      sp.preserve_paths = "src/XCocoaUtilsPublic/http"
-  end
-
   s.subspec 'benchmark' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/benchmark/*.{h,m}"
       sp.preserve_paths = "src/XCocoaUtilsPublic/benchmark"
-  end
-  
-  s.subspec 'debug' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/debug/*.{h,m}"
-      sp.dependency "XCocoaUtilsPublic/categories"
-      sp.dependency "XCocoaUtilsPublic/http"
-      sp.preserve_paths = "src/XCocoaUtilsPublic/debug"
-  end
-  
-  s.subspec 'UIKit' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/UIKit/*.{h,m}"
-      sp.dependency "XCocoaUtilsPublic/categories"
-      sp.preserve_paths = "src/XCocoaUtilsPublic/UIKit"
   end
   
   s.subspec 'concurrency' do |sp|

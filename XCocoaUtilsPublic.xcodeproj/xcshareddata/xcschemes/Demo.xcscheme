@@ -38,7 +38,7 @@
       </MacroExpansion>
       <Testables>
          <TestableReference
-            skipped = "YES">
+            skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7461B78A1B959EB300EB5D6D"
@@ -49,9 +49,6 @@
             <SkippedTests>
                <Test
                   Identifier = "DemoTests">
-               </Test>
-               <Test
-                  Identifier = "LoggingTests">
                </Test>
             </SkippedTests>
          </TestableReference>
