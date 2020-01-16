@@ -7,6 +7,7 @@ def useLib
     pod 'XCocoaUtilsPublic', :path => './' \
     , :subspecs => [
     'General',
+    'http',
     'logging',
     'debug',
     'io',

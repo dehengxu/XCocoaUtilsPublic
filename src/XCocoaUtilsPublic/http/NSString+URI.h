@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSString (URI)
+@interface NSString (XCUP_URI)
 
 + (NSString *)xcup_reservedCharacters;
 + (NSString *)xcup_unreservedCharacters;
@@ -26,6 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)xcup_URLDecoding;
 - (NSString *)xcup_UTF8AddingPercentEscape;
 - (NSString *)xcup_UTF8RemovingPercentEscape;
+
+@end
+
+@interface NSString (XCUP_URL)
+
+- (NSURL *)xcup_URL;
 
 @end
 
