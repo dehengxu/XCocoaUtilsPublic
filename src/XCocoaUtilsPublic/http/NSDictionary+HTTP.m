@@ -10,7 +10,7 @@
 
 @implementation NSString (HTTP)
 
-- (NSDictionary *)x_parameters
+- (NSDictionary *)xcup_parameters
 {
     NSMutableDictionary *tmp = [NSMutableDictionary new];
     NSArray *kvpairs = [self componentsSeparatedByString:@"&"];
@@ -28,17 +28,17 @@
 
 @implementation NSDictionary (HTTP)
 
-- (NSString *)x_sortedParameterStringAscending:(BOOL)isAscending
+- (NSString *)xcup_sortedParameterStringAscending:(BOOL)isAscending
 {
-    return [self sortedParameterString:isAscending caseInsensitive:NO];
+    return [self xcup_sortedParameterString:isAscending caseInsensitive:NO];
 }
 
-- (NSString *)x_sortedCaseInsensitiveParameterStringAscending:(BOOL)isAscending
+- (NSString *)xcup_sortedCaseInsensitiveParameterStringAscending:(BOOL)isAscending
 {
-    return [self sortedParameterString:isAscending caseInsensitive:YES];
+    return [self xcup_sortedParameterString:isAscending caseInsensitive:YES];
 }
 
-- (NSString *)sortedParameterString:(BOOL)isAscending caseInsensitive:(BOOL)isCaseInsensitive
+- (NSString *)xcup_sortedParameterString:(BOOL)isAscending caseInsensitive:(BOOL)isCaseInsensitive
 {
     NSArray *sorted = [self.allKeys sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
         NSComparisonResult result = NSOrderedSame;
