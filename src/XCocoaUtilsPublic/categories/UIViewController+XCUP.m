@@ -9,6 +9,7 @@
 #import "UIViewController+XCUP.h"
 //#import "UIDevice+Ext.h"
 #import "NSObject+XCUP.h"
+#import "XCUPMacros.h"
 
 #define ASSERT_LOADING  0
 
@@ -34,7 +35,7 @@
     }else {
         rtn = [[self alloc] initWithNibName:[NSString stringWithFormat:@"%@_%@", nibName, suffix] bundle:nibBundleOrNil];
     }
-    return [rtn autorelease];
+    return XAutorelease(rtn);
 }
 
 - (BOOL)isSupportInteractivePopGestureRecognizer

@@ -11,6 +11,14 @@
 
 #pragma mark - Convert utility.
 
+#ifndef ARC_ENABLED
+#define ARC_ENABLED  __has_feature(objc_arc)
+#endif
+
+#ifndef ARC_DISABLED
+#define ARC_DISABLED  !__has_feature(objc_arc)
+#endif
+
 #define CFStringRefByNSString(str)  ((__bridge CFStringRef)(str))
 
 #define CFMutableStringRefByNSMutableString(str) ((__bridge CFMutableStringRef)(str))

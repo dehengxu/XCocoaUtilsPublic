@@ -9,6 +9,8 @@
 #import "NSObject+XCUP.h"
 #import <objc/runtime.h>
 
+#import "XCUPMacros.h"
+
 @implementation NSObject (XCUP)
 
 + (NSString *)nameOfClass:(Class)cls

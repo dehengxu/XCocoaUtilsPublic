@@ -7,8 +7,11 @@
 //
 
 #import "NSObject+Debug.h"
-#import "NSObject+XCUP.h"
+
 #import <objc/runtime.h>
+
+#import "XCUPMacros.h"
+#import "NSObject+XCUP.h"
 
 @implementation NSObject (Debug)
 
