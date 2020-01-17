@@ -277,13 +277,14 @@ static NSDateFormatter *formatter = nil;
 	}
     if (formatter == nil) {
         formatter =  [[NSDateFormatter alloc] init];
-        [formatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] autorelease]];
+        [formatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] XAutorelease]];
     }
     
     [formatter setDateFormat:formatString];
     return [formatter dateFromString:self];
 }
 
+#if __has_include("RegexKitLite.h")
 - (NSString *)stringByRemoveHTMLTags
 {
     NSString *tmp = [self stringByReplacingOccurrencesOfString:@"\n" withString:@""];
@@ -330,6 +331,8 @@ static NSDateFormatter *formatter = nil;
     return tmp;
 }
 
+#endif
+
 @end
 
 
@@ -347,7 +350,7 @@ static NSDateFormatter *formatter = nil;
     va_list args;
     NSMutableString *rtn = nil;
     va_start(args, format);
-    rtn = [[[NSMutableString alloc] initWithFormat:format arguments:args] autorelease];
+    rtn = [[[NSMutableString alloc] initWithFormat:format arguments:args] XAutorelease];
     va_end(args);
     [rtn appendString:@"\n"];
     
@@ -378,7 +381,7 @@ static NSDateFormatter *formatter = nil;
     va_list args;
     NSMutableString *string = nil;
     va_start(args, format);
-    string = [[[NSMutableString alloc] initWithFormat:format arguments:args] autorelease];
+    string = [[[NSMutableString alloc] initWithFormat:format arguments:args] XAutorelease];
     va_end(args);
     
     if (string.length == 0) {

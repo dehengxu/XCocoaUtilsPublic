@@ -2,6 +2,8 @@
 
 #import "NSData+Base64.h"
 
+#import "NSObject+XCUP.h"
+
 static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
 @implementation NSData (Base64)
@@ -100,12 +102,8 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
 			characters[length++] = encodingTable[buffer[2] & 0x3F];
 		else characters[length++] = '=';	
 	}
-#if !ARC_ENABLED
-	return [[[NSString alloc] initWithBytesNoCopy:characters length:length encoding:NSASCIIStringEncoding freeWhenDone:YES] autorelease];
-#else
-    return [[NSString alloc] initWithBytesNoCopy:characters length:length encoding:NSASCIIStringEncoding freeWhenDone:YES];
-#endif
-    
+
+	return [[[NSString alloc] initWithBytesNoCopy:characters length:length encoding:NSASCIIStringEncoding freeWhenDone:YES] XAutorelease];
 }
 
 

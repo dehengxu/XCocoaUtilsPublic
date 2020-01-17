@@ -10,7 +10,7 @@
 
 @interface XCUPSafeTimer ()
 
-@property (nonatomic, weak, nullable) NSTimer *timer;
+@property (nonatomic, strong, nullable) NSTimer *timer;
 @property (nonatomic, assign) BOOL isReapt;
 @property (nonatomic, assign) NSTimeInterval interval;
 @property (nonatomic, assign) NSTimeInterval duration;
@@ -54,6 +54,9 @@
 
 - (void)startTimer
 {
+    if (self.timer && self.timer.isValid) {
+        [self cancelTimer];
+    }
     self.timer = [NSTimer timerWithTimeInterval:self.interval target:self selector:@selector(handleTimer:) userInfo:nil repeats:self.isReapt];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     self.startTime = [NSDate new];
@@ -72,11 +75,14 @@
 - (void)handleTimer:(NSTimer *)timer
 {
     self.timerBlock(timer);
-    
+    if ([NSDate.new timeIntervalSinceDate:self.startTime] > self.duration) {
+        [self cancelTimer];
+    }
 }
 
 - (void)dealloc
 {
+    [self cancelTimer];
     NSLog(@"%s", __func__);
 }
 

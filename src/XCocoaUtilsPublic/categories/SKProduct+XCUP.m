@@ -13,7 +13,7 @@
 
 - (NSString *)localizedPriceString
 {
-    NSNumberFormatter *numberFormatter_ = [[[NSNumberFormatter alloc] init] autorelease];
+    NSNumberFormatter *numberFormatter_ = [[[NSNumberFormatter alloc] init] XAutorelease];
     [numberFormatter_ setFormatterBehavior:NSNumberFormatterBehavior10_4];
     [numberFormatter_ setNumberStyle:NSNumberFormatterCurrencyStyle];
     [numberFormatter_ setLocale:self.priceLocale];

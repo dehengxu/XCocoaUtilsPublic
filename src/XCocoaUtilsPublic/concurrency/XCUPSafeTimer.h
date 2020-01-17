@@ -14,10 +14,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) void(^timerBlock)(NSTimer *);
 
+/// Create a XCUPSafeTimer instance
+/// @param interval Be update to NSTimer interval, units(seconds)
+/// @param timerBlock trigger by every step
 + (instancetype)timerWithInterval:(NSTimeInterval)interval block:(void(^)(NSTimer *))timerBlock;
 + (instancetype)repeatTimerWithInterval:(NSTimeInterval)interval block:(void(^)(NSTimer *))timerBlock;
 + (instancetype)repeatTimerWithInterval:(NSTimeInterval)interval duration:(NSTimeInterval)duration block:(void(^)(NSTimer *))timerBlock;
 
+
+///
+/// Start a new NSTimer, 
+///
+///
 - (void)startTimer;
 - (void)cancelTimer;
 

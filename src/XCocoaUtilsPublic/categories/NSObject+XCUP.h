@@ -8,14 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#ifndef ARC_ENABLED
-#define ARC_ENABLED  __has_feature(objc_arc)
-#endif
-
-#ifndef ARC_DISABLED
-#define ARC_DISABLED  !__has_feature(objc_arc)
-#endif
-
 @interface NSObject (XCUP)
 + (NSString *)nameOfClass:(Class)cls;
 + (NSString *)name;
