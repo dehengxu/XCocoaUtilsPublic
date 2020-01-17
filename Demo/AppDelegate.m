@@ -33,15 +33,25 @@
     appLog(@"JS: %@", JS_HTML_OUTER);
     //appLog(@"XCocoaUtilsPublic_iOSVersionNumber: %s", XCocoaUtilsPublic_iOSVersionString);
     appLog(@"title: %@", [@"title" localizedString]);
-    
+
+    self.timer = [XCUPSafeTimer repeatTimerWithInterval:1.0 block:^(NSTimer * _Nonnull t) {
+        NSLog(@"t: %@", t);
+    }];
+    [self.timer startTimer];
+
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_10_0
     os_log_t log = OS_LOG_DEFAULT;
     os_log_info(log, "os log ..%s", __func__);
     os_log_error(log, "os log ..%s", __func__);
 #else
-    NSLog(@"");
+
 #endif
     return YES;
+}
+
+- (void)handleTimer:(NSTimer *)timer
+{
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
