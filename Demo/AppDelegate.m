@@ -41,6 +41,14 @@
     [self.timer startTimer];
     [self.timer startTimer];
 
+    NSLog(@"doc:%@", FileIOHelper.documentPath);
+    FileIOHelper *io = [[FileIOHelper alloc] initWithRoot:[FileIOHelper.documentPath stringByAppendingPathComponent:@"data/imgs"] ];
+    NSLog(@"io path :%@", io.path);
+    NSString *uuid = [[NSUUID UUID] UUIDString];
+    [io saveData:[@"ss" dataUsingEncoding:NSUTF8StringEncoding] forSubPath:[NSString stringWithFormat:@"ipicker/local/%@", uuid]];
+    NSLog(@"root: %@", io.path);
+    [io cleanAll];
+
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_10_0
     os_log_t log = OS_LOG_DEFAULT;
     os_log_info(log, "os log ..%s", __func__);
