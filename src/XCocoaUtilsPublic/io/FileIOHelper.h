@@ -55,6 +55,8 @@
 
 - (void)removePath:(NSString *)subpath error:(NSError **)error;
 
+- (NSData *)dataForSubPath:(NSString *)subpath;
+
 - (void)cleanAll;
 
 @end

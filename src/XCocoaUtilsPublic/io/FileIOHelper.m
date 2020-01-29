@@ -92,6 +92,16 @@
     }
 }
 
+- (NSData *)dataForSubPath:(NSString *)subpath
+{
+    BOOL isDir = NO;
+    NSString *dest = [self.path stringByAppendingPathComponent:subpath];
+    if ([NSFileManager.defaultManager fileExistsAtPath:dest isDirectory:&isDir] && !isDir) {
+        return [NSData dataWithContentsOfFile:dest];
+    }
+    return nil;
+}
+
 - (void)cleanAll
 {
     NSError *err = nil;
