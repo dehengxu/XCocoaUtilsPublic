@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
   #
 
   s.platform     = :ios
-   s.platform     = :ios, "8.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -96,7 +96,7 @@ Pod::Spec.new do |s|
   # Remove file from link list.
   s.exclude_files = "src/**/RegexKitLite.{h,m}"
 
- s.public_header_files = "src/XCocoaUtilsPublic/*.h"
+  s.public_header_files = "src/XCocoaUtilsPublic/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -192,6 +192,12 @@ Pod::Spec.new do |s|
   s.subspec 'logging' do |sp|
 	  sp.source_files = "src/XCocoaUtilsPublic/Logging/*.{h,m,c,cpp,cxx,cc}"
     sp.preserve_paths = "src/XCocoaUtilsPublic/Logging"
+  end
+
+  s.subspec 'compress' do |sp|
+    sp.source_files = "src/XCocoaUtilsPublic/compress/*.{h,m,mm,c,cpp,cxx,cc}"
+    sp.libraries = "z"
+    sp.preserve_paths = "src/XCocoaUtilsPublic/compress"
   end
 
   s.requires_arc = true

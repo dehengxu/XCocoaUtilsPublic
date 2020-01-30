@@ -13,6 +13,7 @@ def useLib
     'io',
     'concurrency',
     'benchmark',
+    'compress'
     ]
 end
 

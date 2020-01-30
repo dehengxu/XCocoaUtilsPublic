@@ -87,6 +87,11 @@
 //#import <XCocoaUtilsPublic/cbench_mark.h>
 #endif
 
+// Compress
+#if __has_include(<XCocoaUtilsPublic/NSData+XCUPGzip.h>)
+#import <XCocoaUtilsPublic/NSData+XCUPGzip.h>
+#endif
+
 //! Project version number for XCocoaUtilsPublic_iOS.
 FOUNDATION_EXPORT double XCocoaUtilsPublic_iOSVersionNumber;
 
