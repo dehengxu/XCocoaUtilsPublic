@@ -12,6 +12,7 @@ typedef void(^AlertCancelBlock)(void);
 typedef void(^AlertOtherBlock)(NSInteger index);
 
 @interface XCUPBlockAlertView : UIAlertView<UIAlertViewDelegate>
+
 @property (nonatomic, copy) void(^cancelBlock)(void);
 @property (nonatomic, copy) void(^otherBlock)(NSInteger index);
 

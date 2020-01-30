@@ -12,7 +12,7 @@
 #import "NSArray+XCUP.h"
 #import "NSData+String.h"
 #import "NSDate+XCUP.h"
-#import "NSObject+Debug.h"
+#import "NSObject+XCUPDebug.h"
 #import "NSObject+XCUP.h"
 #import "NSString+XCUP.h"
 #import "NSTimer+XCUP.h"

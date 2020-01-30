@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (Debug)
+@interface NSObject (XCUPDebug)
 
 + (NSArray *)propertyList;
 

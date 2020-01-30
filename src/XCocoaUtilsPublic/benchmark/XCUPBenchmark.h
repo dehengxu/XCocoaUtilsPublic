@@ -9,5 +9,7 @@
 #ifndef XCUPBenchmark_h
 #define XCUPBenchmark_h
 
+#import "BenchMark.h"
+#import "cbench_mark.h"
 
 #endif /* XCUPBenchmark_h */

@@ -12,6 +12,7 @@
 
 #import <Foundation/Foundation.h>
 
+API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0))
 @interface XOperationTemplate : NSOperation
 {
 

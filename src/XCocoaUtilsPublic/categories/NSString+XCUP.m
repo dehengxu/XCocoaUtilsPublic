@@ -88,7 +88,7 @@ extern inline const char *CStringFromNSString(NSString *string)
     return [string cStringUsingEncoding:NSUTF8StringEncoding];
 }
 
-@implementation NSString (Ext)
+@implementation NSString (XCUP)
 
 - (NSString*)md5Digest
 {
@@ -336,7 +336,7 @@ static NSDateFormatter *formatter = nil;
 @end
 
 
-@implementation NSMutableString (Utils)
+@implementation NSMutableString (XCUP)
 
 - (void)appendLineString:(NSString *)string
 {
