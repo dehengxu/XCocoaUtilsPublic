@@ -49,6 +49,44 @@
     NSLog(@"root: %@", io.path);
     [io cleanAll];
 
+    NSData *dt = nil;
+
+//    UIImage *img = [UIImage imageNamed:@"erik-unsplash.jpg"];
+//    CGFloat ratio = 0.7;
+//    for (int i = 0; i < 1; i++) {
+//        dt = UIImageJPEGRepresentation(img, ratio);
+//        //[NSData dataWithContentsOfFile:[NSBundle.mainBundle pathForResource:@"erik" ofType:@""]];
+//        //[NSData dataWithContentsOfFile:[NSBundle.mainBundle pathForResource:@"erik-unsplash" ofType:@"jpg"]];
+//        //dt = [@"HeyJude." dataUsingEncoding:NSUTF8StringEncoding];
+//        NSLog(@"%d dt: %lu", i, [dt length]);
+//        img = [UIImage imageWithData:dt];
+//        //ratio = 1.0;
+//    }
+
+    dt =
+    //[@"HeyJude." dataUsingEncoding:NSUTF8StringEncoding];
+    [NSData dataWithContentsOfFile:[NSBundle.mainBundle pathForResource:@"dat" ofType:@"txt"]];
+
+    NSLog(@"dt: %lu", dt.length);
+    NSError *err = nil;
+    dt = [dt gzipDataError:&err];
+    if (err) {
+        NSLog(@"err: %@", err);
+    }else {
+        NSLog(@"dt: %lu", dt.length);
+    }
+    NSLog(@"dt gziped:\n%@", [NSString stringWithData:dt usingEncoding:NSUTF8StringEncoding]);
+
+    err = nil;
+    dt = [dt ungzipDataError:&err];
+    if (err) {
+        NSLog(@"err: %@", err);
+    }else {
+        NSLog(@"dt: %lu", dt.length);
+    }
+
+    NSLog(@"dt decompressed:\n%@", [NSString stringWithData:dt usingEncoding:NSUTF8StringEncoding]);
+
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_10_0
     os_log_t log = OS_LOG_DEFAULT;
     os_log_info(log, "os log ..%s", __func__);

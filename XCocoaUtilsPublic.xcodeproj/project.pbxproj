@@ -10,6 +10,10 @@
 		2426B59B21E24C4700B9BA7E /* XLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59A21E24C4700B9BA7E /* XLogging.m */; };
 		2426B59D21E24CB400B9BA7E /* LoggingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59C21E24CB400B9BA7E /* LoggingTests.m */; };
 		2426B5A021E3A67D00B9BA7E /* Logs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59F21E3A67D00B9BA7E /* Logs.m */; };
+		24289C0B23E2C054006EED9E /* NSData+XCUPGzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 24289C0923E2C054006EED9E /* NSData+XCUPGzip.m */; };
+		24289C0D23E2CAC1006EED9E /* erik-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24289C0C23E2CAC1006EED9E /* erik-unsplash.jpg */; };
+		24289C0F23E2CC3A006EED9E /* dat.txt in Resources */ = {isa = PBXBuildFile; fileRef = 24289C0E23E2CC3A006EED9E /* dat.txt */; };
+		24289C1123E2CCB0006EED9E /* erik in Resources */ = {isa = PBXBuildFile; fileRef = 24289C1023E2CCB0006EED9E /* erik */; };
 		243FD98723C054BF006EED9E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 243FD98923C054BF006EED9E /* Localizable.strings */; };
 		243FD99323C05F97006EED9E /* XCUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243FD99223C05F97006EED9E /* XCUViewController.swift */; };
 		2495DF6F23D0B242006EED9E /* XCUPSafeTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2495DF6D23D0B242006EED9E /* XCUPSafeTimer.h */; };
@@ -185,6 +189,12 @@
 		2426B59C21E24CB400B9BA7E /* LoggingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoggingTests.m; sourceTree = "<group>"; };
 		2426B59E21E3A67D00B9BA7E /* Logs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logs.h; sourceTree = "<group>"; };
 		2426B59F21E3A67D00B9BA7E /* Logs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Logs.m; sourceTree = "<group>"; };
+		24289C0723E2C054006EED9E /* NSData+XCUPGzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+XCUPGzip.h"; sourceTree = "<group>"; };
+		24289C0823E2C054006EED9E /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		24289C0923E2C054006EED9E /* NSData+XCUPGzip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+XCUPGzip.m"; sourceTree = "<group>"; };
+		24289C0C23E2CAC1006EED9E /* erik-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "erik-unsplash.jpg"; sourceTree = "<group>"; };
+		24289C0E23E2CC3A006EED9E /* dat.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = dat.txt; sourceTree = "<group>"; };
+		24289C1023E2CCB0006EED9E /* erik */ = {isa = PBXFileReference; lastKnownFileType = file; path = erik; sourceTree = "<group>"; };
 		243FD97923C0174F006EED9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		243FD97D23C03256006EED9E /* XCUPConcurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUPConcurrency.h; sourceTree = "<group>"; };
 		243FD97E23C03261006EED9E /* XCUPHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUPHttp.h; sourceTree = "<group>"; };
@@ -356,6 +366,16 @@
 			path = Logging;
 			sourceTree = "<group>";
 		};
+		24289C0623E2C054006EED9E /* compress */ = {
+			isa = PBXGroup;
+			children = (
+				24289C0723E2C054006EED9E /* NSData+XCUPGzip.h */,
+				24289C0823E2C054006EED9E /* readme.md */,
+				24289C0923E2C054006EED9E /* NSData+XCUPGzip.m */,
+			);
+			path = compress;
+			sourceTree = "<group>";
+		};
 		24C11ED02225A06C00733658 /* XCocoaUtilsPublicFW */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +400,7 @@
 		74419E1118448DD000E28DD4 /* XCocoaUtilsPublic */ = {
 			isa = PBXGroup;
 			children = (
+				24289C0623E2C054006EED9E /* compress */,
 				2426B59821E24C2900B9BA7E /* Logging */,
 				748BB40D21DC97BD0094B4CE /* Runtime */,
 				74C3561B21BEC467001B0C4C /* concurrency */,
@@ -463,6 +484,8 @@
 		7461B7741B959EB300EB5D6D /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				24289C0C23E2CAC1006EED9E /* erik-unsplash.jpg */,
+				24289C1023E2CCB0006EED9E /* erik */,
 				7461B7791B959EB300EB5D6D /* AppDelegate.h */,
 				7461B77A1B959EB300EB5D6D /* AppDelegate.m */,
 				2426B59E21E3A67D00B9BA7E /* Logs.h */,
@@ -476,6 +499,7 @@
 				243FD98923C054BF006EED9E /* Localizable.strings */,
 				243FD99223C05F97006EED9E /* XCUViewController.swift */,
 				243FD99123C05F96006EED9E /* Demo-Bridging-Header.h */,
+				24289C0E23E2CC3A006EED9E /* dat.txt */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -847,9 +871,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24289C0F23E2CC3A006EED9E /* dat.txt in Resources */,
 				7461B7811B959EB300EB5D6D /* Main.storyboard in Resources */,
 				243FD98723C054BF006EED9E /* Localizable.strings in Resources */,
 				7461B7861B959EB300EB5D6D /* LaunchScreen.xib in Resources */,
+				24289C1123E2CCB0006EED9E /* erik in Resources */,
+				24289C0D23E2CAC1006EED9E /* erik-unsplash.jpg in Resources */,
 				7461B7831B959EB300EB5D6D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -959,6 +986,7 @@
 				7461B77B1B959EB300EB5D6D /* AppDelegate.m in Sources */,
 				243FD99323C05F97006EED9E /* XCUViewController.swift in Sources */,
 				2426B5A021E3A67D00B9BA7E /* Logs.m in Sources */,
+				24289C0B23E2C054006EED9E /* NSData+XCUPGzip.m in Sources */,
 				7461B7781B959EB300EB5D6D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
