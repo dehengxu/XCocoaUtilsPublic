@@ -10,6 +10,7 @@
 
 @interface XCUPSafeTimer ()
 
+@property (nonatomic, copy) void(^timerBlock)(NSTimer *);
 @property (nonatomic, strong, nullable) NSTimer *timer;
 @property (nonatomic, assign) BOOL isReapt;
 @property (nonatomic, assign) NSTimeInterval interval;

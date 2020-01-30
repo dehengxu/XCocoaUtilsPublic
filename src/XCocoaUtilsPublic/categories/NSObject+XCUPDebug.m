@@ -6,14 +6,14 @@
 //  Copyright (c) 2013年 Deheng.Xu. All rights reserved.
 //
 
-#import "NSObject+Debug.h"
+#import "NSObject+XCUPDebug.h"
 
 #import <objc/runtime.h>
 
 #import "XCUPMacros.h"
 #import "NSObject+XCUP.h"
 
-@implementation NSObject (Debug)
+@implementation NSObject (XCUPDebug)
 
 + (NSArray *)propertyList
 {
