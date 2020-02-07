@@ -12,6 +12,9 @@
 		2426B5A021E3A67D00B9BA7E /* Logs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59F21E3A67D00B9BA7E /* Logs.m */; };
 		243FD98723C054BF006EED9E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 243FD98923C054BF006EED9E /* Localizable.strings */; };
 		243FD99323C05F97006EED9E /* XCUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243FD99223C05F97006EED9E /* XCUViewController.swift */; };
+		2495DF6F23D0B242006EED9E /* XCUPSafeTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2495DF6D23D0B242006EED9E /* XCUPSafeTimer.h */; };
+		2495DF7023D0B242006EED9E /* XCUPSafeTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2495DF6E23D0B242006EED9E /* XCUPSafeTimer.m */; };
+		2495DF7123D0B242006EED9E /* XCUPSafeTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2495DF6E23D0B242006EED9E /* XCUPSafeTimer.m */; };
 		24B5A12719BEF7E9009B474C /* XCUPCGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* XCUPCGFunctions.m */; };
 		24C11ED72225A06C00733658 /* XCocoaUtilsPublic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24C11F012225A0C000733658 /* XLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59A21E24C4700B9BA7E /* XLogging.m */; };
@@ -278,6 +281,8 @@
 		243FD98A23C054D5006EED9E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		243FD99123C05F96006EED9E /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		243FD99223C05F97006EED9E /* XCUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUViewController.swift; sourceTree = "<group>"; };
+		2495DF6D23D0B242006EED9E /* XCUPSafeTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCUPSafeTimer.h; sourceTree = "<group>"; };
+		2495DF6E23D0B242006EED9E /* XCUPSafeTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCUPSafeTimer.m; sourceTree = "<group>"; };
 		24B5A12419BEF7E9009B474C /* XCUPCGFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUPCGFunctions.h; sourceTree = "<group>"; };
 		24B5A12519BEF7E9009B474C /* XCUPCGFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCUPCGFunctions.m; sourceTree = "<group>"; };
 		24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCocoaUtilsPublic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -722,6 +727,8 @@
 				243FD97D23C03256006EED9E /* XCUPConcurrency.h */,
 				74C3561721BEC458001B0C4C /* XOperationTemplate.h */,
 				74C3561621BEC458001B0C4C /* XOperationTemplate.m */,
+				2495DF6D23D0B242006EED9E /* XCUPSafeTimer.h */,
+				2495DF6E23D0B242006EED9E /* XCUPSafeTimer.m */,
 			);
 			path = concurrency;
 			sourceTree = "<group>";
@@ -795,6 +802,8 @@
 				24C11F332225A13400733658 /* XCObjectMapping.h in Headers */,
 				24C11F472225A13400733658 /* UIAlertView+XCUP.h in Headers */,
 				24C11F412225A13400733658 /* NSObject+XCUP.h in Headers */,
+				2495DF6F23D0B242006EED9E /* XCUPSafeTimer.h in Headers */,
+				24C11F522225A14600733658 /* XCocoaUtilsPublic.h in Headers */,
 				24C11F2E2225A13400733658 /* web_macros.h in Headers */,
 				749F23C723EDB0EF000D6559 /* XCUPBenchmark.h in Headers */,
 				24C11F372225A13400733658 /* BenchMark.h in Headers */,
@@ -1166,6 +1175,7 @@
 				24C11F162225A0C000733658 /* NSObject+PropertyToURLParams.m in Sources */,
 				24C11F032225A0C000733658 /* XOperationTemplate.m in Sources */,
 				24C11F012225A0C000733658 /* XLogging.m in Sources */,
+				2495DF7123D0B242006EED9E /* XCUPSafeTimer.m in Sources */,
 				24C11F172225A0C000733658 /* NSString+XCUP.m in Sources */,
 				24C11F142225A0C000733658 /* NSObject+Debug.m in Sources */,
 				24C11F1B2225A0C000733658 /* UIAlertView+XCUP.m in Sources */,
@@ -1245,6 +1255,7 @@
 				24B5A12719BEF7E9009B474C /* XCUPCGFunctions.m in Sources */,
 				74419E5518448DD000E28DD4 /* NSArray+XCUP.m in Sources */,
 				74419E7618448DD100E28DD4 /* UIButton+XCUP.m in Sources */,
+				2495DF7023D0B242006EED9E /* XCUPSafeTimer.m in Sources */,
 				2426B59B21E24C4700B9BA7E /* XLogging.m in Sources */,
 				74419E7018448DD100E28DD4 /* SKProduct+XCUP.m in Sources */,
 				74419E6D18448DD100E28DD4 /* NSURL+XCUP.m in Sources */,
