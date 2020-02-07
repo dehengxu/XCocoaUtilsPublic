@@ -6,6 +6,8 @@
 //  Copyright (c) 2013年 Nicholas.Xu. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 #if TARGET_OS_IPHONE
 
 #import <UIKit/UIKit.h>

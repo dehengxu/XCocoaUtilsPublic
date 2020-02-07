@@ -1,5 +1,6 @@
 // http://www.cocoadev.com/index.pl?BaseSixtyFour
 
+#import <Foundation/Foundation.h>
 
 @interface NSData (Base64)
 

@@ -7,7 +7,8 @@
 //
 
 #import "XCUPCGFunctions.h"
-//#import "NSObject+Ext.h"
+
+#import <UIKit/UIKit.h>
 
 extern inline BOOL CallDelegateWithArgs(NSObject **delegate, SEL selector, NSArray *args)
 {
