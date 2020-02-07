@@ -37,14 +37,26 @@
     NSLog(@"ver: %f", XCocoaUtilsPublicVersionNumber);
     NSLog(@"ver: %s", XCocoaUtilsPublicVersionString);
     
+    self.timer = [XCUPSafeTimer repeatTimerWithInterval:1.0 duration:4.0 block:^(NSTimer * _Nonnull t) {
+        NSLog(@"t: %@", t);
+        self.timer = nil;
+    }];
+    [self.timer startTimer];
+    [self.timer startTimer];
+
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_10_0
     os_log_t log = OS_LOG_DEFAULT;
     os_log_info(log, "os log ..%s", __func__);
     os_log_error(log, "os log ..%s", __func__);
 #else
-    NSLog(@"");
+
 #endif
     return YES;
+}
+
+- (void)handleTimer:(NSTimer *)timer
+{
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

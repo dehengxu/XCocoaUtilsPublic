@@ -9,5 +9,6 @@
 #define XCUPConcurrency_h
 
 #import "XOperationTemplate.h"
+#import "XCUPSafeTimer.h"
 
 #endif /* XCUPConcurrency_h */

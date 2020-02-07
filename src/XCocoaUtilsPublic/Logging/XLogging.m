@@ -25,14 +25,20 @@ void UpdateLoggerStatus(NSString *tag, const char *key, NSNumber *value) {
     Class c = NSClassFromString([NSString stringWithFormat:@"log_%@_swift", tag]);
     if (c) {
         //TODO: fix this warning
+#if __has_feature(objc_arc)
+        objc_setAssociatedObject(c, key, value, OBJC_ASSOCIATION_ASSIGN);
+#else
         [c setLoggingEnabled:[value boolValue]];
+#endif
         //-- Under submodule will not works.
-        //objc_setAssociatedObject(c, key, value, OBJC_ASSOCIATION_ASSIGN);
     }
 
     c = NSClassFromString([NSString stringWithFormat:@"log_%@", tag]);
     if (c) {
+#if __has_feature(objc_arc)
+        objc_setAssociatedObject(c, key, value, OBJC_ASSOCIATION_ASSIGN);
+#else
         [c setLoggingEnabled:[value boolValue]];
-        //objc_setAssociatedObject(c, key, value, OBJC_ASSOCIATION_ASSIGN);
+#endif
     }
 }

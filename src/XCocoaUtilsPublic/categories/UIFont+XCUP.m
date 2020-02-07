@@ -8,6 +8,7 @@
 
 #import "UIFont+XCUP.h"
 #import "NSObject+XCUP.h"
+#import "XCUPMacros.h"
 
 @implementation UIFont (XCUP)
 
@@ -20,7 +21,7 @@
 	}
 	//[allFonts writeToFile:@"/iphon4_font_family.plist" atomically:YES];
 	//printf("Notice! Has already written file iphon4_font_family in \"/\"");
-	return [allFonts autorelease];
+	return XAutorelease(allFonts);
 }
 
 @end
