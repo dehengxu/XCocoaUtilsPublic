@@ -16,7 +16,7 @@
 		24289C1123E2CCB0006EED9E /* erik in Resources */ = {isa = PBXBuildFile; fileRef = 24289C1023E2CCB0006EED9E /* erik */; };
 		243FD98723C054BF006EED9E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 243FD98923C054BF006EED9E /* Localizable.strings */; };
 		243FD99323C05F97006EED9E /* XCUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243FD99223C05F97006EED9E /* XCUViewController.swift */; };
-		2495DF6F23D0B242006EED9E /* XCUPSafeTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2495DF6D23D0B242006EED9E /* XCUPSafeTimer.h */; };
+		2495DF6F23D0B242006EED9E /* XCUPSafeTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2495DF6D23D0B242006EED9E /* XCUPSafeTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2495DF7023D0B242006EED9E /* XCUPSafeTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2495DF6E23D0B242006EED9E /* XCUPSafeTimer.m */; };
 		2495DF7123D0B242006EED9E /* XCUPSafeTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2495DF6E23D0B242006EED9E /* XCUPSafeTimer.m */; };
 		24B5A12719BEF7E9009B474C /* XCUPCGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* XCUPCGFunctions.m */; };
@@ -137,6 +137,41 @@
 		746AAF6321CCD3DC005B29F6 /* XCObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF5F21CCD3DC005B29F6 /* XCObjectMapping.m */; };
 		746AAF6621CCD406005B29F6 /* NSDictionary+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */; };
 		746EA5AB23EDB7660050FB01 /* NSData+XCUPGzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 24289C0723E2C054006EED9E /* NSData+XCUPGzip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746EA5F223EDD68B0050FB01 /* XOperationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3561621BEC458001B0C4C /* XOperationTemplate.m */; };
+		746EA5F323EDD6940050FB01 /* XCUPSafeTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2495DF6E23D0B242006EED9E /* XCUPSafeTimer.m */; };
+		746EA5F423EDD6970050FB01 /* XCUPSafeTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2495DF6D23D0B242006EED9E /* XCUPSafeTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746EA5F523EDD6A20050FB01 /* NSInvocation+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BB41021DC98070094B4CE /* NSInvocation+XCUP.m */; };
+		746EA5F623EDD6A80050FB01 /* XLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59A21E24C4700B9BA7E /* XLogging.m */; };
+		746EA5F723EDD6C20050FB01 /* XCUPCGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5A12519BEF7E9009B474C /* XCUPCGFunctions.m */; };
+		746EA5F823EDD6C20050FB01 /* XCUPBlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1618448DD000E28DD4 /* XCUPBlockAlertView.m */; };
+		746EA5F923EDD6D10050FB01 /* DefaultSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4518448DD000E28DD4 /* DefaultSettings.m */; };
+		746EA5FA23EDD6D10050FB01 /* FileIOHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4718448DD000E28DD4 /* FileIOHelper.m */; };
+		746EA5FB23EDD6E20050FB01 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
+		746EA5FC23EDD6E20050FB01 /* NSString+URI.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF5D21CCD3DC005B29F6 /* NSString+URI.m */; };
+		746EA5FD23EDD6E20050FB01 /* XCObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF5F21CCD3DC005B29F6 /* XCObjectMapping.m */; };
+		746EA5FE23EDD6E20050FB01 /* NameValuePaire.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E4B18448DD000E28DD4 /* NameValuePaire.m */; };
+		746EA5FF23EDD6E20050FB01 /* NSURL+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2A18448DD000E28DD4 /* NSURL+XCUP.m */; };
+		746EA60023EDD6E20050FB01 /* NSDictionary+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */; };
+		746EA60123EDD6E20050FB01 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A05C1B80C4CEE2563A701BF /* NSData+Base64.m */; };
+		746EA60223EDD6E70050FB01 /* BenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3560721BEA897001B0C4C /* BenchMark.m */; };
+		746EA60323EDD6E70050FB01 /* cbench_mark.c in Sources */ = {isa = PBXBuildFile; fileRef = 74C3560621BEA897001B0C4C /* cbench_mark.c */; };
+		746EA60423EDD6EF0050FB01 /* NSArray+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1A18448DD000E28DD4 /* NSArray+XCUP.m */; };
+		746EA60523EDD6EF0050FB01 /* NSData+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1E18448DD000E28DD4 /* NSData+String.m */; };
+		746EA60623EDD6EF0050FB01 /* NSDate+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2018448DD000E28DD4 /* NSDate+XCUP.m */; };
+		746EA60723EDD6EF0050FB01 /* NSObject+XCUPDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2218448DD000E28DD4 /* NSObject+XCUPDebug.m */; };
+		746EA60823EDD6EF0050FB01 /* NSObject+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2418448DD000E28DD4 /* NSObject+XCUP.m */; };
+		746EA60923EDD6EF0050FB01 /* NSString+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2618448DD000E28DD4 /* NSString+XCUP.m */; };
+		746EA60A23EDD6FB0050FB01 /* NSTimer+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2818448DD000E28DD4 /* NSTimer+XCUP.m */; };
+		746EA60B23EDD6FB0050FB01 /* SKProduct+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2C18448DD000E28DD4 /* SKProduct+XCUP.m */; };
+		746EA60C23EDD6FB0050FB01 /* UIAlertView+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2E18448DD000E28DD4 /* UIAlertView+XCUP.m */; };
+		746EA60D23EDD6FB0050FB01 /* UIButton+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E3018448DD000E28DD4 /* UIButton+XCUP.m */; };
+		746EA60E23EDD6FB0050FB01 /* UIColor+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E3218448DD000E28DD4 /* UIColor+XCUP.m */; };
+		746EA60F23EDD6FB0050FB01 /* UIFont+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E3418448DD000E28DD4 /* UIFont+XCUP.m */; };
+		746EA61023EDD6FB0050FB01 /* UIImage+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E3618448DD000E28DD4 /* UIImage+XCUP.m */; };
+		746EA61123EDD6FB0050FB01 /* UIScreen+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E3818448DD000E28DD4 /* UIScreen+XCUP.m */; };
+		746EA61223EDD6FB0050FB01 /* UIScrollView+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E3A18448DD000E28DD4 /* UIScrollView+XCUP.m */; };
+		746EA61323EDD6FB0050FB01 /* UIView+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E3C18448DD000E28DD4 /* UIView+XCUP.m */; };
+		746EA61423EDD6FB0050FB01 /* UIViewController+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E3E18448DD000E28DD4 /* UIViewController+XCUP.m */; };
 		748BB41121DC98070094B4CE /* NSInvocation+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BB41021DC98070094B4CE /* NSInvocation+XCUP.m */; };
 		749F237C23EDAECB000D6559 /* XCocoaUtilsPublic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749F237323EDAECB000D6559 /* XCocoaUtilsPublic.framework */; };
 		749F238323EDAECB000D6559 /* XCocoaUtilsPublicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 749F238223EDAECB000D6559 /* XCocoaUtilsPublicTests.m */; };
@@ -894,6 +929,7 @@
 				749F23B623EDB071000D6559 /* SKProduct+XCUP.h in Headers */,
 				749F23A823EDB071000D6559 /* NSDictionary+HTTP.h in Headers */,
 				746EA5AB23EDB7660050FB01 /* NSData+XCUPGzip.h in Headers */,
+				746EA5F423EDD6970050FB01 /* XCUPSafeTimer.h in Headers */,
 				749F23B223EDB071000D6559 /* NSObject+XCUPDebug.h in Headers */,
 				749F23B323EDB071000D6559 /* NSObject+XCUP.h in Headers */,
 				749F23B923EDB071000D6559 /* UIColor+XCUP.h in Headers */,
@@ -1263,6 +1299,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746EA60023EDD6E20050FB01 /* NSDictionary+HTTP.m in Sources */,
+				746EA61223EDD6FB0050FB01 /* UIScrollView+XCUP.m in Sources */,
+				746EA60E23EDD6FB0050FB01 /* UIColor+XCUP.m in Sources */,
+				746EA61123EDD6FB0050FB01 /* UIScreen+XCUP.m in Sources */,
+				746EA60223EDD6E70050FB01 /* BenchMark.m in Sources */,
+				746EA60923EDD6EF0050FB01 /* NSString+XCUP.m in Sources */,
+				746EA60323EDD6E70050FB01 /* cbench_mark.c in Sources */,
+				746EA5F623EDD6A80050FB01 /* XLogging.m in Sources */,
+				746EA60123EDD6E20050FB01 /* NSData+Base64.m in Sources */,
+				746EA61323EDD6FB0050FB01 /* UIView+XCUP.m in Sources */,
+				746EA60523EDD6EF0050FB01 /* NSData+String.m in Sources */,
+				746EA5FB23EDD6E20050FB01 /* NSObject+PropertyToURLParams.m in Sources */,
+				746EA60823EDD6EF0050FB01 /* NSObject+XCUP.m in Sources */,
+				746EA5FC23EDD6E20050FB01 /* NSString+URI.m in Sources */,
+				746EA5FA23EDD6D10050FB01 /* FileIOHelper.m in Sources */,
+				746EA60F23EDD6FB0050FB01 /* UIFont+XCUP.m in Sources */,
+				746EA60423EDD6EF0050FB01 /* NSArray+XCUP.m in Sources */,
+				746EA60B23EDD6FB0050FB01 /* SKProduct+XCUP.m in Sources */,
+				746EA61423EDD6FB0050FB01 /* UIViewController+XCUP.m in Sources */,
+				746EA60C23EDD6FB0050FB01 /* UIAlertView+XCUP.m in Sources */,
+				746EA5F823EDD6C20050FB01 /* XCUPBlockAlertView.m in Sources */,
+				746EA61023EDD6FB0050FB01 /* UIImage+XCUP.m in Sources */,
+				746EA5F923EDD6D10050FB01 /* DefaultSettings.m in Sources */,
+				746EA5F723EDD6C20050FB01 /* XCUPCGFunctions.m in Sources */,
+				746EA5F323EDD6940050FB01 /* XCUPSafeTimer.m in Sources */,
+				746EA60623EDD6EF0050FB01 /* NSDate+XCUP.m in Sources */,
+				746EA5F523EDD6A20050FB01 /* NSInvocation+XCUP.m in Sources */,
+				746EA60723EDD6EF0050FB01 /* NSObject+XCUPDebug.m in Sources */,
+				746EA5FF23EDD6E20050FB01 /* NSURL+XCUP.m in Sources */,
+				746EA60D23EDD6FB0050FB01 /* UIButton+XCUP.m in Sources */,
+				746EA5FD23EDD6E20050FB01 /* XCObjectMapping.m in Sources */,
+				746EA5FE23EDD6E20050FB01 /* NameValuePaire.m in Sources */,
+				746EA60A23EDD6FB0050FB01 /* NSTimer+XCUP.m in Sources */,
+				746EA5F223EDD68B0050FB01 /* XOperationTemplate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
