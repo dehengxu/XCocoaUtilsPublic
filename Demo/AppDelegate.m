@@ -34,6 +34,9 @@
     //appLog(@"XCocoaUtilsPublic_iOSVersionNumber: %s", XCocoaUtilsPublic_iOSVersionString);
     appLog(@"title: %@", [@"title" localizedString]);
     
+    NSLog(@"ver: %f", XCocoaUtilsPublicVersionNumber);
+    NSLog(@"ver: %s", XCocoaUtilsPublicVersionString);
+    
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_10_0
     os_log_t log = OS_LOG_DEFAULT;
     os_log_info(log, "os log ..%s", __func__);

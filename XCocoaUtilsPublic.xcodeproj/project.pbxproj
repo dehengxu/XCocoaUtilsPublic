@@ -67,7 +67,7 @@
 		24C11F362225A13400733658 /* NSDictionary+HTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6421CCD406005B29F6 /* NSDictionary+HTTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F372225A13400733658 /* BenchMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560421BEA896001B0C4C /* BenchMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F382225A13400733658 /* cbench_mark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560521BEA897001B0C4C /* cbench_mark.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24C11F3A2225A13400733658 /* extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1818448DD000E28DD4 /* extensions.h */; };
+		24C11F3A2225A13400733658 /* extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1818448DD000E28DD4 /* extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F3B2225A13400733658 /* NSArray+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1918448DD000E28DD4 /* NSArray+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F3D2225A13400733658 /* NSData+String.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1D18448DD000E28DD4 /* NSData+String.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F3E2225A13400733658 /* NSDate+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1F18448DD000E28DD4 /* NSDate+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -89,7 +89,6 @@
 		24C11F4F2225A14600733658 /* UIViewController+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3D18448DD000E28DD4 /* UIViewController+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F502225A14600733658 /* DebugUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4018448DD000E28DD4 /* DebugUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F512225A14600733658 /* NSURL+Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4218448DD000E28DD4 /* NSURL+Test.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24C11F522225A14600733658 /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = 7434EA1C19C5BE13001E6989 /* XCocoaUtilsPublic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F532225A15D00733658 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23B2A13180D2A4800C270A4 /* UIKit.framework */; };
 		24C11F542225A16100733658 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415A0180CDF790067EBE8 /* Foundation.framework */; };
 		2A05C06A7265CDED2B35CDE7 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A05C4DD9C94C4DABC628670 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -131,6 +130,68 @@
 		746AAF6321CCD3DC005B29F6 /* XCObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF5F21CCD3DC005B29F6 /* XCObjectMapping.m */; };
 		746AAF6621CCD406005B29F6 /* NSDictionary+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */; };
 		748BB41121DC98070094B4CE /* NSInvocation+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BB41021DC98070094B4CE /* NSInvocation+XCUP.m */; };
+		749F237C23EDAECB000D6559 /* XCocoaUtilsPublic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749F237323EDAECB000D6559 /* XCocoaUtilsPublic.framework */; };
+		749F238323EDAECB000D6559 /* XCocoaUtilsPublicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 749F238223EDAECB000D6559 /* XCocoaUtilsPublicTests.m */; };
+		749F238523EDAECB000D6559 /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = 749F237523EDAECB000D6559 /* XCocoaUtilsPublic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F238823EDAECB000D6559 /* XCocoaUtilsPublic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749F237323EDAECB000D6559 /* XCocoaUtilsPublic.framework */; };
+		749F238923EDAECB000D6559 /* XCocoaUtilsPublic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 749F237323EDAECB000D6559 /* XCocoaUtilsPublic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		749F239023EDAEF2000D6559 /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C11ED12225A06C00733658 /* XCocoaUtilsPublic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239123EDB071000D6559 /* XLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 2426B59921E24C4700B9BA7E /* XLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239223EDB071000D6559 /* NSInvocation+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 748BB40F21DC98070094B4CE /* NSInvocation+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239323EDB071000D6559 /* XCUPConcurrency.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD97D23C03256006EED9E /* XCUPConcurrency.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239423EDB071000D6559 /* XOperationTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561721BEC458001B0C4C /* XOperationTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239523EDB071000D6559 /* XCUPCGFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B5A12419BEF7E9009B474C /* XCUPCGFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239623EDB071000D6559 /* XCUPBlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1518448DD000E28DD4 /* XCUPBlockAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239723EDB071000D6559 /* XCUPUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98323C034A3006EED9E /* XCUPUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239823EDB071000D6559 /* memory_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561021BEB283001B0C4C /* memory_macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239923EDB071000D6559 /* singletone.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561221BEB728001B0C4C /* singletone.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239A23EDB071000D6559 /* UIKit_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561321BEB7A9001B0C4C /* UIKit_macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239B23EDB071000D6559 /* web_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561421BEB7CE001B0C4C /* web_macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239C23EDB071000D6559 /* CF_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561521BEBA08001B0C4C /* CF_macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239D23EDB071000D6559 /* XCUPMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98123C0329A006EED9E /* XCUPMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239E23EDB071000D6559 /* DefaultSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4418448DD000E28DD4 /* DefaultSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239F23EDB071000D6559 /* FileIOHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4618448DD000E28DD4 /* FileIOHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23A023EDB071000D6559 /* XCUPIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98223C03443006EED9E /* XCUPIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23A123EDB071000D6559 /* XCUPHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD97E23C03261006EED9E /* XCUPHttp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23A223EDB071000D6559 /* NSObject+PropertyToURLParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23A323EDB071000D6559 /* NSString+URI.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6121CCD3DC005B29F6 /* NSString+URI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23A423EDB071000D6559 /* XCObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF5E21CCD3DC005B29F6 /* XCObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23A523EDB071000D6559 /* XCObjectMappingDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6021CCD3DC005B29F6 /* XCObjectMappingDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23A623EDB071000D6559 /* NameValuePaire.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4A18448DD000E28DD4 /* NameValuePaire.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23A723EDB071000D6559 /* NSURL+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2918448DD000E28DD4 /* NSURL+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23A823EDB071000D6559 /* NSDictionary+HTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6421CCD406005B29F6 /* NSDictionary+HTTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23A923EDB071000D6559 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A05C4DD9C94C4DABC628670 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23AA23EDB071000D6559 /* BenchMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560421BEA896001B0C4C /* BenchMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23AB23EDB071000D6559 /* cbench_mark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560521BEA897001B0C4C /* cbench_mark.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23AC23EDB071000D6559 /* XCUPBenchmark.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98023C03287006EED9E /* XCUPBenchmark.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23AE23EDB071000D6559 /* extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1818448DD000E28DD4 /* extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23AF23EDB071000D6559 /* NSArray+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1918448DD000E28DD4 /* NSArray+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23B023EDB071000D6559 /* NSData+String.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1D18448DD000E28DD4 /* NSData+String.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23B123EDB071000D6559 /* NSDate+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1F18448DD000E28DD4 /* NSDate+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23B223EDB071000D6559 /* NSObject+Debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2118448DD000E28DD4 /* NSObject+Debug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23B323EDB071000D6559 /* NSObject+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2318448DD000E28DD4 /* NSObject+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23B423EDB071000D6559 /* NSString+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2518448DD000E28DD4 /* NSString+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23B523EDB071000D6559 /* NSTimer+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2718448DD000E28DD4 /* NSTimer+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23B623EDB071000D6559 /* SKProduct+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2B18448DD000E28DD4 /* SKProduct+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23B723EDB071000D6559 /* UIAlertView+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2D18448DD000E28DD4 /* UIAlertView+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23B823EDB071000D6559 /* UIButton+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2F18448DD000E28DD4 /* UIButton+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23B923EDB071000D6559 /* UIColor+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3118448DD000E28DD4 /* UIColor+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23BA23EDB071000D6559 /* UIFont+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3318448DD000E28DD4 /* UIFont+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23BB23EDB071000D6559 /* UIImage+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3518448DD000E28DD4 /* UIImage+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23BC23EDB071000D6559 /* UIScreen+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3718448DD000E28DD4 /* UIScreen+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23BD23EDB071000D6559 /* UIScrollView+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3918448DD000E28DD4 /* UIScrollView+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23BE23EDB071000D6559 /* UIView+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3B18448DD000E28DD4 /* UIView+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23BF23EDB071000D6559 /* UIViewController+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3D18448DD000E28DD4 /* UIViewController+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23C023EDB071000D6559 /* XCUPDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD97F23C0326E006EED9E /* XCUPDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23C123EDB071000D6559 /* DebugUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4018448DD000E28DD4 /* DebugUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23C223EDB0AD000D6559 /* XCUPConcurrency.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD97D23C03256006EED9E /* XCUPConcurrency.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23C323EDB0BC000D6559 /* XCUPUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98323C034A3006EED9E /* XCUPUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23C423EDB0CA000D6559 /* XCUPMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98123C0329A006EED9E /* XCUPMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23C523EDB0D6000D6559 /* XCUPIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98223C03443006EED9E /* XCUPIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23C623EDB0DE000D6559 /* XCUPHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD97E23C03261006EED9E /* XCUPHttp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23C723EDB0EF000D6559 /* XCUPBenchmark.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98023C03287006EED9E /* XCUPBenchmark.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23C823EDB10B000D6559 /* XCUPDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD97F23C0326E006EED9E /* XCUPDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23C923EDB114000D6559 /* NSURL+Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4218448DD000E28DD4 /* NSURL+Test.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74C279FB23D0576400D5D016 /* mappingmodel.json in Resources */ = {isa = PBXBuildFile; fileRef = 74C279FA23D0576400D5D016 /* mappingmodel.json */; };
 		74C279FD23D0588F00D5D016 /* HttpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C279FC23D0588F00D5D016 /* HttpTests.m */; };
 		74C3560A21BEA897001B0C4C /* cbench_mark.c in Sources */ = {isa = PBXBuildFile; fileRef = 74C3560621BEA897001B0C4C /* cbench_mark.c */; };
@@ -150,6 +211,27 @@
 			remoteGlobalIDString = 7461B7721B959EB300EB5D6D;
 			remoteInfo = Demo;
 		};
+		749F237D23EDAECB000D6559 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2141595180CDF790067EBE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 749F237223EDAECB000D6559;
+			remoteInfo = XCocoaUtilsPublic;
+		};
+		749F237F23EDAECB000D6559 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2141595180CDF790067EBE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7461B7721B959EB300EB5D6D;
+			remoteInfo = Demo;
+		};
+		749F238623EDAECB000D6559 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2141595180CDF790067EBE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 749F237223EDAECB000D6559;
+			remoteInfo = XCocoaUtilsPublic;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -159,6 +241,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				749F238923EDAECB000D6559 /* XCocoaUtilsPublic.framework in Embed Frameworks */,
 				24C11ED72225A06C00733658 /* XCocoaUtilsPublic.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -280,6 +363,12 @@
 		746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HTTP.m"; sourceTree = "<group>"; };
 		748BB40F21DC98070094B4CE /* NSInvocation+XCUP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+XCUP.h"; sourceTree = "<group>"; };
 		748BB41021DC98070094B4CE /* NSInvocation+XCUP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+XCUP.m"; sourceTree = "<group>"; };
+		749F237323EDAECB000D6559 /* XCocoaUtilsPublic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCocoaUtilsPublic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		749F237523EDAECB000D6559 /* XCocoaUtilsPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublic.h; sourceTree = "<group>"; };
+		749F237623EDAECB000D6559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		749F237B23EDAECB000D6559 /* XCocoaUtilsPublicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCocoaUtilsPublicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		749F238223EDAECB000D6559 /* XCocoaUtilsPublicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCocoaUtilsPublicTests.m; sourceTree = "<group>"; };
+		749F238423EDAECB000D6559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74C279FA23D0576400D5D016 /* mappingmodel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mappingmodel.json; sourceTree = "<group>"; };
 		74C279FC23D0588F00D5D016 /* HttpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpTests.m; sourceTree = "<group>"; };
 		74C3560421BEA896001B0C4C /* BenchMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BenchMark.h; sourceTree = "<group>"; };
@@ -318,6 +407,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				749F238823EDAECB000D6559 /* XCocoaUtilsPublic.framework in Frameworks */,
 				925EEDA9778C69CF219F2E8B /* libPods-Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +417,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D47966F2ACC00ABFFFDB620 /* libPods-DemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		749F237023EDAECB000D6559 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		749F237823EDAECB000D6559 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				749F237C23EDAECB000D6559 /* XCocoaUtilsPublic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +618,24 @@
 			path = Runtime;
 			sourceTree = "<group>";
 		};
+		749F237423EDAECB000D6559 /* XCocoaUtilsPublic */ = {
+			isa = PBXGroup;
+			children = (
+				749F237523EDAECB000D6559 /* XCocoaUtilsPublic.h */,
+				749F237623EDAECB000D6559 /* Info.plist */,
+			);
+			path = XCocoaUtilsPublic;
+			sourceTree = "<group>";
+		};
+		749F238123EDAECB000D6559 /* XCocoaUtilsPublicTests */ = {
+			isa = PBXGroup;
+			children = (
+				749F238223EDAECB000D6559 /* XCocoaUtilsPublicTests.m */,
+				749F238423EDAECB000D6559 /* Info.plist */,
+			);
+			path = XCocoaUtilsPublicTests;
+			sourceTree = "<group>";
+		};
 		74C279F923D0573B00D5D016 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,6 +735,8 @@
 				7461B7741B959EB300EB5D6D /* Demo */,
 				7461B78E1B959EB300EB5D6D /* DemoTests */,
 				24C11ED02225A06C00733658 /* XCocoaUtilsPublicFW */,
+				749F237423EDAECB000D6559 /* XCocoaUtilsPublic */,
+				749F238123EDAECB000D6559 /* XCocoaUtilsPublicTests */,
 				A214159F180CDF790067EBE8 /* Frameworks */,
 				A214159E180CDF790067EBE8 /* Products */,
 				29EF8ABF903E6BBF7D52D683 /* Pods */,
@@ -625,6 +750,8 @@
 				7461B7731B959EB300EB5D6D /* Demo.app */,
 				7461B78B1B959EB300EB5D6D /* DemoTests.xctest */,
 				24C11ECF2225A06B00733658 /* XCocoaUtilsPublic.framework */,
+				749F237323EDAECB000D6559 /* XCocoaUtilsPublic.framework */,
+				749F237B23EDAECB000D6559 /* XCocoaUtilsPublicTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -656,6 +783,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				749F23C823EDB10B000D6559 /* XCUPDebug.h in Headers */,
+				749F23C623EDB0DE000D6559 /* XCUPHttp.h in Headers */,
+				749F23C323EDB0BC000D6559 /* XCUPUIKit.h in Headers */,
 				24C11F272225A13400733658 /* NSInvocation+XCUP.h in Headers */,
 				24C11F4E2225A14600733658 /* UIView+XCUP.h in Headers */,
 				24C11F442225A13400733658 /* NSTimer+XCUP.h in Headers */,
@@ -665,13 +795,14 @@
 				24C11F332225A13400733658 /* XCObjectMapping.h in Headers */,
 				24C11F472225A13400733658 /* UIAlertView+XCUP.h in Headers */,
 				24C11F412225A13400733658 /* NSObject+XCUP.h in Headers */,
-				24C11F522225A14600733658 /* XCocoaUtilsPublic.h in Headers */,
 				24C11F2E2225A13400733658 /* web_macros.h in Headers */,
+				749F23C723EDB0EF000D6559 /* XCUPBenchmark.h in Headers */,
 				24C11F372225A13400733658 /* BenchMark.h in Headers */,
 				24C11F4F2225A14600733658 /* UIViewController+XCUP.h in Headers */,
 				24C11F312225A13400733658 /* FileIOHelper.h in Headers */,
 				24C11F4A2225A14600733658 /* UIFont+XCUP.h in Headers */,
 				24C11F402225A13400733658 /* NSObject+Debug.h in Headers */,
+				749F23C523EDB0D6000D6559 /* XCUPIO.h in Headers */,
 				24C11F3A2225A13400733658 /* extensions.h in Headers */,
 				24C11F4C2225A14600733658 /* UIScreen+XCUP.h in Headers */,
 				24C11F4B2225A14600733658 /* UIImage+XCUP.h in Headers */,
@@ -691,14 +822,74 @@
 				24C11F422225A13400733658 /* NSObject+PropertyToURLParams.h in Headers */,
 				24C11F302225A13400733658 /* DefaultSettings.h in Headers */,
 				24C11F282225A13400733658 /* XOperationTemplate.h in Headers */,
+				749F23C223EDB0AD000D6559 /* XCUPConcurrency.h in Headers */,
 				24C11F482225A13400733658 /* UIButton+XCUP.h in Headers */,
 				24C11F2B2225A13400733658 /* memory_macros.h in Headers */,
 				24C11F462225A13400733658 /* SKProduct+XCUP.h in Headers */,
 				24C11F452225A13400733658 /* NSURL+XCUP.h in Headers */,
 				24C11F322225A13400733658 /* NSString+URI.h in Headers */,
+				749F23C423EDB0CA000D6559 /* XCUPMacros.h in Headers */,
 				24C11F432225A13400733658 /* NSString+XCUP.h in Headers */,
 				24C11F4D2225A14600733658 /* UIScrollView+XCUP.h in Headers */,
+				749F239023EDAEF2000D6559 /* XCocoaUtilsPublic.h in Headers */,
 				2A05C06A7265CDED2B35CDE7 /* NSData+Base64.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		749F236E23EDAECB000D6559 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				749F238523EDAECB000D6559 /* XCocoaUtilsPublic.h in Headers */,
+				749F23BC23EDB071000D6559 /* UIScreen+XCUP.h in Headers */,
+				749F23BA23EDB071000D6559 /* UIFont+XCUP.h in Headers */,
+				749F23A723EDB071000D6559 /* NSURL+XCUP.h in Headers */,
+				749F23A623EDB071000D6559 /* NameValuePaire.h in Headers */,
+				749F23B023EDB071000D6559 /* NSData+String.h in Headers */,
+				749F239D23EDB071000D6559 /* XCUPMacros.h in Headers */,
+				749F23AB23EDB071000D6559 /* cbench_mark.h in Headers */,
+				749F23A523EDB071000D6559 /* XCObjectMappingDelegate.h in Headers */,
+				749F23A023EDB071000D6559 /* XCUPIO.h in Headers */,
+				749F239C23EDB071000D6559 /* CF_macros.h in Headers */,
+				749F23C123EDB071000D6559 /* DebugUtility.h in Headers */,
+				749F23A423EDB071000D6559 /* XCObjectMapping.h in Headers */,
+				749F239823EDB071000D6559 /* memory_macros.h in Headers */,
+				749F23AA23EDB071000D6559 /* BenchMark.h in Headers */,
+				749F239423EDB071000D6559 /* XOperationTemplate.h in Headers */,
+				749F23A123EDB071000D6559 /* XCUPHttp.h in Headers */,
+				749F23BE23EDB071000D6559 /* UIView+XCUP.h in Headers */,
+				749F23B623EDB071000D6559 /* SKProduct+XCUP.h in Headers */,
+				749F23A823EDB071000D6559 /* NSDictionary+HTTP.h in Headers */,
+				749F23B223EDB071000D6559 /* NSObject+Debug.h in Headers */,
+				749F23B323EDB071000D6559 /* NSObject+XCUP.h in Headers */,
+				749F23B923EDB071000D6559 /* UIColor+XCUP.h in Headers */,
+				749F23B123EDB071000D6559 /* NSDate+XCUP.h in Headers */,
+				749F23A323EDB071000D6559 /* NSString+URI.h in Headers */,
+				749F23C023EDB071000D6559 /* XCUPDebug.h in Headers */,
+				749F23B423EDB071000D6559 /* NSString+XCUP.h in Headers */,
+				749F23AF23EDB071000D6559 /* NSArray+XCUP.h in Headers */,
+				749F239223EDB071000D6559 /* NSInvocation+XCUP.h in Headers */,
+				749F239B23EDB071000D6559 /* web_macros.h in Headers */,
+				749F239623EDB071000D6559 /* XCUPBlockAlertView.h in Headers */,
+				749F239323EDB071000D6559 /* XCUPConcurrency.h in Headers */,
+				749F23A223EDB071000D6559 /* NSObject+PropertyToURLParams.h in Headers */,
+				749F23A923EDB071000D6559 /* NSData+Base64.h in Headers */,
+				749F23B723EDB071000D6559 /* UIAlertView+XCUP.h in Headers */,
+				749F23AC23EDB071000D6559 /* XCUPBenchmark.h in Headers */,
+				749F239E23EDB071000D6559 /* DefaultSettings.h in Headers */,
+				749F23B823EDB071000D6559 /* UIButton+XCUP.h in Headers */,
+				749F23BF23EDB071000D6559 /* UIViewController+XCUP.h in Headers */,
+				749F23C923EDB114000D6559 /* NSURL+Test.h in Headers */,
+				749F23AE23EDB071000D6559 /* extensions.h in Headers */,
+				749F23BB23EDB071000D6559 /* UIImage+XCUP.h in Headers */,
+				749F23BD23EDB071000D6559 /* UIScrollView+XCUP.h in Headers */,
+				749F239923EDB071000D6559 /* singletone.h in Headers */,
+				749F239523EDB071000D6559 /* XCUPCGFunctions.h in Headers */,
+				749F23B523EDB071000D6559 /* NSTimer+XCUP.h in Headers */,
+				749F239F23EDB071000D6559 /* FileIOHelper.h in Headers */,
+				749F239123EDB071000D6559 /* XLogging.h in Headers */,
+				749F239723EDB071000D6559 /* XCUPUIKit.h in Headers */,
+				749F239A23EDB071000D6559 /* UIKit_macros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,6 +927,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				749F238723EDAECB000D6559 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -759,6 +951,43 @@
 			name = DemoTests;
 			productName = DemoTests;
 			productReference = 7461B78B1B959EB300EB5D6D /* DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		749F237223EDAECB000D6559 /* XCocoaUtilsPublic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 749F238A23EDAECB000D6559 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublic" */;
+			buildPhases = (
+				749F236E23EDAECB000D6559 /* Headers */,
+				749F236F23EDAECB000D6559 /* Sources */,
+				749F237023EDAECB000D6559 /* Frameworks */,
+				749F237123EDAECB000D6559 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XCocoaUtilsPublic;
+			productName = XCocoaUtilsPublic;
+			productReference = 749F237323EDAECB000D6559 /* XCocoaUtilsPublic.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		749F237A23EDAECB000D6559 /* XCocoaUtilsPublicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 749F238D23EDAECB000D6559 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublicTests" */;
+			buildPhases = (
+				749F237723EDAECB000D6559 /* Sources */,
+				749F237823EDAECB000D6559 /* Frameworks */,
+				749F237923EDAECB000D6559 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				749F237E23EDAECB000D6559 /* PBXTargetDependency */,
+				749F238023EDAECB000D6559 /* PBXTargetDependency */,
+			);
+			name = XCocoaUtilsPublicTests;
+			productName = XCocoaUtilsPublicTests;
+			productReference = 749F237B23EDAECB000D6559 /* XCocoaUtilsPublicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		A214159C180CDF790067EBE8 /* XCocoaUtilsPublic-lib */ = {
@@ -802,6 +1031,17 @@
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = 7461B7721B959EB300EB5D6D;
 					};
+					749F237223EDAECB000D6559 = {
+						CreatedOnToolsVersion = 11.3.1;
+						DevelopmentTeam = 375GT6S3QN;
+						ProvisioningStyle = Automatic;
+					};
+					749F237A23EDAECB000D6559 = {
+						CreatedOnToolsVersion = 11.3.1;
+						DevelopmentTeam = 375GT6S3QN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7461B7721B959EB300EB5D6D;
+					};
 				};
 			};
 			buildConfigurationList = A2141598180CDF790067EBE8 /* Build configuration list for PBXProject "XCocoaUtilsPublic" */;
@@ -823,6 +1063,8 @@
 				7461B78A1B959EB300EB5D6D /* DemoTests */,
 				A214159C180CDF790067EBE8 /* XCocoaUtilsPublic-lib */,
 				24C11ECE2225A06B00733658 /* XCocoaUtilsPublicFW */,
+				749F237223EDAECB000D6559 /* XCocoaUtilsPublic */,
+				749F237A23EDAECB000D6559 /* XCocoaUtilsPublicTests */,
 			);
 		};
 /* End PBXProject section */
@@ -851,6 +1093,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				74C279FB23D0576400D5D016 /* mappingmodel.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		749F237123EDAECB000D6559 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		749F237923EDAECB000D6559 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -964,6 +1220,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		749F236F23EDAECB000D6559 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		749F237723EDAECB000D6559 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				749F238323EDAECB000D6559 /* XCocoaUtilsPublicTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2141599180CDF790067EBE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1013,6 +1284,21 @@
 			isa = PBXTargetDependency;
 			target = 7461B7721B959EB300EB5D6D /* Demo */;
 			targetProxy = 7461B78C1B959EB300EB5D6D /* PBXContainerItemProxy */;
+		};
+		749F237E23EDAECB000D6559 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 749F237223EDAECB000D6559 /* XCocoaUtilsPublic */;
+			targetProxy = 749F237D23EDAECB000D6559 /* PBXContainerItemProxy */;
+		};
+		749F238023EDAECB000D6559 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7461B7721B959EB300EB5D6D /* Demo */;
+			targetProxy = 749F237F23EDAECB000D6559 /* PBXContainerItemProxy */;
+		};
+		749F238723EDAECB000D6559 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 749F237223EDAECB000D6559 /* XCocoaUtilsPublic */;
+			targetProxy = 749F238623EDAECB000D6559 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1268,6 +1554,188 @@
 			};
 			name = Release;
 		};
+		749F238B23EDAECB000D6559 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 375GT6S3QN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = XCocoaUtilsPublic/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dehengxu.techs.XCocoaUtilsPublic;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		749F238C23EDAECB000D6559 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 375GT6S3QN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = XCocoaUtilsPublic/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dehengxu.techs.XCocoaUtilsPublic;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		749F238E23EDAECB000D6559 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 375GT6S3QN;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = XCocoaUtilsPublicTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dehengxu.techs.XCocoaUtilsPublicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
+			};
+			name = Debug;
+		};
+		749F238F23EDAECB000D6559 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 375GT6S3QN;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = XCocoaUtilsPublicTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dehengxu.techs.XCocoaUtilsPublicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
+			};
+			name = Release;
+		};
 		A21415BE180CDF790067EBE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1402,6 +1870,24 @@
 			buildConfigurations = (
 				7461B7951B959EB300EB5D6D /* Debug */,
 				7461B7961B959EB300EB5D6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		749F238A23EDAECB000D6559 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				749F238B23EDAECB000D6559 /* Debug */,
+				749F238C23EDAECB000D6559 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		749F238D23EDAECB000D6559 /* Build configuration list for PBXNativeTarget "XCocoaUtilsPublicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				749F238E23EDAECB000D6559 /* Debug */,
+				749F238F23EDAECB000D6559 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
