@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #import <objc/runtime.h>
+#import <Foundation/Foundation.h>
 
 #ifdef cpusplus
 extern "C" {

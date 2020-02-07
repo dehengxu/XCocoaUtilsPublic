@@ -7,9 +7,10 @@
 //
 
 #import "UIViewController+XCUP.h"
-//#import "UIDevice+Ext.h"
 #import "NSObject+XCUP.h"
 #import "XCUPMacros.h"
+
+#import <UIKit/UIKit.h>
 
 #define ASSERT_LOADING  0
 

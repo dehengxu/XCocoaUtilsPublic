@@ -10,7 +10,7 @@
 #import "Logs.h"
 #import <XCocoaUtilsPublic/XCocoaUtilsPublic.h>
 #import <objc/runtime.h>
-
+#import <XCocoaUtilsPublic/NSData+XCUPGzip.h>
 
 @interface AppDelegate ()
 
