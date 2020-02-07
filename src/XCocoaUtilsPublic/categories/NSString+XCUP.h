@@ -13,7 +13,7 @@ extern NSString* NSStringFromBool(BOOL bValue);
 
 extern const char *CStringFromNSString(NSString *string);
 
-@interface NSString (Ext)
+@interface NSString (XCUP)
 
 + (NSString*)stringWithData:(NSData *)data usingEncoding:(NSStringEncoding)encoding;
 
@@ -38,7 +38,7 @@ extern const char *CStringFromNSString(NSString *string);
 
 @end
 
-@interface NSMutableString (Utils)
+@interface NSMutableString (XCUP)
 
 - (void)appendLineString:(NSString*)string;
 - (void)appendLineFormat:(NSString*)format, ...;
