@@ -10,6 +10,10 @@
 		2426B59B21E24C4700B9BA7E /* XLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59A21E24C4700B9BA7E /* XLogging.m */; };
 		2426B59D21E24CB400B9BA7E /* LoggingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59C21E24CB400B9BA7E /* LoggingTests.m */; };
 		2426B5A021E3A67D00B9BA7E /* Logs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59F21E3A67D00B9BA7E /* Logs.m */; };
+		24289C0B23E2C054006EED9E /* NSData+XCUPGzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 24289C0923E2C054006EED9E /* NSData+XCUPGzip.m */; };
+		24289C0D23E2CAC1006EED9E /* erik-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24289C0C23E2CAC1006EED9E /* erik-unsplash.jpg */; };
+		24289C0F23E2CC3A006EED9E /* dat.txt in Resources */ = {isa = PBXBuildFile; fileRef = 24289C0E23E2CC3A006EED9E /* dat.txt */; };
+		24289C1123E2CCB0006EED9E /* erik in Resources */ = {isa = PBXBuildFile; fileRef = 24289C1023E2CCB0006EED9E /* erik */; };
 		243FD98723C054BF006EED9E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 243FD98923C054BF006EED9E /* Localizable.strings */; };
 		243FD99323C05F97006EED9E /* XCUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243FD99223C05F97006EED9E /* XCUViewController.swift */; };
 		2495DF6F23D0B242006EED9E /* XCUPSafeTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2495DF6D23D0B242006EED9E /* XCUPSafeTimer.h */; };
@@ -33,7 +37,7 @@
 		24C11F0F2225A0C000733658 /* NSArray+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1A18448DD000E28DD4 /* NSArray+XCUP.m */; };
 		24C11F112225A0C000733658 /* NSData+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1E18448DD000E28DD4 /* NSData+String.m */; };
 		24C11F122225A0C000733658 /* NSDate+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2018448DD000E28DD4 /* NSDate+XCUP.m */; };
-		24C11F142225A0C000733658 /* NSObject+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2218448DD000E28DD4 /* NSObject+Debug.m */; };
+		24C11F142225A0C000733658 /* NSObject+XCUPDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2218448DD000E28DD4 /* NSObject+XCUPDebug.m */; };
 		24C11F152225A0C000733658 /* NSObject+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2418448DD000E28DD4 /* NSObject+XCUP.m */; };
 		24C11F162225A0C000733658 /* NSObject+PropertyToURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */; };
 		24C11F172225A0C000733658 /* NSString+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2618448DD000E28DD4 /* NSString+XCUP.m */; };
@@ -74,7 +78,7 @@
 		24C11F3B2225A13400733658 /* NSArray+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1918448DD000E28DD4 /* NSArray+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F3D2225A13400733658 /* NSData+String.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1D18448DD000E28DD4 /* NSData+String.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F3E2225A13400733658 /* NSDate+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1F18448DD000E28DD4 /* NSDate+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24C11F402225A13400733658 /* NSObject+Debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2118448DD000E28DD4 /* NSObject+Debug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C11F402225A13400733658 /* NSObject+XCUPDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2118448DD000E28DD4 /* NSObject+XCUPDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F412225A13400733658 /* NSObject+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2318448DD000E28DD4 /* NSObject+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F422225A13400733658 /* NSObject+PropertyToURLParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F432225A13400733658 /* NSString+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2518448DD000E28DD4 /* NSString+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -102,7 +106,7 @@
 		74419E5518448DD000E28DD4 /* NSArray+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1A18448DD000E28DD4 /* NSArray+XCUP.m */; };
 		74419E5B18448DD000E28DD4 /* NSData+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1E18448DD000E28DD4 /* NSData+String.m */; };
 		74419E5E18448DD100E28DD4 /* NSDate+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2018448DD000E28DD4 /* NSDate+XCUP.m */; };
-		74419E6118448DD100E28DD4 /* NSObject+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2218448DD000E28DD4 /* NSObject+Debug.m */; };
+		74419E6118448DD100E28DD4 /* NSObject+XCUPDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2218448DD000E28DD4 /* NSObject+XCUPDebug.m */; };
 		74419E6418448DD100E28DD4 /* NSObject+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2418448DD000E28DD4 /* NSObject+XCUP.m */; };
 		74419E6718448DD100E28DD4 /* NSString+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2618448DD000E28DD4 /* NSString+XCUP.m */; };
 		74419E6A18448DD100E28DD4 /* NSTimer+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E2818448DD000E28DD4 /* NSTimer+XCUP.m */; };
@@ -132,6 +136,7 @@
 		746AAF6221CCD3DC005B29F6 /* NSString+URI.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF5D21CCD3DC005B29F6 /* NSString+URI.m */; };
 		746AAF6321CCD3DC005B29F6 /* XCObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF5F21CCD3DC005B29F6 /* XCObjectMapping.m */; };
 		746AAF6621CCD406005B29F6 /* NSDictionary+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */; };
+		746EA5AB23EDB7660050FB01 /* NSData+XCUPGzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 24289C0723E2C054006EED9E /* NSData+XCUPGzip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		748BB41121DC98070094B4CE /* NSInvocation+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BB41021DC98070094B4CE /* NSInvocation+XCUP.m */; };
 		749F237C23EDAECB000D6559 /* XCocoaUtilsPublic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749F237323EDAECB000D6559 /* XCocoaUtilsPublic.framework */; };
 		749F238323EDAECB000D6559 /* XCocoaUtilsPublicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 749F238223EDAECB000D6559 /* XCocoaUtilsPublicTests.m */; };
@@ -141,21 +146,21 @@
 		749F239023EDAEF2000D6559 /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C11ED12225A06C00733658 /* XCocoaUtilsPublic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F239123EDB071000D6559 /* XLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 2426B59921E24C4700B9BA7E /* XLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F239223EDB071000D6559 /* NSInvocation+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 748BB40F21DC98070094B4CE /* NSInvocation+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		749F239323EDB071000D6559 /* XCUPConcurrency.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD97D23C03256006EED9E /* XCUPConcurrency.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239323EDB071000D6559 /* XCUPConcurrency.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD97D23C03256006EED9E /* XCUPConcurrency.h */; };
 		749F239423EDB071000D6559 /* XOperationTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561721BEC458001B0C4C /* XOperationTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F239523EDB071000D6559 /* XCUPCGFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B5A12419BEF7E9009B474C /* XCUPCGFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F239623EDB071000D6559 /* XCUPBlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1518448DD000E28DD4 /* XCUPBlockAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		749F239723EDB071000D6559 /* XCUPUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98323C034A3006EED9E /* XCUPUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239723EDB071000D6559 /* XCUPUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98323C034A3006EED9E /* XCUPUIKit.h */; };
 		749F239823EDB071000D6559 /* memory_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561021BEB283001B0C4C /* memory_macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F239923EDB071000D6559 /* singletone.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561221BEB728001B0C4C /* singletone.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F239A23EDB071000D6559 /* UIKit_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561321BEB7A9001B0C4C /* UIKit_macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F239B23EDB071000D6559 /* web_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561421BEB7CE001B0C4C /* web_macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F239C23EDB071000D6559 /* CF_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3561521BEBA08001B0C4C /* CF_macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		749F239D23EDB071000D6559 /* XCUPMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98123C0329A006EED9E /* XCUPMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F239D23EDB071000D6559 /* XCUPMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98123C0329A006EED9E /* XCUPMacros.h */; };
 		749F239E23EDB071000D6559 /* DefaultSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4418448DD000E28DD4 /* DefaultSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F239F23EDB071000D6559 /* FileIOHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4618448DD000E28DD4 /* FileIOHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		749F23A023EDB071000D6559 /* XCUPIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98223C03443006EED9E /* XCUPIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		749F23A123EDB071000D6559 /* XCUPHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD97E23C03261006EED9E /* XCUPHttp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23A023EDB071000D6559 /* XCUPIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98223C03443006EED9E /* XCUPIO.h */; };
+		749F23A123EDB071000D6559 /* XCUPHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD97E23C03261006EED9E /* XCUPHttp.h */; };
 		749F23A223EDB071000D6559 /* NSObject+PropertyToURLParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BBDE0A192620AA00A05DC9 /* NSObject+PropertyToURLParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F23A323EDB071000D6559 /* NSString+URI.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF6121CCD3DC005B29F6 /* NSString+URI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F23A423EDB071000D6559 /* XCObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 746AAF5E21CCD3DC005B29F6 /* XCObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -166,12 +171,12 @@
 		749F23A923EDB071000D6559 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A05C4DD9C94C4DABC628670 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F23AA23EDB071000D6559 /* BenchMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560421BEA896001B0C4C /* BenchMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F23AB23EDB071000D6559 /* cbench_mark.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C3560521BEA897001B0C4C /* cbench_mark.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		749F23AC23EDB071000D6559 /* XCUPBenchmark.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98023C03287006EED9E /* XCUPBenchmark.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		749F23AE23EDB071000D6559 /* extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1818448DD000E28DD4 /* extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23AC23EDB071000D6559 /* XCUPBenchmark.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98023C03287006EED9E /* XCUPBenchmark.h */; };
+		749F23AE23EDB071000D6559 /* extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1818448DD000E28DD4 /* extensions.h */; };
 		749F23AF23EDB071000D6559 /* NSArray+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1918448DD000E28DD4 /* NSArray+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F23B023EDB071000D6559 /* NSData+String.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1D18448DD000E28DD4 /* NSData+String.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F23B123EDB071000D6559 /* NSDate+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E1F18448DD000E28DD4 /* NSDate+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		749F23B223EDB071000D6559 /* NSObject+Debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2118448DD000E28DD4 /* NSObject+Debug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23B223EDB071000D6559 /* NSObject+XCUPDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2118448DD000E28DD4 /* NSObject+XCUPDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F23B323EDB071000D6559 /* NSObject+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2318448DD000E28DD4 /* NSObject+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F23B423EDB071000D6559 /* NSString+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2518448DD000E28DD4 /* NSString+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F23B523EDB071000D6559 /* NSTimer+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E2718448DD000E28DD4 /* NSTimer+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -185,7 +190,7 @@
 		749F23BD23EDB071000D6559 /* UIScrollView+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3918448DD000E28DD4 /* UIScrollView+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F23BE23EDB071000D6559 /* UIView+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3B18448DD000E28DD4 /* UIView+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F23BF23EDB071000D6559 /* UIViewController+XCUP.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E3D18448DD000E28DD4 /* UIViewController+XCUP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		749F23C023EDB071000D6559 /* XCUPDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD97F23C0326E006EED9E /* XCUPDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749F23C023EDB071000D6559 /* XCUPDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD97F23C0326E006EED9E /* XCUPDebug.h */; };
 		749F23C123EDB071000D6559 /* DebugUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4018448DD000E28DD4 /* DebugUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F23C223EDB0AD000D6559 /* XCUPConcurrency.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD97D23C03256006EED9E /* XCUPConcurrency.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F23C323EDB0BC000D6559 /* XCUPUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 243FD98323C034A3006EED9E /* XCUPUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -268,6 +273,12 @@
 		2426B59C21E24CB400B9BA7E /* LoggingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoggingTests.m; sourceTree = "<group>"; };
 		2426B59E21E3A67D00B9BA7E /* Logs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logs.h; sourceTree = "<group>"; };
 		2426B59F21E3A67D00B9BA7E /* Logs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Logs.m; sourceTree = "<group>"; };
+		24289C0723E2C054006EED9E /* NSData+XCUPGzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+XCUPGzip.h"; sourceTree = "<group>"; };
+		24289C0823E2C054006EED9E /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		24289C0923E2C054006EED9E /* NSData+XCUPGzip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+XCUPGzip.m"; sourceTree = "<group>"; };
+		24289C0C23E2CAC1006EED9E /* erik-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "erik-unsplash.jpg"; sourceTree = "<group>"; };
+		24289C0E23E2CC3A006EED9E /* dat.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = dat.txt; sourceTree = "<group>"; };
+		24289C1023E2CCB0006EED9E /* erik */ = {isa = PBXFileReference; lastKnownFileType = file; path = erik; sourceTree = "<group>"; };
 		243FD97923C0174F006EED9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		243FD97D23C03256006EED9E /* XCUPConcurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUPConcurrency.h; sourceTree = "<group>"; };
 		243FD97E23C03261006EED9E /* XCUPHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUPHttp.h; sourceTree = "<group>"; };
@@ -306,8 +317,8 @@
 		74419E1E18448DD000E28DD4 /* NSData+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+String.m"; sourceTree = "<group>"; };
 		74419E1F18448DD000E28DD4 /* NSDate+XCUP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+XCUP.h"; sourceTree = "<group>"; };
 		74419E2018448DD000E28DD4 /* NSDate+XCUP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XCUP.m"; sourceTree = "<group>"; };
-		74419E2118448DD000E28DD4 /* NSObject+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Debug.h"; sourceTree = "<group>"; };
-		74419E2218448DD000E28DD4 /* NSObject+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Debug.m"; sourceTree = "<group>"; };
+		74419E2118448DD000E28DD4 /* NSObject+XCUPDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XCUPDebug.h"; sourceTree = "<group>"; };
+		74419E2218448DD000E28DD4 /* NSObject+XCUPDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XCUPDebug.m"; sourceTree = "<group>"; };
 		74419E2318448DD000E28DD4 /* NSObject+XCUP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XCUP.h"; sourceTree = "<group>"; };
 		74419E2418448DD000E28DD4 /* NSObject+XCUP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XCUP.m"; sourceTree = "<group>"; };
 		74419E2518448DD000E28DD4 /* NSString+XCUP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XCUP.h"; sourceTree = "<group>"; };
@@ -461,6 +472,16 @@
 			path = Logging;
 			sourceTree = "<group>";
 		};
+		24289C0623E2C054006EED9E /* compress */ = {
+			isa = PBXGroup;
+			children = (
+				24289C0723E2C054006EED9E /* NSData+XCUPGzip.h */,
+				24289C0823E2C054006EED9E /* readme.md */,
+				24289C0923E2C054006EED9E /* NSData+XCUPGzip.m */,
+			);
+			path = compress;
+			sourceTree = "<group>";
+		};
 		24C11ED02225A06C00733658 /* XCocoaUtilsPublicFW */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +506,7 @@
 		74419E1118448DD000E28DD4 /* XCocoaUtilsPublic */ = {
 			isa = PBXGroup;
 			children = (
+				24289C0623E2C054006EED9E /* compress */,
 				2426B59821E24C2900B9BA7E /* Logging */,
 				748BB40D21DC97BD0094B4CE /* Runtime */,
 				74C3561B21BEC467001B0C4C /* concurrency */,
@@ -520,8 +542,8 @@
 				74419E1E18448DD000E28DD4 /* NSData+String.m */,
 				74419E1F18448DD000E28DD4 /* NSDate+XCUP.h */,
 				74419E2018448DD000E28DD4 /* NSDate+XCUP.m */,
-				74419E2118448DD000E28DD4 /* NSObject+Debug.h */,
-				74419E2218448DD000E28DD4 /* NSObject+Debug.m */,
+				74419E2118448DD000E28DD4 /* NSObject+XCUPDebug.h */,
+				74419E2218448DD000E28DD4 /* NSObject+XCUPDebug.m */,
 				74419E2318448DD000E28DD4 /* NSObject+XCUP.h */,
 				74419E2418448DD000E28DD4 /* NSObject+XCUP.m */,
 				74419E2518448DD000E28DD4 /* NSString+XCUP.h */,
@@ -568,6 +590,8 @@
 		7461B7741B959EB300EB5D6D /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				24289C0C23E2CAC1006EED9E /* erik-unsplash.jpg */,
+				24289C1023E2CCB0006EED9E /* erik */,
 				7461B7791B959EB300EB5D6D /* AppDelegate.h */,
 				7461B77A1B959EB300EB5D6D /* AppDelegate.m */,
 				2426B59E21E3A67D00B9BA7E /* Logs.h */,
@@ -581,6 +605,7 @@
 				243FD98923C054BF006EED9E /* Localizable.strings */,
 				243FD99223C05F97006EED9E /* XCUViewController.swift */,
 				243FD99123C05F96006EED9E /* Demo-Bridging-Header.h */,
+				24289C0E23E2CC3A006EED9E /* dat.txt */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -803,15 +828,14 @@
 				24C11F472225A13400733658 /* UIAlertView+XCUP.h in Headers */,
 				24C11F412225A13400733658 /* NSObject+XCUP.h in Headers */,
 				2495DF6F23D0B242006EED9E /* XCUPSafeTimer.h in Headers */,
-				24C11F522225A14600733658 /* XCocoaUtilsPublic.h in Headers */,
 				24C11F2E2225A13400733658 /* web_macros.h in Headers */,
 				749F23C723EDB0EF000D6559 /* XCUPBenchmark.h in Headers */,
 				24C11F372225A13400733658 /* BenchMark.h in Headers */,
 				24C11F4F2225A14600733658 /* UIViewController+XCUP.h in Headers */,
 				24C11F312225A13400733658 /* FileIOHelper.h in Headers */,
 				24C11F4A2225A14600733658 /* UIFont+XCUP.h in Headers */,
-				24C11F402225A13400733658 /* NSObject+Debug.h in Headers */,
 				749F23C523EDB0D6000D6559 /* XCUPIO.h in Headers */,
+				24C11F402225A13400733658 /* NSObject+XCUPDebug.h in Headers */,
 				24C11F3A2225A13400733658 /* extensions.h in Headers */,
 				24C11F4C2225A14600733658 /* UIScreen+XCUP.h in Headers */,
 				24C11F4B2225A14600733658 /* UIImage+XCUP.h in Headers */,
@@ -869,7 +893,8 @@
 				749F23BE23EDB071000D6559 /* UIView+XCUP.h in Headers */,
 				749F23B623EDB071000D6559 /* SKProduct+XCUP.h in Headers */,
 				749F23A823EDB071000D6559 /* NSDictionary+HTTP.h in Headers */,
-				749F23B223EDB071000D6559 /* NSObject+Debug.h in Headers */,
+				746EA5AB23EDB7660050FB01 /* NSData+XCUPGzip.h in Headers */,
+				749F23B223EDB071000D6559 /* NSObject+XCUPDebug.h in Headers */,
 				749F23B323EDB071000D6559 /* NSObject+XCUP.h in Headers */,
 				749F23B923EDB071000D6559 /* UIColor+XCUP.h in Headers */,
 				749F23B123EDB071000D6559 /* NSDate+XCUP.h in Headers */,
@@ -1090,9 +1115,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24289C0F23E2CC3A006EED9E /* dat.txt in Resources */,
 				7461B7811B959EB300EB5D6D /* Main.storyboard in Resources */,
 				243FD98723C054BF006EED9E /* Localizable.strings in Resources */,
 				7461B7861B959EB300EB5D6D /* LaunchScreen.xib in Resources */,
+				24289C1123E2CCB0006EED9E /* erik in Resources */,
+				24289C0D23E2CAC1006EED9E /* erik-unsplash.jpg in Resources */,
 				7461B7831B959EB300EB5D6D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1177,7 +1205,7 @@
 				24C11F012225A0C000733658 /* XLogging.m in Sources */,
 				2495DF7123D0B242006EED9E /* XCUPSafeTimer.m in Sources */,
 				24C11F172225A0C000733658 /* NSString+XCUP.m in Sources */,
-				24C11F142225A0C000733658 /* NSObject+Debug.m in Sources */,
+				24C11F142225A0C000733658 /* NSObject+XCUPDebug.m in Sources */,
 				24C11F1B2225A0C000733658 /* UIAlertView+XCUP.m in Sources */,
 				24C11F232225A0C000733658 /* UIViewController+XCUP.m in Sources */,
 				24C11F112225A0C000733658 /* NSData+String.m in Sources */,
@@ -1216,6 +1244,7 @@
 				7461B77B1B959EB300EB5D6D /* AppDelegate.m in Sources */,
 				243FD99323C05F97006EED9E /* XCUViewController.swift in Sources */,
 				2426B5A021E3A67D00B9BA7E /* Logs.m in Sources */,
+				24289C0B23E2C054006EED9E /* NSData+XCUPGzip.m in Sources */,
 				7461B7781B959EB300EB5D6D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1261,7 +1290,7 @@
 				74419E6D18448DD100E28DD4 /* NSURL+XCUP.m in Sources */,
 				746AAF6621CCD406005B29F6 /* NSDictionary+HTTP.m in Sources */,
 				74419E6A18448DD100E28DD4 /* NSTimer+XCUP.m in Sources */,
-				74419E6118448DD100E28DD4 /* NSObject+Debug.m in Sources */,
+				74419E6118448DD100E28DD4 /* NSObject+XCUPDebug.m in Sources */,
 				74419E9718448DD100E28DD4 /* FileIOHelper.m in Sources */,
 				74419E5E18448DD100E28DD4 /* NSDate+XCUP.m in Sources */,
 				74419E7C18448DD100E28DD4 /* UIFont+XCUP.m in Sources */,
@@ -1588,7 +1617,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.4.5;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 375GT6S3QN;
@@ -1639,7 +1668,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.4.5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 375GT6S3QN;

@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface FileIOHelper : NSObject
+
+@property (readonly) NSString *path;
+
 /**
  *  获取bundle 内的文件路径
  *
@@ -46,5 +49,14 @@
  */
 + (NSString *)tmpPath;
 
+- (instancetype)initWithRoot:(NSString *)rootPath;
+
+- (void)saveData:(NSData *)data forSubPath:(NSString *)subpath;
+
+- (void)removePath:(NSString *)subpath error:(NSError **)error;
+
+- (NSData *)dataForSubPath:(NSString *)subpath;
+
+- (void)cleanAll;
 
 @end

@@ -26,10 +26,17 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testHashTable {
     // This is an example of a functional test case.
     NSLog(@"%@", [NSHashTable name]);
-	
+}
+
+- (void)testFleManager {
+    NSURL *fileURL = [NSURL fileURLWithPath:@"/usr/local/readme.txt"];
+    NSLog(@"relativePath: %@", fileURL.relativePath);
+    NSLog(@"URLByStandardizingPath: %@", fileURL.URLByStandardizingPath.absoluteString);
+    NSLog(@"URLByDeletingPathExtension: %@", fileURL.URLByDeletingPathExtension.absoluteString);
+    NSLog(@"URLByDeletingLastPathComponent: %@", fileURL.URLByDeletingLastPathComponent.absoluteString);
 }
 
 //- (void)testPerformanceExample {
