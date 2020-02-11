@@ -25,7 +25,7 @@
 
 + (NSString *)className
 {
-    return [NSString stringWithCString:class_getName(self.class) encoding:NSUTF8StringEncoding];
+    return NSStringFromClass(self);
 }
 
 - (NSString *)dispatchQueueLabel
