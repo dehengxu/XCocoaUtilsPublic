@@ -174,7 +174,7 @@ char * hex2dec(const char * source)
         /* Convert from right to left. */
         unsigned long hex_pos = hex_length - 1 - hex_index;
         char hex_curr_value = source[hex_pos];
-        int dec_curr_value, dec_index, curr_index;
+        int dec_curr_value = 0, dec_index, curr_index;
         
         /* Convert a single hex to dec. */
         if (hex_curr_value <= '9' && hex_curr_value >= '0')
