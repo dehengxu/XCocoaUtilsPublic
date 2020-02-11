@@ -97,7 +97,7 @@
 
 - (void)removeFirstObject
 {
-    pthread_rwlock_t lock;
+//    pthread_rwlock_t lock;
 //    while(!pthread_rwlock_tryrdlock(&lock)) {
 //        [NSThread sleepForTimeInterval:0.1f];
 //    }
