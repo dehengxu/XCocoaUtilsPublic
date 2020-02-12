@@ -37,12 +37,33 @@
     NSLog(@"ver: %f", XCocoaUtilsPublicVersionNumber);
     NSLog(@"ver: %s", XCocoaUtilsPublicVersionString);
     
-    self.timer = [XCUPSafeTimer repeatTimerWithInterval:1.0 duration:4.0 block:^(NSTimer * _Nonnull t) {
-        NSLog(@"t: %@", t);
-        self.timer = nil;
+//    self.timer = [XCUPSafeTimer repeatTimerWithInterval:1.0 duration:4.0 block:^(NSTimer * _Nonnull t, BOOL reachEnd) {
+//        NSLog(@"t: %@", t);
+//        if (reachEnd) {
+//            self.timer = nil;
+//        }
+//    }];
+//    [self.timer startTimer];
+//    [self.timer startTimer];
+//    [self.timer cancelTimer];
+    
+    [XCUPSafeTimer repeatTimerWithInterval:1.0 duration:4.0 block:^(NSTimer * _Nonnull t, BOOL reachEnd) {
+        NSLog(@"XCUPSafeTimer t: %@", t);
+        if (reachEnd) {
+            NSLog(@"XCUPSafeTimer reach end");
+        }
     }];
-    [self.timer startTimer];
-    [self.timer startTimer];
+    
+    [XCUPSafeTimer cancelAll];
+    
+    
+//    [NXGCDTimer repeatTimerWithInterval:0.3 duration:2.0 onQueue:dispatch_get_main_queue() handleBlock:^(NXGCDTimer * _Nonnull timer, BOOL reachEnd) {
+//        NSLog(@"timer tik tok");
+//        if (reachEnd) {
+//            NSLog(@"timer reach end");
+//        }
+//    }];
+    
 
     NSLog(@"doc:%@", FileIOHelper.documentPath);
     FileIOHelper *io = [[FileIOHelper alloc] initWithRoot:[FileIOHelper.documentPath stringByAppendingPathComponent:@"data/imgs"] ];
