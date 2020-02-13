@@ -107,6 +107,7 @@
 		742893D423F45A57006F2624 /* NXGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 742893D123F45A57006F2624 /* NXGCDTimer.m */; };
 		742893D523F45A57006F2624 /* NXGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 742893D123F45A57006F2624 /* NXGCDTimer.m */; };
 		742893D623F45A58006F2624 /* NXGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 742893D123F45A57006F2624 /* NXGCDTimer.m */; };
+		742893D923F4D52E006F2624 /* NXTimerTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 742893D823F4D52E006F2624 /* NXTimerTarget.m */; };
 		74419E5118448DD000E28DD4 /* XCUPBlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1618448DD000E28DD4 /* XCUPBlockAlertView.m */; };
 		74419E5518448DD000E28DD4 /* NSArray+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1A18448DD000E28DD4 /* NSArray+XCUP.m */; };
 		74419E5B18448DD000E28DD4 /* NSData+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E1E18448DD000E28DD4 /* NSData+String.m */; };
@@ -181,7 +182,6 @@
 		749F237C23EDAECB000D6559 /* XCocoaUtilsPublic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749F237323EDAECB000D6559 /* XCocoaUtilsPublic.framework */; };
 		749F238323EDAECB000D6559 /* XCocoaUtilsPublicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 749F238223EDAECB000D6559 /* XCocoaUtilsPublicTests.m */; };
 		749F238523EDAECB000D6559 /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = 749F237523EDAECB000D6559 /* XCocoaUtilsPublic.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		749F238823EDAECB000D6559 /* XCocoaUtilsPublic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749F237323EDAECB000D6559 /* XCocoaUtilsPublic.framework */; };
 		749F238923EDAECB000D6559 /* XCocoaUtilsPublic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 749F237323EDAECB000D6559 /* XCocoaUtilsPublic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		749F239023EDAEF2000D6559 /* XCocoaUtilsPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C11ED12225A06C00733658 /* XCocoaUtilsPublic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749F239123EDB071000D6559 /* XLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 2426B59921E24C4700B9BA7E /* XLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -347,6 +347,8 @@
 		41BBDE0B192620AA00A05DC9 /* NSObject+PropertyToURLParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyToURLParams.m"; sourceTree = "<group>"; };
 		742893D023F45A57006F2624 /* NXGCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NXGCDTimer.h; sourceTree = "<group>"; };
 		742893D123F45A57006F2624 /* NXGCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NXGCDTimer.m; sourceTree = "<group>"; };
+		742893D723F4D52E006F2624 /* NXTimerTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NXTimerTarget.h; sourceTree = "<group>"; };
+		742893D823F4D52E006F2624 /* NXTimerTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NXTimerTarget.m; sourceTree = "<group>"; };
 		7434EA1C19C5BE13001E6989 /* XCocoaUtilsPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCocoaUtilsPublic.h; sourceTree = "<group>"; };
 		74419E1318448DD000E28DD4 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		74419E1418448DD000E28DD4 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
@@ -465,7 +467,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				749F238823EDAECB000D6559 /* XCocoaUtilsPublic.framework in Frameworks */,
 				925EEDA9778C69CF219F2E8B /* libPods-Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,6 +649,8 @@
 				243FD99223C05F97006EED9E /* XCUViewController.swift */,
 				243FD99123C05F96006EED9E /* Demo-Bridging-Header.h */,
 				24289C0E23E2CC3A006EED9E /* dat.txt */,
+				742893D723F4D52E006F2624 /* NXTimerTarget.h */,
+				742893D823F4D52E006F2624 /* NXTimerTarget.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1292,6 +1295,7 @@
 				7461B77B1B959EB300EB5D6D /* AppDelegate.m in Sources */,
 				243FD99323C05F97006EED9E /* XCUViewController.swift in Sources */,
 				2426B5A021E3A67D00B9BA7E /* Logs.m in Sources */,
+				742893D923F4D52E006F2624 /* NXTimerTarget.m in Sources */,
 				24289C0B23E2C054006EED9E /* NSData+XCUPGzip.m in Sources */,
 				7461B7781B959EB300EB5D6D /* main.m in Sources */,
 			);

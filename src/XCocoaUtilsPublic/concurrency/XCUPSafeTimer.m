@@ -44,19 +44,19 @@ static XCUPSafeTimer *popTimerNamed(NSString *name) {
 
 @implementation XCUPSafeTimer
 
-+ (void)initialize
-{
-    [super initialize];
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        if (!__nx_timers__) {
-            __nx_timers__ = [[NSMutableDictionary alloc] initWithCapacity:16];
-        }
-        if (!__nx_lock__) {
-            __nx_lock__ = [NSRecursiveLock new];
-        }
-    });
-}
+//+ (void)initialize
+//{
+//    [super initialize];
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        if (!__nx_timers__) {
+//            __nx_timers__ = [[NSMutableDictionary alloc] initWithCapacity:16];
+//        }
+//        if (!__nx_lock__) {
+//            __nx_lock__ = [NSRecursiveLock new];
+//        }
+//    });
+//}
 
 + (instancetype)timerWithInterval:(NSTimeInterval)interval block:(void(^)(NSTimer *, BOOL))timerBlock
 {

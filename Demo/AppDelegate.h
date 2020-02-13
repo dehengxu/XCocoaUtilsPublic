@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) XCUPSafeTimer *timer;
+@property (strong, nonatomic) NSTimer *nstimer;
 
 @end
 
