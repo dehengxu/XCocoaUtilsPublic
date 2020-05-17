@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    
                    DESC
 
-  s.homepage     = "https://github.com/dehengxu/XCocoaUtilsPublic"
+  s.homepage     = "https://gitee.com/dehengxu/XCocoaUtilsPublic"
   # s.homepage     = "git@bitbucket.org:xudeheng/XCocoaUtilsPublic"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dehengxu/XCocoaUtilsPublic.git", :tag => s.version }
+  s.source       = { :git => "https://gitee.com/dehengxu/XCocoaUtilsPublic.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
