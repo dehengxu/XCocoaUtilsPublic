@@ -25,12 +25,12 @@
 
 + (NSString *)className
 {
-    return [NSString stringWithCString:class_getName(self.class) encoding:NSUTF8StringEncoding];
+    return NSStringFromClass(self);
 }
 
 - (NSString *)dispatchQueueLabel
 {
-    return [NSString stringWithCString:dispatch_queue_get_label(dispatch_get_current_queue()) encoding:NSUTF8StringEncoding];
+    return [NSString stringWithCString:dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL) encoding:NSUTF8StringEncoding];
 }
 
 - (id)XAutorelease
