@@ -38,9 +38,9 @@
     NSInvocation *invoc = [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:aSelector]];
     invoc.selector = aSelector;
     invoc.target = self;
+
     NSObject *obj = nil;
-    
-    for (int i = 0; nil != objects && i < objects.count; i++) {
+    for (uint32_t i = 0; i < objects.count; i++) {
         obj = [objects objectAtIndex:i];
         [invoc setArgument:&obj atIndex:2 + i];
         obj = nil;
@@ -52,20 +52,15 @@
     if (typeChar[0] == '@' || typeChar[0] == '#') {
         //Return an object.
         id rtnValue = nil;
-        //NSLog(@"-->%@  %s %u %@", NSClassFromString([NSString stringWithCString:[[invoc methodSignature] methodReturnType] encoding:NSUTF8StringEncoding]), [[invoc methodSignature] methodReturnType], [[invoc methodSignature] methodReturnLength], NSStringFromSelector(aSelector));
         [invoc getReturnValue:&rtnValue];
         return rtnValue;
     }else {
         //Return a simple type.
-        id rtnValue = nil;
-#if ARC_ENABLED
-        rtnValue = (__bridge id)(void*)malloc([[invoc methodSignature] methodReturnLength]);
-        [invoc getReturnValue:(__bridge void *)(rtnValue)];
-#else
-        rtnValue = (void*)malloc([[invoc methodSignature] methodReturnLength]);
-        [invoc getReturnValue:rtnValue];
-#endif
-        return rtnValue;
+        //id rtnValue = nil;
+        //[invoc getReturnValue:&rtnValue];
+        NSLog(@"Return value only support object.");
+        NSAssert(false, @"Return value only support object.");
+        return nil;
     }
 }
 
