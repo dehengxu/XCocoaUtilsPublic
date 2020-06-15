@@ -66,12 +66,12 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios
-  s.platform     = :ios, "8.0"
+#  s.platform     = :ios
+#  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
-  # s.osx.deployment_target = "10.7"
+   s.ios.deployment_target = "8.0"
+   s.osx.deployment_target = "10.13"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -162,8 +162,6 @@ Pod::Spec.new do |s|
   
   s.subspec 'debug' do |sp|
     sp.source_files = "src/XCocoaUtilsPublic/debug/*.{h,m}"
-    sp.dependency "XCocoaUtilsPublic/categories"
-    sp.dependency "XCocoaUtilsPublic/http"
     sp.preserve_paths = "src/XCocoaUtilsPublic/debug"
   end
   

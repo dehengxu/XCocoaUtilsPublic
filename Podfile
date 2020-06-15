@@ -27,6 +27,20 @@ end
      useLib
  end
 
+target 'DemoMacOSCmd' do
+  pod 'XCocoaUtilsPublic', :path => './' \
+  , :subspecs => [
+  'debug'
+  ]
+end
+
+target 'DemoMacOSApp' do
+  pod 'XCocoaUtilsPublic', :path => './' \
+  , :subspecs => [
+  'debug'
+  ]
+end
+
 # target 'XCocoaUtilsPublic' do
 
 # end
