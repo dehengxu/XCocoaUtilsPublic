@@ -16,11 +16,23 @@
 #ifdef cpusplus
 extern "C" {
 #endif
+    
+#pragma mark - C logging
+    
+#define println(fmt, ...) printf(fmt"\n", ##__VA_ARGS__)
+#define tagprintln(TAG, fmt, ...) println("[" #TAG "] " fmt, ##__VA_ARGS__)
 
 #pragma mark - Tag logging
 
+#if __OBJC2__
+    
 #ifndef TagLogging
 	#define TagLogging(TAG, fmt, ...) NSLog(@"<"#TAG"> "fmt, ##__VA_ARGS__)
+#endif
+    
+#ifndef TagCLogging
+    /// Write objc objecto to c stdout
+    #define TagCLogging(TAG, fmt, ...)     do { @autoreleasepool { NSString *msg = [NSString stringWithFormat:@"["#TAG "]: "fmt, ## __VA_ARGS__];  println("%s\n", [msg cStringUsingEncoding:NSUTF8StringEncoding]); } } while (0)
 #endif
 
 #ifndef TagLoggingv
@@ -132,6 +144,8 @@ SwiftDefineLoggerWithTag(tag)
 FOUNDATION_EXPORT void EnableLogger(NSString *tag);
 FOUNDATION_EXPORT void DisableLogger(NSString *tag);
 
+#endif // __OBJC2__
+    
 #ifdef cpusplus
 }
 #endif

@@ -173,7 +173,7 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'benchmark' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/benchmark/*.{h,m}"
+      sp.source_files = "src/XCocoaUtilsPublic/benchmark/*.{h,m,c}"
       sp.preserve_paths = "src/XCocoaUtilsPublic/benchmark"
   end
   

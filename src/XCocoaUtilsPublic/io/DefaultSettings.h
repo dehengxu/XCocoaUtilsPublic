@@ -6,18 +6,23 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @protocol DefaultSettingsProtocol <NSObject>
 
 @optional
 - (id)loadDefaultSettingValueForKey:(NSString *)theKey;
 
+@required
+- (id)defaultSettingValueForKeyPath:(NSString *)keyPath;
+
 @end
 
 #import <Foundation/Foundation.h>
 
 @interface DefaultSettings : NSObject<DefaultSettingsProtocol>
+
+@property (nonatomic, weak) id<DefaultSettingsProtocol> defaultDelegate;
 
 + (id)sharedInstance;
 
