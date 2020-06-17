@@ -11,9 +11,7 @@
 #import <XCocoaUtilsPublic/XLogging.h>
 #import <XCocoaUtilsPublic/XCUPBenchmark.h>
 #import <XCocoaUtilsPublic/XCUPHttp.h>
-
-//#define Log(fmt, ...) TagCLogging(MacOS, fmt, ##__VA_ARGS__)
-//#define CLog(fmt, ...) tagprintln(MacOS, fmt, ##__VA_ARGS__)
+#import <XCocoaUtilsPublic/NSData+XCUPGzip.h>
 
 NSDictionary *data;
 
@@ -42,6 +40,15 @@ int main(int argc, const char * argv[]) {
         bench_mark_clock("KeyPath data.name", testKeyPath, max);
         //benchMark("Key", testKey, max);
         NSString *urlEncoded = @"%12%09%08%9C%F8%E8%C8%FC%09%20O%18%AF*";
+        urlEncoded = @"%12%09%08%9C%F8%E8%C8%FC%09%20O%18%AF*|%12%09%08%9C%F8%E8%C8%FC%09%20O%18%AF*|%12%09%08%9C%F8%E8%C8%FC%09%20O%18%AF*";
+        NSData *strData = [urlEncoded dataUsingEncoding:NSUTF8StringEncoding];
+        {
+            NSError *error = nil;
+            NSData *gziped = [strData gzipDataError:&error];
+            if (!error) {
+                CLog(@"%lu / %lu, compress ratio: %f", gziped.length, strData.length, gziped.length * 1.0 / strData.length);
+            }
+        }
         CLog(@"url dec :%@", [urlEncoded xcup_URLDecoding]);
         
         
