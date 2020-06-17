@@ -6,6 +6,8 @@
 //
 //
 
+#if TARGET_OS_IOS
+
 #import <UIKit/UIKit.h>
 
 @interface UIScreen (XCUP)
@@ -13,3 +15,5 @@
 - (BOOL)isRetina;
 
 @end
+
+#endif

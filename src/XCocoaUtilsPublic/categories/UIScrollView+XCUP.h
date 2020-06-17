@@ -6,6 +6,8 @@
 //  Copyright (c) 2013年 Deheng.Xu. All rights reserved.
 //
 
+#if TARGET_OS_IOS
+
 #import <UIKit/UIKit.h>
 
 @interface UIScrollView (XCUP)
@@ -16,3 +18,5 @@
 - (void)autoUpdateInset;
 
 @end
+
+#endif

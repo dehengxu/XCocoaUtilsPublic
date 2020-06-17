@@ -131,8 +131,9 @@ Pod::Spec.new do |s|
   # General module | 常用模块组
   s.subspec 'General' do |sp|
     sp.dependency 'XCocoaUtilsPublic/categories'
-    sp.dependency 'XCocoaUtilsPublic/UIKit'
     sp.dependency 'XCocoaUtilsPublic/http'
+    sp.dependency 'XCocoaUtilsPublic/logging'
+    sp.dependency 'XCocoaUtilsPublic/compress'
   end
   
   # Basically module | 基础模块
@@ -155,6 +156,7 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'UIKit' do |sp|
+    sp.platform = :ios, "8.0"
     sp.source_files = "src/XCocoaUtilsPublic/UIKit/*.{h,m}"
     sp.dependency "XCocoaUtilsPublic/categories"
     sp.preserve_paths = "src/XCocoaUtilsPublic/UIKit"

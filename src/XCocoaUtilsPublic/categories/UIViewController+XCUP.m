@@ -10,11 +10,11 @@
 #import "NSObject+XCUP.h"
 #import "XCUPMacros.h"
 
-#import <UIKit/UIKit.h>
-
 #define ASSERT_LOADING  0
 
 #if TARGET_OS_IPHONE
+
+#import <UIKit/UIKit.h>
 
 @implementation UIViewController (XCUP)
 

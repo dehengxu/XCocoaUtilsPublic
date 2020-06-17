@@ -10,8 +10,6 @@
 #define XLogging_h
 
 #include <stdio.h>
-#import <objc/runtime.h>
-#import <Foundation/Foundation.h>
 
 #ifdef cpusplus
 extern "C" {
@@ -25,6 +23,15 @@ extern "C" {
 #pragma mark - Tag logging
 
 #if __OBJC2__
+
+#import <objc/runtime.h>
+#import <Foundation/Foundation.h>
+
+#define CLog(fmt, ...) do { @autoreleasepool { NSString *msg = [NSString stringWithFormat:fmt, ## __VA_ARGS__];  printf("%s\n", [msg cStringUsingEncoding:NSUTF8StringEncoding]); } } while (0)
+    
+/// Log with t(ag)
+#define CLogt(TAG, fmt, ...)  CLog(@"["#TAG "]: "fmt, ## __VA_ARGS__)
+
     
 #ifndef TagLogging
 	#define TagLogging(TAG, fmt, ...) NSLog(@"<"#TAG"> "fmt, ##__VA_ARGS__)

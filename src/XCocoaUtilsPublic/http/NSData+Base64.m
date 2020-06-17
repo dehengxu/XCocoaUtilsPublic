@@ -30,7 +30,8 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
 	const char *characters = [string cStringUsingEncoding:NSASCIIStringEncoding];
 	if (characters == NULL)     //  Not an ASCII string!
 		return nil;
-	char *bytes = malloc((([string length] + 3) / 4) * 3);
+    size_t msize = (([string length] + 3) / 4) * 3;
+	char *bytes = malloc(msize);
 	if (bytes == NULL)
 		return nil;
 	NSUInteger length = 0;
@@ -69,8 +70,10 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
 		if (bufferLength > 3)
 			bytes[length++] = (buffer[2] << 6) | buffer[3];
 	}
-	
-	realloc(bytes, length);
+    // realloc memory if msize greater than string 25%
+    if ( (msize - length) > (length >> 2) ) {
+        bytes = realloc(bytes, length);
+    }
 	return [NSData dataWithBytesNoCopy:bytes length:length];
 }
 

@@ -33,7 +33,10 @@ target 'DemoMacOSCmd' do
   platform :osx, '10.13'
   pod 'XCocoaUtilsPublic', :path => './' \
   , :subspecs => [
-  'macros', 'io', 'debug', 'logging', 'benchmark'
+  'General',
+  'concurrency',
+  'compress',
+  'macros', 'io', 'debug', 'logging', 'benchmark', 'http'
   ]
 end
 

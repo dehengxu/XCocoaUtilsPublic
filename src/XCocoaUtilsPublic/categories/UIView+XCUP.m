@@ -8,6 +8,8 @@
 
 #import "UIView+XCUP.h"
 
+#if TARGET_OS_IOS
+
 @implementation UIView (XCUP)
 
 - (CGPoint)origin
@@ -146,3 +148,5 @@
 }
 
 @end
+
+#endif

@@ -6,8 +6,9 @@
 //  Copyright (c) 2013年 Nicholas.Xu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#if TARGET_OS_IOS
 
+#import <UIKit/UIKit.h>
 
 @interface UIView (XCUP)
 
@@ -32,3 +33,5 @@
 - (void)fillInnerWithColor:(UIColor *)color path:(UIBezierPath *)path inContext:(CGContextRef)ctx;
 
 @end
+
+#endif
