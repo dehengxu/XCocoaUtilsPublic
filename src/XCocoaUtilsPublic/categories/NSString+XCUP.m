@@ -132,6 +132,11 @@ extern inline const char *CStringFromNSString(NSString *string)
     return dateformatters;
 }
 
+- (BOOL)isNotEmpty
+{
+    return self.length > 0;
+}
+
 - (NSString *)urlEncoding
 {
     NSString *rtn = NSStringByCFStringRef(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, NULL, (CFStringRef)reserved, kCFStringEncodingUTF8));

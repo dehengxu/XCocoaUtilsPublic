@@ -17,6 +17,7 @@ extern const char *CStringFromNSString(NSString *string);
 
 + (NSString*)stringWithData:(NSData *)data usingEncoding:(NSStringEncoding)encoding;
 
+- (BOOL)isNotEmpty;
 - (NSString*)md5Digest;
 - (NSString *)urlEncoding;
 - (NSString *)urlDecoding;
