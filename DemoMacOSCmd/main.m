@@ -49,8 +49,13 @@ int main(int argc, const char * argv[]) {
                 CLog(@"%lu / %lu, compress ratio: %f", gziped.length, strData.length, gziped.length * 1.0 / strData.length);
             }
         }
-        CLog(@"url dec :%@", [urlEncoded xcup_URLDecoding]);
-        
+        //CLog(@"url dec :%@", [urlEncoded xcup_URLDecoding]);
+        DefaultSettings *settings = [DefaultSettings sharedInstance];
+        [settings setObject:@(7) forKey:@"num" immediately:true];
+        //[settings setObject:nil forKey:@"num" immediately:true];
+        [settings removeObjectForKey:@"num"];
+        id n = [settings objectForKey:@"num"];
+        CLog(@"n :%@", n);
         
     }
     return 0;

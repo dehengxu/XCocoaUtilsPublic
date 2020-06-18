@@ -14,5 +14,6 @@
 #import "memory_macros.h"
 #import "singletone.h"
 #import "web_macros.h"
+#import "compiler_macros.h"
 
 #endif /* XCUPMacros_h */

@@ -172,6 +172,7 @@ Pod::Spec.new do |s|
   s.subspec 'io' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/io/*.{h,m}"
       sp.preserve_paths = "src/XCocoaUtilsPublic/io"
+      sp.dependency "XCocoaUtilsPublic/debug"
   end
   
   s.subspec 'benchmark' do |sp|

@@ -430,6 +430,7 @@
 		74419E4718448DD000E28DD4 /* FileIOHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileIOHelper.m; sourceTree = "<group>"; };
 		74419E4A18448DD000E28DD4 /* NameValuePaire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameValuePaire.h; sourceTree = "<group>"; };
 		74419E4B18448DD000E28DD4 /* NameValuePaire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameValuePaire.m; sourceTree = "<group>"; };
+		7457E42524A834D50087194C /* compiler_macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = compiler_macros.h; sourceTree = "<group>"; };
 		7461B7731B959EB300EB5D6D /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7461B7761B959EB300EB5D6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7461B7771B959EB300EB5D6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -906,6 +907,7 @@
 				74C3561421BEB7CE001B0C4C /* web_macros.h */,
 				74C3561521BEBA08001B0C4C /* CF_macros.h */,
 				243FD98123C0329A006EED9E /* XCUPMacros.h */,
+				7457E42524A834D50087194C /* compiler_macros.h */,
 			);
 			path = macros;
 			sourceTree = "<group>";
