@@ -14,6 +14,15 @@
 
 #endif
 
+/// Check key if null and return immediately
+#define IsNullAndReturn(key) do { NSAssert(([key isKindOfClass:NSString.class] && key.length > 0) || key, @" "#key" is nil.");\
+if (!(([key isKindOfClass:NSString.class] && key.length > 0) || key)) { return ; }\
+}while(0)
+
+/// Check key if null and return specified value
+#define IsNullAndReturnValue(key, retv) do { NSAssert(([key isKindOfClass:NSString.class] && key.length > 0) || key, @" "#key" is nil, will return "#retv "");\
+if (!(([key isKindOfClass:NSString.class] && key.length > 0) || key)) { return retv; }\
+}while(0)
 
 /*
  Try...Catch...  block macros. Indicate exception line number.
