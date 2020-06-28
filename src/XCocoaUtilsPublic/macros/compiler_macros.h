@@ -9,6 +9,10 @@
 #ifndef compiler_macros_h
 #define compiler_macros_h
 
+#ifndef XCUP_STRINGIFY
+#define XCUP_STRINGIFY(x) #x //Convert symbol to literal string
+#endif
+
 #pragma mark - compiler attributes annotations
 
 #ifndef XCUP_ATTRIBUTE
@@ -33,16 +37,10 @@
 #define XCUP_CLANG_POP _Pragma("clang diagnostic pop")
 #endif
 
-#define TEST_IGNORE(msg) "clang diagnostic ignoredd " #msg
-
-#ifndef STRINGIFY
-#define STRINGIFY(x) #x
-#endif
-
 #define XCUP_PRAGMA(y) _Pragma(#y) // equals to _Pragma("clang diagnostic ignored ...");
 
 #ifndef XCUP_CLANG_IGNORE
-#define XCUP_CLANG_IGNORE(msg) _Pragma(STRINGIFY(clang diagnostic ignored #msg))
+#define XCUP_CLANG_IGNORE(msg) _Pragma(XCUP_STRINGIFY(clang diagnostic ignored #msg))
 #endif
 
 #endif /* compiler_macros_h */
