@@ -25,4 +25,24 @@
 #define XCUP_DEPRECATED_MSG(x) __deprecated_msg(x)
 #endif
 
+#ifndef XCUP_CLANG_PUSH
+#define XCUP_CLANG_PUSH _Pragma("clang diagnostic push")
+#endif
+
+#ifndef XCUP_CLANG_POP
+#define XCUP_CLANG_POP _Pragma("clang diagnostic pop")
+#endif
+
+#define TEST_IGNORE(msg) "clang diagnostic ignoredd " #msg
+
+#ifndef STRINGIFY
+#define STRINGIFY(x) #x
+#endif
+
+#define XCUP_PRAGMA(y) _Pragma(#y) // equals to _Pragma("clang diagnostic ignored ...");
+
+#ifndef XCUP_CLANG_IGNORE
+#define XCUP_CLANG_IGNORE(msg) _Pragma(STRINGIFY(clang diagnostic ignored #msg))
+#endif
+
 #endif /* compiler_macros_h */

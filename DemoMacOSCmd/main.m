@@ -12,6 +12,7 @@
 #import <XCocoaUtilsPublic/XCUPBenchmark.h>
 #import <XCocoaUtilsPublic/XCUPHttp.h>
 #import <XCocoaUtilsPublic/NSData+XCUPGzip.h>
+#import <XCocoaUtilsPublic/XCUPMacros.h>
 
 NSDictionary *data;
 
@@ -22,7 +23,6 @@ void testKeyPath(benchmark_t b) {
 void testKey(benchmark_t b) {
     [data valueForKey:@"data"];
 }
-
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -36,6 +36,10 @@ int main(int argc, const char * argv[]) {
             }
         };
         
+        XCUP_CLANG_PUSH
+        XCUP_CLANG_IGNORE(-Wunused-variable)
+        int x = 0;
+        XCUP_CLANG_POP
         //benchMark("KeyPath data.name", testKeyPath, max);
         bench_mark_clock("KeyPath data.name", testKeyPath, max);
         //benchMark("Key", testKey, max);
