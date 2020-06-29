@@ -336,7 +336,17 @@ static NSDateFormatter *formatter = nil;
     return tmp;
 }
 
-#endif
+#endif // RegexKitLite
+
+- (NSString *)localizedString
+{
+    return NSLocalizedString(self, nil);
+}
+
+- (NSString *)localizedStringInTable:(NSString *)tbl ofBundle:(NSBundle *)bundle
+{
+    return NSLocalizedStringWithDefaultValue(self, tbl, bundle, self, nil);
+}
 
 @end
 
@@ -407,16 +417,6 @@ static NSDateFormatter *formatter = nil;
             [self appendFormat:@"&%@", string];
         }
     }
-}
-
-- (NSString *)localizedString
-{
-    return NSLocalizedString(self, nil);
-}
-
-- (NSString *)localizedStringInTable:(NSString *)tbl ofBundle:(NSBundle *)bundle
-{
-    return NSLocalizedStringWithDefaultValue(self, tbl, bundle, self, nil);
 }
 
 @end
