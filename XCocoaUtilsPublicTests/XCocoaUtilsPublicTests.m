@@ -7,7 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <XCocoaUtilsPublic/XCocoaUtilsPublic.h>
+//#import <XCocoaUtilsPublic/XCocoaUtilsPublic.h>
+#import <XCocoaUtilsPublic/NSData+XCUPGzip.h>
 
 typedef struct _book_info {
     float price;
@@ -57,6 +58,17 @@ typedef struct _book_info {
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+}
+
+- (void)test_compress {
+	NSString *path = [[NSBundle bundleForClass:self.class] pathForResource:@"Info.plist" ofType:nil];
+	NSAssert(path.length, @"Not found Info.plist");
+	NSData *data = [NSData dataWithContentsOfFile:path];
+	NSAssert(data.length, @"data is nil.");
+	NSError *err = nil;
+	NSData *gziped = [data xcup_gzipDataError:&err];
+	NSAssert(!err, @"gzip error: %@", err);
+	NSAssert(gziped.length < data.length, @"ziped issue");
 }
 
 - (void)testRuntime {

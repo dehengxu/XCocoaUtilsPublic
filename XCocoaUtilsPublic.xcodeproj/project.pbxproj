@@ -10,7 +10,6 @@
 		2426B59B21E24C4700B9BA7E /* XLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59A21E24C4700B9BA7E /* XLogging.m */; };
 		2426B59D21E24CB400B9BA7E /* LoggingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59C21E24CB400B9BA7E /* LoggingTests.m */; };
 		2426B5A021E3A67D00B9BA7E /* Logs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2426B59F21E3A67D00B9BA7E /* Logs.m */; };
-		24289C0B23E2C054006EED9E /* NSData+XCUPGzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 24289C0923E2C054006EED9E /* NSData+XCUPGzip.m */; };
 		24289C0D23E2CAC1006EED9E /* erik-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24289C0C23E2CAC1006EED9E /* erik-unsplash.jpg */; };
 		24289C0F23E2CC3A006EED9E /* dat.txt in Resources */ = {isa = PBXBuildFile; fileRef = 24289C0E23E2CC3A006EED9E /* dat.txt */; };
 		24289C1123E2CCB0006EED9E /* erik in Resources */ = {isa = PBXBuildFile; fileRef = 24289C1023E2CCB0006EED9E /* erik */; };
@@ -98,6 +97,9 @@
 		24C11F512225A14600733658 /* NSURL+Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 74419E4218448DD000E28DD4 /* NSURL+Test.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C11F532225A15D00733658 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23B2A13180D2A4800C270A4 /* UIKit.framework */; };
 		24C11F542225A16100733658 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21415A0180CDF790067EBE8 /* Foundation.framework */; };
+		24F4F7D524B3E263006EED9E /* NSData+XCUPGzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 24289C0923E2C054006EED9E /* NSData+XCUPGzip.m */; };
+		24F4F7D624B3E264006EED9E /* NSData+XCUPGzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 24289C0923E2C054006EED9E /* NSData+XCUPGzip.m */; };
+		24F4F7D724B3E265006EED9E /* NSData+XCUPGzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 24289C0923E2C054006EED9E /* NSData+XCUPGzip.m */; };
 		2A05C06A7265CDED2B35CDE7 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A05C4DD9C94C4DABC628670 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A05CD8DBB0B6D9B15195821 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A05C1B80C4CEE2563A701BF /* NSData+Base64.m */; };
 		2A05CFB5C9D79724F827980C /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A05C1B80C4CEE2563A701BF /* NSData+Base64.m */; };
@@ -1340,6 +1342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F4F7D724B3E265006EED9E /* NSData+XCUPGzip.m in Sources */,
 				749F238323EDAECB000D6559 /* XCocoaUtilsPublicTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

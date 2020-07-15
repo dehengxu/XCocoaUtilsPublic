@@ -72,7 +72,7 @@
 
     NSLog(@"dt: %lu", dt.length);
     NSError *err = nil;
-    dt = [dt gzipDataError:&err];
+    dt = [dt xcup_gzipDataError:&err];
     if (err) {
         NSLog(@"err: %@", err);
     }else {
@@ -81,7 +81,7 @@
     NSLog(@"dt gziped:\n%@", [NSString stringWithData:dt usingEncoding:NSUTF8StringEncoding]);
 
     err = nil;
-    dt = [dt ungzipDataError:&err];
+    dt = [dt xcup_ungzipDataError:&err];
     if (err) {
         NSLog(@"err: %@", err);
     }else {
