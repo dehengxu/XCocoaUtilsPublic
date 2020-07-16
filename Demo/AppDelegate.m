@@ -37,12 +37,10 @@
     NSLog(@"ver: %f", XCocoaUtilsPublicVersionNumber);
     NSLog(@"ver: %s", XCocoaUtilsPublicVersionString);
     
-    self.timer = [XCUPSafeTimer repeatTimerWithInterval:1.0 duration:4.0 block:^(NSTimer * _Nonnull t) {
+    self.timer = [XCUPSafeTimer repeatTimerWithInterval:1.0 duration:4.0 block:^(NSTimer * _Nonnull t, BOOL end) {
         NSLog(@"t: %@", t);
         self.timer = nil;
     }];
-    [self.timer startTimer];
-    [self.timer startTimer];
 
     NSLog(@"doc:%@", FileIOHelper.documentPath);
     FileIOHelper *io = [[FileIOHelper alloc] initWithRoot:[FileIOHelper.documentPath stringByAppendingPathComponent:@"data/imgs"] ];

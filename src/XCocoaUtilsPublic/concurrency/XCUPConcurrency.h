@@ -10,5 +10,6 @@
 
 #import "XOperationTemplate.h"
 #import "XCUPSafeTimer.h"
+#import "NXGCDTimer.h"
 
 #endif /* XCUPConcurrency_h */
