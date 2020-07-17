@@ -134,6 +134,11 @@ Pod::Spec.new do |s|
     sp.dependency 'XCocoaUtilsPublic/http'
     sp.dependency 'XCocoaUtilsPublic/logging'
     sp.dependency 'XCocoaUtilsPublic/compress'
+    sp.dependency 'XCocoaUtilsPublic/CCommons'
+  end
+  
+  s.subspec 'CCommons' do |sp|
+    sp.source_files = "src/XCocoaUtilsPublic/CCommons/*.{h,m,c,mm,cpp,cxx,hpp}"
   end
   
   # Basically module | 基础模块

@@ -26,7 +26,7 @@
             //get name
             const char *name = property_getName(property_list[c]);
             //exclude list
-            if ([properties containsStringObject:[NSString stringWithFormat:@"%s", name]]) {
+            if ([properties xcup_containsStringObject:[NSString stringWithFormat:@"%s", name]]) {
                 continue;
             }
             

@@ -145,10 +145,11 @@ extern inline const char *CStringFromNSString(NSString *string)
 
 - (NSString *)urlDecoding
 {
-    if (@available(iOS 7, macOS 10.9, tvOS 9.0, watchOS 2.0, *)) {
+    if (@available(iOS 9.0, macOS 10.9, tvOS 9.0, watchOS 2.0, *)) {
         return [self stringByRemovingPercentEncoding];
+    }else {
+        return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     }
-    return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
 - (NSURL *)URL

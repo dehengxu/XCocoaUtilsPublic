@@ -10,20 +10,19 @@
 
 @interface NSArray (XCUP)
 
-- (id)objectForKey:(id)key atKeyPath:(NSString *)keyPath;
-- (id)objectForKey:(id)key atKeyPath:(NSString *)keyPath withCaseSensitive:(BOOL)caseSensitive;
-- (id)firstObject;
-- (id)objectAfter:(id)anObject;
-- (id)objectBefore:(id)anObject;
-- (id)mutableArray;
-- (NSArray *)getObjectsValueForKey:(NSString *)key;
-- (BOOL)containsStringObject:(NSString *)anObject;
+- (id)xcup_objectForKey:(id)key atKeyPath:(NSString *)keyPath;
+- (id)xcup_objectForKey:(id)key atKeyPath:(NSString *)keyPath withCaseSensitive:(BOOL)caseSensitive;
+- (id)xcup_firstObject;
+- (id)xcup_objectAfter:(id)anObject;
+- (id)xcup_objectBefore:(id)anObject;
+- (NSArray *)xcup_getObjectsValueForKey:(NSString *)key;
+- (BOOL)xcup_containsStringObject:(NSString *)anObject;
 
 @end
 
 @interface NSMutableArray (Ext)
 
-- (void)removeFirstObject;
-- (void)removeObjectForKey:(id)key atKeyPath:(NSString *)keyPath;
+- (void)xcup_removeFirstObject;
+- (void)xcup_removeObjectForKey:(id)key atKeyPath:(NSString *)keyPath;
 
 @end

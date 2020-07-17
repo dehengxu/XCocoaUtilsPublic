@@ -14,7 +14,9 @@ class XCUViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        mainvcLogSwift("\(#function)");
+        mainvcLogSwift("func: \(#function)");
+        let home = getEnv("HOME")
+        debugPrint("home: \(home)")
     }
     
 

@@ -180,6 +180,7 @@
 		746EA61223EDD6FB0050FB01 /* UIScrollView+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E3A18448DD000E28DD4 /* UIScrollView+XCUP.m */; };
 		746EA61323EDD6FB0050FB01 /* UIView+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E3C18448DD000E28DD4 /* UIView+XCUP.m */; };
 		746EA61423EDD6FB0050FB01 /* UIViewController+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 74419E3E18448DD000E28DD4 /* UIViewController+XCUP.m */; };
+		74882E2624C0245500490F4C /* CCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 74882E2524C0245500490F4C /* CCommons.m */; };
 		748BB41121DC98070094B4CE /* NSInvocation+XCUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 748BB41021DC98070094B4CE /* NSInvocation+XCUP.m */; };
 		749F237C23EDAECB000D6559 /* XCocoaUtilsPublic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749F237323EDAECB000D6559 /* XCocoaUtilsPublic.framework */; };
 		749F238323EDAECB000D6559 /* XCocoaUtilsPublicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 749F238223EDAECB000D6559 /* XCocoaUtilsPublicTests.m */; };
@@ -451,6 +452,8 @@
 		746AAF6121CCD3DC005B29F6 /* NSString+URI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URI.h"; sourceTree = "<group>"; };
 		746AAF6421CCD406005B29F6 /* NSDictionary+HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HTTP.h"; sourceTree = "<group>"; };
 		746AAF6521CCD406005B29F6 /* NSDictionary+HTTP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HTTP.m"; sourceTree = "<group>"; };
+		74882E2424C0245500490F4C /* CCommons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCommons.h; sourceTree = "<group>"; };
+		74882E2524C0245500490F4C /* CCommons.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCommons.m; sourceTree = "<group>"; };
 		748BB40F21DC98070094B4CE /* NSInvocation+XCUP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+XCUP.h"; sourceTree = "<group>"; };
 		748BB41021DC98070094B4CE /* NSInvocation+XCUP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+XCUP.m"; sourceTree = "<group>"; };
 		749F237323EDAECB000D6559 /* XCocoaUtilsPublic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCocoaUtilsPublic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -639,6 +642,7 @@
 		74419E1118448DD000E28DD4 /* XCocoaUtilsPublic */ = {
 			isa = PBXGroup;
 			children = (
+				74882E2324C0240B00490F4C /* CCommons */,
 				24289C0623E2C054006EED9E /* compress */,
 				2426B59821E24C2900B9BA7E /* Logging */,
 				748BB40D21DC97BD0094B4CE /* Runtime */,
@@ -772,6 +776,15 @@
 				7461B7901B959EB300EB5D6D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74882E2324C0240B00490F4C /* CCommons */ = {
+			isa = PBXGroup;
+			children = (
+				74882E2424C0245500490F4C /* CCommons.h */,
+				74882E2524C0245500490F4C /* CCommons.m */,
+			);
+			path = CCommons;
 			sourceTree = "<group>";
 		};
 		748BB40D21DC97BD0094B4CE /* Runtime */ = {
@@ -1599,6 +1612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74882E2624C0245500490F4C /* CCommons.m in Sources */,
 				7461B77E1B959EB300EB5D6D /* ViewController.m in Sources */,
 				7461B77B1B959EB300EB5D6D /* AppDelegate.m in Sources */,
 				243FD99323C05F97006EED9E /* XCUViewController.swift in Sources */,
