@@ -28,6 +28,7 @@ while(0)
 + (id)viewControllerWithNibName:(NSString *)nibName bundle:(NSBundle *)nibBundleOrNil;
 
 - (BOOL)isSupportInteractivePopGestureRecognizer;
+- (void)xcup_dismissViewController:(BOOL)animated completion:(void(^)(void))completion;
 
 @end
 

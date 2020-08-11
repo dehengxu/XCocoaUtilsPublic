@@ -44,5 +44,13 @@
     return ([self isKindOfClass:[UINavigationController class]] && [self respondsToSelector:@selector(interactivePopGestureRecognizer)]);
 }
 
+- (void)xcup_dismissViewController:(BOOL)animated completion:(void (^)(void))completion {
+	if (self.navigationController) {
+		[self.navigationController dismissViewControllerAnimated:animated completion:completion];
+	}else {
+		[self dismissViewControllerAnimated:animated completion:completion];
+	}
+}
+
 @end
 #endif
