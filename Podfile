@@ -14,7 +14,8 @@ def useLib
     'concurrency',
     'benchmark',
     'compress',
-    'CCommons'
+    'CCommons',
+		'macros'
     ]
 end
 
