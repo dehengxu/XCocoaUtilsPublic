@@ -130,6 +130,23 @@ Pod::Spec.new do |s|
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
+  s.subspec 'All' do |sp|
+    sp.dependency 'XCocoaUtilsPublic/CCommons'
+    sp.dependency 'XCocoaUtilsPublic/macros'
+    sp.dependency 'XCocoaUtilsPublic/categories'
+    sp.dependency 'XCocoaUtilsPublic/http'
+    sp.dependency 'XCocoaUtilsPublic/UIKit'
+    sp.dependency 'XCocoaUtilsPublic/debug'
+    sp.dependency 'XCocoaUtilsPublic/io'
+    sp.dependency 'XCocoaUtilsPublic/benchmark'
+    sp.dependency 'XCocoaUtilsPublic/concurrency'
+    sp.dependency 'XCocoaUtilsPublic/runtime'
+    sp.dependency 'XCocoaUtilsPublic/logging'
+    sp.dependency 'XCocoaUtilsPublic/compress'
+    
+    sp.dependency 'XCocoaUtilsPublic/Swift'
+  end
+  
   # General module | 常用模块组
   s.subspec 'General' do |sp|
     sp.source_files = "src/XCocoaUtilsPublic/*.h"
