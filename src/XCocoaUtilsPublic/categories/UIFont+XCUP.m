@@ -7,8 +7,11 @@
 //
 
 #import "UIFont+XCUP.h"
+
 #import "NSObject+XCUP.h"
 #import "XCUPMacros.h"
+
+#if TARGET_OS_IOS
 
 @implementation UIFont (XCUP)
 
@@ -25,3 +28,5 @@
 }
 
 @end
+
+#endif

@@ -17,6 +17,7 @@ extern const char *CStringFromNSString(NSString *string);
 
 + (NSString*)stringWithData:(NSData *)data usingEncoding:(NSStringEncoding)encoding;
 
+- (BOOL)isNotEmpty;
 - (NSString*)md5Digest;
 - (NSString *)urlEncoding;
 - (NSString *)urlDecoding;
@@ -30,8 +31,11 @@ extern const char *CStringFromNSString(NSString *string);
 
 - (NSDate*)date;
 - (NSDate *)dateWithFormatString:(NSString *)formatString;
+
+#if __has_include("RegexKitLite.h")
 - (NSString *)stringByRemoveHTMLTags;
 - (NSString *)stringByRemoveHTMLTag:(NSString *)tag;
+#endif // RegexKitLite
 
 - (NSString *)localizedString;
 - (NSString *)localizedStringInTable:(NSString *)tbl ofBundle:(NSBundle *)bundle;

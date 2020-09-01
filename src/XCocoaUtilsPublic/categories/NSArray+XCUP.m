@@ -12,12 +12,12 @@
 @implementation NSArray (XCUP)
 
 
-- (id)objectForKey:(id)key atKeyPath:(NSString *)keyPath
+- (id)xcup_objectForKey:(id)key atKeyPath:(NSString *)keyPath
 {
-    return [self objectForKey:key atKeyPath:keyPath withCaseSensitive:YES];
+    return [self xcup_objectForKey:key atKeyPath:keyPath withCaseSensitive:YES];
 }
 
-- (id)objectForKey:(id)key atKeyPath:(NSString *)keyPath withCaseSensitive:(BOOL)caseSensitive
+- (id)xcup_objectForKey:(id)key atKeyPath:(NSString *)keyPath withCaseSensitive:(BOOL)caseSensitive
 {
     for (NSObject * obj in self) {
         id value = [obj valueForKeyPath:keyPath];
@@ -37,7 +37,7 @@
     return nil;
 }
 
-- (id)firstObject
+- (id)xcup_firstObject
 {
     if (self.count == 0 || self.count >= NSNotFound) {
         return nil;
@@ -45,7 +45,7 @@
     return [self objectAtIndex:0];
 }
 
-- (id)objectAfter:(id)anObject
+- (id)xcup_objectAfter:(id)anObject
 {
     NSUInteger idx = [self indexOfObject:anObject];
     if (idx != NSNotFound && idx < [self count] - 1) {
@@ -54,7 +54,7 @@
     return nil;
 }
 
-- (id)objectBefore:(id)anObject
+- (id)xcup_objectBefore:(id)anObject
 {
     NSUInteger idx = [self indexOfObject:anObject];
     if (idx != NSNotFound && idx > 0) {
@@ -63,12 +63,7 @@
     return nil;
 }
 
-- (id)mutableArray
-{
-    return [NSMutableArray arrayWithArray:self];
-}
-
-- (NSArray *)getObjectsValueForKey:(NSString *)key
+- (NSArray *)xcup_getObjectsValueForKey:(NSString *)key
 {
     NSMutableArray *rtn = [NSMutableArray arrayWithCapacity:self.count];
     for (NSObject *obj in self) {
@@ -77,7 +72,7 @@
     return rtn;
 }
 
-- (BOOL)containsStringObject:(NSString *)anObject
+- (BOOL)xcup_containsStringObject:(NSString *)anObject
 {
     for (NSString *ele in self) {
         if ([ele isKindOfClass:[NSString class]]) {
@@ -95,19 +90,19 @@
 
 @implementation NSMutableArray (Ext)
 
-- (void)removeFirstObject
+- (void)xcup_removeFirstObject
 {
 //    pthread_rwlock_t lock;
 //    while(!pthread_rwlock_tryrdlock(&lock)) {
 //        [NSThread sleepForTimeInterval:0.1f];
 //    }
-    [self removeObject:self.firstObject];
+    [self removeObject:self.xcup_firstObject];
 //    pthread_rwlock_unlock(&lock);
 }
 
-- (void)removeObjectForKey:(id)key atKeyPath:(NSString *)keyPath
+- (void)xcup_removeObjectForKey:(id)key atKeyPath:(NSString *)keyPath
 {
-    [self removeObject:[self objectForKey:key atKeyPath:keyPath]];
+    [self removeObject:[self xcup_objectForKey:key atKeyPath:keyPath]];
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import "UIScreen+XCUP.h"
 
+#if TARGET_OS_IOS
+
 @implementation UIScreen (XCUP)
 
 - (BOOL)isRetina
@@ -25,3 +27,5 @@
 
 
 @end
+
+#endif

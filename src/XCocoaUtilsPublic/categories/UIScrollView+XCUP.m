@@ -8,6 +8,8 @@
 
 #import "UIScrollView+XCUP.h"
 
+#if TARGET_OS_IOS
+
 @implementation UIScrollView (XCUP)
 
 - (CGFloat)contentWidth
@@ -40,3 +42,5 @@
 }
 
 @end
+
+#endif

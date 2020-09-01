@@ -132,6 +132,11 @@ extern inline const char *CStringFromNSString(NSString *string)
     return dateformatters;
 }
 
+- (BOOL)isNotEmpty
+{
+    return self.length > 0;
+}
+
 - (NSString *)urlEncoding
 {
     NSString *rtn = NSStringByCFStringRef(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, NULL, (CFStringRef)reserved, kCFStringEncodingUTF8));
@@ -140,10 +145,11 @@ extern inline const char *CStringFromNSString(NSString *string)
 
 - (NSString *)urlDecoding
 {
-    if (@available(iOS 7, macOS 10.9, tvOS 9.0, watchOS 2.0, *)) {
+    if (@available(iOS 9.0, macOS 10.9, tvOS 9.0, watchOS 2.0, *)) {
         return [self stringByRemovingPercentEncoding];
+    }else {
+        return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     }
-    return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
 - (NSURL *)URL
@@ -331,7 +337,17 @@ static NSDateFormatter *formatter = nil;
     return tmp;
 }
 
-#endif
+#endif // RegexKitLite
+
+- (NSString *)localizedString
+{
+    return NSLocalizedString(self, nil);
+}
+
+- (NSString *)localizedStringInTable:(NSString *)tbl ofBundle:(NSBundle *)bundle
+{
+    return NSLocalizedStringWithDefaultValue(self, tbl, bundle, self, nil);
+}
 
 @end
 
@@ -402,16 +418,6 @@ static NSDateFormatter *formatter = nil;
             [self appendFormat:@"&%@", string];
         }
     }
-}
-
-- (NSString *)localizedString
-{
-    return NSLocalizedString(self, nil);
-}
-
-- (NSString *)localizedStringInTable:(NSString *)tbl ofBundle:(NSBundle *)bundle
-{
-    return NSLocalizedStringWithDefaultValue(self, tbl, bundle, self, nil);
 }
 
 @end

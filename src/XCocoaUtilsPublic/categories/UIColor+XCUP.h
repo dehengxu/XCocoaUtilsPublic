@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IOS
+
+#import <UIKit/UIKit.h>
 
 @interface UIColor (XCUP)
 

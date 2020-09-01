@@ -29,67 +29,46 @@
 // Concurrency
 #if __has_include(<XCocoaUtilsPublic/XCUPConcurrency.h>)
 #import <XCocoaUtilsPublic/XCUPConcurrency.h>
-//#import <XCocoaUtilsPublic/XOperationTemplate.h>
 #endif
 
 // Http
 #if __has_include(<XCocoaUtilsPublic/XCUPHttp.h>)
 #import <XCocoaUtilsPublic/XCUPHttp.h>
-
-//#import <XCocoaUtilsPublic/NSData+Base64.h>
-//#import <XCocoaUtilsPublic/NSObject+PropertyToURLParams.h>
-//#import <XCocoaUtilsPublic/XCObjectMappingDelegate.h>
-//#import <XCocoaUtilsPublic/NSString+URI.h>
-//#import <XCocoaUtilsPublic/NSDictionary+HTTP.h>
-//#import <XCocoaUtilsPublic/NameValuePaire.h>
-//#import <XCocoaUtilsPublic/XCObjectMapping.h>
 #endif
 
 //Debug
 #if __has_include(<XCocoaUtilsPublic/XCUPDebug.h>)
 #import <XCocoaUtilsPublic/XCUPDebug.h>
-
-//#import <XCocoaUtilsPublic/DebugUtility.h>
-//#import <XCocoaUtilsPublic/NSURL+Test.h>
 #endif
 
 // C macros
 #if __has_include(<XCocoaUtilsPublic/XCUPMacros.h>)
 #import <XCocoaUtilsPublic/XCUPMacros.h>
-
-//#import <XCocoaUtilsPublic/memory_macros.h>
-//#import <XCocoaUtilsPublic/singletone.h>
-//#import <XCocoaUtilsPublic/UIKit_macros.h>
-//#import <XCocoaUtilsPublic/web_macros.h>
-//#import <XCocoaUtilsPublic/CF_macros.h>
 #endif
 
 // IO
 #if __has_include(<XCocoaUtilsPublic/XCUPIO.h>)
 #import <XCocoaUtilsPublic/XCUPIO.h>
-
-//#import <XCocoaUtilsPublic/FileIOHelper.h>
-//#import <XCocoaUtilsPublic/DefaultSettings.h>
 #endif
 
 // UIKit
 #if __has_include(<XCocoaUtilsPublic/XCUPUIKit.h>)
 #import <XCocoaUtilsPublic/XCUPUIKit.h>
-
-//#import <XCocoaUtilsPublic/XCUPBlockAlertView.h>
-//#import <XCocoaUtilsPublic/XCUPCGFunctions.h>
 #endif
 
 // Benchmark
 #if __has_include(<XCocoaUtilsPublic/XCUPBenchmark.h>)
 #import <XCocoaUtilsPublic/XCUPBenchmark.h>
-//#import <XCocoaUtilsPublic/BenchMark.h>
-//#import <XCocoaUtilsPublic/cbench_mark.h>
 #endif
 
 // Compress
 #if __has_include(<XCocoaUtilsPublic/NSData+XCUPGzip.h>)
 #import <XCocoaUtilsPublic/NSData+XCUPGzip.h>
+#endif
+
+// C common utils
+#if __has_include(<XCocoaUtilsPublic/CCommons.h>)
+#import <XCocoaUtilsPublic/CCommons.h>
 #endif
 
 //! Project version number for XCocoaUtilsPublic_iOS.

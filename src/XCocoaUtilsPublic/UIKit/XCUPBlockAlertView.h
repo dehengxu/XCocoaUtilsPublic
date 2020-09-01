@@ -5,6 +5,9 @@
 //  Created by Deheng.Xu on 13-5-22.
 //  Copyright (c) 2013年 Nicholas.Xu. All rights reserved.
 //
+#if !__has_include(<UIKit/UIKit.h>)
+#error Only for iOS
+#endif
 
 #import <UIKit/UIKit.h>
 

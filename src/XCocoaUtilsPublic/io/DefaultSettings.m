@@ -7,6 +7,7 @@
 //
 
 #import "DefaultSettings.h"
+#import <XCocoaUtilsPublic/XCUPDebug.h>
 
 @implementation DefaultSettings
 
@@ -39,51 +40,51 @@ static DefaultSettings *__shared_instance = nil;
 #endif
 }
 
-- (id)loadSettingValueForKey:(NSString *)theKey
+- (id)objectForKey:(NSString *)theKey
 {
+    IsNullAndReturnValue(theKey, nil);
+    
     NSUserDefaults *_defaults = [NSUserDefaults standardUserDefaults];
-    if ([_defaults valueForKey:theKey]) {
-        return [_defaults valueForKey:theKey];
+    if ([_defaults objectForKey:theKey]) {
+        return [_defaults objectForKey:theKey];
     }
-    //load default value
-    if ([self respondsToSelector:@selector(loadDefaultSettingValueForKey:)]) {
-        return [self loadDefaultSettingValueForKey:theKey];
+    
+    //load default value from delegate
+    if ([self.defaultDelegate respondsToSelector:@selector(defaultSettingObjectForKey:)]) {
+        return [self.defaultDelegate defaultSettingObjectForKey:theKey];
     }
     return nil;
 }
 
-- (void)saveUserDefaultsValue:(id)value forKey:(NSString *)theKey
+- (void)setObject:(id)value forKey:(NSString *)theKey
 {
-    if (!value || !theKey) {
-        return;
-    }
+    IsNullAndReturn(theKey);
     NSUserDefaults *_defaults = [NSUserDefaults standardUserDefaults];
-    //NSAssert(theKey != nil, @"key is nil!");
-    //NSAssert(value != nil, @"key :%@;  value is '%@'!" , theKey, value);
     [_defaults setValue:value forKey:theKey];
 }
 
-- (void)saveUserDefaultsValue:(id)value forKey:(NSString *)theKey immediately:(BOOL)isImmediately
+- (void)setObject:(id)value forKey:(NSString *)theKey immediately:(BOOL)isImmediately
 {
-    [self saveUserDefaultsValue:value forKey:theKey];
+    IsNullAndReturn(theKey);
+    [self setObject:value forKey:theKey];
     if (isImmediately) {
-        NSUserDefaults *_defaults = [NSUserDefaults standardUserDefaults];
-        [_defaults synchronize];
+        [self synchronize];
     }
 }
 
-- (void)deleteValueForKey:(NSString *)key
+- (void)removeObjectForKey:(NSString *)key
 {
+    IsNullAndReturn(key);
     NSUserDefaults *_defaults = [NSUserDefaults standardUserDefaults];
     [_defaults removeObjectForKey:key];
 }
 
-- (void)deleteValueForKey:(NSString *)key immediately:(BOOL)isImmediately
+- (void)removeObjectForKey:(NSString *)key immediately:(BOOL)isImmediately
 {
-    NSUserDefaults *_defaults = [NSUserDefaults standardUserDefaults];
-    [_defaults removeObjectForKey:key];
+    IsNullAndReturn(key);
+    [self removeObjectForKey:key];
     if (isImmediately) {
-        [_defaults synchronize];
+        [self synchronize];
     }
 }
 
