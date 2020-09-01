@@ -141,15 +141,12 @@ extension NSURL: XCURLSigning {
 
 		let absoluteString = String(format: "%@\(queryString.count > 0 ? "?" : "")%@", shortUrl, queryString )
 
-		//print("absoluteString:", absoluteString)
 		let signature = algo(absoluteString)
-		//print("signature:", signature)
+		
 		if let url = self as? SignedURL {
             return Foundation.URL(string: "\(absoluteString)&\(url.signName)=\(signature)")
-			//return NSURL(string: "\(absoluteString)&\(url.signName)=\(signature)")
 		}else {
             return Foundation.URL(string: "\(absoluteString)&sign=\(signature)")
-			//return NSURL(string: "\(absoluteString)&sign=\(signature)")
 		}
 	}
 
