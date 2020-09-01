@@ -9,13 +9,13 @@
 import Foundation
 import CommonCrypto
 
-public protocol LBrowserDigesting {
+public protocol XCDigesting {
 	func MD5(lowercase: Bool) -> String
 	func SHA256(lowercase: Bool) -> String
 	func SHA512(lowercase: Bool) -> String
 }
 
-protocol LBrowserNSURLSigning {
+protocol XCURLSigning {
 	func sign(with algo: (String)->String, isAscending :Bool) -> NSURL?
 	func sortedQuery(isAscending :Bool) -> String
 }
@@ -46,14 +46,14 @@ public extension Array {
 
 }
 
-extension String: LBrowserDigesting {
+extension String: XCDigesting {
 
 	public func MD5(lowercase: Bool = true) -> String {
 		var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
 
 		var ctx = CC_MD5_CTX()
 		CC_MD5_Init(&ctx)
-		CC_MD5_Update(&ctx, self, CC_LONG(self.count))
+        CC_MD5_Update(&ctx, self, CC_LONG(self.count))
 
 		_ = withUnsafeMutablePointer(to: &digest[0]) {
 			CC_MD5_Final($0, &ctx)
@@ -96,7 +96,7 @@ class SignedURL: NSURL {
 	var signName = "sign"
 }
 
-extension NSURL: LBrowserNSURLSigning {
+extension NSURL: XCURLSigning {
 
 	public func useSignKeyName(_ keyName: String) -> NSURL? {
 		if let abstr = self.absoluteString {
