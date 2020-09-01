@@ -132,11 +132,15 @@ Pod::Spec.new do |s|
 
   # General module | 常用模块组
   s.subspec 'General' do |sp|
+    sp.source_files = "src/XCocoaUtilsPublic/*.h"
+    sp.preserve_paths = "src/XCocoaUtilsPublic"
+    
     sp.dependency 'XCocoaUtilsPublic/categories'
     sp.dependency 'XCocoaUtilsPublic/http'
     sp.dependency 'XCocoaUtilsPublic/logging'
     sp.dependency 'XCocoaUtilsPublic/compress'
     sp.dependency 'XCocoaUtilsPublic/CCommons'
+    sp.dependency 'XCocoaUtilsPublic/Swift'
   end
   
   s.subspec 'CCommons' do |sp|
@@ -207,7 +211,13 @@ Pod::Spec.new do |s|
     sp.libraries = "z"
     sp.preserve_paths = "src/XCocoaUtilsPublic/compress"
   end
+  
+  s.subspec 'Swift' do |sp|
+    sp.source_files = "src/XCocoaUtilsPublic/Swift/*.#{source_extensions}"
+    sp.preserve_paths = "src/XCocoaUtilsPublic/Swift"
+  end
 
+  s.default_subspec = "General"
   s.requires_arc = true
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency 'RegexKitLite', '~> 4.0'

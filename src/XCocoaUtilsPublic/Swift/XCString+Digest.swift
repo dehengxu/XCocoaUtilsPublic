@@ -16,7 +16,7 @@ public protocol XCDigesting {
 }
 
 protocol XCURLSigning {
-	func sign(with algo: (String)->String, isAscending :Bool) -> NSURL?
+	func sign(with algo: (String)->String, isAscending :Bool) -> URL?
 	func sortedQuery(isAscending :Bool) -> String
 }
 
@@ -46,6 +46,25 @@ public extension Array {
 
 }
 
+@objc extension NSString {
+    
+    public func MD5(_ lowercase: Bool = true) -> NSString {
+        let s = (self as String) as XCDigesting
+        return s.MD5(lowercase: lowercase) as NSString
+    }
+    
+    public func SHA256(_ lowercase: Bool = true) -> NSString {
+        let s = (self as String) as XCDigesting
+        return s.SHA256(lowercase: lowercase) as NSString
+    }
+    
+    public func SHA512(_ lowercase: Bool = true) -> NSString {
+        let s = (self as String) as XCDigesting
+        return s.SHA512(lowercase: lowercase) as NSString
+    }
+    
+}
+
 extension String: XCDigesting {
 
 	public func MD5(lowercase: Bool = true) -> String {
@@ -53,7 +72,7 @@ extension String: XCDigesting {
 
 		var ctx = CC_MD5_CTX()
 		CC_MD5_Init(&ctx)
-        CC_MD5_Update(&ctx, self, CC_LONG(self.count))
+		CC_MD5_Update(&ctx, self, CC_LONG(self.count))
 
 		_ = withUnsafeMutablePointer(to: &digest[0]) {
 			CC_MD5_Final($0, &ctx)
@@ -115,7 +134,7 @@ extension NSURL: XCURLSigning {
 		}
 	}
 
-	public func sign(with algo: (String) -> String, isAscending: Bool = true) -> NSURL? {
+	public func sign(with algo: (String) -> String, isAscending: Bool = true) -> URL? {
 		let shortUrl = String(format: "%@://%@%@", (self.scheme != nil) ? self.scheme! : "", (self.host != nil) ? self.host! : "", (self.path != nil) ? self.path! : "")
 
 		let queryString = self.sortedQuery(isAscending: isAscending)
@@ -126,10 +145,11 @@ extension NSURL: XCURLSigning {
 		let signature = algo(absoluteString)
 		//print("signature:", signature)
 		if let url = self as? SignedURL {
-			return NSURL(string: "\(absoluteString)&\(url.signName)=\(signature)")
+            return Foundation.URL(string: "\(absoluteString)&\(url.signName)=\(signature)")
+			//return NSURL(string: "\(absoluteString)&\(url.signName)=\(signature)")
 		}else {
-			return NSURL(string: "\(absoluteString)&sign=\(signature)")
-
+            return Foundation.URL(string: "\(absoluteString)&sign=\(signature)")
+			//return NSURL(string: "\(absoluteString)&sign=\(signature)")
 		}
 	}
 
@@ -162,6 +182,15 @@ extension NSURL: XCURLSigning {
 }
 
 extension URL {
+    
+    func sign(with algo: (String) -> String, isAscending: Bool) -> URL? {
+        return self.NSURL()?.sign(with: algo, isAscending: isAscending) as URL?
+    }
+    
+    func sortedQuery(isAscending: Bool) -> String {
+        return self.NSURL()?.sortedQuery(isAscending: isAscending) ?? ""
+    }
+    
 	public func NSURL() -> Foundation.NSURL? {
 		return Foundation.NSURL(string: self.absoluteString)
 	}
