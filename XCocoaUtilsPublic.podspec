@@ -145,12 +145,12 @@ Pod::Spec.new do |s|
   
   # Basically module | 基础模块
   s.subspec 'macros' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/macros/*.{h}"
+      sp.source_files = "src/XCocoaUtilsPublic/macros/*.#{source_extensions}"
       sp.preserve_paths = "src/XCocoaUtilsPublic/macros"
   end
 
   s.subspec 'categories' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/categories/*.{h,m}"
+      sp.source_files = "src/XCocoaUtilsPublic/categories/*.#{source_extensions}"
       sp.dependency "XCocoaUtilsPublic/macros"
       sp.preserve_paths = "src/XCocoaUtilsPublic/categories"
   end
