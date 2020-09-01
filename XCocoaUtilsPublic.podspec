@@ -131,6 +131,7 @@ Pod::Spec.new do |s|
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.subspec 'All' do |sp|
+    sp.dependency 'XCocoaUtilsPublic/General'
     sp.dependency 'XCocoaUtilsPublic/CCommons'
     sp.dependency 'XCocoaUtilsPublic/macros'
     sp.dependency 'XCocoaUtilsPublic/categories'
