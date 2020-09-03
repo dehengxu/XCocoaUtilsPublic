@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSData (XCUString)
-- (NSString *)xcu_utf8String;
-- (NSString *)xcu_stringByEncoding:(NSStringEncoding)encoding;
+- (NSString *)xc_utf8String;
+- (NSString *)xc_stringByEncoding:(NSStringEncoding)encoding;
 @end

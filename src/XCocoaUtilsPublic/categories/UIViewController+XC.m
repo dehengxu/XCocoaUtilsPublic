@@ -6,7 +6,7 @@
 //  Copyright (c) 2012年 Deheng.Xu. All rights reserved.
 //
 
-#import "UIViewController+XCUP.h"
+#import "UIViewController+XC.h"
 #import "NSObject+XCUP.h"
 #import "XCUPMacros.h"
 
@@ -44,7 +44,28 @@
     return ([self isKindOfClass:[UINavigationController class]] && [self respondsToSelector:@selector(interactivePopGestureRecognizer)]);
 }
 
-- (void)xcup_dismissViewController:(BOOL)animated completion:(void (^)(void))completion {
+- (void)xc_presentOn:(UIViewController *)presentingViewController animated:(BOOL)animated needNavigation:(BOOL)needed completion:(void (^)(void))completion {
+	if (self.navigationController) {
+		[presentingViewController presentViewController:self.navigationController animated:animated completion:completion];
+	}else {
+		if (needed) {
+			UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self];
+			[presentingViewController presentViewController:nav animated:animated completion:completion];
+		}else {
+			[presentingViewController presentViewController:self animated:animated completion:completion];
+		}
+	}
+}
+
+- (void)xc_presentOn:(UIViewController *)presentingViewController animated:(BOOL)animated completion:(void (^)(void))completion {
+	if (self.navigationController) {
+		[presentingViewController presentViewController:self.navigationController animated:animated completion:completion];
+	}else {
+		[presentingViewController presentViewController:self animated:animated completion:completion];
+	}
+}
+
+- (void)xc_dismissViewController:(BOOL)animated completion:(void (^)(void))completion {
 	if (self.navigationController) {
 		[self.navigationController dismissViewControllerAnimated:animated completion:completion];
 	}else {
