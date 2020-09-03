@@ -23,7 +23,7 @@
     return ([[[[UIDevice currentDevice] model] lowercaseString] rangeOfString:@"ipad"].length > 0) ? @"iPad" : @"iPhone";
 }
 
-+ (id)viewControllerWithNibName:(NSString *)nibName bundle:(NSBundle *)nibBundleOrNil
++ (instancetype)viewControllerWithNibName:(NSString *)nibName bundle:(NSBundle *)nibBundleOrNil
 {
     id rtn = nil;
     NSString *suffix = [self xibFileNameDefaultSuffix];
@@ -44,7 +44,7 @@
     return ([self isKindOfClass:[UINavigationController class]] && [self respondsToSelector:@selector(interactivePopGestureRecognizer)]);
 }
 
-- (void)xc_presentOn:(UIViewController *)presentingViewController animated:(BOOL)animated needNavigation:(BOOL)needed completion:(void (^)(void))completion {
+- (instancetype)xc_presentOn:(UIViewController *)presentingViewController animated:(BOOL)animated needNavigation:(BOOL)needed completion:(void (^)(void))completion {
 	if (self.navigationController) {
 		[presentingViewController presentViewController:self.navigationController animated:animated completion:completion];
 	}else {
@@ -55,22 +55,25 @@
 			[presentingViewController presentViewController:self animated:animated completion:completion];
 		}
 	}
+	return self;
 }
 
-- (void)xc_presentOn:(UIViewController *)presentingViewController animated:(BOOL)animated completion:(void (^)(void))completion {
+- (instancetype)xc_presentOn:(UIViewController *)presentingViewController animated:(BOOL)animated completion:(void (^)(void))completion {
 	if (self.navigationController) {
 		[presentingViewController presentViewController:self.navigationController animated:animated completion:completion];
 	}else {
 		[presentingViewController presentViewController:self animated:animated completion:completion];
 	}
+	return self;
 }
 
-- (void)xc_dismissViewController:(BOOL)animated completion:(void (^)(void))completion {
+- (instancetype)xc_dismissViewController:(BOOL)animated completion:(void (^)(void))completion {
 	if (self.navigationController) {
 		[self.navigationController dismissViewControllerAnimated:animated completion:completion];
 	}else {
 		[self dismissViewControllerAnimated:animated completion:completion];
 	}
+	return self;
 }
 
 @end
