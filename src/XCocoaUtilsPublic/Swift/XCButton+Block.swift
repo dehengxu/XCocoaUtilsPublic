@@ -5,7 +5,7 @@
 //  Created by NicholasXu on 2020/8/14.
 //  Copyright © 2020 NicholasXu. All rights reserved.
 //
-
+#if os(iOS)
 import UIKit
 
 @objc public extension UIButton {
@@ -42,3 +42,6 @@ import UIKit
     }
     
 }
+#else
+
+#endif

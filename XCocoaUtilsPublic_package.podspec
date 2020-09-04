@@ -235,6 +235,7 @@ Pod::Spec.new do |s|
   s.subspec 'Swift' do |sp|
     sp.source_files = "src/XCocoaUtilsPublic/Swift/*.#{source_extensions}"
     sp.preserve_paths = "src/XCocoaUtilsPublic/Swift"
+    sp.frameworks = "UIKit"
   end
 
   s.default_subspec = "General"

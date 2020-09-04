@@ -5,8 +5,8 @@
 //  Created by NicholasXu on 2020/8/31.
 //  Copyright © 2020 NicholasXu. All rights reserved.
 //
-
-import Foundation
+#if os(iOS)
+import UIKit
 
 extension UIResponder {
     
@@ -24,3 +24,8 @@ extension UIResponder {
     }
     
 }
+#else
+
+import Foundation
+
+#endif
