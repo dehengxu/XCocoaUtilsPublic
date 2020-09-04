@@ -37,8 +37,8 @@
     //appLog(@"XCocoaUtilsPublic_iOSVersionNumber: %s", XCocoaUtilsPublic_iOSVersionString);
     appLog(@"title: %@", [@"title" localizedString]);
     
-    NSLog(@"ver: %f", XCocoaUtilsPublicVersionNumber);
-    NSLog(@"ver: %s", XCocoaUtilsPublicVersionString);
+    //NSLog(@"ver: %f", XCocoaUtilsPublic_iOSVersionNumber);
+    //NSLog(@"ver: %s", XCocoaUtilsPublic_iOSVersionString);
     
 //    self.timer = [XCUPSafeTimer repeatTimerWithInterval:1.0 duration:4.0 block:^(NSTimer * _Nonnull t, BOOL reachEnd) {
 //        NSLog(@"t: %@", t);

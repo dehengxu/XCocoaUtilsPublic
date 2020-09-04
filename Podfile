@@ -26,7 +26,6 @@ target 'Demo' do
     
     target 'DemoTests' do
       #pod 'AFNetworking'
-      useLib
     end
 end
 
