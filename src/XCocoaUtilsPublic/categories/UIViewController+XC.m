@@ -44,25 +44,26 @@
     return ([self isKindOfClass:[UINavigationController class]] && [self respondsToSelector:@selector(interactivePopGestureRecognizer)]);
 }
 
-- (instancetype)xc_presentOn:(UIViewController *)presentingViewController animated:(BOOL)animated needNavigation:(BOOL)needed completion:(void (^)(void))completion {
+//- (instancetype)xc_present:(UIViewController *)presentingViewController animated:(BOOL)animated needNavigation:(BOOL)needed completion:(void (^)(void))completion
+- (instancetype)xc_present:(UIViewController *)presentedViewController animated:(BOOL)animated needNavigation:(BOOL)needed completion:(void (^)(void))completion {
 	if (self.navigationController) {
-		[presentingViewController presentViewController:self.navigationController animated:animated completion:completion];
+		[self presentViewController:self.navigationController animated:animated completion:completion];
 	}else {
 		if (needed) {
-			UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self];
-			[presentingViewController presentViewController:nav animated:animated completion:completion];
+			UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:presentedViewController];
+			[self presentViewController:nav animated:animated completion:completion];
 		}else {
-			[presentingViewController presentViewController:self animated:animated completion:completion];
+			[self presentViewController:presentedViewController animated:animated completion:completion];
 		}
 	}
 	return self;
 }
 
-- (instancetype)xc_presentOn:(UIViewController *)presentingViewController animated:(BOOL)animated completion:(void (^)(void))completion {
-	if (self.navigationController) {
-		[presentingViewController presentViewController:self.navigationController animated:animated completion:completion];
+- (instancetype)xc_present:(UIViewController *)presentedViewController animated:(BOOL)animated completion:(void (^)(void))completion {
+	if (presentedViewController.navigationController) {
+		[self presentViewController:presentedViewController.navigationController animated:animated completion:completion];
 	}else {
-		[presentingViewController presentViewController:self animated:animated completion:completion];
+		[self presentViewController:presentedViewController animated:animated completion:completion];
 	}
 	return self;
 }

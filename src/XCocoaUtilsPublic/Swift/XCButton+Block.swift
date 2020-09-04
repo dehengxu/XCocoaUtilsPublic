@@ -11,9 +11,9 @@ import UIKit
 @objc public extension UIButton {
     
     fileprivate class BlockButton: UIButton {
-        var handleBlock: ((_ sender: Any)->Void)?
+        var handleBlock: ((_ sender: UIControl)->Void)?
         
-        @objc func _private_onClick(_ sender: Any) {
+        @objc func _private_onClick(_ sender: UIControl) {
             if let blk = self.handleBlock {
                 blk(self)
             }
@@ -35,7 +35,7 @@ import UIKit
         return btn
     }
     
-    @objc func setHandler(_ handler:((_ sender: Any)->Void)?) {
+    @objc func setHandler(_ handler:((_ sender: UIControl)->Void)?) {
         if let blkBtn = self as? BlockButton {
             blkBtn.handleBlock = handler
         }
