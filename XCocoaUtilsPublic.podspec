@@ -93,7 +93,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "src/XCocoaUtilsPublic/*.{h,m}"
+  s.source_files  = "src/XCocoaUtilsPublic/**/*.{h,m}"
 
   # Remove file from link list.
   s.exclude_files = "src/**/RegexKitLite.{h,m}"
@@ -122,7 +122,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-   s.frameworks = "UIKit"#, "AnotherFramework"
+   s.ios.frameworks = "UIKit"#, "AnotherFramework"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
