@@ -68,7 +68,7 @@
 
 // C common utils
 #if __has_include(<XCocoaUtilsPublic/CCommons.h>)
-#import <XCocoaUtilsPublic/CCommons.h>
+#import <XCocoaUtilsPublic/CCommon.h>
 #endif
 
 //! Project version number for XCocoaUtilsPublic_iOS.

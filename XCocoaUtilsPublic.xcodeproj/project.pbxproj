@@ -350,11 +350,11 @@
 			isa = PBXGroup;
 			children = (
 				7479BBF725021354001B498D /* Swift */,
-				74882E2324C0240B00490F4C /* CCommons */,
+				74882E2324C0240B00490F4C /* CCommon */,
 				24289C0623E2C054006EED9E /* compress */,
 				2426B59821E24C2900B9BA7E /* Logging */,
 				748BB40D21DC97BD0094B4CE /* Runtime */,
-				74C3561B21BEC467001B0C4C /* concurrency */,
+				74C3561B21BEC467001B0C4C /* Concurrency */,
 				74C3561121BEB676001B0C4C /* UIKit */,
 				74C3560F21BEB268001B0C4C /* macros */,
 				74C3560E21BEAAA0001B0C4C /* io */,
@@ -496,13 +496,13 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
-		74882E2324C0240B00490F4C /* CCommons */ = {
+		74882E2324C0240B00490F4C /* CCommon */ = {
 			isa = PBXGroup;
 			children = (
 				74882E2424C0245500490F4C /* CCommons.h */,
 				74882E2524C0245500490F4C /* CCommons.m */,
 			);
-			path = CCommons;
+			path = CCommon;
 			sourceTree = "<group>";
 		};
 		748BB40D21DC97BD0094B4CE /* Runtime */ = {
@@ -655,7 +655,7 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		74C3561B21BEC467001B0C4C /* concurrency */ = {
+		74C3561B21BEC467001B0C4C /* Concurrency */ = {
 			isa = PBXGroup;
 			children = (
 				243FD97D23C03256006EED9E /* XCUPConcurrency.h */,
@@ -666,7 +666,7 @@
 				742893D023F45A57006F2624 /* NXGCDTimer.h */,
 				742893D123F45A57006F2624 /* NXGCDTimer.m */,
 			);
-			path = concurrency;
+			path = Concurrency;
 			sourceTree = "<group>";
 		};
 		A2141594180CDF790067EBE8 = {

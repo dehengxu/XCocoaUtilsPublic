@@ -6,7 +6,7 @@
 //  Copyright © 2020 Deheng.Xu. All rights reserved.
 //
 
-#import "CCommons.h"
+#import "CCommon.h"
 
 NSString* getEnv(NSString* name) {
     const char* env = getenv([name cStringUsingEncoding:NSUTF8StringEncoding]);

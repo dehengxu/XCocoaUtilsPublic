@@ -35,6 +35,7 @@ Pod::Spec.new do |s|
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
   s.module_name = "XCocoaUtilsPublic"
+  s.module_map = "./src/XCocoaUtilsPublic/XCocoaUtilsPublic.modulemap"
   
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -112,7 +113,7 @@ Pod::Spec.new do |s|
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
-  # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
+   s.preserve_paths = "./src/XCocoaUtilsPublic/XCocoaUtilsPublic.modulemap"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -131,108 +132,111 @@ Pod::Spec.new do |s|
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.subspec 'All' do |sp|
-    sp.dependency 'XCocoaUtilsPublic/General'
-    sp.dependency 'XCocoaUtilsPublic/CCommons'
-    sp.dependency 'XCocoaUtilsPublic/macros'
-    sp.dependency 'XCocoaUtilsPublic/categories'
-    sp.dependency 'XCocoaUtilsPublic/http'
-    sp.dependency 'XCocoaUtilsPublic/UIKit'
-    sp.dependency 'XCocoaUtilsPublic/debug'
-    sp.dependency 'XCocoaUtilsPublic/io'
-    sp.dependency 'XCocoaUtilsPublic/benchmark'
-    sp.dependency 'XCocoaUtilsPublic/concurrency'
-    sp.dependency 'XCocoaUtilsPublic/runtime'
-    sp.dependency 'XCocoaUtilsPublic/logging'
-    sp.dependency 'XCocoaUtilsPublic/compress'
-    
+		sp.dependency 'XCocoaUtilsPublic/ObjC'
     sp.dependency 'XCocoaUtilsPublic/Swift'
   end
-  
+
+	s.subspec 'ObjC' do |sp|
+		sp.dependency 'XCococUtilsPublic/Base'
+
+		sp.dependency 'XCocoaUtilsPublic/HTTP'
+		sp.dependency 'XCocoaUtilsPublic/UIKit'
+		sp.dependency 'XCocoaUtilsPublic/Debug'
+		sp.dependency 'XCocoaUtilsPublic/IO'
+		sp.dependency 'XCocoaUtilsPublic/Benchmark'
+		sp.dependency 'XCocoaUtilsPublic/Concurrency'
+		sp.dependency 'XCocoaUtilsPublic/Runtime'
+		sp.dependency 'XCocoaUtilsPublic/Logging'
+		sp.dependency 'XCocoaUtilsPublic/Compress'
+	end
+
+	s.subspec 'Swift' do |sp|
+		sp.source_files = "src/XCocoaUtilsPublic/Swift/*.swift"
+		#sp.preserve_paths = "src/XCocoaUtilsPublic/Swift"
+	end
+
+	s.subspec 'Base' do |sp|
+		sp.dependency 'XCocoaUtilsPublic/CCommon'
+		sp.dependency 'XCocoaUtilsPublic/Macros'
+		sp.dependency 'XCocoaUtilsPublic/Categories'
+	end
+
   # General module | 常用模块组
   s.subspec 'General' do |sp|
-    sp.source_files = "src/XCocoaUtilsPublic/*.h"
-    sp.preserve_paths = "src/XCocoaUtilsPublic"
-    
-    sp.dependency 'XCocoaUtilsPublic/categories'
-    sp.dependency 'XCocoaUtilsPublic/http'
-    sp.dependency 'XCocoaUtilsPublic/logging'
-    sp.dependency 'XCocoaUtilsPublic/compress'
-    sp.dependency 'XCocoaUtilsPublic/CCommons'
+		sp.dependency 'XCocoaUtilsPublic/Base'
+    sp.dependency 'XCocoaUtilsPublic/HTTP'
+    sp.dependency 'XCocoaUtilsPublic/Logging'
+    sp.dependency 'XCocoaUtilsPublic/Compress'
     sp.dependency 'XCocoaUtilsPublic/Swift'
-  end
-  
-  s.subspec 'CCommons' do |sp|
-    sp.source_files = "src/XCocoaUtilsPublic/CCommons/*.#{source_extensions}"
   end
   
   # Basically module | 基础模块
-  s.subspec 'macros' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/macros/*.#{source_extensions}"
-      sp.preserve_paths = "src/XCocoaUtilsPublic/macros"
+	s.subspec 'CCommon' do |sp|
+		sp.source_files = "src/XCocoaUtilsPublic/CCommon/*.#{source_extensions}"
+	end
+
+  s.subspec 'Macros' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/Macros/*.#{source_extensions}"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/Macros"
   end
 
-  s.subspec 'categories' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/categories/*.#{source_extensions}"
-      sp.dependency "XCocoaUtilsPublic/macros"
-      sp.preserve_paths = "src/XCocoaUtilsPublic/categories"
+  s.subspec 'Categories' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/Categories/*.#{source_extensions}"
+      sp.dependency "XCocoaUtilsPublic/Macros"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/Categories"
   end
 
   # Application module | 应用模块
-  s.subspec 'http' do |sp|
-    sp.source_files = "src/XCocoaUtilsPublic/http/*.#{source_extensions}"
-    sp.dependency "XCocoaUtilsPublic/categories"
-    sp.preserve_paths = "src/XCocoaUtilsPublic/http"
+  s.subspec 'HTTP' do |sp|
+    sp.source_files = "src/XCocoaUtilsPublic/HTTP/*.#{source_extensions}"
+    sp.dependency "XCocoaUtilsPublic/Categories"
+    sp.preserve_paths = "src/XCocoaUtilsPublic/HTTP"
   end
   
   s.subspec 'UIKit' do |sp|
-    sp.platform = :ios, "8.0"
+    sp.platform = :ios, "9.0"
     sp.source_files = "src/XCocoaUtilsPublic/UIKit/*.#{source_extensions}"
-    sp.dependency "XCocoaUtilsPublic/categories"
+    sp.dependency "XCocoaUtilsPublic/Categories"
     sp.preserve_paths = "src/XCocoaUtilsPublic/UIKit"
   end
   
-  s.subspec 'debug' do |sp|
-    sp.source_files = "src/XCocoaUtilsPublic/debug/*.#{source_extensions}"
-    sp.preserve_paths = "src/XCocoaUtilsPublic/debug"
+  s.subspec 'Debug' do |sp|
+    sp.source_files = "src/XCocoaUtilsPublic/Debug/*.#{source_extensions}"
+    sp.preserve_paths = "src/XCocoaUtilsPublic/Debug"
   end
   
   # Independent module | 独立模块
   
-  s.subspec 'io' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/io/*.#{source_extensions}"
-      sp.preserve_paths = "src/XCocoaUtilsPublic/io"
-      sp.dependency "XCocoaUtilsPublic/debug"
+  s.subspec 'IO' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/IO/*.#{source_extensions}"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/IO"
+      sp.dependency "XCocoaUtilsPublic/Debug"
   end
   
-  s.subspec 'benchmark' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/benchmark/*.#{source_extensions}"
-      sp.preserve_paths = "src/XCocoaUtilsPublic/benchmark"
+  s.subspec 'Benchmark' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/Benchmark/*.#{source_extensions}"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/Benchmark"
   end
   
-  s.subspec 'concurrency' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/concurrency/*.#{source_extensions}"
-      sp.preserve_paths = "src/XCocoaUtilsPublic/concurrency"
+  s.subspec 'Concurrency' do |sp|
+      sp.source_files = "src/XCocoaUtilsPublic/Concurrency/*.#{source_extensions}"
+      sp.preserve_paths = "src/XCocoaUtilsPublic/Concurrency"
   end
 
-  s.subspec 'runtime' do |sp|
+  s.subspec 'Runtime' do |sp|
       sp.source_files = "src/XCocoaUtilsPublic/Runtime/*.#{source_extensions}"
       sp.preserve_paths = "src/XCocoaUtilsPublic/Runtime"
   end
 
-  s.subspec 'logging' do |sp|
+  s.subspec 'Logging' do |sp|
 	  sp.source_files = "src/XCocoaUtilsPublic/Logging/*.#{source_extensions}"
     sp.preserve_paths = "src/XCocoaUtilsPublic/Logging"
   end
 
-  s.subspec 'compress' do |sp|
-    sp.source_files = "src/XCocoaUtilsPublic/compress/*.#{source_extensions}"
+  s.subspec 'Compress' do |sp|
+    sp.source_files = "src/XCocoaUtilsPublic/Compress/*.#{source_extensions}"
     sp.libraries = "z"
-    sp.preserve_paths = "src/XCocoaUtilsPublic/compress"
-  end
-  
-  s.subspec 'Swift' do |sp|
-    sp.source_files = "src/XCocoaUtilsPublic/Swift/*.#{source_extensions}"
-    sp.preserve_paths = "src/XCocoaUtilsPublic/Swift"
+    sp.preserve_paths = "src/XCocoaUtilsPublic/Compress"
   end
 
   s.default_subspec = "General"

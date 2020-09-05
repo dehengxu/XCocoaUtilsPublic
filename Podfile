@@ -3,19 +3,22 @@ project 'XCocoaUtilsPublic.xcodeproj'
 # Uncomment this line to define a global platform for your project
 # platform :ios, '8.0'
 
+install! 'cocoapods', :preserve_pod_file_structure => true
+
 def useLib
     pod 'XCocoaUtilsPublic', :path => './' \
     , :subspecs => [
-    'General',
-    'http',
-    'logging',
-    'debug',
-    'io',
-    'concurrency',
-    'benchmark',
-    'compress',
-    'CCommons',
-		'macros'
+		'All'
+#    'General',
+#    'http',
+#    'Logging',
+#    'debug',
+#    'io',
+#    'Concurrency',
+#    'benchmark',
+#    'compress',
+#    'CCommon',
+#		'macros'
     ]
 end
 
@@ -35,9 +38,9 @@ target 'DemoMacOSCmd' do
   pod 'XCocoaUtilsPublic', :path => './' \
   , :subspecs => [
   'General',
-  'concurrency',
-  'compress',
-  'macros', 'io', 'debug', 'logging', 'benchmark', 'http'
+  'Concurrency',
+  'Compress',
+  'Macros', 'IO', 'Debug', 'Logging', 'Benchmark', 'HTTP'
   ]
 end
 
