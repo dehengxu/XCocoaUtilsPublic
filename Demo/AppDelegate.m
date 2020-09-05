@@ -7,10 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
 #import "Logs.h"
-#import "NXTimerTarget.h"
-
 #import <XCocoaUtilsPublic/XCocoaUtilsPublic.h>
 #import <objc/runtime.h>
 #import <XCocoaUtilsPublic/NSData+XCUPGzip.h>
@@ -25,8 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    //DisableLogger(@"app");
-    //DisableLogger(@"mainvc");
+    EnableLogger(@"app");
+    EnableLogger(@"mainvc");
     //DisableLogger(@"app");
 
 //    [log_app setLoggingEnabled:1];
@@ -40,55 +37,18 @@
     //NSLog(@"ver: %f", XCocoaUtilsPublic_iOSVersionNumber);
     //NSLog(@"ver: %s", XCocoaUtilsPublic_iOSVersionString);
     
-//    self.timer = [XCUPSafeTimer repeatTimerWithInterval:1.0 duration:4.0 block:^(NSTimer * _Nonnull t, BOOL reachEnd) {
-//        NSLog(@"t: %@", t);
-//        if (reachEnd) {
-//            self.timer = nil;
-//        }
-//    }];
-//    [self.timer startTimer];
-//    [self.timer startTimer];
-//    [self.timer cancelTimer];
-    
-//    [XCUPSafeTimer repeatTimerWithInterval:1.0 duration:4.0 block:^(NSTimer * _Nonnull t, BOOL reachEnd) {
-//        NSLog(@"XCUPSafeTimer t: %@", t);
-//        if (reachEnd) {
-//            NSLog(@"XCUPSafeTimer reach end");
-//        }
-//    }];
-//
-//    [XCUPSafeTimer cancelAll];
-    
-    NXTimerTarget *target = [NXTimerTarget new];
-    NSTimer *nstimer =
-    [NSTimer timerWithTimeInterval:2.0 target:target selector:@selector(handleTimer) userInfo:nil repeats:false];
-    [[NSRunLoop currentRunLoop] addTimer:nstimer forMode:NSRunLoopCommonModes];
-//    NSLog(@"before fire");
-//    while(true) {
-//
-//        [nstimer fire];
-//        [[NSRunLoop currentRunLoop] runMode:NSRunLoopCommonModes beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
-//    }
-//    NSLog(@"after fire");
-    
-    //[[NSRunLoop currentRunLoop] addTimer:nstimer forMode:NSRunLoopCommonModes];
-    
-    
-//    [NXGCDTimer repeatTimerWithInterval:0.3 duration:2.0 onQueue:dispatch_get_main_queue() handleBlock:^(NXGCDTimer * _Nonnull timer, BOOL reachEnd) {
-//        NSLog(@"timer tik tok");
-//        if (reachEnd) {
-//            NSLog(@"timer reach end");
-//        }
-//    }];
-    
+    self.timer = [XCUPSafeTimer repeatTimerWithInterval:1.0 duration:4.0 block:^(NSTimer * _Nonnull t, BOOL end) {
+        NSLog(@"t: %@", t);
+        self.timer = nil;
+    }];
 
     NSLog(@"doc:%@", FileIOHelper.documentPath);
-//    FileIOHelper *io = [[FileIOHelper alloc] initWithRoot:[FileIOHelper.documentPath stringByAppendingPathComponent:@"data/imgs"] ];
-//    NSLog(@"io path :%@", io.path);
-//    NSString *uuid = [[NSUUID UUID] UUIDString];
-//    [io saveData:[@"ss" dataUsingEncoding:NSUTF8StringEncoding] forSubPath:[NSString stringWithFormat:@"ipicker/local/%@", uuid]];
-//    NSLog(@"root: %@", io.path);
-//    [io cleanAll];
+    FileIOHelper *io = [[FileIOHelper alloc] initWithRoot:[FileIOHelper.documentPath stringByAppendingPathComponent:@"data/imgs"] ];
+    NSLog(@"io path :%@", io.path);
+    NSString *uuid = [[NSUUID UUID] UUIDString];
+    [io saveData:[@"ss" dataUsingEncoding:NSUTF8StringEncoding] forSubPath:[NSString stringWithFormat:@"ipicker/local/%@", uuid]];
+    NSLog(@"root: %@", io.path);
+    [io cleanAll];
 
     NSData *dt = nil;
 
@@ -104,28 +64,29 @@
 //        //ratio = 1.0;
 //    }
 
-    //dt =
+    dt =
     //[@"HeyJude." dataUsingEncoding:NSUTF8StringEncoding];
-    //[NSData dataWithContentsOfFile:[NSBundle.mainBundle pathForResource:@"dat" ofType:@"txt"]];
-//    NSLog(@"dt: %lu", dt.length);
-//    NSError *err = nil;
-//    dt = [dt gzipDataError:&err];
-//    if (err) {
-//        NSLog(@"err: %@", err);
-//    }else {
-//        NSLog(@"dt: %lu", dt.length);
-//    }
-//    NSLog(@"dt gziped:\n%@", [NSString stringWithData:dt usingEncoding:NSUTF8StringEncoding]);
-//
-//    err = nil;
-//    dt = [dt ungzipDataError:&err];
-//    if (err) {
-//        NSLog(@"err: %@", err);
-//    }else {
-//        NSLog(@"dt: %lu", dt.length);
-//    }
-//
-//    NSLog(@"dt decompressed:\n%@", [NSString stringWithData:dt usingEncoding:NSUTF8StringEncoding]);
+    [NSData dataWithContentsOfFile:[NSBundle.mainBundle pathForResource:@"dat" ofType:@"txt"]];
+
+    NSLog(@"dt: %lu", dt.length);
+    NSError *err = nil;
+    dt = [dt xcup_gzipDataError:&err];
+    if (err) {
+        NSLog(@"err: %@", err);
+    }else {
+        NSLog(@"dt: %lu", dt.length);
+    }
+    NSLog(@"dt gziped:\n%@", [NSString stringWithData:dt usingEncoding:NSUTF8StringEncoding]);
+
+    err = nil;
+    dt = [dt xcup_ungzipDataError:&err];
+    if (err) {
+        NSLog(@"err: %@", err);
+    }else {
+        NSLog(@"dt: %lu", dt.length);
+    }
+
+    NSLog(@"dt decompressed:\n%@", [NSString stringWithData:dt usingEncoding:NSUTF8StringEncoding]);
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_10_0
     os_log_t log = OS_LOG_DEFAULT;

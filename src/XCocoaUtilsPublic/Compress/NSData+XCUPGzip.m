@@ -13,7 +13,7 @@
 
 @implementation NSData (XCUPGzip)
 
-- (NSData *)gzipDataError:(NSError *__autoreleasing  _Nullable *)error
+- (NSData *)xcup_gzipDataError:(NSError *__autoreleasing  _Nullable *)error
 {
     if (self.length == 0) return nil;
     NSUInteger halfLength = (self.length >> 1);
@@ -61,7 +61,7 @@
     return outputData;
 }
 
-- (NSData *)ungzipDataError:(NSError *__autoreleasing  _Nullable *)error
+- (NSData *)xcup_ungzipDataError:(NSError *__autoreleasing  _Nullable *)error
 {
     if (self.length == 0) return nil;
 
