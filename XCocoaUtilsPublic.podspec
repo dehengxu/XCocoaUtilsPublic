@@ -6,8 +6,10 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
+source_extensions = "{h,m,mm,c,hpp,cpp,cxx,swift,md}"
+included_files = "*.#{source_extensions}"
+
 Pod::Spec.new do |s|
-	source_extensions = "{h,m,mm,c,hpp,cpp,cxx,swift}"
   s.name         = "XCocoaUtilsPublic"
   s.version      = "0.4.6"
   s.summary      = "Utils for iOS development"
@@ -49,22 +51,11 @@ Pod::Spec.new do |s|
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.subspec 'All' do |sp|
-    sp.exclude_files = "src/**/RegexKitLite.{h,m}"
-    sp.source_files = "src/XCocoaUtilsPublic/**/*.#{source_extensions}"
 		sp.dependency 'XCocoaUtilsPublic/ObjC'
     sp.dependency 'XCocoaUtilsPublic/Swift'
   end
 
-	s.subspec 'Basement' do |sp|
-    sp.exclude_files = "src/**/RegexKitLite.{h,m}"
-    sp.source_files = "src/XCocoaUtilsPublic/**/*.#{source_extensions}"
-    sp.dependency 'XCocoaUtilsPublic/CCommon'
-    sp.dependency 'XCocoaUtilsPublic/Macros'
-    sp.dependency 'XCocoaUtilsPublic/Categories'
-  end
-
   s.subspec 'ObjC' do |sp|
-		# sp.dependency 'XCococUtilsPublic/Basement'
 
 		sp.dependency 'XCocoaUtilsPublic/HTTP'
 		sp.dependency 'XCocoaUtilsPublic/UIKit'
@@ -78,17 +69,19 @@ Pod::Spec.new do |s|
 	end
 
 	s.subspec 'Swift' do |sp|
-		sp.source_files = "src/XCocoaUtilsPublic/Swift/*.#{source_extensions}"
-		#sp.preserve_paths = "src/XCocoaUtilsPublic/Swift"
+		sp.source_files = "src/XCocoaUtilsPublic/Swift/**/#{included_files}"
+    # sp.exclude_files = "src/XCocoaUtilsPublic/Swift/**/*.md"
+		# sp.preserve_paths = "src/XCocoaUtilsPublic/Swift/docs/#{included_files}"
 	end
 
   # General module | 常用模块组
   s.subspec 'General' do |sp|
-		# sp.dependency 'XCocoaUtilsPublic/Basement'
     sp.dependency 'XCocoaUtilsPublic/HTTP'
     sp.dependency 'XCocoaUtilsPublic/Logging'
     sp.dependency 'XCocoaUtilsPublic/Compress'
-    sp.dependency 'XCocoaUtilsPublic/Swift'
+    sp.dependency 'XCocoaUtilsPublic/Debug'
+    sp.dependency 'XCocoaUtilsPublic/Benchmark'
+    sp.dependency 'XCocoaUtilsPublic/Logging'
   end
   
   # Basically module | 基础模块
@@ -102,7 +95,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Categories' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/Categories/*.#{source_extensions}"
+      sp.source_files = "src/XCocoaUtilsPublic/Categories/**/*.#{source_extensions}"
       sp.dependency "XCocoaUtilsPublic/Macros"
       #sp.preserve_paths = "src/XCocoaUtilsPublic/Categories"
   end
@@ -116,7 +109,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'UIKit' do |sp|
     sp.platform = :ios, "9.0"
-    sp.source_files = "src/XCocoaUtilsPublic/UIKit/*.#{source_extensions}"
+    sp.source_files = "src/XCocoaUtilsPublic/UIKit/**/*.#{source_extensions}"
     sp.dependency "XCocoaUtilsPublic/Categories"
     #sp.preserve_paths = "src/XCocoaUtilsPublic/UIKit"
   end
@@ -135,8 +128,7 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Benchmark' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/Benchmark/*.#{source_extensions}"
-      #sp.preserve_paths = "src/XCocoaUtilsPublic/Benchmark"
+      sp.source_files = "src/XCocoaUtilsPublic/Benchmark/**/#{included_files}"
   end
   
   s.subspec 'Concurrency' do |sp|

@@ -28,6 +28,9 @@ while(0)
 + (instancetype)viewControllerWithNibName:(NSString *)nibName bundle:(NSBundle *)nibBundleOrNil;
 
 - (BOOL)isSupportInteractivePopGestureRecognizer;
+
+- (UINavigationController*)xc_navigationController;
+
 - (instancetype)xc_present:(UIViewController*)presentedViewController animated:(BOOL)animated needNavigation:(BOOL)needed completion:(void(^)(void))completion;
 - (instancetype)xc_present:(UIViewController*)presentedViewController animated:(BOOL)animated completion:(void(^)(void))completion;
 - (instancetype)xc_dismissViewController:(BOOL)animated completion:(void(^)(void))completion;

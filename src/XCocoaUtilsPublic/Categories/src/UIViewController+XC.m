@@ -44,7 +44,15 @@
     return ([self isKindOfClass:[UINavigationController class]] && [self respondsToSelector:@selector(interactivePopGestureRecognizer)]);
 }
 
-//- (instancetype)xc_present:(UIViewController *)presentingViewController animated:(BOOL)animated needNavigation:(BOOL)needed completion:(void (^)(void))completion
+- (UINavigationController *)xc_navigationController {
+	if (self.navigationController) {
+		return self.navigationController;
+	}else {
+		UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:self];
+		return nav;
+	}
+}
+
 - (instancetype)xc_present:(UIViewController *)presentedViewController animated:(BOOL)animated needNavigation:(BOOL)needed completion:(void (^)(void))completion {
 	if (self.navigationController) {
 		[self presentViewController:self.navigationController animated:animated completion:completion];
