@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSData (XCUPGzip)
 
-- (NSData *)xcup_gzipDataError:(NSError **)error;
-- (NSData *)xcup_ungzipDataError:(NSError **)error;
+- (NSData *)gzipDataError:(NSError **)error;
+- (NSData *)ungzipDataError:(NSError **)error;
 
 @end
 
