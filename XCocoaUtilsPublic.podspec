@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
   end
 
 	s.subspec 'ObjC' do |sp|
-		sp.dependency 'XCococUtilsPublic/Base'
+		sp.dependency 'XCococUtilsPublic/Basement'
 
 		sp.dependency 'XCocoaUtilsPublic/HTTP'
 		sp.dependency 'XCocoaUtilsPublic/UIKit'
@@ -72,7 +72,7 @@ Pod::Spec.new do |s|
 		#sp.preserve_paths = "src/XCocoaUtilsPublic/Swift"
 	end
 
-	s.subspec 'Base' do |sp|
+	s.subspec 'Basement' do |sp|
 		sp.dependency 'XCocoaUtilsPublic/CCommon'
 		sp.dependency 'XCocoaUtilsPublic/Macros'
 		sp.dependency 'XCocoaUtilsPublic/Categories'
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
 
   # General module | 常用模块组
   s.subspec 'General' do |sp|
-		sp.dependency 'XCocoaUtilsPublic/Base'
+		sp.dependency 'XCocoaUtilsPublic/Basement'
     sp.dependency 'XCocoaUtilsPublic/HTTP'
     sp.dependency 'XCocoaUtilsPublic/Logging'
     sp.dependency 'XCocoaUtilsPublic/Compress'
