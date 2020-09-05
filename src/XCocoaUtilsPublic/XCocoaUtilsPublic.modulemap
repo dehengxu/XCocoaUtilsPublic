@@ -1,7 +1,6 @@
-module XCocoaUtilsPublic {
-	umbrella header "XCocoaUtilsPublic.h"
-	header "Macros/CF_macros.h"
-
-	export *
-	module * { export * }
-}
+//module XCocoaUtilsPublic {
+////	umbrella header "XCocoaUtilsPublic.h"
+////	header "Macros/CF_macros.h"
+//
+////	export *
+//}

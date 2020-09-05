@@ -34,8 +34,8 @@ Pod::Spec.new do |s|
   # s.homepage     = "git@bitbucket.org:xudeheng/XCocoaUtilsPublic"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
-  s.module_name = "XCocoaUtilsPublic"
-  s.module_map = "./src/XCocoaUtilsPublic/XCocoaUtilsPublic.modulemap"
+  # s.module_name = "XCocoaUtilsPublic"
+  # s.module_map = "./src/XCocoaUtilsPublic/XCocoaUtilsPublic.modulemap"
   
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -87,12 +87,6 @@ Pod::Spec.new do |s|
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any h, m, mm, c & cpp files. For header
-  #  files it will include any header in the folder.
-  #  Not including the public_header_files will make all headers public.
-  #
 
   s.source_files  = "src/XCocoaUtilsPublic/**/*.{h,m}"
 
