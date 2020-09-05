@@ -7,21 +7,10 @@
 #
 
 Pod::Spec.new do |s|
-
-  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  These will help people to find your library, and whilst it
-  #  can feel like a chore to fill in it's definitely to your advantage. The
-  #  summary should be tweet-length, and the description more in depth.
-  #
-
 	source_extensions = "{h,m,mm,c,hpp,cpp,cxx,swift}"
-
   s.name         = "XCocoaUtilsPublic"
-
   s.version      = "0.4.6"
   s.summary      = "Utils for iOS development"
-
   s.description  = <<-DESC
                    XCocoaUtilsPublic is a utilities set for iOS development.
 
@@ -31,97 +20,31 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://gitee.com/dehengxu/XCocoaUtilsPublic"
-  # s.homepage     = "git@bitbucket.org:xudeheng/XCocoaUtilsPublic"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
-
   # s.module_name = "XCocoaUtilsPublic"
   # s.module_map = "./src/XCocoaUtilsPublic/XCocoaUtilsPublic.modulemap"
   
-  # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Licensing your code is important. See http://choosealicense.com for more info.
-  #  CocoaPods will detect a license file if there is a named LICENSE*
-  #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
-  #
-
   s.license      = "MIT"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-
-
-  # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the authors of the library, with email addresses. Email addresses
-  #  of the authors are extracted from the SCM log. E.g. $ git log. CocoaPods also
-  #  accepts just a name if you'd rather not provide an email address.
-  #
-  #  Specify a social_media_url where others can refer to, for example a twitter
-  #  profile URL.
-  #
-
   s.author             = { "DehengXu" => "dehengxu@outlook.com" }
-  # Or just: s.author    = "DehengXu"
   # s.authors            = { "DehengXu" => "dehengxu@outlook.com" }
   #s.social_media_url   = "http://twitter.com/dehengxu"
-
-  # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If this Pod runs only on iOS or OS X, then specify the platform and
-  #  the deployment target. You can optionally include the target after the platform.
-  #
-
 #  s.platform     = :ios
 #  s.platform     = :ios, "8.0"
-
   #  When using multiple platforms
    s.ios.deployment_target = "8.0"
    s.osx.deployment_target = "10.13"
-
-
-  # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the location from where the source should be retrieved.
-  #  Supports git, hg, bzr, svn and HTTP.
-  #
-
   s.source       = { :git => "https://gitee.com/dehengxu/XCocoaUtilsPublic.git", :tag => s.version }
-
-
-  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-
   s.source_files  = "src/XCocoaUtilsPublic/**/*.{h,m}"
-
   # Remove file from link list.
   s.exclude_files = "src/**/RegexKitLite.{h,m}"
-
-  s.public_header_files = "src/XCocoaUtilsPublic/*.h"
-
-
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
-
+  #s.public_header_files = "src/XCocoaUtilsPublic/*.h"
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
    s.preserve_paths = "./src/XCocoaUtilsPublic/XCocoaUtilsPublic.modulemap"
-
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
   # s.framework  = "SomeFramework"
    s.ios.frameworks = "UIKit"#, "AnotherFramework"
-
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
-
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
