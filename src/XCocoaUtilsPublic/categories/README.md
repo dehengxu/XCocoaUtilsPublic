@@ -1,4 +1,0 @@
-#  Categories
-
-> General categories
-
