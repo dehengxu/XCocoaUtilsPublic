@@ -156,7 +156,7 @@ Pod::Spec.new do |s|
     sp.preserve_paths = "src/XCocoaUtilsPublic/Compress"
   end
 
-  s.default_subspec = "General"
+  # s.default_subspec = "General"
   s.requires_arc = true
   s.swift_version = "5.0"
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
