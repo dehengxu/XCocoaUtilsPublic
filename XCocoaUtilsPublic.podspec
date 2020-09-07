@@ -86,11 +86,11 @@ Pod::Spec.new do |s|
   
   # Basically module | 基础模块
 	s.subspec 'CCommon' do |sp|
-		sp.source_files = "src/XCocoaUtilsPublic/CCommon/*.#{source_extensions}"
+		sp.source_files = "src/XCocoaUtilsPublic/CCommon/**/*.#{source_extensions}"
 	end
 
   s.subspec 'Macros' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/Macros/*.#{source_extensions}"
+      sp.source_files = "src/XCocoaUtilsPublic/Macros/**/*.#{source_extensions}"
       #sp.preserve_paths = "src/XCocoaUtilsPublic/Macros"
   end
 
@@ -102,7 +102,7 @@ Pod::Spec.new do |s|
 
   # Application module | 应用模块
   s.subspec 'HTTP' do |sp|
-    sp.source_files = "src/XCocoaUtilsPublic/HTTP/*.#{source_extensions}"
+    sp.source_files = "src/XCocoaUtilsPublic/HTTP/**/*.#{source_extensions}"
     sp.dependency "XCocoaUtilsPublic/Categories"
     #sp.preserve_paths = "src/XCocoaUtilsPublic/HTTP"
   end
@@ -115,14 +115,14 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Debug' do |sp|
-    sp.source_files = "src/XCocoaUtilsPublic/Debug/*.#{source_extensions}"
+    sp.source_files = "src/XCocoaUtilsPublic/Debug/**/*.#{source_extensions}"
     #sp.preserve_paths = "src/XCocoaUtilsPublic/Debug"
   end
   
   # Independent module | 独立模块
   
   s.subspec 'IO' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/IO/*.#{source_extensions}"
+      sp.source_files = "src/XCocoaUtilsPublic/IO/**/*.#{source_extensions}"
       sp.preserve_paths = "src/XCocoaUtilsPublic/IO"
       #sp.dependency "XCocoaUtilsPublic/Debug"
   end
@@ -132,22 +132,22 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Concurrency' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/Concurrency/*.#{source_extensions}"
+      sp.source_files = "src/XCocoaUtilsPublic/Concurrency/**/*.#{source_extensions}"
       #sp.preserve_paths = "src/XCocoaUtilsPublic/Concurrency"
   end
 
   s.subspec 'Runtime' do |sp|
-      sp.source_files = "src/XCocoaUtilsPublic/Runtime/*.#{source_extensions}"
+      sp.source_files = "src/XCocoaUtilsPublic/Runtime/**/*.#{source_extensions}"
       #sp.preserve_paths = "src/XCocoaUtilsPublic/Runtime"
   end
 
   s.subspec 'Logging' do |sp|
-	  sp.source_files = "src/XCocoaUtilsPublic/Logging/*.#{source_extensions}"
+	  sp.source_files = "src/XCocoaUtilsPublic/Logging/**/*.#{source_extensions}"
     #sp.preserve_paths = "src/XCocoaUtilsPublic/Logging"
   end
 
   s.subspec 'Compress' do |sp|
-    sp.source_files = "src/XCocoaUtilsPublic/Compress/*.#{source_extensions}"
+    sp.source_files = "src/XCocoaUtilsPublic/Compress/**/*.#{source_extensions}"
     sp.libraries = "z"
     #sp.preserve_paths = "src/XCocoaUtilsPublic/Compress"
   end

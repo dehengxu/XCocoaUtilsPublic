@@ -7,7 +7,7 @@
 //
 
 #import "NSTimer+XCUP.h"
-#import "../macros/memory_macros.h"
+#import "../../Macros/src/memory_macros.h"
 
 @implementation NSTimer (XCUP)
 

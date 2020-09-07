@@ -8,7 +8,7 @@
 
 #import "UIAlertView+XCUP.h"
 
-#import "../macros/memory_macros.h"
+#import "../../Macros/src/memory_macros.h"
 
 #if TARGET_OS_IPHONE
 

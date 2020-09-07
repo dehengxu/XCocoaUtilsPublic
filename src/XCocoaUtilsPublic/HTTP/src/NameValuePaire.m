@@ -7,7 +7,7 @@
 //
 
 #import "NameValuePaire.h"
-#import "../macros/memory_macros.h"
+#import "../../Macros/src/memory_macros.h"
 #import "NSString+XCUP.h"
 #import "NSObject+XCUP.h"
 
