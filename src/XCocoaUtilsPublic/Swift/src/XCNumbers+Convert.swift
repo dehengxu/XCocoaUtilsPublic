@@ -9,7 +9,7 @@ import Foundation
 import CoreGraphics
 
 public extension Float {
-	var xc_CGFloat: CGFloat {
+	var CGFloat: CGFloat {
 		get {
 			return CoreGraphics.CGFloat(self)
 		}
@@ -17,7 +17,7 @@ public extension Float {
 }
 
 public extension Double {
-	var xc_CGFloat: CGFloat {
+	var CGFloat: CGFloat {
 		get {
 			return CoreGraphics.CGFloat(self)
 		}
@@ -26,13 +26,13 @@ public extension Double {
 
 public extension CGFloat {
 
-	var xc_float: Float {
+	var Float: Float {
 		get {
 			return Swift.Float(self)
 		}
 	}
 
-	var xc_double: Double {
+	var Double: Double {
 		get {
 			return Swift.Double(self)
 		}
