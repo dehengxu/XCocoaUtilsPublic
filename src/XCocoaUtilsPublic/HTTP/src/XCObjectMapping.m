@@ -126,7 +126,9 @@ NSString *const XCObjectMappingJSONFormatException = @"XCObjectMapping: JSON con
         return nil;
     }
     
-    return [NSString stringWithCString:substr encoding:NSUTF8StringEncoding];
+    NSString* ret = [NSString stringWithCString:substr encoding:NSUTF8StringEncoding];
+	free(substr);
+	return ret;
 }
 
 - (NSDictionary *)propertiesMapping
