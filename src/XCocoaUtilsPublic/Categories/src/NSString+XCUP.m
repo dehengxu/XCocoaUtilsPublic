@@ -78,16 +78,6 @@ __unused static NSString * const unreserved = @"abcdefghijklmnopqrstuvwxyzABCDEF
  */
 __unused static NSString * const reserved = @":/?#[]@!$&'()*+,;=";
 
-extern inline NSString* NSStringFromBool(BOOL bValue)
-{
-    return (NSString *)(bValue ? @"YES" : @"NO");
-}
-
-extern inline const char *CStringFromNSString(NSString *string)
-{
-    return [string cStringUsingEncoding:NSUTF8StringEncoding];
-}
-
 @implementation NSString (XCUP)
 
 - (NSString*)md5Digest

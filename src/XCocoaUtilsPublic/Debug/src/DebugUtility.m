@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 Nicholas.Xu. All rights reserved.
 //
 
-#import "NSString+XCUP.h"
+#import "XCUFoundation.h"
 #import "DebugUtility.h"
 #import "memory_macros.h"
 #if __has_include("RegexKitLite.h")
@@ -87,7 +87,7 @@ NSMutableString * tabString = nil;
     UIView * testView = nil;
     for (int i = 0; i < [[view subviews] count]; i++) {
         testView = [[view subviews] objectAtIndex:i];
-        NSLog(@"%@:%@ %@ %@", tabString, [testView class], NSStringFromCGRect(testView.frame), NSStringFromBool(testView.clipsToBounds));
+        NSLog(@"%@:%@ %@ %@", tabString, [testView class], NSStringFromCGRect(testView.frame), xcu_NSStringFromBool(testView.clipsToBounds));
         [self travelSubviews:testView];
     }
     level--;
