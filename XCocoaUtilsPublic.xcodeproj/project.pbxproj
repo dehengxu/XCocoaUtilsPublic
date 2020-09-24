@@ -235,6 +235,9 @@
 		74C3561521BEBA08001B0C4C /* CF_macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CF_macros.h; sourceTree = "<group>"; };
 		74C3561621BEC458001B0C4C /* XOperationTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XOperationTemplate.m; sourceTree = "<group>"; };
 		74C3561721BEC458001B0C4C /* XOperationTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XOperationTemplate.h; sourceTree = "<group>"; };
+		74D4C90B251C7971000AD6FD /* foundation_readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = foundation_readme.md; sourceTree = "<group>"; };
+		74D4C90D251C7971000AD6FD /* XCUFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCUFoundation.h; sourceTree = "<group>"; };
+		74D4C90E251C7971000AD6FD /* XCUFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCUFoundation.m; sourceTree = "<group>"; };
 		74E15A0B1B9542CC00E522A3 /* XCocoaUtilsPublic.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = XCocoaUtilsPublic.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A21415A0180CDF790067EBE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A21415AE180CDF790067EBE8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -349,6 +352,7 @@
 		74419E1118448DD000E28DD4 /* XCocoaUtilsPublic */ = {
 			isa = PBXGroup;
 			children = (
+				74D4C909251C7971000AD6FD /* Foundation */,
 				7479BBF725021354001B498D /* Swift */,
 				74882E2324C0240B00490F4C /* CCommon */,
 				24289C0623E2C054006EED9E /* compress */,
@@ -667,6 +671,32 @@
 				742893D123F45A57006F2624 /* NXGCDTimer.m */,
 			);
 			path = Concurrency;
+			sourceTree = "<group>";
+		};
+		74D4C909251C7971000AD6FD /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				74D4C90A251C7971000AD6FD /* docs */,
+				74D4C90C251C7971000AD6FD /* src */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		74D4C90A251C7971000AD6FD /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				74D4C90B251C7971000AD6FD /* foundation_readme.md */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		74D4C90C251C7971000AD6FD /* src */ = {
+			isa = PBXGroup;
+			children = (
+				74D4C90D251C7971000AD6FD /* XCUFoundation.h */,
+				74D4C90E251C7971000AD6FD /* XCUFoundation.m */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		A2141594180CDF790067EBE8 = {
