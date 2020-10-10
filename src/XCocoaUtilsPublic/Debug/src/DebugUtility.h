@@ -14,6 +14,8 @@
 
 #endif
 
+extern void _objc_autoreleasePoolPrint(void);
+
 /// Check key if null and return immediately
 #define IsNullAndReturn(key) do { NSAssert(([key isKindOfClass:NSString.class] && key.length > 0) || key, @" "#key" is nil.");\
 if (!(([key isKindOfClass:NSString.class] && key.length > 0) || key)) { return ; }\
