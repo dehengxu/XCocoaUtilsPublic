@@ -62,11 +62,10 @@
     }];
     
     NSMutableString *buff = nil;
-    
+	if (!buff) { buff = [NSMutableString new]; }
+
     BOOL began = NO;
     for (NSString *key in sorted) {
-        if (!buff) { buff = [NSMutableString new]; }
-        
         if (began) {
             [buff appendString:@"&"];
         }
