@@ -11,12 +11,12 @@
 
 @implementation NSData (XCUString)
 
-- (NSString *)xc_utf8String
+- (NSString *)xcup_utf8String
 {
-    return [self xc_stringByEncoding:NSUTF8StringEncoding];
+    return [self xcup_stringByEncoding:NSUTF8StringEncoding];
 }
 
-- (NSString *)xc_stringByEncoding:(NSStringEncoding)encoding
+- (NSString *)xcup_stringByEncoding:(NSStringEncoding)encoding
 {
     return [[[NSString alloc] initWithData:self encoding:encoding] XAutorelease];
 }

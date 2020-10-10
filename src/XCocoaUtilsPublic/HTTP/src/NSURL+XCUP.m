@@ -54,4 +54,13 @@
     return [NSURL URLWithString:urlWithOutQuery.copy];
 }
 
+//- (NSURL *)xcup_URLByAppendingFragments:(NSArray *)fragments {
+//    NSMutableString *urlWithOutQuery = self.xcup_URLByTrimQuery.absoluteString.mutableCopy;
+//    
+//    if (self.fragment.length > 0) {
+//        
+//    }
+//    
+//}
+
 @end

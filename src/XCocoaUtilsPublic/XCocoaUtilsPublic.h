@@ -71,6 +71,11 @@
 #import <XCocoaUtilsPublic/CCommon.h>
 #endif
 
+// Foundation extensions
+#if __has_include(<XCocoaUtilsPublic/XCUFoundation.h>)
+#import <XCocoaUtilsPublic/XCUFoundation.h>
+#endif
+
 //! Project version number for XCocoaUtilsPublic_iOS.
 FOUNDATION_EXPORT double XCocoaUtilsPublic_iOSVersionNumber;
 

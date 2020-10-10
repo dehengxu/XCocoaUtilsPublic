@@ -122,6 +122,11 @@ __unused static NSString * const reserved = @":/?#[]@!$&'()*+,;=";
     return dateformatters;
 }
 
+- (BOOL)xcup_startsWithString:(NSString *)string {
+    NSRange range = [self rangeOfString:string];
+    return range.location == 0;
+}
+
 - (BOOL)isNotEmpty
 {
     return self.length > 0;

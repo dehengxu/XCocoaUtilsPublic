@@ -18,3 +18,12 @@ inline const char *xcu_CStringFromNSString(NSString *string) {
 @implementation XCUFoundation
 
 @end
+
+@implementation NSBundle (XCUP)
+
+- (NSString *)contentStringWithName:(NSString *)fileName extension:(NSString *)extension error:(NSError * _Nullable *)error {
+    NSString* path = [self pathForResource:fileName ofType:extension];
+    return [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:error];
+}
+
+@end

@@ -17,4 +17,10 @@ extern const char *xcu_CStringFromNSString(NSString *string);
 
 @end
 
+@interface NSBundle (XCUP)
+
+- (NSString*)contentStringWithName:(NSString*)fileName extension:(NSString*)extension error:(NSError**)error;
+
+@end
+
 NS_ASSUME_NONNULL_END

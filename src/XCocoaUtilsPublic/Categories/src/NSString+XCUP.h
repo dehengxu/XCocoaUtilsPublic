@@ -13,6 +13,7 @@
 
 + (NSString*)stringWithData:(NSData *)data usingEncoding:(NSStringEncoding)encoding;
 
+- (BOOL)xcup_startsWithString:(NSString*)string;
 - (BOOL)isNotEmpty;
 - (NSString*)md5Digest;
 - (NSString *)urlEncoding;

@@ -102,12 +102,34 @@ __unused static NSString * const unreserved = @"abcdefghijklmnopqrstuvwxyzABCDEF
  delimiting data subcomponents within a URI.
  */
 __unused static NSString * const reserved = @":/?#[]@!$&'()*+,;=";
+__unused static NSString * const gen_delimiters = @":/?#[]@";
+__unused static NSString * const sub_delimiters = @"!$&'()*+,;=";
 
 @implementation NSString (XCUP_URI)
 
-+ (NSString *)xcup_reservedCharacters
++ (NSCharacterSet *)xcup_reservedCharacters
 {
-    return reserved;
+    static NSCharacterSet* charset = nil;
+    if (!charset) {
+        charset = [NSCharacterSet characterSetWithCharactersInString:reserved];
+    }
+    return charset;
+}
+
++ (NSCharacterSet *)xcup_genericDelimiters {
+    static NSCharacterSet* charset = nil;
+    if (!charset) {
+        charset = [NSCharacterSet characterSetWithCharactersInString:gen_delimiters];
+    }
+    return charset;
+}
+
++ (NSCharacterSet *)xcup_subDelimiters {
+    static NSCharacterSet* charset = nil;
+    if (!charset) {
+        charset = [NSCharacterSet characterSetWithCharactersInString:sub_delimiters];
+    }
+    return charset;
 }
 
 + (NSString *)xcup_unreservedCharacters
@@ -189,6 +211,34 @@ __unused static NSString * const reserved = @":/?#[]@!$&'()*+,;=";
     }
 }
 
+- (NSString *)xcup_stringWithHTTP_Scheme {
+    static NSString* httpPrefix = @"http://";
+
+    if (self.length < httpPrefix.length) {
+        return [NSString stringWithFormat:@"http://%@", self];
+    }
+    NSString* tmp = [[self substringToIndex:httpPrefix.length] lowercaseString];
+    if ([tmp rangeOfString:@"http://"].location == 0) {
+        return self;
+    }
+
+    return [NSString stringWithFormat:@"http://%@", self];
+}
+
+- (NSString *)xcup_stringWithHTTPS_Scheme {
+    static NSString* httpsPrefix = @"https://";
+    
+    if (self.length < httpsPrefix.length) {
+        return [NSString stringWithFormat:@"https://%@", self];
+    }
+    NSString* tmp = [[self substringToIndex:httpsPrefix.length] lowercaseString];
+    if ([tmp rangeOfString:@"https://"].location == 0) {
+        return self;
+    }
+
+    return [NSString stringWithFormat:@"https://%@", self];
+}
+
 @end
 
 @implementation NSString (XCUP_URL)
@@ -196,6 +246,14 @@ __unused static NSString * const reserved = @":/?#[]@!$&'()*+,;=";
 - (NSURL *)xcup_URL
 {
     return [NSURL URLWithString:self];
+}
+
+- (NSURL *)xcup_httpURL {
+    return [[self xcup_stringWithHTTP_Scheme] xcup_URL];
+}
+
+- (NSURL *)xcup_httpsURL {
+    return [[self xcup_stringWithHTTPS_Scheme] xcup_URL];
 }
 
 @end

@@ -12,5 +12,6 @@
 
 - (NSURL *)xcup_URLByTrimQuery;
 - (NSURL *)xcup_URLByAppendingQueries:(NSDictionary *)queries;
+//- (NSURL *)xcup_URLByAppendingFragments:(NSArray *)fragments;
 
 @end
