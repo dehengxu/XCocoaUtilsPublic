@@ -36,35 +36,37 @@
 //Used for delegate selector call, auto check delegate value and selector implementation.
 //#ifndef CALL_DELEGATE_WITH_ARGS
 //#define CALL_DELEGATE_WITH_ARGS(delegate, selector, args)   CallDelegateWithArgs(&delegate, selector, args)
-extern inline BOOL CallDelegateWithArgs(NSObject **delegate, SEL selector, NSArray *args);
+extern BOOL CallDelegateWithArgs(NSObject **delegate, SEL selector, NSArray *args);
 //#endif
 
-extern inline CGRect CGRectResizeToCGSize(CGRect rect, CGSize size);
-extern inline CGRect CGRectResizeToWidth(CGRect rect, CGFloat width);
-extern inline CGRect CGRectResizeToHeight(CGRect rect, CGFloat height);
+extern CGRect CGRectResizeToCGSize(CGRect rect, CGSize size);
+extern CGRect CGRectResizeToWidth(CGRect rect, CGFloat width);
+extern CGRect CGRectResizeToHeight(CGRect rect, CGFloat height);
 
-extern inline CGRect CGRectMoveToCGPoint(CGRect rect, CGPoint point);
-extern inline CGRect CGRectMoveToXPosition(CGRect rect, CGFloat x);
-extern inline CGRect CGRectMoveToYPosition(CGRect rect, CGFloat y);
-extern inline CGSize CGSizeScaleTo(CGSize size, CGFloat factor);
-extern inline CGSize CGSizeScaleToScaleFactors(CGSize size, CGFloat widthFactor, CGFloat heightFactor);
+extern CGRect CGRectMoveToCGPoint(CGRect rect, CGPoint point);
+extern CGRect CGRectMoveToXPosition(CGRect rect, CGFloat x);
+extern CGRect CGRectMoveToYPosition(CGRect rect, CGFloat y);
+extern CGSize CGSizeScaleTo(CGSize size, CGFloat factor);
+extern CGSize CGSizeScaleToScaleFactors(CGSize size, CGFloat widthFactor, CGFloat heightFactor);
+
+extern CGPoint CGRectGetCenter(CGRect rect);
 
 //Print call stack symbols by depth.
 extern void PrintCallStackSymbols(int depth);
 
 #if TARGET_OS_IPHONE
 
-extern inline CGFloat XOffsetFromUIView(UIView *view);
-extern inline CGFloat YOffsetFromUIView(UIView *view);
-extern inline CGFloat HeightFromUIView(UIView *view);
-extern inline CGFloat WidthFromUIView(UIView *view);
+extern CGFloat XOffsetFromUIView(UIView *view);
+extern CGFloat YOffsetFromUIView(UIView *view);
+extern CGFloat HeightFromUIView(UIView *view);
+extern CGFloat WidthFromUIView(UIView *view);
 
 #else
 
-extern inline CGFloat XOffsetFromUIView(NSView *view);
-extern inline CGFloat YOffsetFromUIView(NSView *view);
-extern inline CGFloat HeightFromUIView(NSView *view);
-extern inline CGFloat WidthFromUIView(NSView *view);
+extern CGFloat XOffsetFromUIView(NSView *view);
+extern CGFloat YOffsetFromUIView(NSView *view);
+extern CGFloat HeightFromUIView(NSView *view);
+extern CGFloat WidthFromUIView(NSView *view);
 
 #endif
 
