@@ -8,21 +8,21 @@
 import Foundation
 import CoreGraphics
 
-//MARK: - Advanced types
+//MARK: - NSIndexPath and IndexPath
 
 extension IndexPath {
 	var NSIndexPath: NSIndexPath {
 		return self as NSIndexPath
-		//return NSIndexPath(row: self.row, section: self.section)
 	}
 }
 
 extension NSIndexPath {
 	var IndexPath: IndexPath {
 		return self as IndexPath
-		//return IndexPath(row: self.row, section: self.section)
 	}
 }
+
+//MARK: - NSString and String
 
 extension String {
 	var NSString: NSString {
