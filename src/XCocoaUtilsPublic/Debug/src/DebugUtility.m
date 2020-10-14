@@ -13,6 +13,25 @@
 #import "RegexKitLite.h"
 #endif
 #import "NameValuePaire.h"
+#import <mach/mach.h>
+
+/// Ref: https://stackoverflow.com/questions/787160/programmatically-retrieve-memory-usage-on-iphone
+NSUInteger reportMemory(void)
+{
+    struct task_basic_info info;
+    mach_msg_type_number_t size = TASK_BASIC_INFO_COUNT;
+    kern_return_t kerr = task_info(mach_task_self(), TASK_BASIC_INFO, (task_info_t)&info, &size);
+    if (kerr == KERN_SUCCESS) {
+        printf(">>------------------------------->\n");
+        printf("Memory in use (in bytes): %lu\n", info.resident_size);
+        printf("Memory in use (in MiB): %f\n", ((CGFloat)info.resident_size / 1048576));
+        printf("\n");
+        return (NSUInteger)info.resident_size;
+    } else {
+        printf("Error with task_info(): %s\n", mach_error_string(kerr));
+        return NSUIntegerMax;
+    }
+}
 
 @interface DebugUtility (private)
 
