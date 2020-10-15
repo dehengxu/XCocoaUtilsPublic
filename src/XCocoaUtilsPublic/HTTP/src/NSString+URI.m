@@ -105,6 +105,12 @@ __unused static NSString * const reserved = @":/?#[]@!$&'()*+,;=";
 __unused static NSString * const gen_delimiters = @":/?#[]@";
 __unused static NSString * const sub_delimiters = @"!$&'()*+,;=";
 
+__unused static NSString * const alphaNumber = @"abcdefghijklmnopqrstuvwxyzABCDEFTHIJKLMNOPQRSTUVWXYZ0123456789";
+__unused static NSString * const safe = @"$-_.+";
+__unused static NSString * const extra = @"!*'(),";
+__unused static NSString * const national = @"{}|\\^~[]`";
+__unused static NSString * const punctuation = @"<>#%\"";
+
 @implementation NSString (XCUP_URI)
 
 + (NSCharacterSet *)xcup_reservedCharacters
@@ -132,83 +138,61 @@ __unused static NSString * const sub_delimiters = @"!$&'()*+,;=";
     return charset;
 }
 
-+ (NSString *)xcup_unreservedCharacters
-{
-    static NSString *unreserved;
-    if (!unreserved) {
-        unreserved = [NSString stringWithFormat:@"%@%@%@%@", lowerCase, upperCase, digit, unreservedSymbols];
-    }
-    return unreserved;
-}
-
-+ (NSString *)xcup_lowerCaseCharacters
-{
-    return lowerCase;
-}
-
-+ (NSString *)xcup_upperCaseCharacters
-{
-    return upperCase;
-}
-
-+ (NSString *)xcup_alphaCharacters
-{
-    static NSString *alpha;
-    if (!alpha) {
-        alpha = [NSString stringWithFormat:@"%@%@", lowerCase, upperCase];
-    }
-    return alpha;
-}
-
-+ (NSString *)xcup_digitCharacters
-{
-    return digit;
-}
+//+ (NSString *)xcup_unreservedCharacters
+//{
+//    static NSString *unreserved;
+//    if (!unreserved) {
+//        unreserved = [NSString stringWithFormat:@"%@%@%@%@", lowerCase, upperCase, digit, unreservedSymbols];
+//    }
+//    return unreserved;
+//}
+//
+//+ (NSString *)xcup_lowerCaseCharacters
+//{
+//    return lowerCase;
+//}
+//
+//+ (NSString *)xcup_upperCaseCharacters
+//{
+//    return upperCase;
+//}
+//
+//+ (NSString *)xcup_alphaCharacters
+//{
+//    static NSString *alpha;
+//    if (!alpha) {
+//        alpha = [NSString stringWithFormat:@"%@%@", lowerCase, upperCase];
+//    }
+//    return alpha;
+//}
+//
+//+ (NSString *)xcup_digitCharacters
+//{
+//    return digit;
+//}
 
 - (NSString *)xcup_URLEncoding
 {
     //rfc3986: https://tools.ietf.org/html/rfc3986#page-12
-    if (@available(iOS 9, *)) {
-        static NSCharacterSet *charset = nil;
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_7_0
+        static NSMutableCharacterSet *charset = nil;
         if (!charset) {
-            charset = [NSCharacterSet characterSetWithCharactersInString:reserved];
+            charset = [NSMutableCharacterSet characterSetWithCharactersInString:alphaNumber];
         }
         return [self stringByAddingPercentEncodingWithAllowedCharacters:charset];
-    }
-    
+#else
     NSString *rtn = NSStringByCFStringRef(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, NULL, (CFStringRef)reserved, kCFStringEncodingUTF8));
-    return XAutorelease(rtn);
+    return rtn;
+#endif
 }
 
 - (NSString *)xcup_URLDecoding
 {
-    if (@available(iOS 7, macOS 10.11, tvOS 9.0, watchOS 2.0, *)) {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_7_0
         return [self stringByRemovingPercentEncoding];
-    }else {
+#else
         return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    }
-}
-
-- (NSString *)xcup_UTF8AddingPercentEscape
-{    
-    if (@available(iOS 7, macOS 10.9, tvOS 9.0, watchOS 2.0, *)) {
-        static NSCharacterSet *charset = nil;
-        if (!charset) {
-            charset = [NSCharacterSet characterSetWithCharactersInString:[NSString stringWithFormat:@"%@%@%@%@", lowerCase, upperCase, digit, reserved]];
-        }
-        return [self stringByAddingPercentEncodingWithAllowedCharacters:charset];
-    }
-    return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-
-}
-
-- (NSString *)xcup_UTF8RemovingPercentEscape
-{
-    if (@available(iOS 7, macOS 10.9, tvOS 9.0, watchOS 2.0, *)) {
-        return [self stringByRemovingPercentEncoding];
-    }else {
-        return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    }
+#endif
 }
 
 - (NSString *)xcup_stringWithHTTP_Scheme {
