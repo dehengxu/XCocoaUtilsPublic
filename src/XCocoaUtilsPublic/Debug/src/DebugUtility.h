@@ -59,6 +59,8 @@ NSLog(@"%s:%d   %@:\n%@\n", __FUNCTION__, (__LINE__ - 1), [exception name], [exc
 
 #import <Foundation/Foundation.h>
 
+extern NSUInteger reportMemory(void);
+
 @interface DebugUtility : NSObject
 
 @property (nonatomic, retain) NSMutableArray * foundSubviews;
