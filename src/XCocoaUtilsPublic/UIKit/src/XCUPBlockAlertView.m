@@ -10,6 +10,7 @@
 
 #import "UIAlertView+XCUP.h"
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_9_0
 @implementation XCUPBlockAlertView
 
 + (id)alertViewWithTitle:(NSString *)title message:(NSString *)message cancelBlock:(AlertCancelBlock)cancelBlock otherBlock:(AlertOtherBlock)otherBlock cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...
@@ -74,3 +75,5 @@
 }
 
 @end
+
+#endif

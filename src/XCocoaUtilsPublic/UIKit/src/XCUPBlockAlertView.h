@@ -11,6 +11,8 @@
 
 #import <UIKit/UIKit.h>
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_9_0
+
 typedef void(^AlertCancelBlock)(void);
 typedef void(^AlertOtherBlock)(NSInteger index);
 
@@ -25,6 +27,6 @@ typedef void(^AlertOtherBlock)(NSInteger index);
 
 - (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate cancelBlock:(AlertCancelBlock)cancelBlock otherBlock:(AlertOtherBlock)otherBlock cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION;
 
-
-
 @end
+
+#endif
