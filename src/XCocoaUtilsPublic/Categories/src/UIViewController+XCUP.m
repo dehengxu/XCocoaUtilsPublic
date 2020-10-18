@@ -6,7 +6,7 @@
 //  Copyright (c) 2012年 Deheng.Xu. All rights reserved.
 //
 
-#import "UIViewController+XC.h"
+#import "UIViewController+XCUP.h"
 #import "NSObject+XCUP.h"
 #import "XCUPMacros.h"
 
@@ -44,7 +44,7 @@
     return ([self isKindOfClass:[UINavigationController class]] && [self respondsToSelector:@selector(interactivePopGestureRecognizer)]);
 }
 
-- (UINavigationController *)xc_navigationController {
+- (UINavigationController *)xcup_navigationController {
 	if (self.navigationController) {
 		return self.navigationController;
 	}else {
@@ -53,9 +53,13 @@
 	}
 }
 
-- (instancetype)xc_present:(UIViewController *)presentedViewController animated:(BOOL)animated needNavigation:(BOOL)needed completion:(void (^)(void))completion {
+- (instancetype)xcup_present:(UIViewController *)presentedViewController animated:(BOOL)animated orNeedNavigation:(BOOL)needed completion:(void (^)(void))completion {
 	if (self.navigationController) {
-		[self presentViewController:self.navigationController animated:animated completion:completion];
+		if (needed) {
+			[self.navigationController pushViewController:presentedViewController animated:animated];
+		}else {
+			[self presentViewController:presentedViewController animated:animated completion:completion];
+		}
 	}else {
 		if (needed) {
 			UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:presentedViewController];
@@ -67,7 +71,7 @@
 	return self;
 }
 
-- (instancetype)xc_present:(UIViewController *)presentedViewController animated:(BOOL)animated completion:(void (^)(void))completion {
+- (instancetype)xcup_present:(UIViewController *)presentedViewController animated:(BOOL)animated completion:(void (^)(void))completion {
 	if (presentedViewController.navigationController) {
 		[self presentViewController:presentedViewController.navigationController animated:animated completion:completion];
 	}else {
@@ -76,7 +80,7 @@
 	return self;
 }
 
-- (instancetype)xc_dismissViewController:(BOOL)animated completion:(void (^)(void))completion {
+- (instancetype)xcup_dismissViewController:(BOOL)animated completion:(void (^)(void))completion {
 	if (self.navigationController) {
 		[self.navigationController dismissViewControllerAnimated:animated completion:completion];
 	}else {

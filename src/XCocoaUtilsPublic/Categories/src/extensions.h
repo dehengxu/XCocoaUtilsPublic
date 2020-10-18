@@ -25,6 +25,6 @@
 #import "UIScreen+XCUP.h"
 #import "UIScrollView+XCUP.h"
 #import "UIView+XCUP.h"
-#import "UIViewController+XC.h"
+#import "UIViewController+XCUP.h"
 
 #endif

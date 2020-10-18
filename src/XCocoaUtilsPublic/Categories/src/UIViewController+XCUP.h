@@ -29,11 +29,11 @@ while(0)
 
 - (BOOL)isSupportInteractivePopGestureRecognizer;
 
-- (UINavigationController*)xc_navigationController;
+- (UINavigationController*)xcup_navigationController;
 
-- (instancetype)xc_present:(UIViewController*)presentedViewController animated:(BOOL)animated needNavigation:(BOOL)needed completion:(void(^)(void))completion;
-- (instancetype)xc_present:(UIViewController*)presentedViewController animated:(BOOL)animated completion:(void(^)(void))completion;
-- (instancetype)xc_dismissViewController:(BOOL)animated completion:(void(^)(void))completion;
+- (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated orNeedNavigation:(BOOL)needed completion:(void(^)(void))completion;
+- (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated completion:(void(^)(void))completion;
+- (instancetype)xcup_dismissViewController:(BOOL)animated completion:(void(^)(void))completion;
 
 @end
 
