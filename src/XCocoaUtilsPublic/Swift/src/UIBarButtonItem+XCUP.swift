@@ -5,11 +5,11 @@
 //  Created by Deheng Xu on 2020/10/17.
 //
 
+#if false //os(iOS)
 import UIKit
-
 public extension UIBarButtonItem {
 
-	@objc convenience init(XCUPTitle buttonTitle: String, target: AnyObject, selector: Selector, buttonSize size: CGSize = CGSize(width: 64, height: 44), buttonType type: UIButton.ButtonType = .system, forEvent: UIControl.Event = .touchUpInside) {
+	@objc convenience init(xcupTitle buttonTitle: String, target: AnyObject, selector: Selector, buttonSize size: CGSize = CGSize(width: 64, height: 44), buttonType type: UIButton.ButtonType = .system, forEvent: UIControl.Event = .touchUpInside) {
 		let btn = UIButton(type: type)
 		btn.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
 		btn.setTitle(buttonTitle, for: .normal)
@@ -22,3 +22,4 @@ public extension UIBarButtonItem {
 	}
 }
 
+#endif

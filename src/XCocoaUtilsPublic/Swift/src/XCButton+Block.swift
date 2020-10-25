@@ -5,7 +5,7 @@
 //  Created by NicholasXu on 2020/8/14.
 //  Copyright © 2020 NicholasXu. All rights reserved.
 //
-#if os(iOS)
+#if false //os(iOS)
 import UIKit
 
 @objc public extension UIButton {
@@ -28,7 +28,7 @@ import UIKit
         }
     }
     
-    class func blockButton(type: UIButton.ButtonType , _ handler:((_ sender: Any)->Void)? = nil) -> UIButton {
+    class func blockButton(type: UIButton.ButtonType , handler:((_ sender: Any)->Void)? = nil) -> UIButton {
         let btn = BlockButton(type: type)
         btn.addTarget(btn, action: #selector(BlockButton._private_onClick(_:)), for: .touchUpInside)
         btn.handleBlock = handler

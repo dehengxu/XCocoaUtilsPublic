@@ -14,7 +14,7 @@ extension UIResponder {
         var responder: UIResponder? = self
         repeat {
             if let resp = responder {
-                if resp.responds(to: action) {
+				if resp.responds(to: action) && resp.canBecomeFirstResponder {
                     resp.perform(action, with: sender)
                     break
                 }
