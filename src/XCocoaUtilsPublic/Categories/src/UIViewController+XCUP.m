@@ -62,8 +62,12 @@
 		}
 	}else {
 		if (needed) {
-			UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:presentedViewController];
-			[self presentViewController:nav animated:animated completion:completion];
+            if ([self isKindOfClass:UINavigationController.class]) {
+                [(UINavigationController*) self pushViewController:presentedViewController animated:animated];
+            }else {
+                UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:presentedViewController];
+                [self presentViewController:nav animated:animated completion:completion];
+            }
 		}else {
 			[self presentViewController:presentedViewController animated:animated completion:completion];
 		}
