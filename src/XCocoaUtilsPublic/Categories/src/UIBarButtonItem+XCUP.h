@@ -9,6 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern CGSize XCUPDefaultBarButtonItemSize;
+
 @interface UIBarButtonItem (XCUP)
 
 - (instancetype)initWithXCUPTitle:(NSString*)title target:(id)target selector:(SEL)selector buttonSize:(CGSize)size buttonType:(UIButtonType)type forEvent:(UIControlEvents)event;

@@ -7,6 +7,8 @@
 
 #import "UIBarButtonItem+XCUP.h"
 
+CGSize XCUPDefaultBarButtonItemSize = (CGSize){64.0, 44.0};
+
 @implementation UIBarButtonItem (XCUP)
 
 - (instancetype)initWithXCUPTitle:(NSString *)title target:(id)target selector:(SEL)selector buttonSize:(CGSize)size buttonType:(UIButtonType)type forEvent:(UIControlEvents)event {
@@ -28,7 +30,7 @@
 }
 
 - (instancetype)initWithXCUPTitle:(NSString *)title target:(id)target selector:(SEL)selector {
-	return [self initWithXCUPTitle:title target:target selector:selector buttonSize:CGSizeMake(64, 44)];
+	return [self initWithXCUPTitle:title target:target selector:selector buttonSize:XCUPDefaultBarButtonItemSize];
 }
 
 - (UIButton *)xcup_customButton {
