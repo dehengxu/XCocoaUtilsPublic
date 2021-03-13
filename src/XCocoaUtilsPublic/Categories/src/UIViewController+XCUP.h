@@ -22,6 +22,8 @@ if ([self isViewLoaded] && ![[self view] window]) {\
 }\
 while(0)
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIViewController (XCUP)
 
 + (NSString *)xibFileNameDefaultSuffix;
@@ -29,12 +31,17 @@ while(0)
 
 - (BOOL)isSupportInteractivePopGestureRecognizer;
 
-- (UINavigationController*)xcup_navigationController;
+- (UINavigationController* __nullable)xcup_navigationController;
 
-- (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated orNeedNavigation:(BOOL)needed completion:(void(^)(void))completion;
-- (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated completion:(void(^)(void))completion;
-- (instancetype)xcup_dismissViewController:(BOOL)animated completion:(void(^)(void))completion;
+- (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated orNeedNavigation:(BOOL)needed completion:(void(^ __nullable)(void))completion;
+
+- (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated modalStyle:(UIModalPresentationStyle)presentationStyle transitionStyle:(UIModalTransitionStyle)transitionStyle orNeedNavigation:(BOOL)needed completion:(void(^ __nullable)(void))completion;
+
+- (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated completion:(void(^ __nullable)(void))completion;
+- (instancetype)xcup_dismissViewController:(BOOL)animated completion:(void(^ __nullable)(void))completion;
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif
