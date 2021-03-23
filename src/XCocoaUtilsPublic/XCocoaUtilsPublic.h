@@ -67,13 +67,19 @@
 #endif
 
 // C common utils
-#if __has_include(<XCocoaUtilsPublic/CCommons.h>)
+#if __has_include(<XCocoaUtilsPublic/CCommon.h>)
 #import <XCocoaUtilsPublic/CCommon.h>
 #endif
 
 // Foundation extensions
 #if __has_include(<XCocoaUtilsPublic/XCUFoundation.h>)
 #import <XCocoaUtilsPublic/XCUFoundation.h>
+#endif
+
+#ifdef __cplusplus
+
+#import "ios_stack_lock.hpp"
+
 #endif
 
 //! Project version number for XCocoaUtilsPublic_iOS.

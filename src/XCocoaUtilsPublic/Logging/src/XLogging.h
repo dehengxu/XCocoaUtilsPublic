@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 
-#ifdef cpusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
     
@@ -30,16 +30,16 @@ extern "C" {
 #define CLog(fmt, ...) do { @autoreleasepool { NSString *msg = [NSString stringWithFormat:fmt, ## __VA_ARGS__];  printf("%s\n", [msg cStringUsingEncoding:NSUTF8StringEncoding]); } } while (0)
     
 /// Log with t(ag)
-#define CLogt(TAG, fmt, ...)  CLog(@"["#TAG "]: "fmt, ## __VA_ARGS__)
+#define CLogt(TAG, fmt, ...)  CLog(@"["#TAG "]: " fmt, ## __VA_ARGS__)
 
     
 #ifndef TagLogging
-	#define TagLogging(TAG, fmt, ...) NSLog(@"<"#TAG"> "fmt, ##__VA_ARGS__)
+	#define TagLogging(TAG, fmt, ...) NSLog(@"<"#TAG"> " fmt, ##__VA_ARGS__)
 #endif
     
 #ifndef TagCLogging
     /// Write objc objecto to c stdout
-    #define TagCLogging(TAG, fmt, ...)     do { @autoreleasepool { NSString *msg = [NSString stringWithFormat:@"["#TAG "]: "fmt, ## __VA_ARGS__];  println("%s\n", [msg cStringUsingEncoding:NSUTF8StringEncoding]); } } while (0)
+    #define TagCLogging(TAG, fmt, ...)     do { @autoreleasepool { NSString *msg = [NSString stringWithFormat:@"["#TAG "]: " fmt, ## __VA_ARGS__];  println("%s\n", [msg cStringUsingEncoding:NSUTF8StringEncoding]); } } while (0)
 #endif
 
 #ifndef TagLoggingv
@@ -153,7 +153,7 @@ FOUNDATION_EXPORT void DisableLogger(NSString *tag);
 
 #endif // __OBJC2__
     
-#ifdef cpusplus
+#ifdef __cplusplus
 }
 #endif
 

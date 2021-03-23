@@ -3,4 +3,4 @@
 //
 
 #import "Logs.h"
-#import "CCommon.h"
+#import <XCocoaUtilsPublic/XCocoaUtilsPublic.h>
