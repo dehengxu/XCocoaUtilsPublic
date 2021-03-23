@@ -76,6 +76,12 @@
 #import <XCocoaUtilsPublic/XCUFoundation.h>
 #endif
 
+#ifdef __cplusplus
+
+#import "ios_stack_lock.hpp"
+
+#endif
+
 //! Project version number for XCocoaUtilsPublic_iOS.
 FOUNDATION_EXPORT double XCocoaUtilsPublic_iOSVersionNumber;
 

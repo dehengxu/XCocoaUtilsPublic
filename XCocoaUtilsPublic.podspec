@@ -37,10 +37,10 @@ Pod::Spec.new do |s|
    s.ios.deployment_target = "8.0"
    s.osx.deployment_target = "10.13"
   s.source       = { :git => "https://gitee.com/dehengxu/XCocoaUtilsPublic.git", :tag => s.version }
-  s.source_files  = "src/XCocoaUtilsPublic/**/*.{h,m}"
+  s.source_files  = "src/XCocoaUtilsPublic/**/*.{h,m,mm,cpp,hpp}"
   # Remove file from link list.
   s.exclude_files = "src/**/RegexKitLite.{h,m}"
-  s.public_header_files = "src/XCocoaUtilsPublic/**/*.h"
+  s.public_header_files = "src/XCocoaUtilsPublic/**/*.{h,hpp}"
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
@@ -49,11 +49,12 @@ Pod::Spec.new do |s|
    s.ios.frameworks = "UIKit"#, "AnotherFramework"
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
-
+	s.libraries = "c++"
+	
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.subspec 'export' do |sp|
-    sp.source_files = "src/XCocoaUtilsPublic/XCocoaUtilsPublic.h"
+    sp.source_files = "src/XCocoaUtilsPublic/XCocoaUtilsPublic.{h,hpp}"
   end
   
   s.subspec 'All' do |sp|
@@ -161,12 +162,12 @@ Pod::Spec.new do |s|
       sp.source_files = "src/XCocoaUtilsPublic/Concurrency/**/*.#{source_extensions}"
       #sp.preserve_paths = "src/XCocoaUtilsPublic/Concurrency"
       sp.dependency 'XCocoaUtilsPublic/export'
-      sp.libraries = "c++"
-      sp.xcconfig = {
-        'CLANG_CXX_LANGUAGE_STANDARD' => 'c++11',
-        'CLANG_CXX_LIBRARY' => 'c++'
-      }
-      sp.compiler_flags = "-std=c++11"
+#      sp.libraries = "c++"
+#      sp.xcconfig = {
+#        'CLANG_CXX_LANGUAGE_STANDARD' => 'c++11',
+#        'CLANG_CXX_LIBRARY' => 'c++'
+#      }
+#      sp.compiler_flags = "-std=c++11"
   end
 
   s.subspec 'Runtime' do |sp|

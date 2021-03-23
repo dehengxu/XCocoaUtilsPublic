@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Logs.h"
 #import <XCocoaUtilsPublic/XCocoaUtilsPublic.h>
+using namespace nxcxx::con;
 
 @interface ViewController ()
 

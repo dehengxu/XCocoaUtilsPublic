@@ -9,6 +9,8 @@
 #ifndef ios_stack_lock_h
 #define ios_stack_lock_h
 
+#if defined(__cplusplus)
+
 #import <Foundation/Foundation.h>
 #import <iostream>
 
@@ -51,5 +53,7 @@ public:
 
 }
 }
+
+#endif // end of __cplusplus
 
 #endif /* ios_stack_lock_h */

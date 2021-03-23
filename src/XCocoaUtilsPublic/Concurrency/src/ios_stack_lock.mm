@@ -1,6 +1,5 @@
 //
 //  ios_stack_lock.cpp
-//  Adpos
 //
 //  Created by NicholasXu on 2021/3/22.
 //  Copyright © 2021 DehengXu. All rights reserved.
