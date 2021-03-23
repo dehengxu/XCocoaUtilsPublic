@@ -9,6 +9,24 @@
 #ifndef compiler_macros_h
 #define compiler_macros_h
 
+#if defined(__cplusplus)
+#define c_extern extern "C"
+#else
+#define c_extern
+#endif
+
+#if defined(__cplusplus)
+#define C_EXTERN_BEGIN extern "C" {
+#else
+#define C_EXTERN_BEGIN
+#endif
+
+#if defined(__cplusplus)
+#define C_EXTERN_END }
+#else
+#define C_EXTERN_END
+#endif
+
 #ifndef XCUP_STRINGIFY
 #define XCUP_STRINGIFY(x) #x //Convert symbol to literal string
 #endif

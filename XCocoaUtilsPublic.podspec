@@ -98,6 +98,7 @@ Pod::Spec.new do |s|
 	s.subspec 'CCommon' do |sp|
     #sp.platform = :mac, "10.13"
 		sp.source_files = "src/XCocoaUtilsPublic/CCommon/**/*.#{source_extensions}"
+    sp.dependency 'XCocoaUtilsPublic/Macros'
     sp.dependency 'XCocoaUtilsPublic/export'
 	end
   

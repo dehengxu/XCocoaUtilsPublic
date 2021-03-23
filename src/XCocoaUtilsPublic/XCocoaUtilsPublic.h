@@ -67,7 +67,7 @@
 #endif
 
 // C common utils
-#if __has_include(<XCocoaUtilsPublic/CCommons.h>)
+#if __has_include(<XCocoaUtilsPublic/CCommon.h>)
 #import <XCocoaUtilsPublic/CCommon.h>
 #endif
 

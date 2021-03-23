@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <XLogging.h>
 //#import <os/log.h>
+#import <XCUPMacros.h>
 
+C_EXTERN_BEGIN
 
 DeclareLogger(app);
 DeclareLogger(mainvc);
 
+C_EXTERN_END
