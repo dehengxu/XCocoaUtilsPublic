@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import XCocoaUtilsPublic
 
 class XCUViewController: UIViewController {
 
