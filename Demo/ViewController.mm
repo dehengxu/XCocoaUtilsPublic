@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import "Logs.h"
-#import <XCocoaUtilsPublic/XCocoaUtilsPublic.h>
+//#import <XCocoaUtilsPublic/XCocoaUtilsPublic.h>
+@import XCocoaUtilsPublic;
 using namespace nxcxx::con;
 
 @interface ViewController ()
@@ -21,6 +22,8 @@ using namespace nxcxx::con;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 	mainvcLog(@"-->>%s", __func__);
+    NSLock*lock = [NSLock new];
+    GenLock<NSLock*>(lock);
     //Close logging
 //    [log_mainvc setLoggingEnabled:false];
 

@@ -1,7 +1,7 @@
 project 'XCocoaUtilsPublic.xcodeproj'
 
 # Uncomment this line to define a global platform for your project
-# platform :ios, '8.0'
+ platform :ios, '9.0'
 
 install! 'cocoapods', :preserve_pod_file_structure => true
 
@@ -25,9 +25,11 @@ end
 target 'Demo' do
     #pod 'AFNetworking'
     platform :ios, '9.0'
+    use_frameworks!
     useLib
     
     target 'DemoTests' do
+      #inherit! :search_paths
       #pod 'AFNetworking'
     end
 end
