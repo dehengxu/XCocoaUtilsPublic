@@ -192,6 +192,7 @@ Pod::Spec.new do |s|
   # s.default_subspec = "General"
   s.requires_arc = true
   s.swift_version = "5.0"
+  s.user_target_xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "NO", s.name => s.version }
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency 'RegexKitLite', '~> 4.0'
 
