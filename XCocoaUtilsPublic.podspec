@@ -30,12 +30,12 @@ Pod::Spec.new do |s|
   # s.authors            = { "DehengXu" => "dehengxu@outlook.com" }
   #s.social_media_url   = "http://twitter.com/dehengxu"
 #  s.platform     = :ios
-  s.platform     = :ios, "8.0"
-  s.platform     = :osx, "10.13"
+  s.platform     = :ios#, "8.0"
+  s.platform     = :osx#, "10.13"
   
   #  When using multiple platforms
    s.ios.deployment_target = "8.0"
-   s.osx.deployment_target = "10.13"
+   s.osx.deployment_target = "10.9"
   s.source       = { :git => "https://gitee.com/dehengxu/XCocoaUtilsPublic.git", :tag => s.version }
   s.source_files  = "src/XCocoaUtilsPublic/**/*.{h,m,mm,cpp,hpp}"
   # Remove file from link list.
