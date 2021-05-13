@@ -28,13 +28,13 @@ extern "C" {
 namespace nxcxx {
 namespace con {
 
-template<typename T>
+extern "C++" template<typename T>
 void GenLock(const T &lock);
 
-template<typename T>
+extern "C++" template<typename T>
 void GenUnLock(const T &lock);
 
-template<typename T>
+extern "C++" template<typename T>
 class NXStackLock {
 private:
     T innerLocker;

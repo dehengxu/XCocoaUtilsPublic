@@ -75,8 +75,9 @@
 #endif
 
 #ifdef __cplusplus
-
+#if __has_include("ios_stack_lock.hpp")
 #import "ios_stack_lock.hpp"
+#endif
 
 #endif
 

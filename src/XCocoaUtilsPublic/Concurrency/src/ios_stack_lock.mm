@@ -7,7 +7,38 @@
 
 #include <stdio.h>
 #import <mach/mach.h>
+#import <pthread.h>
 #include "ios_stack_lock.hpp"
+
+template<>
+void nxcxx::con::GenLock(pthread_rwlock_t __strong const &lock) {
+    //    while (!pthread_rwlock_trywrlock(&lock)) {
+    //        [NSThread sleepForTimeInterval:0.1];
+    //    }
+    //    NSLog(@"%s", __PRETTY_FUNCTION__);
+
+//    pthread_rwlock_wrlock(&lock);
+
+    //    int r = 0;
+    //    switch (r = pthread_rwlock_wrlock(&lock)) {
+    //        case EBUSY:
+    //            NSLog(@"busy");
+    //            break;
+    //        case EINVAL:
+    //            NSLog(@"invalid");
+    //            break;
+    //        case EDEADLK:
+    //            NSLog(@"dead lock");
+    //            break;
+    //        default:
+    //            NSLog(@"r :%d", r);
+    //            break;
+    //    }
+}
+
+template<>
+void nxcxx::con::GenUnLock(pthread_rwlock_t __strong const &lock) {
+}
 
 template<>
 void nxcxx::con::GenLock(dispatch_semaphore_t __strong const &lock) {

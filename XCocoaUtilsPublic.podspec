@@ -69,7 +69,7 @@ Pod::Spec.new do |s|
 		sp.dependency 'XCocoaUtilsPublic/Debug'
 		sp.dependency 'XCocoaUtilsPublic/IO'
 		sp.dependency 'XCocoaUtilsPublic/Benchmark'
-		sp.dependency 'XCocoaUtilsPublic/Concurrency'
+    sp.dependency 'XCocoaUtilsPublic/Concurrency'
 		sp.dependency 'XCocoaUtilsPublic/Runtime'
 		sp.dependency 'XCocoaUtilsPublic/Logging'
 		sp.dependency 'XCocoaUtilsPublic/Compress'
@@ -165,12 +165,12 @@ Pod::Spec.new do |s|
       sp.source_files = "src/XCocoaUtilsPublic/Concurrency/**/*.#{source_extensions}"
       #sp.preserve_paths = "src/XCocoaUtilsPublic/Concurrency"
       sp.dependency 'XCocoaUtilsPublic/export'
-#      sp.libraries = "c++"
+      # sp.libraries = "c++"
 #      sp.xcconfig = {
 #        'CLANG_CXX_LANGUAGE_STANDARD' => 'c++11',
 #        'CLANG_CXX_LIBRARY' => 'c++'
 #      }
-#      sp.compiler_flags = "-std=c++11"
+      # sp.compiler_flags = "-std=c++11"
   end
 
   s.subspec 'Runtime' do |sp|
