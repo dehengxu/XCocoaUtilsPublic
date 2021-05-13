@@ -172,26 +172,25 @@ NSString *const XCObjectMappingJSONFormatException = @"XCObjectMapping: JSON con
 
 - (id)forkFromClass:(nonnull Class)aClass
 {
-    NSMutableArray *rtn = [[NSMutableArray alloc] initWithArray:self];
+    NSMutableArray *rtn = [[NSMutableArray alloc] initWithCapacity:16];
     
     int idx = 0;
-    for (id dict in self) {
+    for (id maybeDict in self) {
         if (!aClass) {
-            [rtn addObject:dict];
+            [rtn addObject:maybeDict];
             continue;
         }
 
         id value = nil;
-        if ([dict isKindOfClass:[NSString class]] ||
-            [dict isKindOfClass:[NSNumber class]]) {
-            value = dict;
-        }else if ([dict isKindOfClass:[NSDictionary class]]) {
-            value = [dict forkFromClass:aClass];
+        if ([maybeDict isKindOfClass:[NSString class]] ||
+            [maybeDict isKindOfClass:[NSNumber class]]) {
+            value = maybeDict;
+        }else if ([maybeDict isKindOfClass:[NSDictionary class]]) {
+            value = [maybeDict forkFromClass:aClass];
         }else {
             [[[NSException alloc] initWithName:XCObjectMappingJSONFormatException reason:@"JSON array must be composed of NSDictionary object for mapping." userInfo:nil] raise];
         }
-        rtn[idx] = value;
-        idx ++;
+        [rtn addObject:value];
     }
     return rtn;
 }
