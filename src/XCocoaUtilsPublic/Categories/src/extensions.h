@@ -17,14 +17,5 @@
 #import "NSString+XCUP.h"
 #import "NSTimer+XCUP.h"
 #import "SKProduct+XCUP.h"
-#import "UIAlertView+XCUP.h"
-#import "UIButton+XCUP.h"
-#import "UIColor+XCUP.h"
-#import "UIFont+XCUP.h"
-#import "UIImage+XCUP.h"
-#import "UIScreen+XCUP.h"
-#import "UIScrollView+XCUP.h"
-#import "UIView+XCUP.h"
-#import "UIViewController+XCUP.h"
 
 #endif

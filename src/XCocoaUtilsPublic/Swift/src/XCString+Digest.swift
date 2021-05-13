@@ -134,7 +134,8 @@ extension NSURL: XCURLSigning {
 		}
 	}
 
-	public func sign(with algo: (String) -> String, isAscending: Bool = true) -> URL? {
+    @available(macOS 10.10, *)
+    public func sign(with algo: (String) -> String, isAscending: Bool = true) -> URL? {
 		let shortUrl = String(format: "%@://%@%@", (self.scheme != nil) ? self.scheme! : "", (self.host != nil) ? self.host! : "", (self.path != nil) ? self.path! : "")
 
 		let queryString = self.sortedQuery(isAscending: isAscending)
@@ -150,7 +151,8 @@ extension NSURL: XCURLSigning {
 		}
 	}
 
-	public func sortedQuery(isAscending: Bool = true) -> String {
+    @available(macOS 10.10, *)
+    public func sortedQuery(isAscending: Bool = true) -> String {
 		var queryString: String = ""
 
 		let urlComps = URLComponents(string: self.absoluteString ?? "")
@@ -180,10 +182,12 @@ extension NSURL: XCURLSigning {
 
 extension URL {
     
+    @available(macOS 10.10, *)
     func sign(with algo: (String) -> String, isAscending: Bool) -> URL? {
         return self.NSURL()?.sign(with: algo, isAscending: isAscending) as URL?
     }
     
+    @available(macOS 10.10, *)
     func sortedQuery(isAscending: Bool) -> String {
         return self.NSURL()?.sortedQuery(isAscending: isAscending) ?? ""
     }

@@ -9,8 +9,6 @@
 #ifndef XCocoaUtilsPublic_XCocoaUtilsPublic_h
 #define XCocoaUtilsPublic_XCocoaUtilsPublic_h
 
-#import <UIKit/UIKit.h>
-
 // General categories
 #if __has_include(<XCocoaUtilsPublic/extensions.h>)
 #import <XCocoaUtilsPublic/extensions.h>

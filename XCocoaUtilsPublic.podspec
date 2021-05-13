@@ -35,11 +35,12 @@ Pod::Spec.new do |s|
   
   #  When using multiple platforms
    s.ios.deployment_target = "8.0"
-   s.osx.deployment_target = "10.9"
+   s.osx.deployment_target = "10.10"
   s.source       = { :git => "https://gitee.com/dehengxu/XCocoaUtilsPublic.git", :tag => s.version }
   s.source_files  = "src/XCocoaUtilsPublic/**/*.{h,m,mm,cpp,hpp}"
   # Remove file from link list.
   s.exclude_files = "src/**/RegexKitLite.{h,m}"
+  s.osx.exclude_files = "src/XCocoaUtilsPublic/UIKit/**/*.*"
   s.public_header_files = "src/XCocoaUtilsPublic/**/*.{h,hpp}"
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
@@ -65,7 +66,6 @@ Pod::Spec.new do |s|
   s.subspec 'ObjC' do |sp|
 
 		sp.dependency 'XCocoaUtilsPublic/HTTP'
-		sp.dependency 'XCocoaUtilsPublic/UIKit'
 		sp.dependency 'XCocoaUtilsPublic/Debug'
 		sp.dependency 'XCocoaUtilsPublic/IO'
 		sp.dependency 'XCocoaUtilsPublic/Benchmark'
@@ -75,6 +75,9 @@ Pod::Spec.new do |s|
 		sp.dependency 'XCocoaUtilsPublic/Compress'
     sp.dependency 'XCocoaUtilsPublic/CCommon'
     sp.dependency 'XCocoaUtilsPublic/Foundation'
+
+    sp.ios.dependency 'XCocoaUtilsPublic/UIKit'
+    
 	end
 
 	s.subspec 'Swift' do |sp|
@@ -126,7 +129,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'UIKit' do |sp|
     sp.platform = :ios, "9.0"
-    sp.source_files = "src/XCocoaUtilsPublic/UIKit/**/*.#{source_extensions}"
+    sp.ios.source_files = "src/XCocoaUtilsPublic/UIKit/**/*.#{source_extensions}"
     sp.dependency "XCocoaUtilsPublic/Categories"
     sp.dependency 'XCocoaUtilsPublic/export'
     #sp.preserve_paths = "src/XCocoaUtilsPublic/UIKit"
@@ -189,7 +192,7 @@ Pod::Spec.new do |s|
     sp.dependency 'XCocoaUtilsPublic/export'
   end
 
-  # s.default_subspec = "General"
+#  s.default_subspec = "General"
   s.requires_arc = true
   s.swift_version = "5.0"
   s.user_target_xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES", s.name => s.version }

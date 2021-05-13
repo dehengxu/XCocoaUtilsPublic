@@ -24,16 +24,16 @@ extern CGSize XCUPDefaultBarButtonItemSize;
 - (instancetype)initWithXCUPTitle:(NSString*)title target:(id)target selector:(SEL)selector buttonSize:(CGSize)size buttonType:(UIButtonType)type;
 
 /// With default buttonType .system
-/// @param title <#title description#>
-/// @param target <#target description#>
-/// @param selector <#selector description#>
-/// @param size <#size description#>
+/// @param title NSString
+/// @param target id
+/// @param selector SEL
+/// @param size CGSize
 - (instancetype)initWithXCUPTitle:(NSString*)title target:(id)target selector:(SEL)selector buttonSize:(CGSize)size;
 
 /// With default button size: 64x44
-/// @param title <#title description#>
-/// @param target <#target description#>
-/// @param selector <#selector description#>
+/// @param title NSString
+/// @param target id
+/// @param selector SEL
 - (instancetype)initWithXCUPTitle:(NSString*)title target:(id)target selector:(SEL)selector;
 
 - (nullable UIButton *)xcup_customButton;
