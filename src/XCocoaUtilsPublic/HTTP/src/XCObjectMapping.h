@@ -12,18 +12,19 @@
 
 #define MappingClass(class_name) protocol class_name
 
+//struct nx_meta_cache {
+//	struct nx_meta_cache * _Nullable superClass;
+//	NSMutableArray* _Nullable propertyList;
+//	objc_property_t _Nullable * _Nullable properties;
+//	Ivar _Nullable * _Nullable ivars;
+//	int property_count;
+//	int ivar_count;
+//	Class _Nonnull theClass;
+//};
 
-struct nx_meta_cache {
-	struct nx_meta_cache * _Nullable superClass;
-	objc_property_t * _Nullable properties;
-	Ivar * _Nullable ivars;
-	int property_count;
-	int ivar_count;
-	Class _Nonnull theClass;
-};
-
+@class nx_meta_cache;
 NSMutableDictionary* _Nonnull nx_metaCache();
-struct nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass);
+nx_meta_cache * _Nonnull nx_lookupMetaCache(Class _Nonnull aClass);
 
 NS_ASSUME_NONNULL_BEGIN
 

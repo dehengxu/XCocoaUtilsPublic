@@ -12,6 +12,64 @@
 
 NSString *const XCObjectMappingJSONFormatException = @"XCObjectMapping: JSON content type exception.";
 
+#pragma mark - Class meta information
+@interface nx_meta_cache : NSObject
+{
+@public
+	nx_meta_cache * _Nullable superClass;
+	NSMutableArray* _Nullable propertyList;
+	objc_property_t _Nullable * _Nullable properties;
+	Ivar _Nullable * _Nullable ivars;
+	int property_count;
+	int ivar_count;
+	Class _Nonnull theClass;
+}
+@end
+
+@implementation nx_meta_cache : NSObject
+@end
+
+NSMutableDictionary* nx_metaCache() {
+	static NSMutableDictionary *metaCache = nil;
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		if (!metaCache) {
+			metaCache = [[NSMutableDictionary alloc] initWithCapacity:16];
+		}
+	});
+	return metaCache;
+}
+
+nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
+	if (!aClass || aClass == NSObject.class) {
+		return 0;
+	}
+
+	nx_meta_cache *cache = [nx_metaCache() objectForKey:aClass];
+	if (cache) {
+
+		return cache;
+
+	}else {
+
+		nx_meta_cache *meta = [nx_meta_cache new];
+		meta->theClass = aClass;
+		meta->properties = class_copyPropertyList(aClass, &meta->property_count);
+		meta->ivars = class_copyIvarList(aClass, &meta->ivar_count);
+		NSMutableArray *buff = [NSMutableArray array];
+		meta->propertyList = buff;
+		for(int i = 0; i < meta->property_count; i++) {
+			const char* name = property_getName(meta->properties[i]);
+			[buff addObject:[NSString stringWithCString:name encoding:NSUTF8StringEncoding]];
+		}
+
+		[nx_metaCache() setObject:meta forKey:aClass];
+
+		meta->superClass = nx_lookupMetaCache(class_getSuperclass(aClass));
+
+		return meta;
+	}
+}
 
 @implementation XCObjectMapping
 
@@ -44,45 +102,6 @@ NSString *const XCObjectMappingJSONFormatException = @"XCObjectMapping: JSON con
 }
 
 @end
-
-#pragma mark - Class meta information
-
-NSMutableDictionary* nx_metaCache() {
-	static NSMutableDictionary *metaCache = nil;
-	static dispatch_once_t onceToken;
-	dispatch_once(&onceToken, ^{
-		if (!metaCache) {
-			metaCache = [[NSMutableDictionary alloc] initWithCapacity:16];
-		}
-	});
-	return metaCache;
-}
-
-struct nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
-	if (!aClass || aClass == NSObject.class) {
-		return 0;
-	}
-
-	struct nx_meta_cache *cache = [[nx_metaCache() objectForKey:aClass] bytes];
-	if (cache) {
-
-		return cache;
-
-	}else {
-
-		struct nx_meta_cache *meta = malloc(sizeof(struct nx_meta_cache));
-		meta->theClass = aClass;
-		meta->properties = class_copyPropertyList(aClass, &meta->property_count);
-		meta->ivars = class_copyIvarList(aClass, &meta->ivar_count);
-
-		NSData *ptr = [NSData dataWithBytes:meta length:sizeof(struct nx_meta_cache)];
-		[nx_metaCache() setObject:ptr forKey:aClass];
-
-		meta->superClass = nx_lookupMetaCache(class_getSuperclass(aClass));
-
-		return meta;
-	}
-}
 
 @implementation NSObject (JSONToObject)
 
@@ -255,15 +274,19 @@ struct nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
 {
     Class aClass = object_getClass(obj);
 
-	struct nx_meta_cache* metaCache = nx_lookupMetaCache(aClass);
+	nx_meta_cache* metaCache = nx_lookupMetaCache(aClass);
 
     Ivar iVar = NULL;
     id value = nil;
     const char * typeEncode;
     
     NSString *propertyKey = nil;
-    unsigned int propertyCount = metaCache->property_count;
-	objc_property_t *propertyList = metaCache->properties;//class_copyPropertyList(aClass, &propertyCount);
+
+	unsigned int propertyCount = metaCache->property_count;
+	objc_property_t *propertyList =
+	metaCache->properties;
+	//class_copyPropertyList(aClass, &propertyCount);
+
     objc_property_t property;
     const char *attributes;
     
@@ -293,7 +316,8 @@ struct nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
         propertyKey =
         //[NSString stringWithFormat:@"%s", name];
         //(__bridge_transfer NSString*)CFStringCreateWithCString(kCFAllocatorDefault, name, kCFStringEncodingUTF8);
-        [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
+        //[NSString stringWithCString:name encoding:NSUTF8StringEncoding];
+		metaCache->propertyList[i];
 
         value = [self objectForKey:propertyKey];
         if (!value || [value isKindOfClass:[NSNull class]]) {
@@ -311,11 +335,15 @@ struct nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
             iVar = class_getInstanceVariable(aClass, ivar_name);
             typeEncode = ivar_getTypeEncoding(iVar);
 
-            NSString *className = [[NSString stringWithCString:typeEncode encoding:NSUTF8StringEncoding] substringWithRange:NSMakeRange(2, strlen(typeEncode) - 3)];
-
-            if (![NSClassFromString(className) isSubclassOfClass:[NSDictionary class]]) {
+            //NSString *className = [[NSString stringWithCString:typeEncode encoding:NSUTF8StringEncoding] substringWithRange:NSMakeRange(2, strlen(typeEncode) - 3)];
+			size_t size = strlen(typeEncode);
+			char name[size - 2];// @""
+			memcpy(name, typeEncode+2, size - 3 + 1);
+			name[size - 3] = '\0';
+			Class aClass = objc_getClass(name);
+            if (![aClass isSubclassOfClass:[NSDictionary class]]) {
                 //直接保留映射为 className 的情况
-                realValue = [realValue forkFromClass:NSClassFromString(className)];
+                realValue = [realValue forkFromClass:aClass];
             }else {
                 //直接保留映射为 NSDictionary 的情况
             }
