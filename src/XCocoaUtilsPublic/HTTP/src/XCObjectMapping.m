@@ -45,6 +45,45 @@ NSString *const XCObjectMappingJSONFormatException = @"XCObjectMapping: JSON con
 
 @end
 
+#pragma mark - Class meta information
+
+NSMutableDictionary* nx_metaCache() {
+	static NSMutableDictionary *metaCache = nil;
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		if (!metaCache) {
+			metaCache = [[NSMutableDictionary alloc] initWithCapacity:16];
+		}
+	});
+	return metaCache;
+}
+
+struct nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
+	if (!aClass || aClass == NSObject.class) {
+		return 0;
+	}
+
+	struct nx_meta_cache *cache = [[nx_metaCache() objectForKey:aClass] bytes];
+	if (cache) {
+
+		return cache;
+
+	}else {
+
+		struct nx_meta_cache *meta = malloc(sizeof(struct nx_meta_cache));
+		meta->theClass = aClass;
+		meta->properties = class_copyPropertyList(aClass, &meta->property_count);
+		meta->ivars = class_copyIvarList(aClass, &meta->ivar_count);
+
+		NSData *ptr = [NSData dataWithBytes:meta length:sizeof(struct nx_meta_cache)];
+		[nx_metaCache() setObject:ptr forKey:aClass];
+
+		meta->superClass = nx_lookupMetaCache(class_getSuperclass(aClass));
+
+		return meta;
+	}
+}
+
 @implementation NSObject (JSONToObject)
 
 - (id)realValueForTypeEncode:(const char *)type fromString:(id)value
@@ -112,7 +151,8 @@ NSString *const XCObjectMappingJSONFormatException = @"XCObjectMapping: JSON con
 
     unsigned long length = strlen(pbegin) - strlen(pend) - 1;
     
-    char *substr = malloc(sizeof(char) * (length + 1));
+    //char *substr = malloc(sizeof(char) * (length + 1));
+	char substr[length + 1];
     __unused char *sub = strncpy(substr, pbegin + 1, length);
     substr[length] = '\0';
     if (substr == NULL) {
@@ -120,7 +160,7 @@ NSString *const XCObjectMappingJSONFormatException = @"XCObjectMapping: JSON con
     }
     
     NSString* ret = [NSString stringWithCString:substr encoding:NSUTF8StringEncoding];
-	free(substr);
+	//free(substr);
 	return ret;
 }
 
@@ -215,13 +255,15 @@ NSString *const XCObjectMappingJSONFormatException = @"XCObjectMapping: JSON con
 {
     Class aClass = object_getClass(obj);
 
+	struct nx_meta_cache* metaCache = nx_lookupMetaCache(aClass);
+
     Ivar iVar = NULL;
     id value = nil;
     const char * typeEncode;
     
     NSString *propertyKey = nil;
-    unsigned int propertyCount = 0;
-    objc_property_t *propertyList = class_copyPropertyList(aClass, &propertyCount);
+    unsigned int propertyCount = metaCache->property_count;
+	objc_property_t *propertyList = metaCache->properties;//class_copyPropertyList(aClass, &propertyCount);
     objc_property_t property;
     const char *attributes;
     
@@ -282,12 +324,10 @@ NSString *const XCObjectMappingJSONFormatException = @"XCObjectMapping: JSON con
             iVar = class_getInstanceVariable(aClass, ivar_name);
             attributes = property_getAttributes(property);
             NSString *className = [obj fetchFirstProtocolName:attributes];
-            if (className.length) {
-                realValue = [(NSArray *)realValue forkFromClass:NSClassFromString(className)];
-                if (realValue) {
-                    object_setIvar(obj, iVar, realValue);
-                }
-            }
+			realValue = [(NSArray *)realValue forkFromClass:NSClassFromString(className)];
+			if (realValue) {
+				object_setIvar(obj, iVar, realValue);
+			}
         }else {
             iVar = class_getInstanceVariable(aClass, ivar_name);
             const char* typeEncode = ivar_getTypeEncoding(iVar);

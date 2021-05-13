@@ -6,10 +6,26 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/message.h>
 
 #import "XCObjectMappingDelegate.h"
 
 #define MappingClass(class_name) protocol class_name
+
+
+struct nx_meta_cache {
+	struct nx_meta_cache * _Nullable superClass;
+	objc_property_t * _Nullable properties;
+	Ivar * _Nullable ivars;
+	int property_count;
+	int ivar_count;
+	Class _Nonnull theClass;
+};
+
+NSMutableDictionary* _Nonnull nx_metaCache();
+struct nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass);
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface XCObjectMapping : NSObject<XCObjectMappingDelegate>
 
@@ -49,3 +65,4 @@
 
 @end
 
+NS_ASSUME_NONNULL_END
