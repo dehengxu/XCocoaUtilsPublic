@@ -17,8 +17,9 @@ NSString *const XCObjectMappingJSONFormatException = @"XCObjectMapping: JSON con
 {
 @public
 	nx_meta_cache * _Nullable superClass;
-	NSMutableArray* _Nullable propertyList;
+	NSMutableArray* _Nullable propertyNames;
     NSMutableDictionary* _Nullable firstProtocalName;
+    NSMutableDictionary* _Nullable firstProtocals;
 	objc_property_t _Nullable * _Nullable properties;
 	Ivar _Nullable * _Nullable ivars;
 	int property_count;
@@ -60,6 +61,13 @@ NSString* nx_fetchFirstProtocolName(const char* attribute) {
     return ret;
 }
 
+Class nx_fetchFirstProtocol(const char* attribute) {
+    NSString* ret = nx_fetchFirstProtocolName(attribute);
+    if (!ret) return nil;
+    Class aClass = NSClassFromString(ret);
+    return aClass;
+}
+
 nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
 	if (!aClass || aClass == NSObject.class) {
 		return 0;
@@ -77,15 +85,18 @@ nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
 		meta->properties = class_copyPropertyList(aClass, &meta->property_count);
 		meta->ivars = class_copyIvarList(aClass, &meta->ivar_count);
 		NSMutableArray *buff = [NSMutableArray arrayWithCapacity:4];
-		meta->propertyList = buff;
+		meta->propertyNames = buff;
         meta->firstProtocalName = [NSMutableDictionary dictionaryWithCapacity:4];
+        meta->firstProtocals = [NSMutableDictionary dictionaryWithCapacity:4];
 		for(int i = 0; i < meta->property_count; i++) {
 			const char* name = property_getName(meta->properties[i]);
 			[buff addObject:[NSString stringWithCString:name encoding:NSUTF8StringEncoding]];
             const char* attributes = property_getAttributes(meta->properties[i]);
             NSString* protoName = nx_fetchFirstProtocolName(attributes);
             if (protoName.length) {
+                Class fpc = NSClassFromString(protoName);
                 meta->firstProtocalName[buff[i]] = protoName;
+                meta->firstProtocals[buff[i]] = fpc;
             }
 		}
 
@@ -320,7 +331,7 @@ nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
         propertyKey =
         //(__bridge_transfer NSString*)CFStringCreateWithCString(kCFAllocatorDefault, name, kCFStringEncodingUTF8);
         //[NSString stringWithCString:name encoding:NSUTF8StringEncoding];
-		metaCache->propertyList[i];
+		metaCache->propertyNames[i];
 
         value = [self objectForKey:propertyKey];
         if (!value || [value isKindOfClass:[NSNull class]]) {
@@ -354,11 +365,11 @@ nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
         }else if ([realValue isKindOfClass:[NSArray class]]) {
             iVar = class_getInstanceVariable(aClass, ivar_name);
             attributes = property_getAttributes(property);
-            NSString *className =
-            metaCache->firstProtocalName[propertyKey];
+            Class aClass =
+            metaCache->firstProtocals[propertyKey];
             //nx_fetchFirstProtocolName(attributes);
 
-			realValue = [(NSArray *)realValue forkFromClass:NSClassFromString(className)];
+			realValue = [(NSArray *)realValue forkFromClass:aClass];
 			if (realValue) {
 				object_setIvar(obj, iVar, realValue);
 			}
