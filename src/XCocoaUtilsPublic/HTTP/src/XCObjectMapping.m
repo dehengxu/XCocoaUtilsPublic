@@ -18,6 +18,7 @@ NSString *const XCObjectMappingJSONFormatException = @"XCObjectMapping: JSON con
 @public
 	nx_meta_cache * _Nullable superClass;
 	NSMutableArray* _Nullable propertyList;
+    NSMutableDictionary* _Nullable firstProtocalName;
 	objc_property_t _Nullable * _Nullable properties;
 	Ivar _Nullable * _Nullable ivars;
 	int property_count;
@@ -31,13 +32,32 @@ NSString *const XCObjectMappingJSONFormatException = @"XCObjectMapping: JSON con
 
 NSMutableDictionary* nx_metaCache() {
 	static NSMutableDictionary *metaCache = nil;
-	static dispatch_once_t onceToken;
-	dispatch_once(&onceToken, ^{
+//	static dispatch_once_t onceToken;
+//	dispatch_once(&onceToken, ^{
 		if (!metaCache) {
 			metaCache = [[NSMutableDictionary alloc] initWithCapacity:16];
 		}
-	});
+//	});
 	return metaCache;
+}
+
+NSString* nx_fetchFirstProtocolName(const char* attribute) {
+    char * pbegin = strstr(attribute, "<");
+    if (pbegin == NULL) return nil;
+
+    char *pend = strstr(attribute, ">");
+    if (pend == NULL) return nil;
+
+    unsigned long length = strlen(pbegin) - strlen(pend) - 1;
+    char substr[length + 1];
+    __unused char *sub = strncpy(substr, pbegin + 1, length);
+    substr[length] = '\0';
+    if (substr == NULL) {
+        return nil;
+    }
+
+    NSString* ret = [NSString stringWithCString:substr encoding:NSUTF8StringEncoding];
+    return ret;
 }
 
 nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
@@ -56,11 +76,17 @@ nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
 		meta->theClass = aClass;
 		meta->properties = class_copyPropertyList(aClass, &meta->property_count);
 		meta->ivars = class_copyIvarList(aClass, &meta->ivar_count);
-		NSMutableArray *buff = [NSMutableArray array];
+		NSMutableArray *buff = [NSMutableArray arrayWithCapacity:4];
 		meta->propertyList = buff;
+        meta->firstProtocalName = [NSMutableDictionary dictionaryWithCapacity:4];
 		for(int i = 0; i < meta->property_count; i++) {
 			const char* name = property_getName(meta->properties[i]);
 			[buff addObject:[NSString stringWithCString:name encoding:NSUTF8StringEncoding]];
+            const char* attributes = property_getAttributes(meta->properties[i]);
+            NSString* protoName = nx_fetchFirstProtocolName(attributes);
+            if (protoName.length) {
+                meta->firstProtocalName[buff[i]] = protoName;
+            }
 		}
 
 		[nx_metaCache() setObject:meta forKey:aClass];
@@ -158,29 +184,6 @@ nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
     }
     
     return [mutableDict copy];
-}
-
-- (NSString *)fetchFirstProtocolName:(const char *)attribute
-{
-    char * pbegin = strstr(attribute, "<");
-    if (pbegin == NULL) return nil;
-    
-    char *pend = strstr(attribute, ">");
-    if (pend == NULL) return nil;
-
-    unsigned long length = strlen(pbegin) - strlen(pend) - 1;
-    
-    //char *substr = malloc(sizeof(char) * (length + 1));
-	char substr[length + 1];
-    __unused char *sub = strncpy(substr, pbegin + 1, length);
-    substr[length] = '\0';
-    if (substr == NULL) {
-        return nil;
-    }
-    
-    NSString* ret = [NSString stringWithCString:substr encoding:NSUTF8StringEncoding];
-	//free(substr);
-	return ret;
 }
 
 - (NSDictionary *)propertiesMapping
@@ -283,7 +286,8 @@ nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
     NSString *propertyKey = nil;
 
 	unsigned int propertyCount = metaCache->property_count;
-	objc_property_t *propertyList =
+
+    objc_property_t *propertyList =
 	metaCache->properties;
 	//class_copyPropertyList(aClass, &propertyCount);
 
@@ -314,7 +318,6 @@ nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
         //strcat(ivar_name, name);
 
         propertyKey =
-        //[NSString stringWithFormat:@"%s", name];
         //(__bridge_transfer NSString*)CFStringCreateWithCString(kCFAllocatorDefault, name, kCFStringEncodingUTF8);
         //[NSString stringWithCString:name encoding:NSUTF8StringEncoding];
 		metaCache->propertyList[i];
@@ -351,7 +354,10 @@ nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
         }else if ([realValue isKindOfClass:[NSArray class]]) {
             iVar = class_getInstanceVariable(aClass, ivar_name);
             attributes = property_getAttributes(property);
-            NSString *className = [obj fetchFirstProtocolName:attributes];
+            NSString *className =
+            metaCache->firstProtocalName[propertyKey];
+            //nx_fetchFirstProtocolName(attributes);
+
 			realValue = [(NSArray *)realValue forkFromClass:NSClassFromString(className)];
 			if (realValue) {
 				object_setIvar(obj, iVar, realValue);
