@@ -15,6 +15,5 @@
 #import "NameValuePaire.h"
 #import "NSURL+XCUP.h"
 #import "XCObjectMapping.h"
-#import "XCObjectMappingDelegate.h"
 
 #endif /* XCUPHttp_h */

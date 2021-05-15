@@ -8,33 +8,16 @@
 #import <Foundation/Foundation.h>
 #import <objc/message.h>
 
-#import "XCObjectMappingDelegate.h"
+#pragma mark - XCObjectMapping definition
+
+@protocol XCObjectMapping
+
+@optional
++ (NSDictionary * _Nullable)propertiesMapping;
+
+@end
 
 #pragma mark - C++ world
-
-#ifdef __cplusplus
-
-extern "C++" {
-    namespace nxcxx {
-
-        namespace objc {
-
-            template<typename T>
-            void nx_copyClassMetaInfoList(Class aClass, unsigned int *count, T**dest);
-
-            template<typename T>
-            static inline void nx_setIvarPrimitiveValue(id object, Ivar ivar, T value) {
-                ptrdiff_t offset = ivar_getOffset(ivar);
-                void *p = (__bridge void*)object;
-                *(T*)((char*)p + offset) = value;
-            }
-
-        }//namespace objc
-
-    }//namespace nxcxx
-}
-
-#endif
 
 #pragma mark - C world
 
@@ -61,8 +44,8 @@ extern "C" {
         unsigned int ivar_count;
         Ivar _Nullable * _Nullable ivars;
 
-        CFMutableDictionaryRef propertyAndIvars;
-        //NSMutableDictionary *propertyAndIvars;
+        //CFMutableDictionaryRef propertyAndIvars;
+        NSMutableDictionary *propertyAndIvars;
     }
     @end
 
@@ -84,6 +67,7 @@ extern "C" {
     @property (nonatomic, readonly) char* _Nullable typeEncoding;
     @property (nonatomic, readonly) char* _Nullable propNameCString;
     @property (nonatomic, assign) ptrdiff_t offset;
+
     @end
 
     nx_meta_cache *_Nonnull nx_buildMetaCache(Class _Nonnull aClass);
@@ -92,10 +76,6 @@ extern "C" {
     void nx_setIvarByPropertyName();
 
 NS_ASSUME_NONNULL_BEGIN
-
-@interface XCObjectMapping : NSObject<XCObjectMappingDelegate>
-
-@end
 
 @interface NSObject (JSONToObject)
 
