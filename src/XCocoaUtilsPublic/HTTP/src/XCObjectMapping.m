@@ -151,8 +151,10 @@ nx_meta_cache *_Nonnull nx_buildMetaCache(Class _Nonnull aClass) {
     meta->ivars = class_copyIvarList(aClass, &meta->ivar_count);
 
     meta->propertyNames = [NSMutableArray arrayWithCapacity:16];
-    meta->propertyAndIvars = [NSMutableDictionary dictionaryWithCapacity:4];
-                             //CFDictionaryCreateMutable(kCFAllocatorDefault, 4, &kNX_CStringDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+    meta->propertyAndIvars =
+    [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsStrongMemory valueOptions:NSPointerFunctionsStrongMemory capacity:4];
+    //[NSMutableDictionary dictionaryWithCapacity:4];
+    //CFDictionaryCreateMutable(kCFAllocatorDefault, 4, &kNX_CStringDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
     //CFDictionaryCreateMutable(kCFAllocatorDefault, 16, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
 
     for(int i = 0; i < meta->property_count; i++) {

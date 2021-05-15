@@ -45,7 +45,7 @@ extern "C" {
         Ivar _Nullable * _Nullable ivars;
 
         //CFMutableDictionaryRef propertyAndIvars;
-        NSMutableDictionary *propertyAndIvars;
+        NSMapTable *propertyAndIvars;
     }
     @end
 
