@@ -23,16 +23,29 @@ free(_##ivarName);\
 _##ivarName = NULL;\
 }
 
+@interface nx_meta_context: NSObject
+{
+@public
+    nx_meta_cache *cache;
+    id model;
+    id data;
+    Class aClass;
+}
+@end
+
+@implementation nx_meta_context
+@end
+
 @implementation nx_meta_cache : NSObject
 
 - (void)dealloc {
-    free(ivars);
-    free(properties);
+    free(_ivars);
+    free(_properties);
 }
 
 @end
 
-@implementation nx_meta_ivar_info
+@implementation nx_meta_ivar_descriptor
 
 @synthesize ivarClass = _ivarClass;
 @synthesize ivarName = _ivarName;
@@ -145,27 +158,27 @@ CFDictionaryValueCallBacks kNX_CStringDictionaryValueCallBacks = {
 
 nx_meta_cache *_Nonnull nx_buildMetaCache(Class _Nonnull aClass) {
     nx_meta_cache *meta = [nx_meta_cache new];
-    meta->theClass = aClass;
+    meta->_theClass = aClass;
     //Initial members
-    meta->properties = class_copyPropertyList(aClass, &meta->property_count);
-    meta->ivars = class_copyIvarList(aClass, &meta->ivar_count);
+    meta->_properties = class_copyPropertyList(aClass, &meta->_propertyCount);
+    meta->_ivars = class_copyIvarList(aClass, &meta->_ivarCount);
 
-    meta->propertyNames = [NSMutableArray arrayWithCapacity:16];
-    meta->propertyAndIvars =
-    [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsStrongMemory valueOptions:NSPointerFunctionsStrongMemory capacity:4];
-    //[NSMutableDictionary dictionaryWithCapacity:4];
+    meta->_propertyNames = [NSMutableArray arrayWithCapacity:16];
+    meta->_propertyAndIvars =
+    //[[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsStrongMemory valueOptions:NSPointerFunctionsStrongMemory capacity:4];
+    [NSMutableDictionary dictionaryWithCapacity:4];
     //CFDictionaryCreateMutable(kCFAllocatorDefault, 4, &kNX_CStringDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
     //CFDictionaryCreateMutable(kCFAllocatorDefault, 16, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
 
-    for(int i = 0; i < meta->property_count; i++) {
-        const char* name = property_getName(meta->properties[i]);
+    for(int i = 0; i < meta->_propertyCount; i++) {
+        const char* name = property_getName(meta->_properties[i]);
 
         unsigned long len = strlen(name);
         char ivar_name[len + 2];
         ivar_name[0] = '_';
         memcpy(ivar_name+1, name, len+1);
 
-        nx_meta_ivar_info *ivarInfo = [nx_meta_ivar_info new];
+        nx_meta_ivar_descriptor *ivarInfo = [nx_meta_ivar_descriptor new];
         ivarInfo.ivarName = ivar_name;
         Ivar ivar = nx_getIvarByPropertyName(aClass, name);
         ivarInfo->_ivar = ivar;
@@ -173,21 +186,21 @@ nx_meta_cache *_Nonnull nx_buildMetaCache(Class _Nonnull aClass) {
         ivarInfo.typeEncoding = (char*)ivar_getTypeEncoding(ivar);
         ivarInfo->_offset = ivar_getOffset(ivar);
         ivarInfo.propNameCString = (char*)name;
-        const char* attr = property_getAttributes(meta->properties[i]);
+        const char* attr = property_getAttributes(meta->_properties[i]);
         ivarInfo->_generic = nx_fetchFirstProtocol(attr);
 
         NSString *propName = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
         //CFDictionarySetValue(meta->cf_propertyAndIvars, ivarInfo->_propNameCString, (__bridge_retained void*)ivarInfo);
         //CFDictionarySetValue(meta->propertyAndIvars, (__bridge void*)propName, (__bridge void*)ivarInfo);
-        [meta->propertyAndIvars setObject:ivarInfo forKey:propName];
+        [meta->_propertyAndIvars setObject:ivarInfo forKey:propName];
 
-        [meta->propertyNames addObject:propName];
+        [meta->_propertyNames addObject:propName];
     }
 
     return meta;
 }
 
-inline nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
+nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
     //    if (!aClass || aClass == NSObject.class) {
     //        return 0;
     //    }
@@ -202,9 +215,94 @@ inline nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
 
         [metaCache setObject:cache forKey:(id)aClass];
 
-        //cache->superClass = nx_lookupMetaCache(class_getSuperclass(aClass));
+        //cache->_superClass = nx_lookupMetaCache(class_getSuperclass(aClass));
 
         return cache;
+    }
+}
+
+void nx_fillPropertyFunction(const void *key, const void *val, void *context) {
+    nx_meta_context *ctx = (__bridge nx_meta_context*)context;
+    //nx_meta_cache *cache = ctx->cache;
+    id obj = ctx->model;
+    Class aClass = ctx->aClass;
+
+#if 1
+    //Reading properties mapping.
+    NSDictionary *propMapped = nil;
+    if ([aClass respondsToSelector:mappingSelector]) {
+        propMapped = [aClass propertiesMapping];
+    }
+#endif
+
+
+    NSString *propertyKey = (__bridge NSString*)key;
+    //propertyKey = key;
+    id value = [ctx->data objectForKey:propertyKey];
+    //value = objValue;
+    id realValue = nil;
+
+    if (!value || [value isKindOfClass:[NSNull class]]) {
+        //continue;
+        return;
+    }
+#if 1
+    // map property key
+    NSString *mappedKey = nil;
+    if (!value && propMapped) {
+        mappedKey = [propMapped objectForKey:propertyKey];
+        if (mappedKey) {
+            value = [ctx->data valueForKey:mappedKey];
+        }
+    }
+#endif
+
+    realValue = value;//[self realValueForTypeEncode:typeEncode fromString:value];
+    nx_meta_ivar_descriptor *info = (__bridge nx_meta_ivar_descriptor *)val;//[cache->propertyAndIvars objectForKey:propertyKey];
+    if (!info) {
+        return;
+    }
+    if ([realValue isKindOfClass:[NSDictionary class]]) {
+        if (!info->_ivarClass) {
+            //continue;
+            return;
+        }
+        if (![info->_ivarClass isSubclassOfClass:[NSDictionary class]]) {
+            //mapp to class
+            realValue = [realValue forkFromClass:info->_ivarClass];
+        }
+        object_setIvar(obj, info->_ivar, realValue);
+    }else if ([realValue isKindOfClass:[NSArray class]]) {
+        realValue = [(NSArray *)realValue forkFromClass:info->_generic];
+        if (realValue) {
+            object_setIvar(obj, info->_ivar, realValue);
+        }
+    }else {
+        const char* typeEncode = ivar_getTypeEncoding(info->_ivar);
+        void* p = (__bridge void*)obj;
+
+        if (strcmp(typeEncode, @encode(NSObject*)) == 0 ||
+            strcmp(typeEncode, @encode(id)) == 0) {
+            object_setIvar(obj, info->_ivar, value);
+        }
+        else if (strcmp(typeEncode, @encode(BOOL)) == 0) {
+            *(BOOL*)((char*)p + info->_offset) = [value boolValue];
+        }
+        else if (strcmp(typeEncode, @encode(NSInteger)) == 0) {
+            *(NSInteger*)((char*)p + info->_offset) = [value integerValue];
+        }
+        else if (strcmp(typeEncode, @encode(NSUInteger)) == 0) {
+            *(NSUInteger*)((char*)p + info->_offset) = [value unsignedIntegerValue];
+        }
+        else if (strcmp(typeEncode, @encode(double)) == 0) {
+            *(double*)((char*)p + info->_offset) = [value doubleValue];
+        }
+        else if (strcmp(typeEncode, @encode(float)) == 0) {
+            *(float*)((char*)p + info->_offset) = [value doubleValue];
+        }
+        else {
+            object_setIvar(obj, info->_ivar, value);
+        }
     }
 }
 
@@ -362,7 +460,7 @@ inline nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
     __block id realValue = nil;
     __block id mappedKey = nil;
     __block NSString *propertyKey = nil;
-	unsigned int propertyCount = cache->property_count;
+	unsigned int propertyCount = cache->_propertyCount;
 
 #if 1
     //Reading properties mapping.
@@ -372,6 +470,15 @@ inline nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
     }
 #endif
 
+    nx_meta_context *ctx = [nx_meta_context new];
+    ctx->cache = cache;
+    ctx->model = obj;
+    ctx->data = self;
+    ctx->aClass = aClass;
+#if 1
+    //CFDictionaryApplyFunction((__bridge CFDictionaryRef)self, nx_fillPropertyFunction, (__bridge void*)ctx);
+    CFDictionaryApplyFunction((__bridge CFDictionaryRef)cache->_propertyAndIvars, nx_fillPropertyFunction, (__bridge void*)ctx);
+#else
     for (int i = 0; i < propertyCount; i++) {//for-beign
         propertyKey = cache->propertyNames[i];
         //propertyKey = key;
@@ -410,7 +517,7 @@ inline nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
             }
             object_setIvar(obj, info->_ivar, realValue);
         }else if ([realValue isKindOfClass:[NSArray class]]) {
-			realValue = [(NSArray *)realValue forkFromClass:info->_ivarClass];
+			realValue = [(NSArray *)realValue forkFromClass:info->_generic];
 			if (realValue) {
 				object_setIvar(obj, info->_ivar, realValue);
 			}
@@ -442,6 +549,7 @@ inline nx_meta_cache* _Nonnull nx_lookupMetaCache(Class _Nonnull aClass) {
             }
         }
     }//for-end
+#endif
 
 }
 
