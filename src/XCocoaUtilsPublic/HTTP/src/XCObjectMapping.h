@@ -13,7 +13,7 @@
 @protocol XCObjectMapping
 
 @optional
-+ (NSDictionary * _Nullable)propertiesMapping;
++ (NSDictionary *_Nullable)propertiesMapping;
 
 @end
 
@@ -25,55 +25,53 @@
 extern "C" {
 #endif
 
-    extern CFDictionaryKeyCallBacks kNX_CStringDictionaryKeyCallBacks;
-    extern CFDictionaryValueCallBacks kNX_CStringDictionaryValueCallBacks;
+extern CFDictionaryKeyCallBacks kNX_CStringDictionaryKeyCallBacks;
+extern CFDictionaryValueCallBacks kNX_CStringDictionaryValueCallBacks;
 
 #define MappingClass(class_name) protocol class_name
 
-    @class nx_meta_cache;
-    @interface nx_meta_cache : NSObject
-    {
+@interface nx_meta_cache : NSObject
+{
     @public
-        Class _Nonnull theClass;
-        nx_meta_cache * _Nullable superClass;
+    Class _Nonnull _theClass;
+    nx_meta_cache *_Nullable _superClass;
 
-        NSMutableArray* _Nullable propertyNames;
-        unsigned int property_count;
-        objc_property_t _Nonnull * _Nullable properties;
+    NSMutableArray *_Nullable _propertyNames;
+    unsigned int _propertyCount;
+    objc_property_t _Nonnull *_Nullable _properties;
 
-        unsigned int ivar_count;
-        Ivar _Nullable * _Nullable ivars;
+    unsigned int _ivarCount;
+    Ivar _Nullable *_Nullable _ivars;
 
-        //CFMutableDictionaryRef propertyAndIvars;
-        NSMapTable *propertyAndIvars;
-    }
-    @end
+    NSMutableDictionary *_propertyAndIvars;
+}
+@end
 
-    @interface nx_meta_ivar_info : NSObject
-    {
-        @public
-        Ivar _ivar;
-        Class __strong _ivarClass;
-        Class __strong _generic;
-        char* _ivarName;
-        char* _typeEncoding;
-        char* _propNameCString;
-        ptrdiff_t _offset;
-    }
-    @property (nonatomic, assign) Ivar _Nullable ivar;
-    @property (nonatomic, strong) Class _Nullable ivarClass;
-    @property (nonatomic, strong) Class _Nullable generic;
-    @property (nonatomic, readonly) char* _Nullable ivarName;
-    @property (nonatomic, readonly) char* _Nullable typeEncoding;
-    @property (nonatomic, readonly) char* _Nullable propNameCString;
-    @property (nonatomic, assign) ptrdiff_t offset;
+@interface nx_meta_ivar_descriptor : NSObject
+{
+    @public
+    Ivar _ivar;
+    Class __strong _ivarClass;
+    Class __strong _generic;
+    char *_ivarName;
+    char *_typeEncoding;
+    char *_propNameCString;
+    ptrdiff_t _offset;
+}
+@property (nonatomic, assign) Ivar _Nullable ivar;
+@property (nonatomic, strong) Class _Nullable ivarClass;
+@property (nonatomic, strong) Class _Nullable generic;
+@property (nonatomic, assign) char *_Nullable ivarName;
+@property (nonatomic, readonly) char *_Nullable typeEncoding;
+@property (nonatomic, readonly) char *_Nullable propNameCString;
+@property (nonatomic, assign) ptrdiff_t offset;
 
-    @end
+@end
 
-    nx_meta_cache *_Nonnull nx_buildMetaCache(Class _Nonnull aClass);
-    nx_meta_cache * _Nonnull nx_lookupMetaCache(Class _Nonnull aClass);
-    Ivar _Nullable nx_getIvarByPropertyName(Class _Nonnull aClass, const char* _Nonnull propName);
-    void nx_setIvarByPropertyName();
+nx_meta_cache * _Nonnull nx_buildMetaCache(Class _Nonnull aClass);
+nx_meta_cache * _Nonnull nx_lookupMetaCache(Class _Nonnull aClass);
+Ivar _Nullable nx_getIvarByPropertyName(Class _Nonnull aClass, const char *_Nonnull propName);
+void nx_setIvarByPropertyName();
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -81,32 +79,32 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (nullable id)realValueForTypeEncode:(nonnull const char *)type fromString:(nonnull NSString *)string;
 - (nullable NSDictionary *)dictionary;
-- (nullable NSString *)fetchFirstProtocolName:(const char * _Nullable)attribute;
+- (nullable NSString *)fetchFirstProtocolName:(const char *_Nullable)attribute;
 - (NSDictionary *_Nullable)propertiesMapping;
 
 @end
 
 @interface NSString (JSONToObject)
 
-- (nullable id)forkFromClass:(nonnull Class) aClass;
+- (nullable id)forkFromClass:(nonnull Class)aClass;
 
 @end
 
 @interface NSData (JSONToObject)
 
-- (nullable id)forkFromClass:(nonnull Class) aClass;
+- (nullable id)forkFromClass:(nonnull Class)aClass;
 
 @end
 
 @interface NSArray (JSONToObject)
 
-- (nullable id)forkFromClass:(nonnull Class) aClass;
+- (nullable id)forkFromClass:(nonnull Class)aClass;
 
 @end
 
 @interface NSDictionary (JSONToObject)
 
-- (nullable id)forkFromClass:(nonnull Class) aClass;
+- (nullable id)forkFromClass:(nonnull Class)aClass;
 - (void)flushObject:(nonnull id)object;
 
 @end
