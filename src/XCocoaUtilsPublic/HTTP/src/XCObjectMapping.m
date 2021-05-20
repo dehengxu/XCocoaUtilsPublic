@@ -170,6 +170,13 @@ nx_meta_cache *_Nonnull nx_buildMetaCache(Class _Nonnull aClass) {
     //CFDictionaryCreateMutable(kCFAllocatorDefault, 4, &kNX_CStringDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
     //CFDictionaryCreateMutable(kCFAllocatorDefault, 16, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
 
+	//Reading properties mapping.
+	if ([aClass respondsToSelector:mappingSelector]) {
+		meta->_mappedProp = [aClass propertiesMapping];
+	}else {
+		meta->_mappedProp = nil;
+	}
+
     for(int i = 0; i < meta->_propertyCount; i++) {
         const char* name = property_getName(meta->_properties[i]);
 
@@ -192,9 +199,14 @@ nx_meta_cache *_Nonnull nx_buildMetaCache(Class _Nonnull aClass) {
         NSString *propName = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
         //CFDictionarySetValue(meta->cf_propertyAndIvars, ivarInfo->_propNameCString, (__bridge_retained void*)ivarInfo);
         //CFDictionarySetValue(meta->propertyAndIvars, (__bridge void*)propName, (__bridge void*)ivarInfo);
-        [meta->_propertyAndIvars setObject:ivarInfo forKey:propName];
 
-        [meta->_propertyNames addObject:propName];
+		NSString *mappedProp = nil;
+		if (meta->_mappedProp && (mappedProp = meta->_mappedProp[propName])) {
+			propName = mappedProp;
+		}
+
+		[meta->_propertyNames addObject:propName];
+        [meta->_propertyAndIvars setObject:ivarInfo forKey:propName];
     }
 
     return meta;
@@ -227,7 +239,7 @@ void nx_fillPropertyFunction(const void *key, const void *val, void *context) {
     id obj = ctx->model;
     Class aClass = ctx->aClass;
 
-#if 1
+#if 0
     //Reading properties mapping.
     NSDictionary *propMapped = nil;
     if ([aClass respondsToSelector:mappingSelector]) {
@@ -246,7 +258,7 @@ void nx_fillPropertyFunction(const void *key, const void *val, void *context) {
         //continue;
         return;
     }
-#if 1
+#if 0
     // map property key
     NSString *mappedKey = nil;
     if (!value && propMapped) {
@@ -397,13 +409,7 @@ void nx_fillPropertyFunction(const void *key, const void *val, void *context) {
 - (id)forkFromClass:(nonnull Class)aClass
 {
     id jsonObj = [NSJSONSerialization JSONObjectWithData:self options:NSJSONReadingAllowFragments error:nil];
-    
-    if (![NSJSONSerialization isValidJSONObject:jsonObj]) {
-        NSLog(@"jsonobj is NOT JSON object.");
-        return nil;
-    }
-    NSArray *obj = nil;
-    obj = [jsonObj forkFromClass:aClass];
+    NSArray *obj = [jsonObj forkFromClass:aClass];
     return obj;
 }
 
@@ -442,11 +448,11 @@ void nx_fillPropertyFunction(const void *key, const void *val, void *context) {
 
 - (id)forkFromClass:(nonnull Class)aClass
 {   
+	if (self.count <= 0) {
+		return nil;
+	}
     id obj = [[aClass alloc] init];
 
-    if (self.count <= 0) {
-        return nil;
-    }
     [self flushObject:obj];
     
     return obj;
@@ -462,25 +468,25 @@ void nx_fillPropertyFunction(const void *key, const void *val, void *context) {
     __block NSString *propertyKey = nil;
 	unsigned int propertyCount = cache->_propertyCount;
 
-#if 1
-    //Reading properties mapping.
+#if 0
+
     NSDictionary *propMapped = nil;
     if ([aClass respondsToSelector:mappingSelector]) {
         propMapped = [aClass propertiesMapping];
     }
 #endif
 
-    nx_meta_context *ctx = [nx_meta_context new];
-    ctx->cache = cache;
-    ctx->model = obj;
-    ctx->data = self;
-    ctx->aClass = aClass;
-#if 1
+#if 0
+	nx_meta_context *ctx = [nx_meta_context new];
+	ctx->cache = cache;
+	ctx->model = obj;
+	ctx->data = self;
+	ctx->aClass = aClass;
     //CFDictionaryApplyFunction((__bridge CFDictionaryRef)self, nx_fillPropertyFunction, (__bridge void*)ctx);
     CFDictionaryApplyFunction((__bridge CFDictionaryRef)cache->_propertyAndIvars, nx_fillPropertyFunction, (__bridge void*)ctx);
 #else
     for (int i = 0; i < propertyCount; i++) {//for-beign
-        propertyKey = cache->propertyNames[i];
+        propertyKey = cache->_propertyNames[i];
         //propertyKey = key;
         value = [self objectForKey:propertyKey];
         //value = objValue;
@@ -489,63 +495,63 @@ void nx_fillPropertyFunction(const void *key, const void *val, void *context) {
             continue;
             //return;
         }
-#if 1
+#if 0
         // map property key
-        if (!value && propMapped) {
-            mappedKey = [propMapped objectForKey:propertyKey];
+        if (!value && cache->_mappedProp) {
+            mappedKey = [cache->_mappedProp objectForKey:propertyKey];
             if (mappedKey) {
-                value = [self valueForKey:mappedKey];
+                value = [self objectForKey:mappedKey];
             }
         }
 #endif
 
         realValue = value;//[self realValueForTypeEncode:typeEncode fromString:value];
-        nx_meta_ivar_info *info = [cache->propertyAndIvars objectForKey:propertyKey];
-        if (!info) {
+		nx_meta_ivar_descriptor *descriptor = [cache->_propertyAndIvars objectForKey:propertyKey];
+        if (!descriptor) {
             return;
         }
         if ([realValue isKindOfClass:[NSDictionary class]]) {
-            if (!info->_ivarClass) {
+            if (!descriptor->_ivarClass) {
                 continue;
                 //return;
             }
-            if (![info->_ivarClass isSubclassOfClass:[NSDictionary class]]) {
+            if (![descriptor->_ivarClass isSubclassOfClass:[NSDictionary class]]) {
                 //直接保留映射为 className 的情况
-                realValue = [realValue forkFromClass:info->_ivarClass];
+                realValue = [realValue forkFromClass:descriptor->_ivarClass];
             }else {
                 //直接保留映射为 NSDictionary 的情况
             }
-            object_setIvar(obj, info->_ivar, realValue);
+            object_setIvar(obj, descriptor->_ivar, realValue);
         }else if ([realValue isKindOfClass:[NSArray class]]) {
-			realValue = [(NSArray *)realValue forkFromClass:info->_generic];
+			realValue = [(NSArray *)realValue forkFromClass:descriptor->_generic];
 			if (realValue) {
-				object_setIvar(obj, info->_ivar, realValue);
+				object_setIvar(obj, descriptor->_ivar, realValue);
 			}
         }else {
-            const char* typeEncode = ivar_getTypeEncoding(info->_ivar);
+            const char* typeEncode = ivar_getTypeEncoding(descriptor->_ivar);
             void* p = (__bridge void*)obj;
 
             if (strcmp(typeEncode, @encode(NSObject*)) == 0 ||
                 strcmp(typeEncode, @encode(id)) == 0) {
-                object_setIvar(obj, info->_ivar, value);
+                object_setIvar(obj, descriptor->_ivar, value);
             }
             else if (strcmp(typeEncode, @encode(BOOL)) == 0) {
-                *(BOOL*)((char*)p + info->_offset) = [value boolValue];
+                *(BOOL*)((char*)p + descriptor->_offset) = [value boolValue];
             }
             else if (strcmp(typeEncode, @encode(NSInteger)) == 0) {
-                *(NSInteger*)((char*)p + info->_offset) = [value integerValue];
+                *(NSInteger*)((char*)p + descriptor->_offset) = [value integerValue];
             }
             else if (strcmp(typeEncode, @encode(NSUInteger)) == 0) {
-                *(NSUInteger*)((char*)p + info->_offset) = [value unsignedIntegerValue];
+                *(NSUInteger*)((char*)p + descriptor->_offset) = [value unsignedIntegerValue];
             }
             else if (strcmp(typeEncode, @encode(double)) == 0) {
-                *(double*)((char*)p + info->_offset) = [value doubleValue];
+                *(double*)((char*)p + descriptor->_offset) = [value doubleValue];
             }
             else if (strcmp(typeEncode, @encode(float)) == 0) {
-                *(float*)((char*)p + info->_offset) = [value doubleValue];
+                *(float*)((char*)p + descriptor->_offset) = [value doubleValue];
             }
             else {
-                object_setIvar(obj, info->_ivar, value);
+                object_setIvar(obj, descriptor->_ivar, value);
             }
         }
     }//for-end

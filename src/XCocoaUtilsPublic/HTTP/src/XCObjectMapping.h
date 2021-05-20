@@ -37,13 +37,16 @@ extern CFDictionaryValueCallBacks kNX_CStringDictionaryValueCallBacks;
     nx_meta_cache *_Nullable _superClass;
 
     NSMutableArray *_Nullable _propertyNames;
-    unsigned int _propertyCount;
     objc_property_t _Nonnull *_Nullable _properties;
 
-    unsigned int _ivarCount;
+    //_Alignas(void*)
+	unsigned int _ivarCount;
+	//_Alignas(void*)
+	unsigned int _propertyCount;
     Ivar _Nullable *_Nullable _ivars;
 
     NSMutableDictionary *_propertyAndIvars;
+	NSDictionary *_mappedProp;
 }
 @end
 
