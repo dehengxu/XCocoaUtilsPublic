@@ -33,14 +33,41 @@ NSUInteger reportMemory(void)
     }
 }
 
-/// from objc-internal.h
+/*
+ from objc4-818.2 objc-internal.h
+
+ #if __arm64__
+ // ARM64 uses a new tagged pointer scheme where normal tags are in
+ // the low bits, extended tags are in the high bits, and half of the
+ // extended tag space is reserved for unobfuscated payloads.
+ #   define OBJC_SPLIT_TAGGED_POINTERS 1
+ #else
+ #   define OBJC_SPLIT_TAGGED_POINTERS 0
+ #endif
+
+ #if (TARGET_OS_OSX || TARGET_OS_MACCATALYST) && __x86_64__
+ // 64-bit Mac - tag bit is LSB
+ #   define OBJC_MSB_TAGGED_POINTERS 0
+ #else
+ // Everything else - tag bit is MSB
+ #   define OBJC_MSB_TAGGED_POINTERS 1
+ #endif
+ 
+ */
+#if (TARGET_OS_OSX || TARGET_OS_MACCATALYST) && __x86_64__
+//LSB
+#   define _OBJC_TAG_MASK (1UL)
+#else
+//MSB
 #   define _OBJC_TAG_MASK (1UL<<63)
+#endif
 static inline bool
 _objc_isTaggedPointerOrNil(const void * _Nullable ptr)
 {
 	// this function is here so that clang can turn this into
 	// a comparison with NULL when this is appropriate
 	// it turns out it's not able to in many cases without this
+	NSLog(@"_OBJC_TAG_MASK: %p", _OBJC_TAG_MASK);
 	return !ptr || ((uintptr_t)ptr & _OBJC_TAG_MASK) == _OBJC_TAG_MASK;
 }
 
