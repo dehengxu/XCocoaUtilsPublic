@@ -10,11 +10,18 @@
 
 #import <UIKit/UIKit.h>
 
-#else
+#elif TARGET_OS_MAC && TARGET_OS_OSX
+
+#import <AppKit/AppKit.h>
 
 #endif
 
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
 extern void _objc_autoreleasePoolPrint(void);
+extern BOOL xcup_isTaggedPointer(id o);
 
 /// Check key if null and return immediately
 #define IsNullAndReturn(key) do { NSAssert(([key isKindOfClass:NSString.class] && key.length > 0) || key, @" "#key" is nil.");\
@@ -79,3 +86,7 @@ extern NSUInteger reportMemory(void);
 + (NSString *)httpParamsStringByArray:(NSArray*)params;
 
 @end
+
+#if defined(__cplusplus)
+}
+#endif

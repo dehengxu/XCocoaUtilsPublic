@@ -33,6 +33,21 @@ NSUInteger reportMemory(void)
     }
 }
 
+/// from objc-internal.h
+#   define _OBJC_TAG_MASK (1UL<<63)
+static inline bool
+_objc_isTaggedPointerOrNil(const void * _Nullable ptr)
+{
+	// this function is here so that clang can turn this into
+	// a comparison with NULL when this is appropriate
+	// it turns out it's not able to in many cases without this
+	return !ptr || ((uintptr_t)ptr & _OBJC_TAG_MASK) == _OBJC_TAG_MASK;
+}
+
+BOOL xcup_isTaggedPointer(id o) {
+	return _objc_isTaggedPointerOrNil((__bridge const void * _Nullable)(o));
+}
+
 @interface DebugUtility (private)
 
 
