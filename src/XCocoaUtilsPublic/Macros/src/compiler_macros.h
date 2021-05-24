@@ -9,22 +9,34 @@
 #ifndef compiler_macros_h
 #define compiler_macros_h
 
-#if defined(__cplusplus)
-#define c_extern extern "C"
-#else
-#define c_extern
+#pragma mark - Extern
+
+#if !defined(c_extern)
+	#if defined(__cplusplus)
+		#define c_extern extern "C"
+	#else
+		#define c_extern
+	#endif
 #endif
 
-#if defined(__cplusplus)
-#define C_EXTERN_BEGIN extern "C" {
-#else
-#define C_EXTERN_BEGIN
+#if !defined(C_EXTERN_BEGIN) || !defined(C_EXTERN_END)
+	#if defined(__cplusplus)
+		#define C_EXTERN_BEGIN extern "C" {
+		#define C_EXTERN_END }
+	#else
+		#define C_EXTERN_BEGIN
+		#define C_EXTERN_END
+	#endif
 #endif
 
-#if defined(__cplusplus)
-#define C_EXTERN_END }
-#else
-#define C_EXTERN_END
+#if !defined(XCUP_EXTERN_BEGIN) || !defined(XCUP_EXTERN_END)
+	#if defined(__cplusplus)
+		#define XCUP_EXTERN_BEGIN extern "C" {
+		#define XCUP_EXTERN_END }
+	#else
+		#define XCUP_EXTERN_BEGIN
+		#define XCUP_EXTERN_END
+	#endif
 #endif
 
 #ifndef XCUP_STRINGIFY
