@@ -75,6 +75,11 @@ BOOL xcup_isTaggedPointer(id o) {
 	return _objc_isTaggedPointerOrNil((__bridge const void * _Nullable)(o));
 }
 
+void xcup_ARPPrint(void) {
+	_objc_autoreleasePoolPrint();
+	printf("\n\n");
+}
+
 @interface DebugUtility (private)
 
 

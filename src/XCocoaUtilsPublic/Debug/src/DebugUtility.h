@@ -20,8 +20,9 @@
 extern "C" {
 #endif
 
-extern void _objc_autoreleasePoolPrint(void);
-extern BOOL xcup_isTaggedPointer(id o);
+void _objc_autoreleasePoolPrint(void);
+void xcup_ARPPrint(void);
+BOOL xcup_isTaggedPointer(id o);
 
 /// Check key if null and return immediately
 #define IsNullAndReturn(key) do { NSAssert(([key isKindOfClass:NSString.class] && key.length > 0) || key, @" "#key" is nil.");\

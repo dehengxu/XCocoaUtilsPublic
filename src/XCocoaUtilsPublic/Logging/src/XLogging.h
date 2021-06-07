@@ -22,7 +22,7 @@ extern "C" {
 
 #pragma mark - Tag logging
 
-#if __OBJC2__
+#if __OBJC__
 
 #import <objc/runtime.h>
 #import <Foundation/Foundation.h>
