@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)isSupportInteractivePopGestureRecognizer;
 
-- (UINavigationController* __nullable)xcup_navigationController;
+- (UINavigationController* __nonnull)xcup_navigationController;
 
 - (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated orNeedNavigation:(BOOL)needed completion:(void(^ __nullable)(void))completion;
 
