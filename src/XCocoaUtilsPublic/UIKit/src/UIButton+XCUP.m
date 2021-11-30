@@ -24,6 +24,7 @@
 	}
 }
 
+#if false
 - (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents {
 	if ([target isKindOfClass:XCUPBlockButton.class] && action == @selector(_private_onClick:)) {
 		[super addTarget:target action:action forControlEvents:controlEvents];
@@ -31,6 +32,7 @@
 		NSAssert(false, @"XCUPBlockButton only wrap selector _private_onClick: with block");
 	}
 }
+#endif
 
 @end
 
