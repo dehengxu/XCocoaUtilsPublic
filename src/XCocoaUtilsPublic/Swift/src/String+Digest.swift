@@ -9,7 +9,7 @@
 import Foundation
 import CommonCrypto
 
-public protocol XCDigesting {
+public protocol XCUPDigesting {
 	func MD5(lowercase: Bool) -> String
 	func SHA256(lowercase: Bool) -> String
 	func SHA512(lowercase: Bool) -> String
@@ -24,7 +24,7 @@ public extension Array {
 
 	/// Joint array and convert lowercase
 	/// - Returns: String
-	func lowerString() -> String {
+	func xcupLowerHexString() -> String where Element: Numeric {
 
 		let a = self.map { (e: Element) -> String in
 			return String(format: "%0x", e as! CVarArg)
@@ -35,7 +35,7 @@ public extension Array {
 
 	/// Joint array and convert uppercase
 	/// - Returns: String
-	func upperString() -> String {
+	func xcupUpperHexString() -> String where Element: Numeric {
 
 		let a = self.map { (e: Element) -> String in
 			return String(format: "%0X", e as! CVarArg)
@@ -49,23 +49,23 @@ public extension Array {
 @objc extension NSString {
     
     public func MD5(_ lowercase: Bool = true) -> NSString {
-        let s = (self as String) as XCDigesting
+        let s = (self as String) as XCUPDigesting
         return s.MD5(lowercase: lowercase) as NSString
     }
     
     public func SHA256(_ lowercase: Bool = true) -> NSString {
-        let s = (self as String) as XCDigesting
+        let s = (self as String) as XCUPDigesting
         return s.SHA256(lowercase: lowercase) as NSString
     }
     
     public func SHA512(_ lowercase: Bool = true) -> NSString {
-        let s = (self as String) as XCDigesting
+        let s = (self as String) as XCUPDigesting
         return s.SHA512(lowercase: lowercase) as NSString
     }
     
 }
 
-extension String: XCDigesting {
+extension String: XCUPDigesting {
 
 	public func MD5(lowercase: Bool = true) -> String {
 		var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
@@ -79,7 +79,7 @@ extension String: XCDigesting {
 		}
 
 		let msg =
-			lowercase ? digest.lowerString() : digest.upperString()
+			lowercase ? digest.xcupLowerHexString() : digest.xcupUpperHexString()
 		return msg
 	}
 
@@ -92,7 +92,7 @@ extension String: XCDigesting {
 			CC_SHA256_Final($0, &ctx)
 		})
 
-		let msg = lowercase ? digest.lowerString() : digest.upperString()
+		let msg = lowercase ? digest.xcupLowerHexString() : digest.xcupUpperHexString()
 		return msg
 	}
 
@@ -105,7 +105,7 @@ extension String: XCDigesting {
 			CC_SHA512_Final($0, &ctx)
 		})
 
-		let msg = lowercase ? digest.lowerString() : digest.upperString()
+		let msg = lowercase ? digest.xcupLowerHexString() : digest.xcupUpperHexString()
 		return msg
 	}
 

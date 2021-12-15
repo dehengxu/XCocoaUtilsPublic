@@ -5,7 +5,8 @@
 //  Created by NicholasXu on 2020/8/14.
 //  Copyright © 2020 NicholasXu. All rights reserved.
 //
-#if false //os(iOS)
+
+#if os(iOS)
 import UIKit
 
 @objc public extension UIButton {
@@ -35,11 +36,11 @@ import UIKit
         return btn
     }
     
-    @objc func setHandler(_ handler:((_ sender: UIControl)->Void)?) {
-        if let blkBtn = self as? BlockButton {
-            blkBtn.handleBlock = handler
-        }
-    }
+//    @objc func setHandler(_ handler:((_ sender: UIControl)->Void)?) {
+//        if let blkBtn = self as? BlockButton {
+//            blkBtn.handleBlock = handler
+//        }
+//    }
     
 }
 #else

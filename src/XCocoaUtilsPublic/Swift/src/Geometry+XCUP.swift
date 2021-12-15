@@ -8,7 +8,7 @@
 import CoreGraphics
 
 extension CGRect {
-	func xcup_center() -> CGPoint {
+	func xcupCenter() -> CGPoint {
 		return CGPoint(x: self.origin.x + self.size.width / 2.0, y: self.origin.y + self.size.height / 2.0)
 	}
 }
