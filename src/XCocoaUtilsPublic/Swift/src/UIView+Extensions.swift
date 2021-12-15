@@ -11,7 +11,7 @@ import UIKit
 extension UIView {
 	typealias T = UIView
 
-	var cornerRadius: CGFloat {
+	public var cornerRadius: CGFloat {
 		set {
 			self.layer.cornerRadius = newValue
 			self.layer.masksToBounds = true
@@ -25,7 +25,7 @@ extension UIView {
         self.removeFromSuperview()
     }
 
-	var width: CGFloat {
+	public var width: CGFloat {
 		get {
 			return self.frame.size.width
 		}
@@ -34,7 +34,7 @@ extension UIView {
 		}
 	}
 
-	var height: CGFloat {
+	public var height: CGFloat {
 		get {
 			return self.frame.size.height
 		}
@@ -43,7 +43,7 @@ extension UIView {
 		}
 	}
 
-	var x: CGFloat {
+	public var x: CGFloat {
 		get {
 			return self.frame.origin.x
 		}
@@ -52,7 +52,7 @@ extension UIView {
 		}
 	}
 
-	var y: CGFloat {
+	public var y: CGFloat {
 		get {
 			return self.frame.origin.y
 		}
@@ -61,7 +61,7 @@ extension UIView {
 		}
 	}
 
-	func resize(_ handler:(_ width: inout CGFloat, _ height: inout CGFloat) -> Void ) {
+	public func resize(_ handler:(_ width: inout CGFloat, _ height: inout CGFloat) -> Void ) {
 		var frame = self.frame
 		var width: CGFloat = frame.size.width
 		var height: CGFloat = frame.size.height
@@ -71,7 +71,7 @@ extension UIView {
 		self.frame = frame
 	}
 
-	func moveToCenter(_ handler:(_ centerX: inout CGFloat, _ centerY: inout CGFloat) -> Void) {
+	public func moveToCenter(_ handler:(_ centerX: inout CGFloat, _ centerY: inout CGFloat) -> Void) {
 		var x = self.center.x
 		var y = self.center.y
 		handler(&x, &y)
@@ -79,7 +79,7 @@ extension UIView {
 		self.center.y = y
 	}
 
-	func moveToOrigin(_ handler:(_ x: inout CGFloat, _ y: inout CGFloat) -> Void) {
+	public func moveToOrigin(_ handler:(_ x: inout CGFloat, _ y: inout CGFloat) -> Void) {
 		var x = self.frame.origin.x
 		var y = self.frame.origin.y
 		handler(&x, &y)
