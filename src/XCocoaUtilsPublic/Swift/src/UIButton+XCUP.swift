@@ -35,6 +35,12 @@ import UIKit
         btn.handleBlock = handler
         return btn
     }
+
+	func setHandler(_ handler: ((_ sender: UIControl)->Void)?) {
+		if let btn = self as? BlockButton {
+			btn.handleBlock = handler
+		}
+	}
     
 //    @objc func setHandler(_ handler:((_ sender: UIControl)->Void)?) {
 //        if let blkBtn = self as? BlockButton {

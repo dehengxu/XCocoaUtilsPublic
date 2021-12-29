@@ -19,15 +19,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// Create a button with a block instead of target/action
 /// @param type UIButtonType
 /// @param handleBlock a block 
-+ (instancetype)blockButtonWithType:(UIButtonType)type handler:(nullable void(^)(id sender))handleBlock;
++ (instancetype)xcupBlockButtonWithType:(UIButtonType)type handler:(nullable void(^)(id sender))handleBlock;
 
 /// Create a button with a block default nil, instead of target/action
 /// @param type UIButtonType
-+ (instancetype)blockButtonWithType:(UIButtonType)type;
++ (instancetype)xcupBlockButtonWithType:(UIButtonType)type;
 
 /// Only can be used on object created with blockButtonWithType:handler:
 /// @param handleBlock a new action block
-- (void)setHandler:(void(^)(id sender))handleBlock;
+- (void)setActionBlock:(void(^)(id sender))handleBlock;
 
 #pragma mark - Convinience init
 

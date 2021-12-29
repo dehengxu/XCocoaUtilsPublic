@@ -38,18 +38,18 @@
 
 @implementation UIButton (XCUP)
 
-+ (UIButton *)blockButtonWithType:(UIButtonType)type handler:(void (^)(id))handleBlock {
++ (UIButton *)xcupBlockButtonWithType:(UIButtonType)type handler:(void (^)(id))actionBlock {
 	XCUPBlockButton *btn = [XCUPBlockButton buttonWithType:type];
 	[btn addTarget:btn action:@selector(_private_onClick:) forControlEvents:UIControlEventTouchUpInside];
-	[btn setHandler:handleBlock];
+	[btn setActionBlock:actionBlock];
 	return btn;
 }
 
-+ (UIButton *)blockButtonWithType:(UIButtonType)type {
-	return [self blockButtonWithType:type handler:nil];
++ (UIButton *)xcupBlockButtonWithType:(UIButtonType)type {
+	return [self xcupBlockButtonWithType:type handler:nil];
 }
 
-- (void)setHandler:(void(^)(id sender))handleBlock {
+- (void)setActionBlock:(void(^)(id sender))handleBlock {
 	if ([self isKindOfClass:XCUPBlockButton.class]) {
 		[(XCUPBlockButton*)self setActionBlock:handleBlock];
 	}
