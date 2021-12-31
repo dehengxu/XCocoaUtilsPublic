@@ -9,7 +9,7 @@
 import UIKit
 public extension UIBarButtonItem {
 
-	@objc convenience init(xcupTitle buttonTitle: String? = nil, titleColor: UIColor = .black, target: AnyObject, selector: Selector, buttonSize size: CGSize = CGSize(width: 64, height: 44), buttonType type: UIButton.ButtonType = .system, forEvent: UIControl.Event = .touchUpInside) {
+	@objc convenience init(xcupTitle buttonTitle: String? = "", titleColor: UIColor = .black, target: AnyObject, selector: Selector, buttonSize size: CGSize = CGSize(width: 64, height: 44), buttonType type: UIButton.ButtonType = .system, forEvent: UIControl.Event = .touchUpInside) {
 		let btn = UIButton(type: type)
 		btn.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
 		btn.setTitle(buttonTitle, for: .normal)
@@ -17,7 +17,7 @@ public extension UIBarButtonItem {
 		self.init(customView: btn)
 	}
 
-	@objc func XCUPCustomButton() -> UIButton? {
+	@objc func xcup_customButton() -> UIButton? {
 		return self.customView as? UIButton
 	}
 }
