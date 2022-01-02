@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+#define SUBCLASSING_FROM_SWIFT __attribute__((objc_subclassing_restricted))
+
 #if __cplusplus
 extern "C" {
 #endif

@@ -7,7 +7,7 @@
 
 #import "UIBarButtonItem+XCUP.h"
 
-CGSize XCUPDefaultBarButtonItemSize = (CGSize){64.0, 44.0};
+CGSize XCUPDefaultBarButtonItemSize = (CGSize){44.0, 44.0};
 
 //@implementation UIBarButtonItem (XCUP)
 //

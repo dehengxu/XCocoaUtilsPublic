@@ -7,19 +7,34 @@
 
 #if os(iOS) //os(iOS)
 import UIKit
-public extension UIBarButtonItem {
 
-	@objc convenience init(xcupTitle buttonTitle: String? = "", titleColor: UIColor = .black, target: AnyObject, selector: Selector, buttonSize size: CGSize = CGSize(width: 64, height: 44), buttonType type: UIButton.ButtonType = .system, forEvent: UIControl.Event = .touchUpInside) {
-		let btn = UIButton(type: type)
-		btn.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-		btn.setTitle(buttonTitle, for: .normal)
-		btn.addTarget(target, action: selector, for: forEvent)
+private protocol ButtonAsCustomView {}
+
+extension UIBarButtonItem: ButtonAsCustomView {
+
+
+	public convenience init(xcupTitle: String? = nil, titleColor: UIColor = .black, target: AnyObject? = nil, selector: Selector? = nil, buttonType: UIButton.ButtonType = .custom, forEvent: UIControl.Event = .touchUpInside) {
+		let btn = UIButton.xcup_button(title: xcupTitle, titleColor: titleColor, target: target, selector: selector, closure: nil, type: buttonType)
 		self.init(customView: btn)
 	}
 
-	@objc func xcup_customButton() -> UIButton? {
+	public convenience init(xcupTitle: String? = nil, titleColor: UIColor = .black, closure: ((_ sender: UIButton)->Void)? = nil, buttonType: UIButton.ButtonType = .custom, forEvent: UIControl.Event = .touchUpInside) {
+		let btn = UIButton.xcup_button(title: xcupTitle, titleColor: titleColor, target: nil, selector: nil, closure: closure, type: buttonType)
+		self.init(customView: btn)
+	}
+
+	public func xcup_withCustomViewSize(width: CGFloat = 64.0, height: CGFloat = 44.0) -> Self {
+		if let view = self.customView {
+			view.frame.size.width = width
+			view.frame.size.height = height
+		}
+		return self
+	}
+
+	public func xcup_customButton() -> UIButton? {
 		return self.customView as? UIButton
 	}
+
 }
 
 #endif

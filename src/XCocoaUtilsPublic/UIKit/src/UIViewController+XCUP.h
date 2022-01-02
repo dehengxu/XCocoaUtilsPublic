@@ -26,19 +26,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (XCUP)
 
-+ (NSString *)xibFileNameDefaultSuffix;
-+ (instancetype)viewControllerWithNibName:(NSString *)nibName bundle:(NSBundle *)nibBundleOrNil;
+//+ (NSString *)xibFileNameDefaultSuffix;
+//+ (instancetype)viewControllerWithNibName:(NSString *)nibName bundle:(NSBundle *)nibBundleOrNil;
 
-- (BOOL)isSupportInteractivePopGestureRecognizer;
+//- (BOOL)isSupportInteractivePopGestureRecognizer;
 
-- (UINavigationController* __nonnull)xcup_navigationController;
+//- (UINavigationController* __nonnull)xcup_navigationController;
 
-- (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated orNeedNavigation:(BOOL)needed completion:(void(^ __nullable)(void))completion;
+//- (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated orNeedNavigation:(BOOL)needed completion:(void(^ __nullable)(void))completion;
 
-- (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated modalStyle:(UIModalPresentationStyle)presentationStyle transitionStyle:(UIModalTransitionStyle)transitionStyle orNeedNavigation:(BOOL)needed completion:(void(^ __nullable)(void))completion;
+//- (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated modalStyle:(UIModalPresentationStyle)presentationStyle transitionStyle:(UIModalTransitionStyle)transitionStyle orNeedNavigation:(BOOL)needed completion:(void(^ __nullable)(void))completion;
 
-- (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated completion:(void(^ __nullable)(void))completion;
-- (instancetype)xcup_dismissViewController:(BOOL)animated completion:(void(^ __nullable)(void))completion;
+//- (instancetype)xcup_present:(UIViewController*)presentedViewController animated:(BOOL)animated completion:(void(^ __nullable)(void))completion;
+//- (instancetype)xcup_dismissViewController:(BOOL)animated completion:(void(^ __nullable)(void))completion;
 
 @end
 
