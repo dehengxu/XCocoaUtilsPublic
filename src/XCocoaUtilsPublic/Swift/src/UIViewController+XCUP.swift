@@ -67,7 +67,10 @@ import UIKit
 			self.dismiss(animated: animated, completion: completion)
 		}
 	}
-	
+
+	func setNavigationBarColor(_ color: UIColor, for barMetrics: UIBarMetrics = .default) {
+		self.navigationController?.navigationBar.setBackgroundImage(UIImage(color: color, size: self.navigationController?.navigationBar.frame.size ?? .zero), for: barMetrics)
+	}
 }
 
 #endif

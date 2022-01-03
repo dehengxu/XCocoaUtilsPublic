@@ -11,7 +11,7 @@
 #if TARGET_OS_IPHONE
 
 @implementation UIImage (XCUP)
-+ (UIImage*)imageWithColor:(UIColor*)color imageSize:(CGSize)size
++ (UIImage*)imageWithColor:(UIColor*)color size:(CGSize)size
 {
     if (CGSizeEqualToSize(size, CGSizeZero)) {
         return nil;
