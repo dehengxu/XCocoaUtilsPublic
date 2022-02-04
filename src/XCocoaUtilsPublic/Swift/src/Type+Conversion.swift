@@ -10,13 +10,13 @@ import CoreGraphics
 
 //MARK: - NSIndexPath and IndexPath
 
-extension IndexPath {
+public extension IndexPath {
 	var NSIndexPath: NSIndexPath {
 		return self as NSIndexPath
 	}
 }
 
-extension NSIndexPath {
+public  extension NSIndexPath {
 	var IndexPath: IndexPath {
 		return self as IndexPath
 	}
@@ -24,13 +24,13 @@ extension NSIndexPath {
 
 //MARK: - NSString and String
 
-extension String {
+public extension String {
 	var NSString: NSString {
 		return self as NSString
 	}
 }
 
-extension NSString {
+public extension NSString {
 	var String: String {
 		return self as String
 	}
