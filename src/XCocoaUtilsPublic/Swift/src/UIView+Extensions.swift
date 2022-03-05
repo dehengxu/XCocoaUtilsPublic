@@ -8,10 +8,18 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
 	typealias T = UIView
 
-	public var cornerRadius: CGFloat {
+    @discardableResult
+    func addSubviews(_ views: UIView...) -> Self {
+        for view in views {
+            self.addSubview(view)
+        }
+        return self
+    }
+
+    var cornerRadius: CGFloat {
 		set {
 			self.layer.cornerRadius = newValue
 			self.layer.masksToBounds = true
@@ -21,11 +29,7 @@ extension UIView {
 		}
 	}
 
-    @objc func handleClick_close(_ sender: UIButton) {
-        self.removeFromSuperview()
-    }
-
-	public var width: CGFloat {
+    var width: CGFloat {
 		get {
 			return self.frame.size.width
 		}
@@ -34,7 +38,7 @@ extension UIView {
 		}
 	}
 
-	public var height: CGFloat {
+    var height: CGFloat {
 		get {
 			return self.frame.size.height
 		}
@@ -43,7 +47,7 @@ extension UIView {
 		}
 	}
 
-	public var x: CGFloat {
+    var x: CGFloat {
 		get {
 			return self.frame.origin.x
 		}
@@ -52,7 +56,7 @@ extension UIView {
 		}
 	}
 
-	public var y: CGFloat {
+    var y: CGFloat {
 		get {
 			return self.frame.origin.y
 		}
@@ -61,7 +65,7 @@ extension UIView {
 		}
 	}
 
-	public func resize(_ handler:(_ width: inout CGFloat, _ height: inout CGFloat) -> Void ) {
+    func resize(_ handler:(_ width: inout CGFloat, _ height: inout CGFloat) -> Void ) {
 		var frame = self.frame
 		var width: CGFloat = frame.size.width
 		var height: CGFloat = frame.size.height
@@ -71,7 +75,7 @@ extension UIView {
 		self.frame = frame
 	}
 
-	public func moveToCenter(_ handler:(_ centerX: inout CGFloat, _ centerY: inout CGFloat) -> Void) {
+    func moveToCenter(_ handler:(_ centerX: inout CGFloat, _ centerY: inout CGFloat) -> Void) {
 		var x = self.center.x
 		var y = self.center.y
 		handler(&x, &y)
@@ -79,7 +83,7 @@ extension UIView {
 		self.center.y = y
 	}
 
-	public func moveToOrigin(_ handler:(_ x: inout CGFloat, _ y: inout CGFloat) -> Void) {
+    func moveToOrigin(_ handler:(_ x: inout CGFloat, _ y: inout CGFloat) -> Void) {
 		var x = self.frame.origin.x
 		var y = self.frame.origin.y
 		handler(&x, &y)

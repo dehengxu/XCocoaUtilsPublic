@@ -6,6 +6,14 @@
 
 import Foundation
 
+public func sychronized(_ lock: NSLocking, work: () -> Void) {
+    lock.lock()
+    defer {
+        lock.unlock()
+    }
+    work()
+}
+
 public class NXDispatchSpecificKeyWrapper<T>: NSObject where T: Hashable {
     public private(set) var specificKey: DispatchSpecificKey<T>
     public private(set) var specificValue: T
