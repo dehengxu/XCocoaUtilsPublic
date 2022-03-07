@@ -11,10 +11,10 @@ import UIKit
 
 public protocol Configuring {}
 
-extension Configuring where Self: Any {
+public extension Configuring where Self: Any {
 
     @discardableResult
-    public func configure(_ configure: ((_ target: Self) -> Void)?) -> Self {
+    func configure(_ configure: ((_ target: Self) -> Void)?) -> Self {
         configure?(self)
         return self
     }
@@ -27,4 +27,5 @@ extension Configuring where Self: Any {
 //    }
 //}
 
+extension Swift.Optional: Configuring {}
 extension NSObject: Configuring {}

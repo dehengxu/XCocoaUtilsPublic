@@ -1,146 +1,211 @@
 //
-//  Concurrency+XCUP.swift
-//  XCocoaUtilsPublic
+//  SwiftFunctions.swift
 //
-//  Created by Nicholas Xu on 2022/1/3.
+//  Created by NicholasXu on 2021/10/22.
 //
 
 import Foundation
 
-public final class NXSynchronize<T> where T: NSLocking {
-	private var _lock: T?
-
-	public init(_ lock: T) {
-		_lock = lock
-		_lock?.lock()
-	}
-
-	deinit {
-		_lock?.unlock()
-	}
+public func sychronized(_ lock: NSLocking, work: () -> Void) {
+    lock.lock()
+    defer {
+        lock.unlock()
+    }
+    work()
 }
 
-func syncOnMain(_ worker: () -> Void) {
-	if Thread.isMainThread {
-		worker()
-	} else {
-		DispatchQueue.main.sync(execute: worker)
-	}
+public class NXDispatchSpecificKeyWrapper<T>: NSObject where T: Hashable {
+    public private(set) var specificKey: DispatchSpecificKey<T>
+    public private(set) var specificValue: T
+    public private(set) var queue: DispatchQueue
+
+    public init(queue: DispatchQueue, value: T) {
+        self.queue = queue
+        specificValue = value
+        specificKey = DispatchSpecificKey<T>()
+        //print("init: \(specificKey), \(specificValue)")
+        self.queue.setSpecific(key: specificKey, value: specificValue)
+    }
+
+    static func == (lhs: NXDispatchSpecificKeyWrapper, rhs: NXDispatchSpecificKeyWrapper) -> Bool {
+        return lhs.queue == rhs.queue
+    }
+
+    public override func isEqual(_ object: Any?) -> Bool {
+        if let obj = object as? Self {
+            return obj.queue.isEqual(self.queue)
+        }
+        return false
+    }
+
+    public override var hash: Int {
+        get {
+            return queue.hashValue
+        }
+    }
+
+    public override var description: String {
+        return "\(self.classForCoder) ( key: \(self.specificKey), value: \(specificValue) )"
+    }
+
 }
 
-enum NXQueue: Int {
-	case main = 0
-	case concurrent = 1
-	case serial = 2
+@objc(NXConcurrency)
+public  class NXConcurrency: NSObject {
+
+    fileprivate static var queueBits: Set<NXDispatchSpecificKeyWrapper<Int>> = []
+
+    @objc public static func register(_ queue: DispatchQueue) {
+        register(queue, specificValue: queueBits.count)
+    }
+
+    @objc private static func register(_ queue: DispatchQueue, specificValue: Int) {
+        let wrapper = NXDispatchSpecificKeyWrapper(queue: queue, value: specificValue)
+        let (inserted, _) = queueBits.insert(wrapper)
+        if !inserted {
+            //#if DEBUG
+            //fatalError("Register duplicated.")
+            //#else
+            print("Register duplicated.")
+            //#endif
+        }
+    }
+
+    @objc public static func currentDispatchQueues() -> [DispatchQueue] {
+        var queues: [DispatchQueue] = []
+
+        for wrapper in queueBits {
+            // print("\(#function), wrapper: \(wrapper)")
+            if let _ = DispatchQueue.getSpecific(key: wrapper.specificKey), let _ = wrapper.queue.getSpecific(key: wrapper.specificKey) {
+                queues.append(wrapper.queue)
+            }
+        }
+
+        return queues
+    }
+
+    @objc public static func isCurrent(_ queue: DispatchQueue) -> Bool {
+        var hasRegistered = false
+        for wrapper in queueBits {
+            // print("\(#function), wrapper: \(wrapper)")
+            if !hasRegistered && wrapper.queue == queue {
+                hasRegistered = true
+            }
+            if let _ = DispatchQueue.getSpecific(key: wrapper.specificKey), let _ = wrapper.queue.getSpecific(key: wrapper.specificKey), let _ = queue.getSpecific(key: wrapper.specificKey) {
+                return true
+            }
+        }
+
+        if !hasRegistered {
+            print("queue has no been registered")
+        }
+
+        return false
+    }
+
+    @objc public static func setupDefaultQueues() {
+        self.register(DispatchQueue.main)
+        self.register(DispatchQueue.global(qos: .default))
+        self.register(DispatchQueue.global(qos: .utility))
+        self.register(DispatchQueue.global(qos: .userInteractive))
+        self.register(DispatchQueue.global(qos: .userInitiated))
+        self.register(DispatchQueue.global(qos: .background))
+    }
 }
 
-public class NXQueueKey: NSObject {
-	fileprivate let key = DispatchSpecificKey<Int>()
+public extension DispatchQueue {
+
+    convenience init(register: Bool, label: String) {
+        self.init(label: label)
+        if register {
+            NXConcurrency.register(self)
+        }
+    }
+
+    convenience init(register: Bool, label: String, qos: DispatchQoS, attributes: DispatchQueue.Attributes, autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency, target: DispatchQueue) {
+        self.init(label: label, qos: qos, attributes: attributes, autoreleaseFrequency: autoreleaseFrequency, target: target)
+        if register {
+            NXConcurrency.register(self)
+        }
+    }
+
+    func isSerial() -> Bool {
+        return self is OS_dispatch_queue_serial
+    }
+
+    func isCurrent() -> Bool {
+        return NXConcurrency.isCurrent(self)
+    }
+
 }
 
-public struct NXConcurrency {
-	fileprivate static var maxQID: Int = NXQueue.serial.rawValue + 1
-
-	fileprivate static let mainQueueKey = DispatchSpecificKey<Int>()
-	fileprivate static var mainBit: Int = 0
-
-	fileprivate static let concurrentQueueKey = DispatchSpecificKey<Int>()
-	fileprivate static var concurrentBit: Int = 1
-	private static var concurrentQueue: DispatchQueue = {
-		var q = DispatchQueue.init(label: "com.dehengxu.nx-concurrent-queue", qos: Dispatch.DispatchQoS.userInteractive, attributes: [.concurrent], autoreleaseFrequency: Dispatch.DispatchQueue.AutoreleaseFrequency.inherit, target: nil)
-		q.setSpecific(key: NXConcurrency.concurrentQueueKey, value: concurrentBit)
-		return q
-	}()
-
-	fileprivate static let serialQueueKey = DispatchSpecificKey<Int>()
-	fileprivate static var serialBit: Int = 2
-	private static let serialQueue: DispatchQueue = {
-		var q = DispatchQueue.init(label: "com.dehengxu.nx-serial-queue", qos: Dispatch.DispatchQoS.userInteractive, attributes: [], autoreleaseFrequency: Dispatch.DispatchQueue.AutoreleaseFrequency.inherit, target: nil)
-		q.setSpecific(key: serialQueueKey, value: serialBit)
-		return q
-	}()
-
-	private static var dispatchQueues: [NXQueueKey: DispatchQueue] = [:]
-
-	private static func register(user dispatchQueue: DispatchQueue, maxID: Int) -> NXQueueKey {
-		let key = NXQueueKey()
-		dispatchQueue.setSpecific(key: key.key, value: maxID)
-		return key
-	}
-
-	public static func register(user dispatchQueue: DispatchQueue) -> NXQueueKey {
-		let key = self.register(user: dispatchQueue, maxID: maxQID)
-		return key
-	}
-
-	public static func queue(of queueKey: NXQueueKey) -> DispatchQueue? {
-		return self.dispatchQueues[queueKey]
-	}
-
-	static func queue(_ queue: NXQueue) -> DispatchQueue {
-		if DispatchQueue.main.getSpecific(key: Self.mainQueueKey) == nil {
-			DispatchQueue.main.setSpecific(key: Self.mainQueueKey, value: Self.mainBit)
-		}
-		switch queue {
-			case .main:
-				return .main
-			case .concurrent:
-				return Self.concurrentQueue
-			case .serial:
-				return Self.serialQueue
-		}
-	}
+func sync(on queue: DispatchQueue = .main, _ worker: (() -> Void)) {
+    if queue.isCurrent() /*&& queue.isSerial()*/ {
+        // Current queue is serialize queue run worker directly
+        worker()
+    } else {
+        queue.sync(execute: worker)
+    }
 }
 
-private func internalKey(queue: NXQueue = .main) -> DispatchSpecificKey<Int> {
-	let pkey: DispatchSpecificKey<Int>
-	switch queue {
-		case .serial:
-			pkey = NXConcurrency.serialQueueKey
-		case .concurrent:
-			pkey = NXConcurrency.concurrentQueueKey
-		default:
-			pkey = NXConcurrency.mainQueueKey
-			break
-	}
-	return pkey
+func async(on queue: DispatchQueue = .main, _  worker: @escaping (() -> Void)) {
+    if queue.isCurrent() /*&& !queue.isSerial()*/ {
+        worker()
+    } else {
+        queue.async(execute: worker)
+    }
 }
 
-func async(onUser queueKey: NXQueueKey, _ worker: @escaping () -> Void) {
-	guard let q = NXConcurrency.queue(of: queueKey) else {
-		return
-	}
-	q.async(execute: worker)
+final class AtomicCounter: NSLock {
+    private var counter: Int = 0
+    init(value: Int = 0) {
+        super.init()
+        counter = value
+    }
+
+    func value() -> Int {
+        self.lock()
+        defer {
+            self.unlock()
+        }
+        return counter
+    }
+
+    func increase(by: Int) -> Int {
+        self.lock()
+        defer {
+            self.unlock()
+        }
+        counter += by
+        return counter
+    }
+
+    func decrease(by: Int) -> Int {
+        self.lock()
+        defer {
+            self.unlock()
+        }
+        counter -= by
+        return counter
+    }
+
+    func multiply(by: Int) -> Int {
+        self.lock()
+        defer {
+            self.unlock()
+        }
+        counter *= by
+        return counter
+    }
+
+    func divid(by: Int) -> Int {
+        self.lock()
+        defer {
+            self.unlock()
+        }
+        counter /= by
+        return counter
+    }
+
 }
 
-func sync(onUser queueKey: NXQueueKey, _ worker: @escaping () -> Void) {
-	guard let q = NXConcurrency.queue(of: queueKey) else {
-		return
-	}
-	if let bit = DispatchQueue.getSpecific(key: queueKey.key) {
-		if bit == q.getSpecific(key: queueKey.key) {
-			worker()
-		}
-	}
-	q.sync(execute: worker)
-}
-
-func async(on queue: NXQueue = .main, _ worker: @escaping (() -> Void)) {
-	let q: DispatchQueue = NXConcurrency.queue(queue)
-	q.async(execute: worker)
-}
-
-func sync(on queue: NXQueue = .main, _ worker: @escaping (() -> Void)) {
-	let q: DispatchQueue = NXConcurrency.queue(queue)
-	if let bit = DispatchQueue.getSpecific(key: NXConcurrency.serialQueueKey) {
-		if bit == NXConcurrency.serialBit {
-			worker()
-			return
-		}
-	}
-	if Thread.isMainThread {
-		worker()
-		return
-	}
-	q.sync(execute: worker)
-}
