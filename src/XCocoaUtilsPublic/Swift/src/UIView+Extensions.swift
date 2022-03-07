@@ -21,9 +21,9 @@ extension UIView {
 		}
 	}
 
-    @objc func handleClick_close(_ sender: UIButton) {
-        self.removeFromSuperview()
-    }
+//    @objc func handleClick_close(_ sender: UIButton) {
+//        self.removeFromSuperview()
+//    }
 
 	public var width: CGFloat {
 		get {
