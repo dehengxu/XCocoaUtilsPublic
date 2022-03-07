@@ -139,7 +139,7 @@ public extension DispatchQueue {
 
 }
 
-func sync(on queue: DispatchQueue = .main, _ worker: (() -> Void)) {
+public func sync(on queue: DispatchQueue = .main, _ worker: (() -> Void)) {
     if queue.isCurrent() /*&& queue.isSerial()*/ {
         // Current queue is serialize queue run worker directly
         worker()
@@ -148,7 +148,7 @@ func sync(on queue: DispatchQueue = .main, _ worker: (() -> Void)) {
     }
 }
 
-func async(on queue: DispatchQueue = .main, _  worker: @escaping (() -> Void)) {
+public func async(on queue: DispatchQueue = .main, _  worker: @escaping (() -> Void)) {
     if queue.isCurrent() /*&& !queue.isSerial()*/ {
         worker()
     } else {
