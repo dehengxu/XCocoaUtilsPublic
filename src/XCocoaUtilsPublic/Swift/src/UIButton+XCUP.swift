@@ -106,7 +106,7 @@ public extension UIButton {
             }
         }
         
-        override func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event) {
+		override func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event = .touchUpInside) {
 			if (self == target as! NSObject) && self.isKind(of: UIButton.BlockButton.self) && NSStringFromSelector(action) == "__800e8c_forwardHandle:" {
 				super.addTarget(target, action: action, for: controlEvents)
 			}else {
