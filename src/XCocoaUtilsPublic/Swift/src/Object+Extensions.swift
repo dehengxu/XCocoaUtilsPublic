@@ -29,3 +29,33 @@ public extension Configuring where Self: Any {
 
 extension Swift.Optional: Configuring {}
 extension NSObject: Configuring {}
+
+public protocol AssocitedObject {}
+extension AssocitedObject where Self: Any {
+    subscript(key: NSString) -> Any? {
+        set {
+            objc_setAssociatedObject(self, Unmanaged.passUnretained(key).toOpaque()
+                                     , newValue, .OBJC_ASSOCIATION_RETAIN)
+            //print("save subscript: \(key), \(newValue)")
+        }
+        get {
+            let v = objc_getAssociatedObject(self, Unmanaged.passUnretained(key).toOpaque())
+            //print("get subscript: \(key), \(v)")
+            return v
+        }
+    }
+
+    subscript<ValueType>(key: NSString) -> ValueType? {
+        set {
+            objc_setAssociatedObject(self, Unmanaged.passUnretained(key).toOpaque()
+                                     , newValue, .OBJC_ASSOCIATION_RETAIN)
+            //print("save subscript: \(key), \(newValue)")
+        }
+        get {
+            let v = objc_getAssociatedObject(self, Unmanaged.passUnretained(key).toOpaque())
+            //print("get subscript: \(key), \(v)")
+            return v as? ValueType
+        }
+    }
+}
+extension NSObject: AssocitedObject {}
