@@ -6,7 +6,7 @@
 
 import Foundation
 
-public func sychronized(_ lock: NSLocking, work: () -> Void) {
+public func synchronized(_ lock: NSLocking, work: () -> Void) {
     lock.lock()
     defer {
         lock.unlock()
@@ -51,7 +51,7 @@ public class NXDispatchSpecificKeyWrapper<T>: NSObject where T: Hashable {
 }
 
 @objc(NXConcurrency)
-public  class NXConcurrency: NSObject {
+public class NXConcurrency: NSObject {
 
     fileprivate static var queueBits: Set<NXDispatchSpecificKeyWrapper<Int>> = []
 
@@ -71,7 +71,7 @@ public  class NXConcurrency: NSObject {
         }
     }
 
-    @objc public static func currentDispatchQueues() -> [DispatchQueue] {
+    public static func currentDispatchQueues() -> [DispatchQueue] {
         var queues: [DispatchQueue] = []
 
         for wrapper in queueBits {

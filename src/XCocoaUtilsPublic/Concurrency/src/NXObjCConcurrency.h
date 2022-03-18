@@ -27,7 +27,7 @@ __END_DECLS
 + (void)setup;
 + (void)registerWithQueue:(dispatch_queue_t)queue;
 + (BOOL)isCurrent:(dispatch_queue_t)queue;
-+ (NSArray<dispatch_queue_t>* )currentDispatchQueues;
++ (NSArray* )currentDispatchQueues;
 
 @end
 

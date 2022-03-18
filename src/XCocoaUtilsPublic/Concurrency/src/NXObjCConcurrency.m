@@ -117,7 +117,7 @@ static NSMutableSet<NXDispatchSpecificKeyWrapper *> *_keyBits = nil;
     return NO;
 }
 
-+ (NSArray<dispatch_queue_t>*)currentDispatchQueues {
++ (NSArray*)currentDispatchQueues {
     NSMutableArray* queues = [NSMutableArray new];
     for (NXDispatchSpecificKeyWrapper* wrapper in _keyBits) {
         if (dispatch_get_specific((__bridge const void*)wrapper) == (__bridge void*)wrapper) {
