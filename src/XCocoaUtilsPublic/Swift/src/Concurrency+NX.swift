@@ -139,7 +139,7 @@ public extension DispatchQueue {
 
 }
 
-public func sync(on queue: DispatchQueue = .main, _ worker: (() -> Void)) {
+public func sync(on queue: DispatchQueue, _ worker: (() -> Void)) {
     if queue.isCurrent() /*&& queue.isSerial()*/ {
         // Current queue is serialize queue run worker directly
         worker()
@@ -148,12 +148,12 @@ public func sync(on queue: DispatchQueue = .main, _ worker: (() -> Void)) {
     }
 }
 
-public func async(on queue: DispatchQueue = .main, _  worker: @escaping (() -> Void)) {
-    if queue.isCurrent() /*&& !queue.isSerial()*/ {
-        worker()
-    } else {
+public func async(on queue: DispatchQueue, _  worker: @escaping (() -> Void)) {
+//    if queue.isCurrent() /*&& !queue.isSerial()*/ {
+//        worker()
+//    } else {
         queue.async(execute: worker)
-    }
+//    }
 }
 
 final class AtomicCounter: NSLock {
