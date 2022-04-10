@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
 
 	@objc static func randomColor() -> UIColor {
 		let range: ClosedRange<UInt> = 0...255
