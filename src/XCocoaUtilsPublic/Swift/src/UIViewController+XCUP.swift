@@ -60,6 +60,16 @@ import UIKit
 		self.present(targetVc, animated: animated, completion: completion)
 	}
 
+	func xcup_present(_ viewController: UIViewController, animated: Bool = true, presentationStyle: UIModalPresentationStyle = .fullScreen, transitionStyle:UIModalTransitionStyle = .coverVertical, completion: (() -> Void)? = nil) {
+		viewController.modalTransitionStyle = transitionStyle
+		viewController.modalPresentationStyle = presentationStyle
+		var presenting = self
+		if let nav = self.navigationController {
+			presenting = nav
+		}
+		presenting.present(viewController, animated: animated, completion: completion)
+	}
+
 	func xcup_dismiss(animated: Bool = true, completion: (() -> Void)? = nil) {
 		if let nav = self.navigationController {
 			nav.dismiss(animated: animated, completion: completion)
