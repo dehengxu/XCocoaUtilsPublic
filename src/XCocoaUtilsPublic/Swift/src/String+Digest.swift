@@ -8,8 +8,16 @@
 
 import Foundation
 import CommonCrypto
+#if canImport(CryptoKit)
+import CryptoKit
+#endif
 
 public protocol XCUPDigesting {
+
+    func MD5(lowercase: Bool) -> [UInt8]
+    func SHA256(lowercase: Bool) -> [UInt8]
+    func SHA512(lowercase: Bool) -> [UInt8]
+
 	func MD5(lowercase: Bool) -> String
 	func SHA256(lowercase: Bool) -> String
 	func SHA512(lowercase: Bool) -> String
@@ -20,33 +28,135 @@ protocol XCURLSigning {
 	func sortedQuery(isAscending :Bool) -> String
 }
 
+public extension IndexingIterator {
+
+    /// Joint array and convert lowercase
+    /// - Returns: String
+    func xcup_ToHexString(_ lowercase: Bool = false) -> String where Element: Numeric {
+
+        let a = self.map { (e: Element) -> String in
+            return lowercase ? String(format: "%0x", e as! CVarArg) : String(format: "%0X", e as! CVarArg)
+        }.joined()
+
+        return a
+    }
+
+}
+
 public extension Array {
 
 	/// Joint array and convert lowercase
 	/// - Returns: String
-	func xcupLowerHexString() -> String where Element: Numeric {
-
+    func xcup_ToHexString(_ lowercase: Bool = false) -> String where Element: Numeric {
 		let a = self.map { (e: Element) -> String in
-			return String(format: "%0x", e as! CVarArg)
+            return lowercase ? String(format: "%0x", e as! CVarArg) : String(format: "%0X", e as! CVarArg)
 		}.joined()
 
 		return a
 	}
 
-	/// Joint array and convert uppercase
-	/// - Returns: String
-	func xcupUpperHexString() -> String where Element: Numeric {
 
-		let a = self.map { (e: Element) -> String in
-			return String(format: "%0X", e as! CVarArg)
-		}.joined()
+}
 
-		return a
-	}
+extension Data: XCUPDigesting {
+    public func MD5(lowercase: Bool) -> [UInt8] {
+        if #available(iOS 13.0, *) {
+            return CryptoKit.Insecure.MD5.hash(data: self).makeIterator().filter { _ in true }
+        } else {
+            var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
+            var ctx = CC_MD5_CTX()
+            CC_MD5_Init(&ctx)
+            CC_MD5_Update(&ctx, self.filter { _ in true }, CC_LONG(self.count))
+            _ = withUnsafeMutablePointer(to: &digest[0]) {
+                CC_MD5_Final($0, &ctx)
+            }
+            return digest
+        }
+    }
+
+    public func SHA256(lowercase: Bool) -> [UInt8] {
+        if #available(iOS 13.0, *) {
+            return CryptoKit.SHA256.hash(data: self).makeIterator().filter { _ in true }
+        } else {
+            var digest = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
+            var ctx = CC_SHA256_CTX()
+            _ = CC_SHA256_Init(&ctx)
+            CC_SHA256_Update(&ctx, self.filter { _ in true } , CC_LONG(self.count))
+            _ = withUnsafeMutablePointer(to: &digest[0], {
+                CC_SHA256_Final($0, &ctx)
+            })
+            return digest
+        }
+    }
+
+    public func SHA512(lowercase: Bool) -> [UInt8] {
+        if #available(iOS 13.0, *) {
+            return CryptoKit.SHA512.hash(data: self).makeIterator().filter { _ in true }
+        } else {
+            var digest = [UInt8](repeating: 0, count: Int(CC_SHA512_DIGEST_LENGTH))
+            var ctx = CC_SHA512_CTX()
+            _ = CC_SHA512_Init(&ctx)
+            CC_SHA512_Update(&ctx, self.filter { _ in true }, CC_LONG(self.count))
+            _ = withUnsafeMutablePointer(to: &digest[0], {
+                CC_SHA512_Final($0, &ctx)
+            })
+            return digest
+        }
+    }
+
+    public func MD5(lowercase: Bool) -> String {
+        if #available(iOS 13.0, *) {
+            return CryptoKit.Insecure.MD5.hash(data: self).makeIterator().xcup_ToHexString(lowercase)
+        } else {
+            var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
+            var ctx = CC_MD5_CTX()
+            CC_MD5_Init(&ctx)
+            CC_MD5_Update(&ctx, self.filter { _ in true }, CC_LONG(self.count))
+            _ = withUnsafeMutablePointer(to: &digest[0]) {
+                CC_MD5_Final($0, &ctx)
+            }
+            return digest.xcup_ToHexString(lowercase)
+        }
+    }
+
+    public func SHA256(lowercase: Bool) -> String {
+        if #available(iOS 13.0, *) {
+            return CryptoKit.SHA256.hash(data: self).makeIterator().xcup_ToHexString(lowercase)
+        } else {
+            var digest = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
+            var ctx = CC_SHA256_CTX()
+            _ = CC_SHA256_Init(&ctx)
+            CC_SHA256_Update(&ctx, self.filter { _ in true } , CC_LONG(self.count))
+            _ = withUnsafeMutablePointer(to: &digest[0], {
+                CC_SHA256_Final($0, &ctx)
+            })
+            return digest.xcup_ToHexString(lowercase)
+        }
+    }
+
+    public func SHA512(lowercase: Bool) -> String {
+        if #available(iOS 13.0, *) {
+            return CryptoKit.SHA512.hash(data: self).makeIterator().xcup_ToHexString(lowercase)
+        } else {
+            var digest = [UInt8](repeating: 0, count: Int(CC_SHA512_DIGEST_LENGTH))
+            var ctx = CC_SHA512_CTX()
+            _ = CC_SHA512_Init(&ctx)
+            CC_SHA512_Update(&ctx, self.filter { _ in true }, CC_LONG(self.count))
+            _ = withUnsafeMutablePointer(to: &digest[0], {
+                CC_SHA512_Final($0, &ctx)
+            })
+            return digest.xcup_ToHexString(lowercase)
+        }
+    }
 
 }
 
 @objc extension NSString {
+
+    public func MD5Array(_ lowercase: Bool = true) -> NSArray {
+        let s = (self as String) as XCUPDigesting
+        return s.MD5(lowercase: lowercase) as NSArray
+    }
     
     public func MD5(_ lowercase: Bool = true) -> NSString {
         let s = (self as String) as XCUPDigesting
@@ -66,47 +176,28 @@ public extension Array {
 }
 
 extension String: XCUPDigesting {
+    public func MD5(lowercase: Bool) -> [UInt8] {
+        return self.data(using: .utf8)?.MD5(lowercase: lowercase) ?? []
+    }
+
+    public func SHA256(lowercase: Bool) -> [UInt8] {
+        return self.data(using: .utf8)?.SHA256(lowercase: lowercase) ?? []
+    }
+
+    public func SHA512(lowercase: Bool) -> [UInt8] {
+        return self.data(using: .utf8)?.SHA512(lowercase: lowercase) ?? []
+    }
 
 	public func MD5(lowercase: Bool = true) -> String {
-		var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
-
-		var ctx = CC_MD5_CTX()
-		CC_MD5_Init(&ctx)
-		CC_MD5_Update(&ctx, self, CC_LONG(self.count))
-
-		_ = withUnsafeMutablePointer(to: &digest[0]) {
-			CC_MD5_Final($0, &ctx)
-		}
-
-		let msg =
-			lowercase ? digest.xcupLowerHexString() : digest.xcupUpperHexString()
-		return msg
+        return self.data(using: .utf8)?.MD5(lowercase: lowercase) ?? ""
 	}
 
 	public func SHA256(lowercase: Bool = true) -> String {
-		var digest = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
-		var ctx = CC_SHA256_CTX()
-		_ = CC_SHA256_Init(&ctx)
-		CC_SHA256_Update(&ctx, self, CC_LONG(self.count))
-		_ = withUnsafeMutablePointer(to: &digest[0], {
-			CC_SHA256_Final($0, &ctx)
-		})
-
-		let msg = lowercase ? digest.xcupLowerHexString() : digest.xcupUpperHexString()
-		return msg
+        return self.data(using: .utf8)?.SHA256(lowercase: lowercase) ?? ""
 	}
 
 	public func SHA512(lowercase: Bool = true) -> String {
-		var digest = [UInt8](repeating: 0, count: Int(CC_SHA512_DIGEST_LENGTH))
-		var ctx = CC_SHA512_CTX()
-		_ = CC_SHA512_Init(&ctx)
-		CC_SHA512_Update(&ctx, self, CC_LONG(self.count))
-		_ = withUnsafeMutablePointer(to: &digest[0], {
-			CC_SHA512_Final($0, &ctx)
-		})
-
-		let msg = lowercase ? digest.xcupLowerHexString() : digest.xcupUpperHexString()
-		return msg
+        return self.data(using: .utf8)?.SHA512(lowercase: lowercase) ?? ""
 	}
 
 }
